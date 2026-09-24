@@ -1,0 +1,45 @@
+4TH DOWN v0.2 - PUT IT ONLINE WITH RENDER
+=========================================
+
+You only need to do this once.
+
+PART A - PUT THE PROJECT ON GITHUB
+1. Go to GitHub and create a new repository.
+2. Name it: fourth-down-grader
+3. Public or private both work. Private is fine if Render is connected to your GitHub account.
+4. Do NOT initialize it with a README if GitHub gives you that option.
+5. Open the new repo and choose "uploading an existing file" / Add file > Upload files.
+6. Drag the CONTENTS of this folder into GitHub:
+   - fixtures
+   - lib
+   - public
+   - test
+   - .gitignore
+   - package.json
+   - README.md
+   - render.yaml
+   - server.js
+   - start-windows.bat
+   - WINDOWS-QUICKSTART.txt
+   - ONLINE-DEPLOY.txt
+7. Commit the files to main.
+
+PART B - DEPLOY ON RENDER
+1. Open Render and sign in.
+2. In the dashboard choose New > Blueprint.
+3. Connect your GitHub account if Render asks.
+4. Pick the fourth-down-grader repository.
+5. Render should automatically detect render.yaml.
+6. Apply/Create the Blueprint.
+7. Wait for the deploy to finish.
+8. Open the generated .onrender.com address.
+
+That public address is your online 4TH DOWN app and will work on your phone too.
+
+IMPORTANT ABOUT THE FREE PLAN
+- Render's free web services can spin down after 15 minutes without traffic.
+- The first visit after a spin-down can take roughly a minute to wake the app back up.
+- That is fine for testing. For a Sunday live product, a paid always-on instance is better.
+
+UPDATES LATER
+Once Render is linked to the GitHub repo, future commits to main automatically redeploy the app.

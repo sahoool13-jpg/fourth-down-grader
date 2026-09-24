@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#080b0d" />
+  <title>4TH DOWN — Live NFL Decision Grader</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brandMark">4</div>
+      <div><strong>4TH DOWN</strong><small>DECISION INTELLIGENCE</small></div>
+    </div>
+    <div class="topright"><span class="dot"></span><span id="feedStatus">CONNECTING</span><span class="model">MODEL v0.2</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">NFL GAME MANAGEMENT • LIVE</span>
+        <h1>Grade the decision.<br><span>Ignore the outcome.</span></h1>
+        <p class="lede">Every fourth down is frozen before the choice. GO, FIELD GOAL and PUNT are priced in win probability, the coach's actual call is identified, and any win probability sacrificed is recorded as WPA Burn.</p>
+      </div>
+      <div class="heroStat">
+        <span>MODEL CORE</span>
+        <strong>WP Δ</strong>
+        <p>Live game-state anchoring plus counterfactual decision pricing and sensitivity testing.</p>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div><span>ACTIVE GAMES</span><strong id="activeGames">0</strong></div>
+      <div><span>LIVE 4TH DOWNS</span><strong id="liveFourths">0</strong></div>
+      <div><span>GRADED DECISIONS</span><strong id="gradedCount">0</strong></div>
+      <div><span>MODEL</span><strong class="smallKpi">ANCHORED v0.2</strong></div>
+    </section>
+
+    <section id="alertStrip" class="alertStrip hidden"></section>
+
+    <section class="grid">
+      <div class="panel livePanel">
+        <div class="panelHead">
+          <div><span class="kicker">LIVE BOARD</span><h2>Games</h2></div>
+          <div class="headActions"><button id="allLiveBtn" class="activeBtn">Live all</button><button id="refreshBtn">Refresh</button></div>
+        </div>
+        <div id="games" class="games"><div class="skeleton">Loading today's slate…</div></div>
+      </div>
+
+      <div class="panel decisionPanel">
+        <div class="panelHead">
+          <div><span class="kicker">DECISION ENGINE</span><h2 id="decisionTitle">Manual Lab</h2></div>
+          <span id="certaintyBadge" class="badge neutral">READY</span>
+        </div>
+        <div id="liveSituation" class="situation hidden"></div>
+        <form id="labForm" class="lab">
+          <label>Yards to go<input id="ydstogo" type="number" min="0.1" step="0.1" value="2"></label>
+          <label>Yards from opponent goal<input id="yardline100" type="number" min="1" max="99" value="43"></label>
+          <label>Score differential<input id="scoreDiff" type="number" value="0"></label>
+          <label>Seconds remaining<input id="secondsRemaining" type="number" min="0" max="3600" value="1800"></label>
+          <label>Your timeouts<input id="timeouts" type="number" min="0" max="3" value="3"></label>
+          <label>Opponent timeouts<input id="opponentTimeouts" type="number" min="0" max="3" value="3"></label>
+          <button type="submit" class="primary">Run 4th-down decision</button>
+          <button type="button" id="thirdDownBtn" class="secondary">Check 3rd-down two-down territory</button>
+        </form>
+        <div id="thirdDownOutput" class="thirdDownOutput hidden"></div>
+        <div id="decisionOutput" class="decisionOutput"></div>
+      </div>
+    </section>
+
+    <section class="panel feedPanel">
+      <div class="panelHead">
+        <div><span class="kicker">DECISION TAPE</span><h2 id="ledgerTitle">Live fourth-down ledger</h2></div>
+        <span class="muted">Outcome-blind grading • newest decision first</span>
+      </div>
+      <div id="decisionFeed" class="tableWrap">
+        <table>
+          <thead><tr><th>Game</th><th>Situation</th><th>Actual</th><th>Optimal</th><th>WP before</th><th>WPA Burn</th><th>Confidence</th><th>Grade</th></tr></thead>
+          <tbody><tr><td colspan="8" class="empty">Waiting for a gradable fourth-down decision.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="method">
+      <div><span>01</span><h3>Freeze state</h3><p>Score, exact field position, distance, clock and timeouts are captured before the strategic decision.</p></div>
+      <div><span>02</span><h3>Anchor + price</h3><p>When live WP is available, the model anchors to it, then prices GO, FG and PUNT as counterfactual paths.</p></div>
+      <div><span>03</span><h3>Stress test</h3><p>Conversion, kicking and punt assumptions are perturbed. Fragile recommendations are marked TOSS-UP instead of fake precision.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Model v0.2 • anchored counterfactual</span>
+    <span>Live-data adapter: ESPN public endpoints</span>
+    <span>Historical benchmark path: nflverse + nfl4th validation</span>
+  </footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

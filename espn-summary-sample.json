@@ -1,0 +1,27 @@
+{
+  "header": {
+    "id": "demo-1",
+    "shortName": "MIA @ BUF",
+    "competitions": [{
+      "id": "demo-1",
+      "venue": {"fullName": "Demo Stadium", "indoor": false},
+      "status": {"period": 4, "displayClock": "5:10", "type": {"description": "In Progress"}},
+      "situation": {"possession": "15", "down": 4, "distance": 5, "yardLine": 37},
+      "competitors": [
+        {"id": "2", "homeAway": "home", "score": "20", "team": {"abbreviation":"BUF","displayName":"Buffalo Bills","color":"00338D"}},
+        {"id": "15", "homeAway": "away", "score": "13", "team": {"abbreviation":"MIA","displayName":"Miami Dolphins","color":"008E97"}}
+      ]
+    }]
+  },
+  "plays": [
+    {
+      "id":"p1",
+      "type":{"text":"Punt"},
+      "text":"Punter punts 43 yards.",
+      "team":{"id":"15"},
+      "period":{"number":2},
+      "clock":{"displayValue":"8:22"},
+      "start":{"down":4,"distance":4,"yardLine":45,"homeScore":7,"awayScore":7,"possession":"15"}
+    }
+  ]
+}

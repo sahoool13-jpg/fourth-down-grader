@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fourth-down-grader
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
