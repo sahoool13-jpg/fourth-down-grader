@@ -1,8 +1,19 @@
-# 4TH DOWN — Live NFL Decision Grader v0.2
+# 4TH DOWN — Live NFL Decision Grader v0.2.1
 
 A live, outcome-blind NFL fourth-down decision grader.
 
-## What changed in v0.2
+## v0.2.1 data-integrity hotfix
+
+- Preserves quarter, clock, yards-to-go, field position and raw play text when a completed fourth down is graded.
+- Adds readable field-position text to the ledger instead of losing the original ESPN play state.
+- Rejects completed decisions with incomplete source fields instead of inventing a grade.
+- Treats tiny model differences as TOSS-UP in the UI rather than presenting a false precise winner.
+- Adds late-game scoring-possession logic so states such as down 20 in the fourth quarter do not incorrectly prefer a field goal that leaves the offense three scores behind.
+- Sorts ESPN win-probability points by sequence before taking the pre-play anchor.
+- Adds regression tests for the Packers-Falcons style late-game case and for completed-play metadata.
+
+
+## What changed in v0.2.1
 
 - Polls **all active NFL games**, not only the game you manually select.
 - Keeps completed games on the current decision tape when the feed reports them as final.
@@ -18,11 +29,11 @@ A live, outcome-blind NFL fourth-down decision grader.
 
 ## Model status
 
-v0.2 is substantially stronger than v0.1, but it is still a **research/prototype decision model**, not an official NFL, ESPN, or nfl4th model.
+v0.2.1 is substantially stronger than v0.1, but it is still a **research/prototype decision model**, not an official NFL, ESPN, or nfl4th model.
 
 The live engine works in two layers:
 
-1. **Game-state anchor** — when ESPN exposes a current/pre-play win probability, v0.2 anchors the model to that real live game state.
+1. **Game-state anchor** — when ESPN exposes a current/pre-play win probability, v0.2.1 anchors the model to that real live game state.
 2. **Counterfactual pricing** — the engine estimates the change in WP for GO, FG and PUNT using conversion probability, field position, clock, score, timeouts, kick distance and punt field compression.
 
 The model then stress-tests the recommendation by perturbing conversion, kicking and punt assumptions. If reasonable changes flip the preferred choice, the interface downgrades the recommendation to LEAN/TOSS-UP.
@@ -31,7 +42,7 @@ This is deliberately outcome-blind. A failed fourth-down attempt can still recei
 
 ## Important limitation
 
-The next major model milestone is still historical calibration/backtesting against nflverse play-by-play and nfl4th-style outputs. Do not present v0.2 as mathematical ground truth. It is a serious prototype and live decision engine, not a finished commercial-grade model.
+The next major model milestone is still historical calibration/backtesting against nflverse play-by-play and nfl4th-style outputs. Do not present v0.2.1 as mathematical ground truth. It is a serious prototype and live decision engine, not a finished commercial-grade model.
 
 ## Run on Windows
 
@@ -63,7 +74,7 @@ Node.js 20+ is required. There are no third-party runtime dependencies.
 npm test
 ```
 
-v0.2 currently includes automated tests for:
+v0.2.1 currently includes automated tests for:
 
 - conversion probability ordering
 - field-goal probability ordering

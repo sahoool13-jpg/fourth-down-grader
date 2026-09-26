@@ -55,9 +55,13 @@ function enrichGame(raw) {
     game.pendingThirdDown.planning = evaluateThirdDownPlanning(game.pendingThirdDown);
   }
   game.completedFourthDowns = (game.completedFourthDowns || []).map(d => {
-    if (!d.yardline100 || !d.ydstogo) return { ...d, grade: null, reason: 'insufficient-feed-fields' };
+    if (!d.verifiedState || !d.yardline100 || !Number.isFinite(Number(d.ydstogo))) {
+      return { ...d, grade: null, reason: 'insufficient-feed-fields' };
+    }
     const ev = evaluateFourthDown({ ...d, indoor: game.indoor, baselineWp: d.baselineWp });
-    return gradeActualDecision(ev, d.actualDecision);
+    // Preserve the raw play metadata. v0.2 accidentally replaced the original
+    // quarter/clock/distance/field-position fields with only the model output.
+    return { ...d, ...gradeActualDecision(ev, d.actualDecision) };
   });
   return game;
 }
@@ -103,7 +107,7 @@ async function api(req, res, url) {
   if (url.pathname === '/api/health') {
     return json(res, 200, {
       ok: true,
-      modelVersion: 'v0.2-anchored-counterfactual',
+      modelVersion: 'v0.2.1-anchored-counterfactual',
       now: new Date().toISOString()
     });
   }
@@ -190,4 +194,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.2 running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.2.1 running on http://localhost:${PORT}`));

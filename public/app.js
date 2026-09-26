@@ -29,8 +29,8 @@ function renderEvaluation(ev) {
     <div class="rec">
       <div class="recCall">
         <small>RECOMMENDATION</small>
-        <strong>${esc(ev.optimal)}</strong>
-        <div class="muted">+${(ev.edge * 100).toFixed(1)} WP vs next-best</div>
+        <strong>${ev.certainty === 'TOSS-UP' ? 'TOSS-UP' : esc(ev.optimal)}</strong>
+        <div class="muted">${ev.certainty === 'TOSS-UP' ? `Slight lean: ${esc(ev.optimal)} • ` : ''}+${(ev.edge * 100).toFixed(1)} WP vs next-best</div>
         <div class="anchorPill">${ev.diagnostics?.liveAnchorUsed ? 'LIVE WP ANCHORED' : 'STRUCTURAL MODE'}</div>
       </div>
       <div>
@@ -120,12 +120,15 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger') {
     return;
   }
   tbody.innerHTML = [...rows].reverse().map(d => {
-    const sit = `Q${d.quarter} ${d.clock} • 4&${d.ydstogo}${d.yardline100 ? ` • y100 ${Math.round(d.yardline100)}` : ''}`;
+    const downText = Number.isFinite(Number(d.ydstogo)) ? `4th & ${Number(d.ydstogo)}` : '4th down';
+    const spot = d.fieldPositionText || (d.yardline100 ? `y100 ${Math.round(d.yardline100)}` : '');
+    const sit = `Q${d.quarter ?? '?'} ${d.clock || '—'} • ${downText}${spot ? ` • ${spot}` : ''}`;
+    const optimalDisplay = d.certainty === 'TOSS-UP' ? `TOSS-UP (${d.optimal || '—'} lean)` : (d.optimal || '—');
     return `<tr>
       <td>${esc(d.gameName || selectedGameName || '')}</td>
       <td title="${esc(d.text || '')}">${esc(sit)}</td>
       <td>${esc(d.actual || d.actualDecision || '—')}</td>
-      <td>${esc(d.optimal || '—')}</td>
+      <td>${esc(optimalDisplay)}</td>
       <td>${fmtWp(d.baselineWp)}</td>
       <td>${fmtBurn(d.wpRegret)}</td>
       <td>${esc(d.sensitivity?.confidence || '—')}</td>

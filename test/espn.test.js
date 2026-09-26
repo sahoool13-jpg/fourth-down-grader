@@ -37,3 +37,20 @@ test('fake punt is graded as GO and no-play penalty is ignored', () => {
   assert.equal(normalizeDecisionFromPlay({ type: { text: 'Fake Punt' }, text: 'Fake punt pass complete' }), 'GO');
   assert.equal(normalizeDecisionFromPlay({ type: { text: 'Penalty' }, text: 'False Start. No Play.' }), null);
 });
+
+
+test('completed fourth down carries displayable situation metadata', () => {
+  const x = structuredClone(fixture);
+  x.plays[0].start.possessionText = 'MIA 45';
+  x.plays[0].start.downDistanceText = '4th & 4 at MIA 45';
+  x.plays[0].start.shortDownDistanceText = '4th & 4';
+  x.plays[0].start.yardsToEndzone = 55;
+  const g = parseGameSummary(x);
+  const d = g.completedFourthDowns[0];
+  assert.equal(d.quarter, 2);
+  assert.equal(d.clock, '8:22');
+  assert.equal(d.ydstogo, 4);
+  assert.equal(d.yardline100, 55);
+  assert.equal(d.fieldPositionText, 'MIA 45');
+  assert.equal(d.verifiedState, true);
+});

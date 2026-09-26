@@ -58,3 +58,19 @@ test('third-down planner returns a coherent threshold', () => {
     assert.ok(plan.remainingDistance > 0);
   }
 });
+
+
+test('down 20 late in Q4 does not recommend a field goal that preserves a three-score deficit', () => {
+  const ev = evaluateFourthDown({
+    ydstogo: 7,
+    yardline100: 39,
+    scoreDiff: -20,
+    secondsRemaining: 569,
+    timeouts: 3,
+    opponentTimeouts: 3,
+    baselineWp: 0.007
+  });
+  assert.equal(ev.optimal, 'GO');
+  assert.ok(ev.options.GO > ev.options.FG);
+  assert.ok(ev.options.GO > ev.options.PUNT);
+});
