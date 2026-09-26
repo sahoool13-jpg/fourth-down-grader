@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": 1,
+  "productVersion": "v0.5.1",
+  "audit": "Release Audit",
+  "generatedAt": "2026-09-26T20:41:53.603Z",
+  "verdict": "PROMOTE",
+  "reference": {
+    "seasons": [
+      2025
+    ],
+    "rows": 3946,
+    "rowsScored": 3946,
+    "skipped": 0,
+    "metadata": {
+      "schema_version": 1,
+      "source": "nfl4th::load_4th_pbp(fast = FALSE)",
+      "nfl4th_version": "1.0.7",
+      "generated_at": "2026-09-26 20:41:51 UTC",
+      "start_season": 2025,
+      "end_season": 2025,
+      "holdout_season": 2025,
+      "seasons": 2025,
+      "rows": 3946,
+      "methodology": "Only real GO/FG/PUNT fourth-down decisions. No-play penalties and non-decision fourth-down states are excluded."
+    },
+    "expectedNfl4thVersion": "1.0.7",
+    "nfl4thVersionMatchesHoldout": true
+  },
+  "reproduction": {
+    "pass": true,
+    "checks": {
+      "rowsScored": true,
+      "legacyExact": true,
+      "candidateExact": true,
+      "legacyDecisionSafe": true,
+      "candidateDecisionSafe": true,
+      "legacyMeanRegret": true,
+      "candidateMeanRegret": true,
+      "legacyStrongSplit": true,
+      "candidateStrongSplit": true,
+      "endgameLegacyMeanRegret": true,
+      "endgameCandidateMeanRegret": true,
+      "finalTwoLegacyMeanRegret": true,
+      "finalTwoCandidateMeanRegret": true
+    }
+  },
+  "pointEstimates": {
+    "overall": {
+      "legacyMeanRegretPp": 0.31746572015426555,
+      "candidateMeanRegretPp": 0.3046850034279557,
+      "legacyExactAgreement": 0.745818550430816,
+      "candidateExactAgreement": 0.7493664470349721,
+      "legacyDecisionSafeRate": 0.8735428281804359,
+      "candidateDecisionSafeRate": 0.8755701976685251,
+      "legacyStrongSplitRate": 0.05473897617840851,
+      "candidateStrongSplitRate": 0.05347187024835276,
+      "legacyWorstRegretPp": 15.239303678999999,
+      "candidateWorstRegretPp": 8.189822725999996
+    },
+    "endgame": {
+      "legacyMeanRegretPp": 0.439003747897063,
+      "candidateMeanRegretPp": 0.3360798536072284
+    },
+    "finalTwo": {
+      "legacyMeanRegretPp": 0.521951600965954,
+      "candidateMeanRegretPp": 0.33654983239761055
+    }
+  },
+  "bootstrap": {
+    "overall": {
+      "n": 3946,
+      "regretImprovement": {
+        "n": 3946,
+        "estimate": 0.012780716726309935,
+        "se": 0.0055701686763717445,
+        "lower95": 0.003382453847925313,
+        "median": 0.012361280925608845,
+        "upper95": 0.02487437221504926,
+        "probabilityPositive": 0.9995,
+        "probabilityNonNegative": 0.9995,
+        "reps": 10000,
+        "seed": 5102036
+      },
+      "exactAgreementDelta": {
+        "n": 3946,
+        "estimate": 0.0035478966041561076,
+        "se": 0.00114096171073873,
+        "lower95": 0.0012671059300557526,
+        "median": 0.0035478966041561076,
+        "upper95": 0.005828687278256462,
+        "probabilityPositive": 0.9989,
+        "probabilityNonNegative": 0.9996,
+        "reps": 10000,
+        "seed": 5102048
+      },
+      "decisionSafeDelta": {
+        "n": 3946,
+        "estimate": 0.0020273694880892043,
+        "se": 0.0007991369836890933,
+        "lower95": 0.0005068423720223011,
+        "median": 0.0020273694880892043,
+        "upper95": 0.0035478966041561076,
+        "probabilityPositive": 0.9958,
+        "probabilityNonNegative": 0.9988,
+        "reps": 10000,
+        "seed": 5102062
+      },
+      "strongSplitImprovement": {
+        "n": 3946,
+        "estimate": 0.0012671059300557526,
+        "se": 0.0006735092927563945,
+        "lower95": 0,
+        "median": 0.0012671059300557526,
+        "upper95": 0.002787633046122656,
+        "probabilityPositive": 0.9658,
+        "probabilityNonNegative": 0.9889,
+        "reps": 10000,
+        "seed": 5102076
+      }
+    },
+    "endgame": {
+      "n": 490,
+      "regretImprovement": {
+        "n": 490,
+        "estimate": 0.1029238942898347,
+        "se": 0.04376099256876586,
+        "lower95": 0.029087984582109237,
+        "median": 0.09891332950698367,
+        "upper95": 0.1998443773883024,
+        "probabilityPositive": 0.9991,
+        "probabilityNonNegative": 0.9991,
+        "reps": 10000,
+        "seed": 5102036
+      },
+      "exactAgreementDelta": {
+        "n": 490,
+        "estimate": 0.02857142857142857,
+        "se": 0.009104143234354966,
+        "lower95": 0.012244897959183673,
+        "median": 0.02857142857142857,
+        "upper95": 0.04693877551020408,
+        "probabilityPositive": 0.9995,
+        "probabilityNonNegative": 0.9998,
+        "reps": 10000,
+        "seed": 5102048
+      },
+      "decisionSafeDelta": {
+        "n": 490,
+        "estimate": 0.0163265306122449,
+        "se": 0.006470755919836204,
+        "lower95": 0.004081632653061225,
+        "median": 0.0163265306122449,
+        "upper95": 0.030612244897959183,
+        "probabilityPositive": 0.9959,
+        "probabilityNonNegative": 0.9984,
+        "reps": 10000,
+        "seed": 5102062
+      },
+      "strongSplitImprovement": {
+        "n": 490,
+        "estimate": 0.01020408163265306,
+        "se": 0.0053673274423484095,
+        "lower95": 0,
+        "median": 0.01020408163265306,
+        "upper95": 0.02040816326530612,
+        "probabilityPositive": 0.9648,
+        "probabilityNonNegative": 0.9871,
+        "reps": 10000,
+        "seed": 5102076
+      }
+    },
+    "finalTwo": {
+      "n": 224,
+      "regretImprovement": {
+        "n": 224,
+        "estimate": 0.18540176856834373,
+        "se": 0.08791102618424698,
+        "lower95": 0.038021882848334444,
+        "median": 0.17722781280431693,
+        "upper95": 0.3770124430898646,
+        "probabilityPositive": 0.9986,
+        "probabilityNonNegative": 0.9986,
+        "reps": 10000,
+        "seed": 5102036
+      },
+      "exactAgreementDelta": {
+        "n": 224,
+        "estimate": 0.0625,
+        "se": 0.018642110723075853,
+        "lower95": 0.026785714285714284,
+        "median": 0.0625,
+        "upper95": 0.10267857142857142,
+        "probabilityPositive": 0.9995,
+        "probabilityNonNegative": 0.9998,
+        "reps": 10000,
+        "seed": 5102048
+      },
+      "decisionSafeDelta": {
+        "n": 224,
+        "estimate": 0.03125,
+        "se": 0.013210254505465275,
+        "lower95": 0.008928571428571428,
+        "median": 0.03125,
+        "upper95": 0.05803571428571429,
+        "probabilityPositive": 0.9916,
+        "probabilityNonNegative": 0.9978,
+        "reps": 10000,
+        "seed": 5102062
+      },
+      "strongSplitImprovement": {
+        "n": 224,
+        "estimate": 0.017857142857142856,
+        "se": 0.010886660040102423,
+        "lower95": 0,
+        "median": 0.017857142857142856,
+        "upper95": 0.04017857142857143,
+        "probabilityPositive": 0.934,
+        "probabilityNonNegative": 0.9751,
+        "reps": 10000,
+        "seed": 5102076
+      }
+    },
+    "finalMinute": {
+      "n": 91,
+      "regretImprovement": {
+        "n": 91,
+        "estimate": 0.3936592851376044,
+        "se": 0.2094005505632023,
+        "lower95": 0.04532701223892308,
+        "median": 0.37281804626208787,
+        "upper95": 0.8642234897045162,
+        "probabilityPositive": 0.991,
+        "probabilityNonNegative": 0.9911,
+        "reps": 10000,
+        "seed": 5102036
+      },
+      "exactAgreementDelta": {
+        "n": 91,
+        "estimate": 0.06593406593406594,
+        "se": 0.03030137268859595,
+        "lower95": 0.01098901098901099,
+        "median": 0.06593406593406594,
+        "upper95": 0.13186813186813187,
+        "probabilityPositive": 0.9837,
+        "probabilityNonNegative": 0.9956,
+        "reps": 10000,
+        "seed": 5102048
+      },
+      "decisionSafeDelta": {
+        "n": 91,
+        "estimate": 0.054945054945054944,
+        "se": 0.02845623439057645,
+        "lower95": 0,
+        "median": 0.054945054945054944,
+        "upper95": 0.10989010989010989,
+        "probabilityPositive": 0.9685,
+        "probabilityNonNegative": 0.9896,
+        "reps": 10000,
+        "seed": 5102062
+      },
+      "strongSplitImprovement": {
+        "n": 91,
+        "estimate": 0.03296703296703297,
+        "se": 0.02427148106110149,
+        "lower95": -0.01098901098901099,
+        "median": 0.03296703296703297,
+        "upper95": 0.08791208791208792,
+        "probabilityPositive": 0.8805,
+        "probabilityNonNegative": 0.9541,
+        "reps": 10000,
+        "seed": 5102076
+      }
+    }
+  },
+  "flips": {
+    "total": 22,
+    "beneficial": 17,
+    "harmful": [
+      {
+        "season": 2025,
+        "week": 12,
+        "gameId": "2025_12_BUF_HOU",
+        "playId": "3970",
+        "posteam": "BUF",
+        "defteam": "HOU",
+        "quarter": 4,
+        "quarterSecondsRemaining": 51,
+        "gameSecondsRemaining": 51,
+        "ydstogo": 27,
+        "yardline100": 70,
+        "scoreDiff": -4,
+        "actual": "GO",
+        "description": "(:51) (Shotgun) 17-J.Allen pass short right to 5-J.Palmer to BUF 41 for 11 yards. Lateral to 10-K.Shakir pushed ob at HOU 26 for 33 yards (23-J.Reed).",
+        "referenceOptimal": "PUNT",
+        "referenceOptions": {
+          "GO": 0.057389927112,
+          "FG": 0.03160828352,
+          "PUNT": 0.08363641947
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0,
+        "candidateRegretPp": 2.6246492358,
+        "regretImprovementPp": -2.6246492358,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.474
+        }
+      },
+      {
+        "season": 2025,
+        "week": 7,
+        "gameId": "2025_07_IND_LAC",
+        "playId": "4214",
+        "posteam": "LAC",
+        "defteam": "IND",
+        "quarter": 4,
+        "quarterSecondsRemaining": 216,
+        "gameSecondsRemaining": 216,
+        "ydstogo": 27,
+        "yardline100": 45,
+        "scoreDiff": -14,
+        "actual": "GO",
+        "description": "(3:36) (Shotgun) 10-J.Herbert pass deep right to 1-Q.Johnston to IND 22 for 23 yards (23-K.Moore).",
+        "referenceOptimal": "FG",
+        "referenceOptions": {
+          "GO": 0.0057317428033,
+          "FG": 0.0073764667862,
+          "PUNT": 0.004284661748
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0,
+        "candidateRegretPp": 0.16447239829,
+        "regretImprovementPp": -0.16447239829,
+        "flipped": true,
+        "candidateTags": [
+          "FG_DOES_NOT_TIE_OR_LEAD"
+        ],
+        "candidateShifts": {
+          "GO": 0.02,
+          "FG": -0.08,
+          "PUNT": 0
+        }
+      },
+      {
+        "season": 2025,
+        "week": 1,
+        "gameId": "2025_01_CAR_JAX",
+        "playId": "4055",
+        "posteam": "JAX",
+        "defteam": "CAR",
+        "quarter": 4,
+        "quarterSecondsRemaining": 120,
+        "gameSecondsRemaining": 120,
+        "ydstogo": 3,
+        "yardline100": 10,
+        "scoreDiff": 13,
+        "actual": "FG",
+        "description": "(2:00) 39-C.Little 28 yard field goal is GOOD, Center-46-R.Matiscik, Holder-9-L.Cooke.",
+        "referenceOptimal": "FG",
+        "referenceOptions": {
+          "GO": 0.99869725135,
+          "FG": 0.99924206632,
+          "PUNT": null
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0,
+        "candidateRegretPp": 0.05448149700000293,
+        "regretImprovementPp": -0.05448149700000293,
+        "flipped": true,
+        "candidateTags": [
+          "CONVERSION_CAN_SEAL"
+        ],
+        "candidateShifts": {
+          "GO": 0.088,
+          "FG": 0,
+          "PUNT": 0
+        }
+      }
+    ],
+    "neutral": 2,
+    "netReferenceRegretSavedPp": 50.432708202019,
+    "worstHarmPp": 2.6246492358,
+    "transitions": {
+      "FG->GO": {
+        "count": 11,
+        "netRegretSavedPp": 32.120287954351994
+      },
+      "PUNT->GO": {
+        "count": 10,
+        "netRegretSavedPp": 9.236970475667006
+      },
+      "GO->FG": {
+        "count": 1,
+        "netRegretSavedPp": 9.075449771999999
+      }
+    },
+    "tags": {
+      "CONVERSION_CAN_SEAL": {
+        "count": 2,
+        "netRegretSavedPp": 0.29810889099999294,
+        "harmful": 1,
+        "beneficial": 1
+      },
+      "TRAILING_PUNT_SCARCITY": {
+        "count": 17,
+        "netRegretSavedPp": 41.231887268308995,
+        "harmful": 1,
+        "beneficial": 15
+      },
+      "FG_DOES_NOT_TIE_OR_LEAD": {
+        "count": 10,
+        "netRegretSavedPp": 32.174769451352,
+        "harmful": 1,
+        "beneficial": 8
+      },
+      "MUST_TD_PATH": {
+        "count": 9,
+        "netRegretSavedPp": 32.339241849641994,
+        "harmful": 0,
+        "beneficial": 8
+      },
+      "FG_TAKES_LEAD": {
+        "count": 1,
+        "netRegretSavedPp": 9.075449771999999,
+        "harmful": 0,
+        "beneficial": 1
+      }
+    },
+    "topBeneficial": [
+      {
+        "season": 2025,
+        "week": 19,
+        "gameId": "2025_19_SF_PHI",
+        "playId": "4063",
+        "posteam": "PHI",
+        "defteam": "SF",
+        "quarter": 4,
+        "quarterSecondsRemaining": 43,
+        "gameSecondsRemaining": 43,
+        "ydstogo": 11,
+        "yardline100": 21,
+        "scoreDiff": -4,
+        "actual": "GO",
+        "description": "(:43) (Shotgun) 1-J.Hurts pass incomplete short middle to 88-D.Goedert (43-E.Kendricks).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.15239303679,
+          "FG": 0,
+          "PUNT": null
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 15.239303678999999,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 15.239303678999999,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.22,
+          "FG": -0.82,
+          "PUNT": -0.522
+        }
+      },
+      {
+        "season": 2025,
+        "week": 18,
+        "gameId": "2025_18_IND_HOU",
+        "playId": "4215",
+        "posteam": "IND",
+        "defteam": "HOU",
+        "quarter": 4,
+        "quarterSecondsRemaining": 162,
+        "gameSecondsRemaining": 162,
+        "ydstogo": 2,
+        "yardline100": 4,
+        "scoreDiff": -2,
+        "actual": "FG",
+        "description": "(2:42) 10-B.Grupe 22 yard field goal is GOOD, Center-46-L.Rhodes, Holder-8-R.Sanchez.",
+        "referenceOptimal": "FG",
+        "referenceOptions": {
+          "GO": 0.34788401947,
+          "FG": 0.43863851719,
+          "PUNT": null
+        },
+        "legacyOptimal": "GO",
+        "candidateOptimal": "FG",
+        "legacyRegretPp": 9.075449771999999,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 9.075449771999999,
+        "flipped": true,
+        "candidateTags": [
+          "FG_TAKES_LEAD"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0.08,
+          "PUNT": 0
+        }
+      },
+      {
+        "season": 2025,
+        "week": 2,
+        "gameId": "2025_02_NE_MIA",
+        "playId": "4149",
+        "posteam": "MIA",
+        "defteam": "NE",
+        "quarter": 4,
+        "quarterSecondsRemaining": 53,
+        "gameSecondsRemaining": 53,
+        "ydstogo": 12,
+        "yardline100": 28,
+        "scoreDiff": -6,
+        "actual": "GO",
+        "description": "(:53) (Shotgun) 1-T.Tagovailoa sacked at NE 37 for -9 yards (97-M.Williams).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.073703276503,
+          "FG": 0,
+          "PUNT": null
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 7.3703276503,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 7.3703276503,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.22,
+          "FG": -1.02,
+          "PUNT": -0.582
+        }
+      },
+      {
+        "season": 2025,
+        "week": 15,
+        "gameId": "2025_15_ATL_TB",
+        "playId": "4552",
+        "posteam": "ATL",
+        "defteam": "TB",
+        "quarter": 4,
+        "quarterSecondsRemaining": 49,
+        "gameSecondsRemaining": 49,
+        "ydstogo": 14,
+        "yardline100": 57,
+        "scoreDiff": -2,
+        "actual": "GO",
+        "description": "(:49) (No Huddle, Shotgun) 18-K.Cousins pass deep right to 87-D.Sills to TB 36 for 21 yards (31-A.Winfield).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.078137154989,
+          "FG": 0,
+          "PUNT": 0.0050295382942
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 7.31076166948,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 7.31076166948,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.606
+        }
+      },
+      {
+        "season": 2025,
+        "week": 2,
+        "gameId": "2025_02_CAR_ARI",
+        "playId": "4559",
+        "posteam": "CAR",
+        "defteam": "ARI",
+        "quarter": 4,
+        "quarterSecondsRemaining": 33,
+        "gameSecondsRemaining": 33,
+        "ydstogo": 15,
+        "yardline100": 38,
+        "scoreDiff": -5,
+        "actual": "GO",
+        "description": "(:33) (Shotgun) 9-B.Young sacked at ARI 46 for -8 yards (93-C.Campbell).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.051246931927,
+          "FG": 0,
+          "PUNT": 0.00060662811607
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 5.1246931927,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 5.1246931927,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.22,
+          "FG": -0.9199999999999999,
+          "PUNT": -0.702
+        }
+      },
+      {
+        "season": 2025,
+        "week": 13,
+        "gameId": "2025_13_HOU_IND",
+        "playId": "4000",
+        "posteam": "IND",
+        "defteam": "HOU",
+        "quarter": 4,
+        "quarterSecondsRemaining": 109,
+        "gameSecondsRemaining": 109,
+        "ydstogo": 9,
+        "yardline100": 31,
+        "scoreDiff": -4,
+        "actual": "GO",
+        "description": "(1:49) (Shotgun) 17-D.Jones pass incomplete short right to 11-M.Pittman [51-W.Anderson].",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.24436781292,
+          "FG": 0.21481799583,
+          "PUNT": 0.15910139153
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 2.9549817090000015,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 2.9549817090000015,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.14,
+          "FG": -0.52,
+          "PUNT": -0.20016666666666666
+        }
+      },
+      {
+        "season": 2025,
+        "week": 7,
+        "gameId": "2025_07_CAR_NYJ",
+        "playId": "4230",
+        "posteam": "NYJ",
+        "defteam": "CAR",
+        "quarter": 4,
+        "quarterSecondsRemaining": 115,
+        "gameSecondsRemaining": 115,
+        "ydstogo": 10,
+        "yardline100": 86,
+        "scoreDiff": -7,
+        "actual": "PUNT",
+        "description": "(1:55) 14-A.McNamara punts 52 yards to CAR 34, Center-42-T.Hennessy. 23-T.Etienne pushed ob at CAR 43 for 9 yards (47-A.Beck).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.049158043307,
+          "FG": 0.016638556495,
+          "PUNT": 0.031449555526
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 1.7708487781000002,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 1.7708487781000002,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.18916666666666665
+        }
+      },
+      {
+        "season": 2025,
+        "week": 15,
+        "gameId": "2025_15_GB_DEN",
+        "playId": "4487",
+        "posteam": "GB",
+        "defteam": "DEN",
+        "quarter": 4,
+        "quarterSecondsRemaining": 50,
+        "gameSecondsRemaining": 50,
+        "ydstogo": 15,
+        "yardline100": 67,
+        "scoreDiff": -8,
+        "actual": "GO",
+        "description": "(:50) (Shotgun) 10-J.Love pass incomplete deep middle to 0-M.Golden [15-N.Bonitto].",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.020412813406,
+          "FG": 0,
+          "PUNT": 0.0029712128908
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 1.74416005152,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 1.74416005152,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.6
+        }
+      },
+      {
+        "season": 2025,
+        "week": 6,
+        "gameId": "2025_06_CIN_GB",
+        "playId": "4062",
+        "posteam": "CIN",
+        "defteam": "GB",
+        "quarter": 4,
+        "quarterSecondsRemaining": 46,
+        "gameSecondsRemaining": 46,
+        "ydstogo": 6,
+        "yardline100": 38,
+        "scoreDiff": -9,
+        "actual": "FG",
+        "description": "(:46) 2-E.McPherson 56 yard field goal is No Good, Wide Right, Center-46-W.Wagner, Holder-8-R.Rehkow.",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.013988290568,
+          "FG": 0,
+          "PUNT": 0.000089158461324
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 1.3988290568,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 1.3988290568,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.22,
+          "FG": -1.1,
+          "PUNT": -0.604
+        }
+      },
+      {
+        "season": 2025,
+        "week": 7,
+        "gameId": "2025_07_NE_TEN",
+        "playId": "3776",
+        "posteam": "NE",
+        "defteam": "TEN",
+        "quarter": 4,
+        "quarterSecondsRemaining": 120,
+        "gameSecondsRemaining": 120,
+        "ydstogo": 2,
+        "yardline100": 35,
+        "scoreDiff": 18,
+        "actual": "GO",
+        "description": "(2:00) 26-T.Jennings up the middle to TEN 32 for 3 yards (93-T.Sweat; 53-J.Ward).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.99975218511,
+          "FG": 0.99950697643,
+          "PUNT": 0.99622628123
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.35259038799999587,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.35259038799999587,
+        "flipped": true,
+        "candidateTags": [
+          "CONVERSION_CAN_SEAL"
+        ],
+        "candidateShifts": {
+          "GO": 0.088,
+          "FG": 0,
+          "PUNT": 0
+        }
+      },
+      {
+        "season": 2025,
+        "week": 18,
+        "gameId": "2025_18_WAS_PHI",
+        "playId": "4163",
+        "posteam": "PHI",
+        "defteam": "WAS",
+        "quarter": 4,
+        "quarterSecondsRemaining": 16,
+        "gameSecondsRemaining": 16,
+        "ydstogo": 17,
+        "yardline100": 79,
+        "scoreDiff": -7,
+        "actual": "GO",
+        "description": "(:16) (No Huddle, Shotgun) 16-T.McKee pass incomplete deep right to 2-J.Dotson.",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.0035773157134,
+          "FG": 0,
+          "PUNT": 0.00098162687818
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.25956888352199997,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.25956888352199997,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.8039999999999999
+        }
+      },
+      {
+        "season": 2025,
+        "week": 6,
+        "gameId": "2025_06_TEN_LV",
+        "playId": "3922",
+        "posteam": "TEN",
+        "defteam": "LV",
+        "quarter": 4,
+        "quarterSecondsRemaining": 115,
+        "gameSecondsRemaining": 115,
+        "ydstogo": 15,
+        "yardline100": 95,
+        "scoreDiff": -10,
+        "actual": "GO",
+        "description": "(1:55) (Shotgun) 1-C.Ward pass short right to 85-C.Okonkwo to TEN 25 for 20 yards (11-J.Chinn).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.0025958844848,
+          "FG": 0,
+          "PUNT": 0.0002548829887
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.23410014961000003,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.23410014961000003,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.38916666666666666
+        }
+      },
+      {
+        "season": 2025,
+        "week": 9,
+        "gameId": "2025_09_ARI_DAL",
+        "playId": "4173",
+        "posteam": "DAL",
+        "defteam": "ARI",
+        "quarter": 4,
+        "quarterSecondsRemaining": 89,
+        "gameSecondsRemaining": 89,
+        "ydstogo": 28,
+        "yardline100": 81,
+        "scoreDiff": -10,
+        "actual": "GO",
+        "description": "(1:29) (Shotgun) 4-D.Prescott pass deep right INTERCEPTED by 29-D.Burke at ARI 41. 29-D.Burke to ARI 41 for no gain (9-K.Turpin).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.0019051573953,
+          "FG": 0,
+          "PUNT": 0.00043107193535
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.147408545995,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.147408545995,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.4368333333333333
+        }
+      },
+      {
+        "season": 2025,
+        "week": 7,
+        "gameId": "2025_07_PHI_MIN",
+        "playId": "3801",
+        "posteam": "MIN",
+        "defteam": "PHI",
+        "quarter": 4,
+        "quarterSecondsRemaining": 120,
+        "gameSecondsRemaining": 120,
+        "ydstogo": 11,
+        "yardline100": 11,
+        "scoreDiff": -9,
+        "actual": "FG",
+        "description": "(2:00) 16-W.Reichard 29 yard field goal is GOOD, Center-42-A.DePaola, Holder-17-R.Wright.",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.03900402454,
+          "FG": 0.037546549349,
+          "PUNT": null
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.14574751910000003,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.14574751910000003,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.14,
+          "FG": -0.75,
+          "PUNT": -0.28
+        }
+      },
+      {
+        "season": 2025,
+        "week": 18,
+        "gameId": "2025_18_ARI_LA",
+        "playId": "4194",
+        "posteam": "ARI",
+        "defteam": "LA",
+        "quarter": 4,
+        "quarterSecondsRemaining": 115,
+        "gameSecondsRemaining": 115,
+        "ydstogo": 3,
+        "yardline100": 11,
+        "scoreDiff": -17,
+        "actual": "GO",
+        "description": "(1:55) (Shotgun) 7-J.Brissett sacked at LA 18 for -7 yards (94-D.Johnson).",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.00064102285503,
+          "FG": 0,
+          "PUNT": null
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.064102285503,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.064102285503,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.14,
+          "FG": -0.75,
+          "PUNT": -0.38916666666666666
+        }
+      },
+      {
+        "season": 2025,
+        "week": 12,
+        "gameId": "2025_12_NYJ_BAL",
+        "playId": "3629",
+        "posteam": "NYJ",
+        "defteam": "BAL",
+        "quarter": 4,
+        "quarterSecondsRemaining": 107,
+        "gameSecondsRemaining": 107,
+        "ydstogo": 14,
+        "yardline100": 89,
+        "scoreDiff": -10,
+        "actual": "GO",
+        "description": "(1:47) (Shotgun) 2-T.Taylor pass incomplete deep left to 10-A.Lazard.",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.0028265328731,
+          "FG": 0.0012259781361,
+          "PUNT": 0.0023220671107
+        },
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.050446576239999985,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.050446576239999985,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "candidateShifts": {
+          "GO": 0,
+          "FG": 0,
+          "PUNT": -0.30383333333333334
+        }
+      },
+      {
+        "season": 2025,
+        "week": 13,
+        "gameId": "2025_13_NYG_NE",
+        "playId": "3906",
+        "posteam": "NYG",
+        "defteam": "NE",
+        "quarter": 4,
+        "quarterSecondsRemaining": 72,
+        "gameSecondsRemaining": 72,
+        "ydstogo": 8,
+        "yardline100": 41,
+        "scoreDiff": -18,
+        "actual": "GO",
+        "description": "(1:12) (Shotgun) 6-J.Dart pass incomplete short middle to 84-T.Johnson (53-C.Elliss) [51-J.Gibbens].",
+        "referenceOptimal": "GO",
+        "referenceOptions": {
+          "GO": 0.00036577841272,
+          "FG": 0,
+          "PUNT": 0.0000077709039851
+        },
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "legacyRegretPp": 0.036577841272,
+        "candidateRegretPp": 0,
+        "regretImprovementPp": 0.036577841272,
+        "flipped": true,
+        "candidateTags": [
+          "TRAILING_PUNT_SCARCITY",
+          "FG_DOES_NOT_TIE_OR_LEAD",
+          "MUST_TD_PATH"
+        ],
+        "candidateShifts": {
+          "GO": 0.14,
+          "FG": -0.75,
+          "PUNT": -0.46799999999999997
+        }
+      }
+    ],
+    "watchlist": [
+      {
+        "gameId": "2025_12_BUF_HOU",
+        "playId": "3970",
+        "posteam": "BUF",
+        "defteam": "HOU",
+        "gameSecondsRemaining": 51,
+        "ydstogo": 27,
+        "yardline100": 70,
+        "scoreDiff": -4,
+        "legacyOptimal": "PUNT",
+        "candidateOptimal": "GO",
+        "referenceOptimal": "PUNT",
+        "regretDamagePp": 2.6246492358,
+        "tags": [
+          "TRAILING_PUNT_SCARCITY"
+        ],
+        "reasons": [
+          "EXTREME_DISTANCE",
+          "OWN_TERRITORY",
+          "FINAL_TWO_MINUTES",
+          "PUNT_SCARCITY_TRIGGER"
+        ],
+        "description": "(:51) (Shotgun) 17-J.Allen pass short right to 5-J.Palmer to BUF 41 for 11 yards. Lateral to 10-K.Shakir pushed ob at HOU 26 for 33 yards (23-J.Reed)."
+      },
+      {
+        "gameId": "2025_07_IND_LAC",
+        "playId": "4214",
+        "posteam": "LAC",
+        "defteam": "IND",
+        "gameSecondsRemaining": 216,
+        "ydstogo": 27,
+        "yardline100": 45,
+        "scoreDiff": -14,
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "referenceOptimal": "FG",
+        "regretDamagePp": 0.16447239829,
+        "tags": [
+          "FG_DOES_NOT_TIE_OR_LEAD"
+        ],
+        "reasons": [
+          "EXTREME_DISTANCE",
+          "FG_DISCOUNT_TRIGGER"
+        ],
+        "description": "(3:36) (Shotgun) 10-J.Herbert pass deep right to 1-Q.Johnston to IND 22 for 23 yards (23-K.Moore)."
+      },
+      {
+        "gameId": "2025_01_CAR_JAX",
+        "playId": "4055",
+        "posteam": "JAX",
+        "defteam": "CAR",
+        "gameSecondsRemaining": 120,
+        "ydstogo": 3,
+        "yardline100": 10,
+        "scoreDiff": 13,
+        "legacyOptimal": "FG",
+        "candidateOptimal": "GO",
+        "referenceOptimal": "FG",
+        "regretDamagePp": 0.05448149700000293,
+        "tags": [
+          "CONVERSION_CAN_SEAL"
+        ],
+        "reasons": [
+          "FINAL_TWO_MINUTES",
+          "SEAL_GAME_TRIGGER"
+        ],
+        "description": "(2:00) 39-C.Little 28 yard field goal is GOOD, Center-46-R.Matiscik, Holder-9-L.Cooke."
+      }
+    ]
+  },
+  "releaseGate": {
+    "verdict": "PROMOTE",
+    "criteria": {
+      "frozenResultReproduced": true,
+      "overallMeanRegretImproves": true,
+      "overallRegretBootstrap95AboveZero": true,
+      "endgameMeanRegretImproves": true,
+      "endgameRegretBootstrap95AboveZero": true,
+      "finalTwoMeanRegretImproves": true,
+      "finalTwoRegretBootstrap95AboveZero": true,
+      "decisionSafeDoesNotWorsen": true,
+      "strongSplitsDoNotWorsen": true,
+      "beneficialFlipsOutnumberHarmful": true,
+      "positiveNetRegretSaved": true,
+      "noFivePointNewHarm": true,
+      "tailRiskImproves": true
+    },
+    "failedCriteria": [],
+    "note": "Release gate audits a frozen candidate. It must not be used to tune v0.5.1 after seeing 2025."
+  }
+}
