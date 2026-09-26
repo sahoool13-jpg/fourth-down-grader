@@ -1,43 +1,37 @@
-4TH DOWN v0.4 — HISTORICAL CALIBRATION
+4TH DOWN v0.4.1 — CALIBRATION INTEGRITY
 
-WHAT THIS ADDS
-- Exact multi-season nfl4th benchmark runner.
-- Default sample: 2021–2025.
-- 2025 is treated as a locked holdout season.
-- Thousands of real fourth-down decisions are replayed through the current JS model.
-- Report includes exact-call agreement, reference regret, strong splits, WP bias,
-  confidence calibration, and context buckets.
-- New calibration dashboard: /calibration.html
-- Top failure cases are saved separately for model diagnosis.
-- The workflow does NOT automatically tune the model. That is intentional.
-  We diagnose first, then change parameters, then re-run the holdout.
+WHY THIS EXISTS
+v0.4 exposed huge 97–100 pp "model errors" where nfl4th showed PUNT = 0.0%.
+Those were not real 0% estimates. The R output contained NA/null for an unsupported
+reference action, and JavaScript accidentally converted null to numeric zero.
 
-HOW TO INSTALL
+v0.4.1 fixes that before any model tuning.
+
+WHAT CHANGES
+- null/NA reference options stay unavailable
+- real numeric zero probabilities remain real zeros
+- primary choices not priced by nfl4th become REFERENCE GAPS
+- reference gaps are excluded from regret and split-rate denominators
+- clean failure tape contains only comparable decisions
+- separate reference-gap tape shows the excluded cases
+- full 3-option coverage and primary-call coverage are displayed
+- baseline WP nulls are no longer coerced to zero in historical replay
+- historical-calibration workflow verifies the integrity separation
+- 10 dedicated calibration-integrity tests pass locally
+
+INSTALL
 1. Extract this ZIP.
-2. Copy everything inside into:
-   Documents > GitHub > fourth-down-grader
-3. Replace matching files. Do not delete .git.
+2. Copy everything inside into Documents > GitHub > fourth-down-grader.
+3. Replace matching files. Keep the .git folder untouched.
 4. GitHub Desktop Summary:
-   Add multi-season historical calibration v0.4
+   Fix calibration reference integrity v0.4.1
 5. Commit to main, then Push origin.
-6. GitHub Actions will start "historical calibration".
-   The exact nfl4th run can take several minutes.
-7. Render > Manual Deploy > Deploy latest commit.
-8. Hard refresh the site with Ctrl+Shift+R.
-9. Open the new CALIBRATION link at the top.
+6. GitHub Actions > historical calibration will rerun automatically.
+7. Let it finish. It should take roughly the same few minutes as v0.4.
+8. Render > Manual Deploy > Deploy latest commit (needed for the new dashboard code).
+9. Hard refresh with Ctrl+Shift+R.
 
-IMPORTANT
-The calibration report is fetched directly from GitHub. Once the workflow commits a
-new report, future calibration updates do not require a Render deployment.
-
-DEFAULT METHODOLOGY
-Development: 2021–2024
-Holdout:     2025
-
-Headline diagnostic:
-reference regret = nfl4th WP(optimal) - nfl4th WP(primary model choice)
-
-<= 0.75 pp regret = decision-safe disagreement
->= 2.00 pp regret = strong split
-
-nfl4th is a validation reference, not ground truth.
+EXPECTED RESULT
+The top pathological 99.98 pp punt rows should disappear from the CLEAN FAILURE TAPE.
+If the primary model chooses an action nfl4th did not price, it will appear in REFERENCE GAPS
+with no fake regret number.

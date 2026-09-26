@@ -16,7 +16,7 @@
     <div class="topright">
       <span id="statusDot" class="dot"></span>
       <span id="statusText">LOADING</span>
-      <span>CAL v0.4</span>
+      <span>CAL v0.4.1</span>
     </div>
   </header>
 
@@ -31,20 +31,29 @@
       </p>
       <div class="notice">
         nfl4th is a strong independent validation reference, not mathematical ground truth.
-        The headline error is <b>reference regret</b>: how much nfl4th win probability the
-        primary model sacrifices by choosing a different action.
+        <b>Calibration integrity v0.4.1</b> treats missing reference actions as unavailable,
+        never as fake 0% win probability. Reference regret is calculated only when nfl4th
+        actually prices the primary model's chosen action.
       </div>
     </section>
 
     <section id="meta" class="meta"></section>
 
     <section class="kpis" id="kpis">
-      <div><span>DECISIONS</span><strong>—</strong></div>
-      <div><span>EXACT CALLS</span><strong>—</strong></div>
+      <div><span>STATES</span><strong>—</strong></div>
+      <div><span>CLEAN EXACT CALLS</span><strong>—</strong></div>
       <div><span>≤0.75 PP REGRET</span><strong>—</strong></div>
       <div><span>HOLDOUT EXACT</span><strong>—</strong></div>
-      <div><span>MEAN REGRET</span><strong>—</strong></div>
-      <div><span>STRONG SPLITS</span><strong>—</strong></div>
+      <div><span>CLEAN MEAN REGRET</span><strong>—</strong></div>
+      <div><span>CLEAN STRONG SPLITS</span><strong>—</strong></div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <div><span class="kicker">REFERENCE INTEGRITY</span><h2>What nfl4th actually priced</h2></div>
+        <span class="subtle">Null / NA ≠ 0% WP</span>
+      </div>
+      <div id="integrityCards" class="splitCards"></div>
     </section>
 
     <section class="panel">
@@ -57,7 +66,7 @@
     <section class="twoCol">
       <section class="panel">
         <div class="panelHead">
-          <div><span class="kicker">ACTION PRICING</span><h2>WP error by option</h2></div>
+          <div><span class="kicker">ACTION PRICING</span><h2>WP error by priced option</h2></div>
         </div>
         <div id="optionErrors"></div>
       </section>
@@ -81,6 +90,7 @@
           <option value="season">Season</option>
           <option value="quarter">Quarter</option>
           <option value="referenceCall">Reference call</option>
+          <option value="referenceIntegrity">Reference integrity</option>
         </select>
       </div>
       <div id="bucketTable"></div>
@@ -88,17 +98,25 @@
 
     <section class="panel">
       <div class="panelHead">
-        <div><span class="kicker">FAILURE TAPE</span><h2>Largest model splits</h2></div>
-        <span class="subtle">Sorted by nfl4th WP sacrificed by the primary call</span>
+        <div><span class="kicker">CLEAN FAILURE TAPE</span><h2>Largest comparable model splits</h2></div>
+        <span class="subtle">Only rows where nfl4th prices the primary call</span>
       </div>
       <div id="splitsTable"></div>
     </section>
 
+    <section class="panel">
+      <div class="panelHead">
+        <div><span class="kicker">REFERENCE GAPS</span><h2>Decisions we refuse to fake-grade</h2></div>
+        <span class="subtle">Primary action not priced by nfl4th</span>
+      </div>
+      <div id="referenceGapsTable"></div>
+    </section>
+
     <section class="method">
       <div><span>01</span><h3>Reference</h3><p>nfl4th probabilities are recomputed on real historical fourth-down decisions.</p></div>
-      <div><span>02</span><h3>Replay</h3><p>The current JavaScript decision engine receives the same pre-snap state.</p></div>
+      <div><span>02</span><h3>Integrity gate</h3><p>Missing options stay unavailable. Genuine numeric zero probabilities remain real zeros.</p></div>
       <div><span>03</span><h3>Hold out</h3><p>The latest completed season is scored separately as an out-of-sample test.</p></div>
-      <div><span>04</span><h3>Diagnose</h3><p>We hunt systematic decision-regret patterns before changing model parameters.</p></div>
+      <div><span>04</span><h3>Diagnose</h3><p>Only clean comparable states drive regret, split-rate and model-tuning decisions.</p></div>
     </section>
   </main>
 

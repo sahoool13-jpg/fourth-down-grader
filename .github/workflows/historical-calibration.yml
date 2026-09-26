@@ -67,27 +67,44 @@ jobs:
       - name: Score current primary model
         run: node scripts/run_historical_calibration.mjs
 
-      - name: Verify calibration report
+      - name: Verify calibration integrity
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          const path = 'public/calibration/report.json';
-          if (!fs.existsSync(path)) {
-            console.error('Calibration report is missing');
+          const reportPath = 'public/calibration/report.json';
+          const splitsPath = 'public/calibration/splits.json';
+          if (!fs.existsSync(reportPath) || !fs.existsSync(splitsPath)) {
+            console.error('Calibration output is missing');
             process.exit(1);
           }
-          const report = JSON.parse(fs.readFileSync(path, 'utf8'));
-          if (!report?.summary?.overall?.n || report.summary.overall.n < 1000) {
-            console.error(`Calibration sample unexpectedly small: ${report?.summary?.overall?.n ?? 0}`);
+          const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+          const splits = JSON.parse(fs.readFileSync(splitsPath, 'utf8'));
+          const o = report?.summary?.overall;
+          if (report.productVersion !== 'v0.4.1') {
+            console.error(`Unexpected calibration version: ${report.productVersion}`);
             process.exit(1);
           }
-          if (!Number.isFinite(report.summary.overall.exactAgreement)) {
-            console.error('Calibration exact-agreement metric missing');
+          if (!o?.n || o.n < 1000 || !Number.isFinite(o.exactAgreement)) {
+            console.error('Calibration summary is incomplete');
             process.exit(1);
           }
-          console.log(`Verified ${report.summary.overall.n} decisions`);
-          console.log(`Exact-call agreement: ${(100 * report.summary.overall.exactAgreement).toFixed(1)}%`);
-          console.log(`Decision-safe rate: ${(100 * report.summary.overall.decisionSafeRate).toFixed(1)}%`);
+          if (!Number.isFinite(o.referenceCoverageRate) || o.referenceCoverageRate <= 0 || o.referenceCoverageRate > 1) {
+            console.error(`Invalid reference coverage: ${o.referenceCoverageRate}`);
+            process.exit(1);
+          }
+          if ((splits.rows || []).some(r => !r.comparable || r.referenceRegretPp == null)) {
+            console.error('Clean failure tape contains an unscored reference-gap row');
+            process.exit(1);
+          }
+          if ((splits.referenceGaps || []).some(r => r.comparable || r.referenceRegretPp != null)) {
+            console.error('Reference-gap tape contains a scored row');
+            process.exit(1);
+          }
+          console.log(`Verified ${o.n} states`);
+          console.log(`Reference-covered primary calls: ${o.comparableN} (${(100 * o.referenceCoverageRate).toFixed(1)}%)`);
+          console.log(`Clean exact-call agreement: ${(100 * o.exactAgreement).toFixed(1)}%`);
+          console.log(`Clean decision-safe rate: ${(100 * o.decisionSafeRate).toFixed(1)}%`);
+          console.log(`Reference gaps excluded from regret: ${o.referenceGapCount}`);
           NODE
 
       - name: Commit calibration output

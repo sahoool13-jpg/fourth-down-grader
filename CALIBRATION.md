@@ -1,53 +1,34 @@
-# v0.4 Historical Calibration
+# v0.4.1 Calibration Integrity
 
-This release adds a multi-season audit of the primary fourth-down model against nfl4th.
+v0.4.1 fixes an important validation bug in the v0.4 historical calibration.
 
-## Design
+## Root cause
 
-Default sample: 2021–2025.
+The JavaScript calibration helper previously used `Number(x)` to test reference values. In JavaScript, `Number(null) === 0`, so an nfl4th `NA` exported as JSON `null` was incorrectly treated as a real 0% win probability.
 
-- 2021–2024: development/diagnostic sample.
-- 2025: locked holdout season.
-- Only real fourth-down GO / FG / PUNT decisions are included.
-- No-play penalties, timeouts, and non-decision fourth-down states are excluded.
-- nfl4th probabilities are recomputed with `load_4th_pbp(..., fast = FALSE)`.
-- The current JavaScript engine receives the same pre-snap state.
+That produced fake ~100 percentage-point regret cases when nfl4th simply had not priced an option. The most visible examples involved punts in deep opponent territory. nfl4th's punt-data support is built only for `yardline_100 > 30`, so a missing punt reference there must remain unavailable rather than become `0.0`.
 
-## Headline metric: reference regret
+## Integrity rules
 
-Exact action agreement is useful but can exaggerate tiny differences.
+- `null`, `undefined`, and empty reference values are unavailable.
+- A genuine numeric `0` remains a valid 0% WP.
+- Reference regret is computed only if nfl4th priced the primary model's chosen action.
+- Unsupported primary choices are reported as **REFERENCE GAPS**, not model failures.
+- Clean split-rate, regret, exact-call, and decision-safe metrics use comparable rows only.
+- Full three-option coverage and primary-call coverage are displayed separately.
+- The latest completed season remains the holdout and is not a tuning target.
 
-The stronger metric is:
+## New outputs
 
-`nfl4th WP of nfl4th-optimal action - nfl4th WP of primary-model action`
+The calibration report now includes:
 
-A disagreement costing <= 0.75 percentage points is treated as decision-safe.
-A disagreement costing >= 2.0 percentage points is a strong split.
+- comparable row count and reference coverage rate
+- full 3-option reference coverage rate
+- reference-gap count
+- genuine numeric-zero count
+- clean exact-call agreement
+- clean decision-safe rate
+- clean strong-split rate
+- separate clean failure tape and reference-gap tape
 
-## Why a holdout season?
-
-Do not tune directly to every season and then celebrate the fit.
-
-The development sample is for diagnosing biases. The latest completed season is held out and reported separately. When model parameters change, the holdout result is the first check for whether the improvement generalizes.
-
-## Outputs
-
-GitHub Actions writes:
-
-- `public/calibration/report.json`
-- `public/calibration/splits.json`
-- `public/calibration/status.json`
-
-The webpage at `/calibration.html` reads these files directly from GitHub, so future calibration runs do not need a Render redeploy.
-
-## Run manually
-
-GitHub → Actions → `historical calibration` → Run workflow.
-
-Defaults:
-
-- start season: 2021
-- end season: 2025
-- holdout: 2025
-
-A full exact nfl4th run may take several minutes because probabilities are recomputed rather than copied.
+The workflow verifies that reference-gap rows never leak into the clean failure tape.
