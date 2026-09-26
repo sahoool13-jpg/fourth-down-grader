@@ -1,0 +1,4634 @@
+{
+  "schemaVersion": 1,
+  "productVersion": "v0.4",
+  "modelCore": "v0.3.2 anchored-counterfactual",
+  "generatedAt": "2026-09-26T13:23:52.289Z",
+  "methodology": {
+    "reference": "nfl4th",
+    "referenceFunction": "nfl4th::load_4th_pbp(fast = FALSE)",
+    "primary": "4TH DOWN anchored-counterfactual model",
+    "headlineMetric": "Reference regret: nfl4th optimal WP minus nfl4th WP of the primary model choice.",
+    "decisionSafeThresholdPp": 0.75,
+    "strongSplitThresholdPp": 2,
+    "holdoutSeason": 2025,
+    "note": "nfl4th is a validation reference, not ground truth. The holdout season is reported separately to discourage tuning to the full sample."
+  },
+  "referenceMetadata": {
+    "schema_version": 1,
+    "source": "nfl4th::load_4th_pbp(fast = FALSE)",
+    "nfl4th_version": "1.0.7",
+    "generated_at": "2026-09-26 13:23:49 UTC",
+    "start_season": 2021,
+    "end_season": 2025,
+    "holdout_season": 2025,
+    "seasons": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "rows": 19991,
+    "methodology": "Only real GO/FG/PUNT fourth-down decisions. No-play penalties and non-decision fourth-down states are excluded."
+  },
+  "rowsScored": 19991,
+  "rowsSkipped": 0,
+  "summary": {
+    "overall": {
+      "n": 19991,
+      "exactAgreement": 0.7424841178530339,
+      "decisionSafeRate": 0.8779450752838778,
+      "materialSplitRate": 0.12205492471612225,
+      "strongSplitRate": 0.04972237506878095,
+      "unsupportedPrimaryChoices": 0,
+      "meanReferenceRegretPp": 0.31827607478677955,
+      "medianReferenceRegretPp": 0,
+      "p90ReferenceRegretPp": 1.031317606000004,
+      "p95ReferenceRegretPp": 1.9956162470000038,
+      "worstReferenceRegretPp": 99.983770261,
+      "coachExactAgreement": 0.7197238757440848,
+      "meanCoachRegretPp": 0.3462970297603205,
+      "primaryActionDistribution": {
+        "GO": {
+          "count": 5426,
+          "share": 0.27142213996298337
+        },
+        "FG": {
+          "count": 6251,
+          "share": 0.31269071081986893
+        },
+        "PUNT": {
+          "count": 8314,
+          "share": 0.4158871492171477
+        }
+      },
+      "referenceActionDistribution": {
+        "GO": {
+          "count": 8017,
+          "share": 0.4010304637086689
+        },
+        "FG": {
+          "count": 4576,
+          "share": 0.2289030063528588
+        },
+        "PUNT": {
+          "count": 7398,
+          "share": 0.37006652993847233
+        }
+      },
+      "optionWpError": {
+        "GO": {
+          "n": 19991,
+          "maePp": 8.366455652433178,
+          "biasPp": -1.5586512149608356,
+          "rmsePp": 11.70765811878329,
+          "p90AbsPp": 20.157565628102063
+        },
+        "FG": {
+          "n": 9874,
+          "maePp": 8.272416058334379,
+          "biasPp": -1.0018644144857929,
+          "rmsePp": 11.647218333539644,
+          "p90AbsPp": 20.079083283578345
+        },
+        "PUNT": {
+          "n": 19991,
+          "maePp": 18.89446676994457,
+          "biasPp": 11.887290813093054,
+          "rmsePp": 30.9437172500575,
+          "p90AbsPp": 57.267630106331346
+        }
+      },
+      "pairwiseMarginError": {
+        "GO_FG": {
+          "n": 9874,
+          "maePp": 2.0265561069141738,
+          "biasPp": -0.716580439689138,
+          "rmsePp": 3.163707532258919
+        },
+        "GO_PUNT": {
+          "n": 19991,
+          "maePp": 14.202267020884442,
+          "biasPp": -13.44594202805386,
+          "rmsePp": 30.524265026035213
+        },
+        "FG_PUNT": {
+          "n": 9874,
+          "maePp": 27.867619865286823,
+          "biasPp": -26.489690275483383,
+          "rmsePp": 43.587459661057565
+        }
+      },
+      "certainty": {
+        "CLEAR": {
+          "n": 4111,
+          "exactAgreement": 0.9194843103867673,
+          "decisionSafeRate": 0.9523230357577231,
+          "meanReferenceRegretPp": 0.12368334460361456,
+          "p95ReferenceRegretPp": 0.6829194200500023
+        },
+        "LEAN": {
+          "n": 6554,
+          "exactAgreement": 0.7880683552029295,
+          "decisionSafeRate": 0.8756484589563626,
+          "meanReferenceRegretPp": 0.2863376439624917,
+          "p95ReferenceRegretPp": 1.989377148100001
+        },
+        "TOSS-UP": {
+          "n": 9326,
+          "exactAgreement": 0.6324254771606262,
+          "decisionSafeRate": 0.8467724640789192,
+          "meanReferenceRegretPp": 0.4264998780685057,
+          "p95ReferenceRegretPp": 2.3060552935000005
+        }
+      }
+    },
+    "development": {
+      "n": 16045,
+      "exactAgreement": 0.7416640698036772,
+      "decisionSafeRate": 0.879027734496728,
+      "materialSplitRate": 0.12097226550327204,
+      "strongSplitRate": 0.04848862574010595,
+      "unsupportedPrimaryChoices": 0,
+      "meanReferenceRegretPp": 0.31847536798590115,
+      "medianReferenceRegretPp": 0,
+      "p90ReferenceRegretPp": 1.012311039600006,
+      "p95ReferenceRegretPp": 1.972858066699998,
+      "worstReferenceRegretPp": 99.983770261,
+      "coachExactAgreement": 0.7160486132751636,
+      "meanCoachRegretPp": 0.3506344550881326,
+      "primaryActionDistribution": {
+        "GO": {
+          "count": 4290,
+          "share": 0.267373013399813
+        },
+        "FG": {
+          "count": 4983,
+          "share": 0.31056403864132126
+        },
+        "PUNT": {
+          "count": 6772,
+          "share": 0.4220629479588657
+        }
+      },
+      "referenceActionDistribution": {
+        "GO": {
+          "count": 6384,
+          "share": 0.39788095980056093
+        },
+        "FG": {
+          "count": 3634,
+          "share": 0.22648800249298848
+        },
+        "PUNT": {
+          "count": 6027,
+          "share": 0.3756310377064506
+        }
+      },
+      "optionWpError": {
+        "GO": {
+          "n": 16045,
+          "maePp": 8.31894038389747,
+          "biasPp": -1.5309577560030385,
+          "rmsePp": 11.656285623783274,
+          "p90AbsPp": 20.03997277799645
+        },
+        "FG": {
+          "n": 7855,
+          "maePp": 8.193854700795066,
+          "biasPp": -0.9792712745845328,
+          "rmsePp": 11.579875800734563,
+          "p90AbsPp": 19.900740710591084
+        },
+        "PUNT": {
+          "n": 16045,
+          "maePp": 18.800936007937256,
+          "biasPp": 11.789835719533759,
+          "rmsePp": 30.92943874648947,
+          "p90AbsPp": 58.04066275511171
+        }
+      },
+      "pairwiseMarginError": {
+        "GO_FG": {
+          "n": 7855,
+          "maePp": 2.0233447255542094,
+          "biasPp": -0.7069130992486797,
+          "rmsePp": 3.1754680619349323
+        },
+        "GO_PUNT": {
+          "n": 16045,
+          "maePp": 14.087981627188864,
+          "biasPp": -13.320793475536846,
+          "rmsePp": 30.452978686199245
+        },
+        "FG_PUNT": {
+          "n": 7855,
+          "maePp": 27.87716173620339,
+          "biasPp": -26.50529496395597,
+          "rmsePp": 43.68931568726461
+        }
+      },
+      "certainty": {
+        "CLEAR": {
+          "n": 3295,
+          "exactAgreement": 0.9189681335356601,
+          "decisionSafeRate": 0.9526555386949924,
+          "meanReferenceRegretPp": 0.12202189597152033,
+          "p95ReferenceRegretPp": 0.6902534205000017
+        },
+        "LEAN": {
+          "n": 5269,
+          "exactAgreement": 0.7868665780983108,
+          "decisionSafeRate": 0.8758777756690074,
+          "meanReferenceRegretPp": 0.28080402269910987,
+          "p95ReferenceRegretPp": 1.9148219751999924
+        },
+        "TOSS-UP": {
+          "n": 7481,
+          "exactAgreement": 0.6317337254377757,
+          "decisionSafeRate": 0.8488170030744553,
+          "meanReferenceRegretPp": 0.4315357220299438,
+          "p95ReferenceRegretPp": 2.2945882570000076
+        }
+      }
+    },
+    "holdout": {
+      "n": 3946,
+      "exactAgreement": 0.745818550430816,
+      "decisionSafeRate": 0.8735428281804359,
+      "materialSplitRate": 0.12645717181956412,
+      "strongSplitRate": 0.05473897617840851,
+      "unsupportedPrimaryChoices": 0,
+      "meanReferenceRegretPp": 0.31746572015426555,
+      "medianReferenceRegretPp": 0,
+      "p90ReferenceRegretPp": 1.107579892499999,
+      "p95ReferenceRegretPp": 2.1150958667500026,
+      "worstReferenceRegretPp": 15.239303678999999,
+      "coachExactAgreement": 0.7346680182463254,
+      "meanCoachRegretPp": 0.32866043843119064,
+      "primaryActionDistribution": {
+        "GO": {
+          "count": 1136,
+          "share": 0.287886467308667
+        },
+        "FG": {
+          "count": 1268,
+          "share": 0.32133806386213887
+        },
+        "PUNT": {
+          "count": 1542,
+          "share": 0.3907754688291941
+        }
+      },
+      "referenceActionDistribution": {
+        "GO": {
+          "count": 1633,
+          "share": 0.4138367967562088
+        },
+        "FG": {
+          "count": 942,
+          "share": 0.2387227572225038
+        },
+        "PUNT": {
+          "count": 1371,
+          "share": 0.3474404460212874
+        }
+      },
+      "optionWpError": {
+        "GO": {
+          "n": 3946,
+          "maePp": 8.559659525635054,
+          "biasPp": -1.671256777296852,
+          "rmsePp": 11.914264725167945,
+          "p90AbsPp": 20.601786812105292
+        },
+        "FG": {
+          "n": 2019,
+          "maePp": 8.578062152178529,
+          "biasPp": -1.0897639260877663,
+          "rmsePp": 11.905593891389833,
+          "p90AbsPp": 20.657122462704535
+        },
+        "PUNT": {
+          "n": 3946,
+          "maePp": 19.274776216576182,
+          "biasPp": 12.283557152717627,
+          "rmsePp": 31.001707951971337,
+          "p90AbsPp": 55.50326999056365
+        }
+      },
+      "pairwiseMarginError": {
+        "GO_FG": {
+          "n": 2019,
+          "maePp": 2.0390501141368276,
+          "biasPp": -0.7541916131214284,
+          "rmsePp": 3.1175306858581666
+        },
+        "GO_PUNT": {
+          "n": 3946,
+          "maePp": 14.66696776641056,
+          "biasPp": -13.95481393001453,
+          "rmsePp": 30.812426819068595
+        },
+        "FG_PUNT": {
+          "n": 2019,
+          "maePp": 27.83049683603995,
+          "biasPp": -26.428979612802703,
+          "rmsePp": 43.18889951790907
+        }
+      },
+      "certainty": {
+        "CLEAR": {
+          "n": 816,
+          "exactAgreement": 0.9215686274509803,
+          "decisionSafeRate": 0.9509803921568627,
+          "meanReferenceRegretPp": 0.13039225789129902,
+          "p95ReferenceRegretPp": 0.6711733045249957
+        },
+        "LEAN": {
+          "n": 1285,
+          "exactAgreement": 0.7929961089494163,
+          "decisionSafeRate": 0.8747081712062257,
+          "meanReferenceRegretPp": 0.30902764430238155,
+          "p95ReferenceRegretPp": 2.3093391313999994
+        },
+        "TOSS-UP": {
+          "n": 1845,
+          "exactAgreement": 0.635230352303523,
+          "decisionSafeRate": 0.8384823848238483,
+          "meanReferenceRegretPp": 0.40608082729586464,
+          "p95ReferenceRegretPp": 2.3749389631999986
+        }
+      }
+    },
+    "anchorComparison": {
+      "liveLike": {
+        "GO": {
+          "n": 19991,
+          "maePp": 8.366455652433178,
+          "biasPp": -1.5586512149608356,
+          "rmsePp": 11.70765811878329,
+          "p90AbsPp": 20.157565628102063
+        },
+        "FG": {
+          "n": 9874,
+          "maePp": 8.272416058334379,
+          "biasPp": -1.0018644144857929,
+          "rmsePp": 11.647218333539644,
+          "p90AbsPp": 20.079083283578345
+        },
+        "PUNT": {
+          "n": 19991,
+          "maePp": 18.89446676994457,
+          "biasPp": 11.887290813093054,
+          "rmsePp": 30.9437172500575,
+          "p90AbsPp": 57.267630106331346
+        }
+      },
+      "structural": {
+        "GO": {
+          "n": 19991,
+          "maePp": 9.989069336791239,
+          "biasPp": 1.1925444840866013,
+          "rmsePp": 12.911591320313402,
+          "p90AbsPp": 21.900567233754053
+        },
+        "FG": {
+          "n": 9874,
+          "maePp": 9.767838946638735,
+          "biasPp": 0.9759529559264127,
+          "rmsePp": 12.720234249251522,
+          "p90AbsPp": 21.599659989826034
+        },
+        "PUNT": {
+          "n": 19991,
+          "maePp": 20.425295630329227,
+          "biasPp": 14.44919734485313,
+          "rmsePp": 30.60592834994464,
+          "p90AbsPp": 52.69860168693015
+        }
+      },
+      "vegasAnchor": {
+        "GO": {
+          "n": 19991,
+          "maePp": 2.174548931586787,
+          "biasPp": -1.6391503428758545,
+          "rmsePp": 3.078996743221503,
+          "p90AbsPp": 4.970071092133887
+        },
+        "FG": {
+          "n": 9874,
+          "maePp": 2.212486832401207,
+          "biasPp": -0.7401113615962664,
+          "rmsePp": 3.368187080416929,
+          "p90AbsPp": 5.173648660702897
+        },
+        "PUNT": {
+          "n": 19991,
+          "maePp": 14.714646552267336,
+          "biasPp": 11.827406463950467,
+          "rmsePp": 30.372882842829533,
+          "p90AbsPp": 61.96274932055148
+        }
+      }
+    },
+    "buckets": {
+      "season": [
+        {
+          "bucket": "2021",
+          "n": 3916,
+          "exactAgreement": 0.7262512768130746,
+          "decisionSafeRate": 0.8723186925434117,
+          "materialSplitRate": 0.12768130745658834,
+          "strongSplitRate": 0.049284984678243104,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3570510318235953,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.076495230999999,
+          "p95ReferenceRegretPp": 1.994564462500003,
+          "worstReferenceRegretPp": 99.937246469,
+          "coachExactAgreement": 0.6871807967313586,
+          "meanCoachRegretPp": 0.3628803974968969,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1089,
+              "share": 0.27808988764044945
+            },
+            "FG": {
+              "count": 1201,
+              "share": 0.3066905005107252
+            },
+            "PUNT": {
+              "count": 1626,
+              "share": 0.41521961184882533
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1671,
+              "share": 0.4267109295199183
+            },
+            "FG": {
+              "count": 853,
+              "share": 0.21782431052093973
+            },
+            "PUNT": {
+              "count": 1392,
+              "share": 0.355464759959142
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3916,
+              "maePp": 9.225129849530452,
+              "biasPp": -1.5689795880485449,
+              "rmsePp": 12.916013736227109,
+              "p90AbsPp": 22.325595980475065
+            },
+            "FG": {
+              "n": 1939,
+              "maePp": 9.02641401388983,
+              "biasPp": -0.8101503339597174,
+              "rmsePp": 12.9258242652759,
+              "p90AbsPp": 22.810914762282927
+            },
+            "PUNT": {
+              "n": 3916,
+              "maePp": 20.177771652731266,
+              "biasPp": 12.624630693146903,
+              "rmsePp": 32.55918776910221,
+              "p90AbsPp": 61.90388262256386
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1939,
+              "maePp": 1.8767195581329408,
+              "biasPp": -0.8188544197492922,
+              "rmsePp": 2.861894699917083
+            },
+            "GO_PUNT": {
+              "n": 3916,
+              "maePp": 14.82266294181855,
+              "biasPp": -14.193610281195456,
+              "rmsePp": 31.838460296389584
+            },
+            "FG_PUNT": {
+              "n": 1939,
+              "maePp": 28.926432033084165,
+              "biasPp": -27.64498956817002,
+              "rmsePp": 45.27610194433086
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 758,
+              "exactAgreement": 0.920844327176781,
+              "decisionSafeRate": 0.9485488126649076,
+              "meanReferenceRegretPp": 0.1375734308424274,
+              "p95ReferenceRegretPp": 0.7791035140499972
+            },
+            "LEAN": {
+              "n": 1273,
+              "exactAgreement": 0.7784760408483896,
+              "decisionSafeRate": 0.8766692851531814,
+              "meanReferenceRegretPp": 0.26600132926168885,
+              "p95ReferenceRegretPp": 1.8003355415999989
+            },
+            "TOSS-UP": {
+              "n": 1885,
+              "exactAgreement": 0.6127320954907162,
+              "decisionSafeRate": 0.8387267904509284,
+              "meanReferenceRegretPp": 0.5067965453010665,
+              "p95ReferenceRegretPp": 2.3428460741999997
+            }
+          }
+        },
+        {
+          "bucket": "2022",
+          "n": 4010,
+          "exactAgreement": 0.7446384039900249,
+          "decisionSafeRate": 0.8770573566084788,
+          "materialSplitRate": 0.1229426433915212,
+          "strongSplitRate": 0.05012468827930175,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2952082693235272,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.9762266147999965,
+          "p95ReferenceRegretPp": 2.0060795813999954,
+          "worstReferenceRegretPp": 12.045684516,
+          "coachExactAgreement": 0.7119700748129676,
+          "meanCoachRegretPp": 0.38948782305689517,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1058,
+              "share": 0.2638403990024938
+            },
+            "FG": {
+              "count": 1224,
+              "share": 0.3052369077306733
+            },
+            "PUNT": {
+              "count": 1728,
+              "share": 0.4309226932668329
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1614,
+              "share": 0.4024937655860349
+            },
+            "FG": {
+              "count": 896,
+              "share": 0.22344139650872819
+            },
+            "PUNT": {
+              "count": 1500,
+              "share": 0.3740648379052369
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4010,
+              "maePp": 8.380759064889096,
+              "biasPp": -1.5463727803142036,
+              "rmsePp": 11.68400250456807,
+              "p90AbsPp": 20.068922265228558
+            },
+            "FG": {
+              "n": 1930,
+              "maePp": 8.107810350821369,
+              "biasPp": -0.9669322822850225,
+              "rmsePp": 11.377206968291791,
+              "p90AbsPp": 19.540937087875687
+            },
+            "PUNT": {
+              "n": 4010,
+              "maePp": 18.583056004052064,
+              "biasPp": 11.51204307687205,
+              "rmsePp": 30.26958613792024,
+              "p90AbsPp": 55.01994972384028
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1930,
+              "maePp": 2.0417717503003763,
+              "biasPp": -0.6811214903025419,
+              "rmsePp": 3.1669406757591436
+            },
+            "GO_PUNT": {
+              "n": 4010,
+              "maePp": 13.839292779200493,
+              "biasPp": -13.058415857186242,
+              "rmsePp": 29.77013603774115
+            },
+            "FG_PUNT": {
+              "n": 1930,
+              "maePp": 27.815752307938897,
+              "biasPp": -26.410220397340456,
+              "rmsePp": 43.119805547208095
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 868,
+              "exactAgreement": 0.923963133640553,
+              "decisionSafeRate": 0.9573732718894009,
+              "meanReferenceRegretPp": 0.10007404160853683,
+              "p95ReferenceRegretPp": 0.4979617478499989
+            },
+            "LEAN": {
+              "n": 1299,
+              "exactAgreement": 0.789838337182448,
+              "decisionSafeRate": 0.8768283294842186,
+              "meanReferenceRegretPp": 0.29401254790375675,
+              "p95ReferenceRegretPp": 2.04526572691
+            },
+            "TOSS-UP": {
+              "n": 1843,
+              "exactAgreement": 0.6283233857840478,
+              "decisionSafeRate": 0.839392295170917,
+              "meanReferenceRegretPp": 0.38795365824425115,
+              "p95ReferenceRegretPp": 2.324858960799993
+            }
+          }
+        },
+        {
+          "bucket": "2023",
+          "n": 4162,
+          "exactAgreement": 0.7542047092743873,
+          "decisionSafeRate": 0.8841902931283037,
+          "materialSplitRate": 0.1158097068716963,
+          "strongSplitRate": 0.04925516578567996,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3143724881891798,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.0266978741900004,
+          "p95ReferenceRegretPp": 1.9830016062000024,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.7333012974531475,
+          "meanCoachRegretPp": 0.3395073507813671,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1110,
+              "share": 0.26669870254685246
+            },
+            "FG": {
+              "count": 1260,
+              "share": 0.3027390677558866
+            },
+            "PUNT": {
+              "count": 1792,
+              "share": 0.43056222969726093
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1557,
+              "share": 0.37409899086977416
+            },
+            "FG": {
+              "count": 948,
+              "share": 0.22777510812109564
+            },
+            "PUNT": {
+              "count": 1657,
+              "share": 0.3981259010091302
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4162,
+              "maePp": 7.5602424887389805,
+              "biasPp": -1.4915084902763578,
+              "rmsePp": 10.768775457872039,
+              "p90AbsPp": 18.309670163063448
+            },
+            "FG": {
+              "n": 1986,
+              "maePp": 7.568256231625576,
+              "biasPp": -0.9493306402640665,
+              "rmsePp": 10.829109700342714,
+              "p90AbsPp": 18.542864800838473
+            },
+            "PUNT": {
+              "n": 4162,
+              "maePp": 17.712823647747413,
+              "biasPp": 11.160854407306868,
+              "rmsePp": 29.994241706857675,
+              "p90AbsPp": 54.42935030794664
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1986,
+              "maePp": 2.0793683530967892,
+              "biasPp": -0.617700573587087,
+              "rmsePp": 3.3951507126049814
+            },
+            "GO_PUNT": {
+              "n": 4162,
+              "maePp": 13.526663687001612,
+              "biasPp": -12.652362897583203,
+              "rmsePp": 29.77147119630715
+            },
+            "FG_PUNT": {
+              "n": 1986,
+              "maePp": 27.491859584350106,
+              "biasPp": -26.044146093753678,
+              "rmsePp": 43.343469157518804
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 844,
+              "exactAgreement": 0.9277251184834123,
+              "decisionSafeRate": 0.9561611374407583,
+              "meanReferenceRegretPp": 0.1139163262352962,
+              "p95ReferenceRegretPp": 0.5270931150999867
+            },
+            "LEAN": {
+              "n": 1397,
+              "exactAgreement": 0.7981388690050107,
+              "decisionSafeRate": 0.8768790264853257,
+              "meanReferenceRegretPp": 0.2711568235545456,
+              "p95ReferenceRegretPp": 1.9784968824000018
+            },
+            "TOSS-UP": {
+              "n": 1921,
+              "exactAgreement": 0.6460176991150443,
+              "decisionSafeRate": 0.8578865174388339,
+              "meanReferenceRegretPp": 0.43387133471893524,
+              "p95ReferenceRegretPp": 2.349241356999998
+            }
+          }
+        },
+        {
+          "bucket": "2024",
+          "n": 3957,
+          "exactAgreement": 0.7407126611068992,
+          "decisionSafeRate": 0.8822340156684357,
+          "materialSplitRate": 0.11776598433156432,
+          "strongSplitRate": 0.04523629011877685,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3081935766696667,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.9582434003999962,
+          "p95ReferenceRegretPp": 1.8730085073999956,
+          "worstReferenceRegretPp": 99.820169414,
+          "coachExactAgreement": 0.7306039929239323,
+          "meanCoachRegretPp": 0.3108451935509346,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1033,
+              "share": 0.26105635582512005
+            },
+            "FG": {
+              "count": 1298,
+              "share": 0.3280262825372757
+            },
+            "PUNT": {
+              "count": 1626,
+              "share": 0.41091736163760423
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1542,
+              "share": 0.38968915845337376
+            },
+            "FG": {
+              "count": 937,
+              "share": 0.23679555218599949
+            },
+            "PUNT": {
+              "count": 1478,
+              "share": 0.3735152893606267
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3957,
+              "maePp": 8.157497316284262,
+              "biasPp": -1.5192014007279826,
+              "rmsePp": 11.203270927587074,
+              "p90AbsPp": 19.018035095657865
+            },
+            "FG": {
+              "n": 2000,
+              "maePp": 8.090940524359699,
+              "biasPp": -1.184872203969523,
+              "rmsePp": 11.104597636217393,
+              "p90AbsPp": 18.816977231953253
+            },
+            "PUNT": {
+              "n": 3957,
+              "maePp": 18.80364868766305,
+              "biasPp": 11.906770670732307,
+              "rmsePp": 30.90440660032353,
+              "p90AbsPp": 58.21812302830023
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2000,
+              "maePp": 2.0920842843392897,
+              "biasPp": -0.7118629296383203,
+              "rmsePp": 3.246206512143887
+            },
+            "GO_PUNT": {
+              "n": 3957,
+              "maePp": 14.203330507502537,
+              "biasPp": -13.42597207146032,
+              "rmsePp": 30.44368490294218
+            },
+            "FG_PUNT": {
+              "n": 2000,
+              "maePp": 27.301759318442894,
+              "biasPp": -25.95002883006522,
+              "rmsePp": 43.005702745835066
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 825,
+              "exactAgreement": 0.9030303030303031,
+              "decisionSafeRate": 0.9478787878787879,
+              "meanReferenceRegretPp": 0.13911738083490913,
+              "p95ReferenceRegretPp": 0.8408013621999995
+            },
+            "LEAN": {
+              "n": 1300,
+              "exactAgreement": 0.78,
+              "decisionSafeRate": 0.8730769230769231,
+              "meanReferenceRegretPp": 0.2924679393990771,
+              "p95ReferenceRegretPp": 1.8662270861499979
+            },
+            "TOSS-UP": {
+              "n": 1832,
+              "exactAgreement": 0.6397379912663755,
+              "decisionSafeRate": 0.8591703056768559,
+              "meanReferenceRegretPp": 0.3954922611759117,
+              "p95ReferenceRegretPp": 2.0914531071999978
+            }
+          }
+        },
+        {
+          "bucket": "2025",
+          "n": 3946,
+          "exactAgreement": 0.745818550430816,
+          "decisionSafeRate": 0.8735428281804359,
+          "materialSplitRate": 0.12645717181956412,
+          "strongSplitRate": 0.05473897617840851,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.31746572015426555,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.107579892499999,
+          "p95ReferenceRegretPp": 2.1150958667500026,
+          "worstReferenceRegretPp": 15.239303678999999,
+          "coachExactAgreement": 0.7346680182463254,
+          "meanCoachRegretPp": 0.32866043843119064,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1136,
+              "share": 0.287886467308667
+            },
+            "FG": {
+              "count": 1268,
+              "share": 0.32133806386213887
+            },
+            "PUNT": {
+              "count": 1542,
+              "share": 0.3907754688291941
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1633,
+              "share": 0.4138367967562088
+            },
+            "FG": {
+              "count": 942,
+              "share": 0.2387227572225038
+            },
+            "PUNT": {
+              "count": 1371,
+              "share": 0.3474404460212874
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3946,
+              "maePp": 8.559659525635054,
+              "biasPp": -1.671256777296852,
+              "rmsePp": 11.914264725167945,
+              "p90AbsPp": 20.601786812105292
+            },
+            "FG": {
+              "n": 2019,
+              "maePp": 8.578062152178529,
+              "biasPp": -1.0897639260877663,
+              "rmsePp": 11.905593891389833,
+              "p90AbsPp": 20.657122462704535
+            },
+            "PUNT": {
+              "n": 3946,
+              "maePp": 19.274776216576182,
+              "biasPp": 12.283557152717627,
+              "rmsePp": 31.001707951971337,
+              "p90AbsPp": 55.50326999056365
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2019,
+              "maePp": 2.0390501141368276,
+              "biasPp": -0.7541916131214284,
+              "rmsePp": 3.1175306858581666
+            },
+            "GO_PUNT": {
+              "n": 3946,
+              "maePp": 14.66696776641056,
+              "biasPp": -13.95481393001453,
+              "rmsePp": 30.812426819068595
+            },
+            "FG_PUNT": {
+              "n": 2019,
+              "maePp": 27.83049683603995,
+              "biasPp": -26.428979612802703,
+              "rmsePp": 43.18889951790907
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 816,
+              "exactAgreement": 0.9215686274509803,
+              "decisionSafeRate": 0.9509803921568627,
+              "meanReferenceRegretPp": 0.13039225789129902,
+              "p95ReferenceRegretPp": 0.6711733045249957
+            },
+            "LEAN": {
+              "n": 1285,
+              "exactAgreement": 0.7929961089494163,
+              "decisionSafeRate": 0.8747081712062257,
+              "meanReferenceRegretPp": 0.30902764430238155,
+              "p95ReferenceRegretPp": 2.3093391313999994
+            },
+            "TOSS-UP": {
+              "n": 1845,
+              "exactAgreement": 0.635230352303523,
+              "decisionSafeRate": 0.8384823848238483,
+              "meanReferenceRegretPp": 0.40608082729586464,
+              "p95ReferenceRegretPp": 2.3749389631999986
+            }
+          }
+        }
+      ],
+      "quarter": [
+        {
+          "bucket": "Q1",
+          "n": 4329,
+          "exactAgreement": 0.7158697158697158,
+          "decisionSafeRate": 0.8327558327558328,
+          "materialSplitRate": 0.16724416724416724,
+          "strongSplitRate": 0.0723030723030723,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3918068197655812,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.4830176063999982,
+          "p95ReferenceRegretPp": 2.5103624425999898,
+          "worstReferenceRegretPp": 8.927348356000003,
+          "coachExactAgreement": 0.6863016863016863,
+          "meanCoachRegretPp": 0.3945785656966274,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 819,
+              "share": 0.1891891891891892
+            },
+            "FG": {
+              "count": 1365,
+              "share": 0.3153153153153153
+            },
+            "PUNT": {
+              "count": 2145,
+              "share": 0.4954954954954955
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1764,
+              "share": 0.4074844074844075
+            },
+            "FG": {
+              "count": 695,
+              "share": 0.16054516054516055
+            },
+            "PUNT": {
+              "count": 1870,
+              "share": 0.43197043197043195
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4329,
+              "maePp": 13.717991464190352,
+              "biasPp": -1.3131203644430518,
+              "rmsePp": 16.755537545801722,
+              "p90AbsPp": 27.205719728403345
+            },
+            "FG": {
+              "n": 1921,
+              "maePp": 13.994028713838967,
+              "biasPp": -0.005053409981878214,
+              "rmsePp": 17.064593702075392,
+              "p90AbsPp": 27.688235265437676
+            },
+            "PUNT": {
+              "n": 4329,
+              "maePp": 21.657683122522585,
+              "biasPp": 10.27880057530166,
+              "rmsePp": 28.23681433393767,
+              "p90AbsPp": 52.054921828902096
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1921,
+              "maePp": 2.2345179916178717,
+              "biasPp": -1.7327092950992138,
+              "rmsePp": 2.819554627811631
+            },
+            "GO_PUNT": {
+              "n": 4329,
+              "maePp": 12.517412731360638,
+              "biasPp": -11.59192093974468,
+              "rmsePp": 26.073503944325093
+            },
+            "FG_PUNT": {
+              "n": 1921,
+              "maePp": 26.603614367394044,
+              "biasPp": -24.71563895725284,
+              "rmsePp": 38.503099467254835
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 698,
+              "exactAgreement": 0.9627507163323782,
+              "decisionSafeRate": 0.9899713467048711,
+              "meanReferenceRegretPp": 0.01965904323638968,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 1883,
+              "exactAgreement": 0.7434944237918215,
+              "decisionSafeRate": 0.8385554965480616,
+              "meanReferenceRegretPp": 0.34051644194200736,
+              "p95ReferenceRegretPp": 2.2410627582
+            },
+            "TOSS-UP": {
+              "n": 1748,
+              "exactAgreement": 0.5875286041189931,
+              "decisionSafeRate": 0.7637299771167048,
+              "meanReferenceRegretPp": 0.5956620425683067,
+              "p95ReferenceRegretPp": 3.2561914495499975
+            }
+          }
+        },
+        {
+          "bucket": "Q2",
+          "n": 5636,
+          "exactAgreement": 0.7567423704755145,
+          "decisionSafeRate": 0.8795244854506742,
+          "materialSplitRate": 0.12047551454932576,
+          "strongSplitRate": 0.04382540809084457,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.27793355273759546,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.993555673999999,
+          "p95ReferenceRegretPp": 1.8617719907499983,
+          "worstReferenceRegretPp": 12.045684516,
+          "coachExactAgreement": 0.7519517388218595,
+          "meanCoachRegretPp": 0.28256620227333357,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1089,
+              "share": 0.193222143364088
+            },
+            "FG": {
+              "count": 2047,
+              "share": 0.36320085166784954
+            },
+            "PUNT": {
+              "count": 2500,
+              "share": 0.44357700496806246
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1907,
+              "share": 0.33836053938963806
+            },
+            "FG": {
+              "count": 1559,
+              "share": 0.27661462029808376
+            },
+            "PUNT": {
+              "count": 2170,
+              "share": 0.38502484031227824
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 5636,
+              "maePp": 10.3503451207486,
+              "biasPp": -1.4857662913682546,
+              "rmsePp": 13.071523408231181,
+              "p90AbsPp": 21.63146238294766
+            },
+            "FG": {
+              "n": 2899,
+              "maePp": 10.41454699080132,
+              "biasPp": -1.2018824931775907,
+              "rmsePp": 13.081613139858415,
+              "p90AbsPp": 21.642335355943246
+            },
+            "PUNT": {
+              "n": 5636,
+              "maePp": 21.35598554685245,
+              "biasPp": 13.055966646767928,
+              "rmsePp": 31.14878769263844,
+              "p90AbsPp": 59.40536771159658
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2899,
+              "maePp": 1.7770287256253747,
+              "biasPp": -0.31668277133350586,
+              "rmsePp": 2.411975095211202
+            },
+            "GO_PUNT": {
+              "n": 5636,
+              "maePp": 15.311106473597166,
+              "biasPp": -14.541732938136224,
+              "rmsePp": 30.72485465753844
+            },
+            "FG_PUNT": {
+              "n": 2899,
+              "maePp": 29.23666892166625,
+              "biasPp": -28.08592000261865,
+              "rmsePp": 43.19038425721123
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1030,
+              "exactAgreement": 0.9825242718446602,
+              "decisionSafeRate": 0.9951456310679612,
+              "meanReferenceRegretPp": 0.011729555911650471,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 2225,
+              "exactAgreement": 0.828314606741573,
+              "decisionSafeRate": 0.9186516853932585,
+              "meanReferenceRegretPp": 0.17034556176624713,
+              "p95ReferenceRegretPp": 1.2100893494000005
+            },
+            "TOSS-UP": {
+              "n": 2381,
+              "exactAgreement": 0.5921881562368753,
+              "decisionSafeRate": 0.7929441411171777,
+              "meanReferenceRegretPp": 0.49363006539697224,
+              "p95ReferenceRegretPp": 2.498491424999999
+            }
+          }
+        },
+        {
+          "bucket": "Q3",
+          "n": 4331,
+          "exactAgreement": 0.7437081505425999,
+          "decisionSafeRate": 0.88894019856846,
+          "materialSplitRate": 0.11105980143154005,
+          "strongSplitRate": 0.03855922419764488,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.29883584175979283,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.883697891999996,
+          "p95ReferenceRegretPp": 1.6934435950000006,
+          "worstReferenceRegretPp": 99.820169414,
+          "coachExactAgreement": 0.7049180327868853,
+          "meanCoachRegretPp": 0.3325727624819581,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1018,
+              "share": 0.235049642114985
+            },
+            "FG": {
+              "count": 1242,
+              "share": 0.2867697991226045
+            },
+            "PUNT": {
+              "count": 2071,
+              "share": 0.4781805587624105
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1656,
+              "share": 0.38235973216347263
+            },
+            "FG": {
+              "count": 977,
+              "share": 0.22558300623412605
+            },
+            "PUNT": {
+              "count": 1698,
+              "share": 0.3920572616024013
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4331,
+              "maePp": 6.81608482082793,
+              "biasPp": -1.8884217359660371,
+              "rmsePp": 9.236230158965618,
+              "p90AbsPp": 15.971367944333647
+            },
+            "FG": {
+              "n": 1966,
+              "maePp": 6.58794679493635,
+              "biasPp": -1.4701122267814641,
+              "rmsePp": 8.912809477751493,
+              "p90AbsPp": 15.63789659322207
+            },
+            "PUNT": {
+              "n": 4331,
+              "maePp": 16.51799787674828,
+              "biasPp": 10.281265662001166,
+              "rmsePp": 29.09021084231335,
+              "p90AbsPp": 55.37739128068739
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1966,
+              "maePp": 1.79481864622679,
+              "biasPp": -0.5812084443188072,
+              "rmsePp": 2.5602745311143
+            },
+            "GO_PUNT": {
+              "n": 4331,
+              "maePp": 12.85908284020703,
+              "biasPp": -12.169687397967268,
+              "rmsePp": 29.08124530538916
+            },
+            "FG_PUNT": {
+              "n": 1966,
+              "maePp": 27.32673686824793,
+              "biasPp": -26.12052261773141,
+              "rmsePp": 43.417963346352174
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 854,
+              "exactAgreement": 0.9426229508196722,
+              "decisionSafeRate": 0.9672131147540983,
+              "meanReferenceRegretPp": 0.06902798813536298,
+              "p95ReferenceRegretPp": 0.3396518917499963
+            },
+            "LEAN": {
+              "n": 1359,
+              "exactAgreement": 0.8005886681383371,
+              "decisionSafeRate": 0.8852097130242825,
+              "meanReferenceRegretPp": 0.25601982560721115,
+              "p95ReferenceRegretPp": 1.8008768448000032
+            },
+            "TOSS-UP": {
+              "n": 2118,
+              "exactAgreement": 0.6270066100094429,
+              "decisionSafeRate": 0.8597733711048159,
+              "meanReferenceRegretPp": 0.41896939839181374,
+              "p95ReferenceRegretPp": 1.950146697850001
+            }
+          }
+        },
+        {
+          "bucket": "Q4",
+          "n": 5695,
+          "exactAgreement": 0.7476733977172959,
+          "decisionSafeRate": 0.9023705004389816,
+          "materialSplitRate": 0.09762949956101843,
+          "strongSplitRate": 0.04688323090430202,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.31709108944803505,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.6825580650000043,
+          "p95ReferenceRegretPp": 1.8583165794000034,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.7244951712028095,
+          "meanCoachRegretPp": 0.3831040492916584,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 2500,
+              "share": 0.43898156277436345
+            },
+            "FG": {
+              "count": 1597,
+              "share": 0.2804214223002634
+            },
+            "PUNT": {
+              "count": 1598,
+              "share": 0.28059701492537314
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2690,
+              "share": 0.4723441615452151
+            },
+            "FG": {
+              "count": 1345,
+              "share": 0.23617208077260754
+            },
+            "PUNT": {
+              "count": 1660,
+              "share": 0.2914837576821773
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 5695,
+              "maePp": 3.5142443265612107,
+              "biasPp": -1.5666312596993608,
+              "rmsePp": 5.811359773407501,
+              "p90AbsPp": 9.875106678002604
+            },
+            "FG": {
+              "n": 3088,
+              "maePp": 3.7744921876721014,
+              "biasPp": -1.1360763090943282,
+              "rmsePp": 6.433470946347118,
+              "p90AbsPp": 11.130332363375162
+            },
+            "PUNT": {
+              "n": 5695,
+              "maePp": 16.165301424812014,
+              "biasPp": 13.17476968406509,
+              "rmsePp": 33.9309009432267,
+              "p90AbsPp": 82.97151489378982
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 3088,
+              "maePp": 2.27897869290893,
+              "biasPp": -0.5460691547857324,
+              "rmsePp": 4.174200058077804
+            },
+            "GO_PUNT": {
+              "n": 5695,
+              "maePp": 15.407121410765418,
+              "biasPp": -14.741400943764432,
+              "rmsePp": 34.29963891698629
+            },
+            "FG_PUNT": {
+              "n": 3088,
+              "maePp": 27.713039981603693,
+              "biasPp": -26.329802392871887,
+              "rmsePp": 46.91746664218682
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1529,
+              "exactAgreement": 0.8443427076520602,
+              "decisionSafeRate": 0.8979725310660562,
+              "meanReferenceRegretPp": 0.27711502487237394,
+              "p95ReferenceRegretPp": 2.034114262999999
+            },
+            "LEAN": {
+              "n": 1087,
+              "exactAgreement": 0.7672493100275989,
+              "decisionSafeRate": 0.8399264029438822,
+              "meanReferenceRegretPp": 0.46781475659914434,
+              "p95ReferenceRegretPp": 3.100033609500003
+            },
+            "TOSS-UP": {
+              "n": 3079,
+              "exactAgreement": 0.6927573887625853,
+              "decisionSafeRate": 0.9265995453069178,
+              "meanReferenceRegretPp": 0.28373180933856085,
+              "p95ReferenceRegretPp": 1.3067056985899927
+            }
+          }
+        }
+      ],
+      "distance": [
+        {
+          "bucket": "1",
+          "n": 2340,
+          "exactAgreement": 0.7816239316239316,
+          "decisionSafeRate": 0.8538461538461538,
+          "materialSplitRate": 0.14615384615384616,
+          "strongSplitRate": 0.09102564102564102,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.4571113649615079,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.7576375436999971,
+          "p95ReferenceRegretPp": 3.212096815549991,
+          "worstReferenceRegretPp": 19.729450737999997,
+          "coachExactAgreement": 0.6829059829059829,
+          "meanCoachRegretPp": 0.6315648768403493,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1914,
+              "share": 0.8179487179487179
+            },
+            "FG": {
+              "count": 399,
+              "share": 0.17051282051282052
+            },
+            "PUNT": {
+              "count": 27,
+              "share": 0.011538461538461539
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2161,
+              "share": 0.9235042735042736
+            },
+            "FG": {
+              "count": 149,
+              "share": 0.06367521367521367
+            },
+            "PUNT": {
+              "count": 30,
+              "share": 0.01282051282051282
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 2340,
+              "maePp": 8.659784443355115,
+              "biasPp": -1.9592219382623735,
+              "rmsePp": 11.933284176356791,
+              "p90AbsPp": 20.51272694007733
+            },
+            "FG": {
+              "n": 1392,
+              "maePp": 8.409660614823988,
+              "biasPp": 0.2247842868518697,
+              "rmsePp": 11.68421914060608,
+              "p90AbsPp": 20.179818560739303
+            },
+            "PUNT": {
+              "n": 2340,
+              "maePp": 22.775404334816187,
+              "biasPp": 17.199435038655704,
+              "rmsePp": 35.647743651879544,
+              "p90AbsPp": 70.24811207529969
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1392,
+              "maePp": 2.791980518142915,
+              "biasPp": -2.199605787330589,
+              "rmsePp": 4.090823453617564
+            },
+            "GO_PUNT": {
+              "n": 2340,
+              "maePp": 19.238157118192653,
+              "biasPp": -19.158656976918092,
+              "rmsePp": 35.61001059289187
+            },
+            "FG_PUNT": {
+              "n": 1392,
+              "maePp": 30.071788469210922,
+              "biasPp": -28.761057183598297,
+              "rmsePp": 45.54591412954886
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 389,
+              "exactAgreement": 0.897172236503856,
+              "decisionSafeRate": 0.9280205655526992,
+              "meanReferenceRegretPp": 0.1956874113971723,
+              "p95ReferenceRegretPp": 1.3561008882000087
+            },
+            "LEAN": {
+              "n": 471,
+              "exactAgreement": 0.921443736730361,
+              "decisionSafeRate": 0.9426751592356688,
+              "meanReferenceRegretPp": 0.1469208167231635,
+              "p95ReferenceRegretPp": 1.0739426095000004
+            },
+            "TOSS-UP": {
+              "n": 1480,
+              "exactAgreement": 0.7067567567567568,
+              "decisionSafeRate": 0.8060810810810811,
+              "meanReferenceRegretPp": 0.6245395177701473,
+              "p95ReferenceRegretPp": 3.983892171050003
+            }
+          }
+        },
+        {
+          "bucket": "2-3",
+          "n": 3089,
+          "exactAgreement": 0.5487212690191,
+          "decisionSafeRate": 0.7497572029783102,
+          "materialSplitRate": 0.2502427970216899,
+          "strongSplitRate": 0.09679507931369376,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.6034277623755168,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.9560492310000017,
+          "p95ReferenceRegretPp": 2.873455076,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.4904499838135319,
+          "meanCoachRegretPp": 0.7147021085336646,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1297,
+              "share": 0.4198769828423438
+            },
+            "FG": {
+              "count": 954,
+              "share": 0.3088378115895112
+            },
+            "PUNT": {
+              "count": 838,
+              "share": 0.271285205568145
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2274,
+              "share": 0.7361605697636776
+            },
+            "FG": {
+              "count": 506,
+              "share": 0.16380705730009712
+            },
+            "PUNT": {
+              "count": 309,
+              "share": 0.10003237293622531
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3089,
+              "maePp": 8.482179735830053,
+              "biasPp": -1.7559959613793392,
+              "rmsePp": 11.884894737951626,
+              "p90AbsPp": 20.558489326413362
+            },
+            "FG": {
+              "n": 1750,
+              "maePp": 8.304484939278751,
+              "biasPp": -0.5617696457902634,
+              "rmsePp": 11.7827130647295,
+              "p90AbsPp": 19.93521870090371
+            },
+            "PUNT": {
+              "n": 3089,
+              "maePp": 21.89697190171388,
+              "biasPp": 16.14071175278326,
+              "rmsePp": 34.7475154748885,
+              "p90AbsPp": 66.26596416591647
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1750,
+              "maePp": 2.2548144067103912,
+              "biasPp": -1.2603375897620412,
+              "rmsePp": 3.3231821908589168
+            },
+            "GO_PUNT": {
+              "n": 3089,
+              "maePp": 18.02903409385365,
+              "biasPp": -17.89670771416264,
+              "rmsePp": 34.80775330025022
+            },
+            "FG_PUNT": {
+              "n": 1750,
+              "maePp": 30.753417715110654,
+              "biasPp": -29.57133614427547,
+              "rmsePp": 46.151190046575245
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 314,
+              "exactAgreement": 0.7197452229299363,
+              "decisionSafeRate": 0.8152866242038217,
+              "meanReferenceRegretPp": 0.5012295545433119,
+              "p95ReferenceRegretPp": 3.1242420828000057
+            },
+            "LEAN": {
+              "n": 771,
+              "exactAgreement": 0.4708171206225681,
+              "decisionSafeRate": 0.6446173800259404,
+              "meanReferenceRegretPp": 0.8200076618972758,
+              "p95ReferenceRegretPp": 3.3069913780000015
+            },
+            "TOSS-UP": {
+              "n": 2004,
+              "exactAgreement": 0.5518962075848304,
+              "decisionSafeRate": 0.7799401197604791,
+              "meanReferenceRegretPp": 0.5361159533575701,
+              "p95ReferenceRegretPp": 2.441883903549999
+            }
+          }
+        },
+        {
+          "bucket": "4-6",
+          "n": 4493,
+          "exactAgreement": 0.6361006009347875,
+          "decisionSafeRate": 0.8379701758290674,
+          "materialSplitRate": 0.16202982417093256,
+          "strongSplitRate": 0.05541954150901402,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3853926495624309,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.271353700899997,
+          "p95ReferenceRegretPp": 2.1065019772000046,
+          "worstReferenceRegretPp": 99.937246469,
+          "coachExactAgreement": 0.60093478744714,
+          "meanCoachRegretPp": 0.4440662668119238,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1270,
+              "share": 0.28266191853995104
+            },
+            "FG": {
+              "count": 1483,
+              "share": 0.3300689962163365
+            },
+            "PUNT": {
+              "count": 1740,
+              "share": 0.38726908524371245
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2127,
+              "share": 0.4734030714444692
+            },
+            "FG": {
+              "count": 1139,
+              "share": 0.253505452926775
+            },
+            "PUNT": {
+              "count": 1227,
+              "share": 0.27309147562875585
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4493,
+              "maePp": 8.501221842412592,
+              "biasPp": -1.9064045425536664,
+              "rmsePp": 11.8879675768327,
+              "p90AbsPp": 20.456810192391508
+            },
+            "FG": {
+              "n": 2387,
+              "maePp": 8.139842147514882,
+              "biasPp": -1.3483144272510248,
+              "rmsePp": 11.563255270897509,
+              "p90AbsPp": 19.837132520544394
+            },
+            "PUNT": {
+              "n": 4493,
+              "maePp": 20.70103001436276,
+              "biasPp": 13.960630327538036,
+              "rmsePp": 33.013517095722925,
+              "p90AbsPp": 62.69911201832274
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2387,
+              "maePp": 1.9331888039292335,
+              "biasPp": -0.7563873630694036,
+              "rmsePp": 2.879129606481153
+            },
+            "GO_PUNT": {
+              "n": 4493,
+              "maePp": 16.198892855144397,
+              "biasPp": -15.867034870091686,
+              "rmsePp": 32.974640547122526
+            },
+            "FG_PUNT": {
+              "n": 2387,
+              "maePp": 29.964198774083226,
+              "biasPp": -28.76628878916129,
+              "rmsePp": 45.393146609498075
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 328,
+              "exactAgreement": 0.7225609756097561,
+              "decisionSafeRate": 0.8292682926829268,
+              "meanReferenceRegretPp": 0.4389784093362804,
+              "p95ReferenceRegretPp": 2.8529471277500007
+            },
+            "LEAN": {
+              "n": 1645,
+              "exactAgreement": 0.6620060790273556,
+              "decisionSafeRate": 0.8018237082066869,
+              "meanReferenceRegretPp": 0.4361320825998781,
+              "p95ReferenceRegretPp": 2.3579434105999986
+            },
+            "TOSS-UP": {
+              "n": 2520,
+              "exactAgreement": 0.6079365079365079,
+              "decisionSafeRate": 0.8626984126984127,
+              "meanReferenceRegretPp": 0.345296420771787,
+              "p95ReferenceRegretPp": 1.732245720424995
+            }
+          }
+        },
+        {
+          "bucket": "7-10",
+          "n": 5048,
+          "exactAgreement": 0.7973454833597464,
+          "decisionSafeRate": 0.919770206022187,
+          "materialSplitRate": 0.08022979397781299,
+          "strongSplitRate": 0.030507131537242473,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2152808649827403,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.45634832159999983,
+          "p95ReferenceRegretPp": 1.40849872719999,
+          "worstReferenceRegretPp": 99.820169414,
+          "coachExactAgreement": 0.7943740095087163,
+          "meanCoachRegretPp": 0.17168063280569684,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 658,
+              "share": 0.1303486529318542
+            },
+            "FG": {
+              "count": 1869,
+              "share": 0.37024564183835185
+            },
+            "PUNT": {
+              "count": 2521,
+              "share": 0.499405705229794
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1141,
+              "share": 0.22603011093502376
+            },
+            "FG": {
+              "count": 1471,
+              "share": 0.2914025356576862
+            },
+            "PUNT": {
+              "count": 2436,
+              "share": 0.48256735340729
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 5048,
+              "maePp": 8.345622839282997,
+              "biasPp": -1.309706768293468,
+              "rmsePp": 11.645911693095076,
+              "p90AbsPp": 20.03784111373428
+            },
+            "FG": {
+              "n": 2427,
+              "maePp": 8.28592140181007,
+              "biasPp": -1.1942965803881873,
+              "rmsePp": 11.651908173375485,
+              "p90AbsPp": 19.98019574577604
+            },
+            "PUNT": {
+              "n": 5048,
+              "maePp": 18.15404711306009,
+              "biasPp": 10.872082894687502,
+              "rmsePp": 29.925833082027903,
+              "p90AbsPp": 54.41173058772553
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2427,
+              "maePp": 1.810368250276181,
+              "biasPp": -0.3136886942236761,
+              "rmsePp": 2.9562176008125483
+            },
+            "GO_PUNT": {
+              "n": 5048,
+              "maePp": 12.993056904143993,
+              "biasPp": -12.181789662980973,
+              "rmsePp": 29.210493762048223
+            },
+            "FG_PUNT": {
+              "n": 2427,
+              "maePp": 26.852229594386177,
+              "biasPp": -25.321889841032917,
+              "rmsePp": 42.59625446629247
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 888,
+              "exactAgreement": 0.9177927927927928,
+              "decisionSafeRate": 0.9605855855855856,
+              "meanReferenceRegretPp": 0.10107525784943695,
+              "p95ReferenceRegretPp": 0.4992815152500057
+            },
+            "LEAN": {
+              "n": 2110,
+              "exactAgreement": 0.8753554502369668,
+              "decisionSafeRate": 0.9412322274881516,
+              "meanReferenceRegretPp": 0.13779411071287204,
+              "p95ReferenceRegretPp": 0.9077644412000012
+            },
+            "TOSS-UP": {
+              "n": 2050,
+              "exactAgreement": 0.6648780487804878,
+              "decisionSafeRate": 0.88,
+              "meanReferenceRegretPp": 0.3445060506626405,
+              "p95ReferenceRegretPp": 1.9674988482499998
+            }
+          }
+        },
+        {
+          "bucket": "11+",
+          "n": 5021,
+          "exactAgreement": 0.8834893447520414,
+          "decisionSafeRate": 0.9617606054570803,
+          "materialSplitRate": 0.03823939454291974,
+          "strongSplitRate": 0.015733917546305518,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.12163335553828641,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.0035547215480000002,
+          "p95ReferenceRegretPp": 0.3861442419999972,
+          "worstReferenceRegretPp": 97.508200919,
+          "coachExactAgreement": 0.9091814379605656,
+          "meanCoachRegretPp": 0.07476871652709238,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 287,
+              "share": 0.057159928301135234
+            },
+            "FG": {
+              "count": 1546,
+              "share": 0.30790679147580163
+            },
+            "PUNT": {
+              "count": 3188,
+              "share": 0.6349332802230632
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 314,
+              "share": 0.06253734315873331
+            },
+            "FG": {
+              "count": 1311,
+              "share": 0.26110336586337385
+            },
+            "PUNT": {
+              "count": 3396,
+              "share": 0.6763592909778928
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 5021,
+              "maePp": 8.058907053515373,
+              "biasPp": -1.189657478989934,
+              "rmsePp": 11.386549703461066,
+              "p90AbsPp": 19.63733115913197
+            },
+            "FG": {
+              "n": 1918,
+              "maePp": 8.291452289942663,
+              "biasPp": -1.618992563788937,
+              "rmsePp": 11.594036948646751,
+              "p90AbsPp": 20.351637117199633
+            },
+            "PUNT": {
+              "n": 5021,
+              "maePp": 14.366408119665005,
+              "biasPp": 5.960188714544922,
+              "rmsePp": 24.528192766204743,
+              "p90AbsPp": 39.595774077241174
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1918,
+              "maePp": 1.6525377936773,
+              "biasPp": 0.395592217458157,
+              "rmsePp": 2.816176095015247
+            },
+            "GO_PUNT": {
+              "n": 5021,
+              "maePp": 8.930087470968392,
+              "biasPp": -7.149846193534855,
+              "rmsePp": 23.291185480078333
+            },
+            "FG_PUNT": {
+              "n": 1918,
+              "maePp": 22.310513190795053,
+              "biasPp": -20.673938448465428,
+              "rmsePp": 38.35881680449012
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 2192,
+              "exactAgreement": 0.9822080291970803,
+              "decisionSafeRate": 0.9913321167883211,
+              "meanReferenceRegretPp": 0.018802006967499986,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 1557,
+              "exactAgreement": 0.9197174052665382,
+              "decisionSafeRate": 0.9588953114964676,
+              "meanReferenceRegretPp": 0.10728866862543354,
+              "p95ReferenceRegretPp": 0.5596901385999934
+            },
+            "TOSS-UP": {
+              "n": 1272,
+              "exactAgreement": 0.6690251572327044,
+              "decisionSafeRate": 0.914308176100629,
+              "meanReferenceRegretPp": 0.31639828760627026,
+              "p95ReferenceRegretPp": 1.7072364893999983
+            }
+          }
+        }
+      ],
+      "fieldPosition": [
+        {
+          "bucket": "Midfield band",
+          "n": 4601,
+          "exactAgreement": 0.7022386437730928,
+          "decisionSafeRate": 0.8441643121060639,
+          "materialSplitRate": 0.1558356878939361,
+          "strongSplitRate": 0.07085416213866551,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3891057166181644,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.4199273070000018,
+          "p95ReferenceRegretPp": 2.5148646349999915,
+          "worstReferenceRegretPp": 9.154815807000006,
+          "coachExactAgreement": 0.6509454466420344,
+          "meanCoachRegretPp": 0.44196733432158253,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1854,
+              "share": 0.40295587915670505
+            },
+            "FG": {
+              "count": 928,
+              "share": 0.2016952836339926
+            },
+            "PUNT": {
+              "count": 1819,
+              "share": 0.3953488372093023
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2445,
+              "share": 0.5314062160399913
+            },
+            "FG": {
+              "count": 233,
+              "share": 0.05064116496413823
+            },
+            "PUNT": {
+              "count": 1923,
+              "share": 0.41795261899587044
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4601,
+              "maePp": 8.527895470104058,
+              "biasPp": -1.784697309639732,
+              "rmsePp": 11.940164126055567,
+              "p90AbsPp": 20.679634247917413
+            },
+            "FG": {
+              "n": 2457,
+              "maePp": 8.292854758683124,
+              "biasPp": 0.7054901531774683,
+              "rmsePp": 11.767938149114336,
+              "p90AbsPp": 20.528050897852722
+            },
+            "PUNT": {
+              "n": 4601,
+              "maePp": 8.251826653177437,
+              "biasPp": -1.4334292847712324,
+              "rmsePp": 11.619166379707838,
+              "p90AbsPp": 19.976164520566254
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2457,
+              "maePp": 2.6864059962699085,
+              "biasPp": -2.5569144238570862,
+              "rmsePp": 3.6154422175807692
+            },
+            "GO_PUNT": {
+              "n": 4601,
+              "maePp": 1.2963147627033804,
+              "biasPp": -0.35126802486849995,
+              "rmsePp": 2.172208481176983
+            },
+            "FG_PUNT": {
+              "n": 2457,
+              "maePp": 2.3256381116081637,
+              "biasPp": 2.0418042355098316,
+              "rmsePp": 3.168759692096975
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 255,
+              "exactAgreement": 0.8431372549019608,
+              "decisionSafeRate": 0.8941176470588236,
+              "meanReferenceRegretPp": 0.26944116926627454,
+              "p95ReferenceRegretPp": 2.3463392291000043
+            },
+            "LEAN": {
+              "n": 1177,
+              "exactAgreement": 0.7790994052676296,
+              "decisionSafeRate": 0.8555649957519117,
+              "meanReferenceRegretPp": 0.3494147177120644,
+              "p95ReferenceRegretPp": 2.3518559804000025
+            },
+            "TOSS-UP": {
+              "n": 3169,
+              "exactAgreement": 0.6623540549069107,
+              "decisionSafeRate": 0.8359103818239192,
+              "meanReferenceRegretPp": 0.4134764219785974,
+              "p95ReferenceRegretPp": 2.596469753160002
+            }
+          }
+        },
+        {
+          "bucket": "Opponent 40-21",
+          "n": 3926,
+          "exactAgreement": 0.6698930208863983,
+          "decisionSafeRate": 0.8239938869077942,
+          "materialSplitRate": 0.17600611309220582,
+          "strongSplitRate": 0.08609271523178808,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.5335245057693717,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.7037432815000044,
+          "p95ReferenceRegretPp": 2.8221310562499964,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.7241467142129394,
+          "meanCoachRegretPp": 0.3546468884360531,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 494,
+              "share": 0.12582781456953643
+            },
+            "FG": {
+              "count": 3423,
+              "share": 0.8718797758532858
+            },
+            "PUNT": {
+              "count": 9,
+              "share": 0.002292409577177789
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1456,
+              "share": 0.3708609271523179
+            },
+            "FG": {
+              "count": 2387,
+              "share": 0.6079979623025981
+            },
+            "PUNT": {
+              "count": 83,
+              "share": 0.021141110545084055
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3926,
+              "maePp": 8.172020375979185,
+              "biasPp": -1.7861786827628652,
+              "rmsePp": 11.484071685495664,
+              "p90AbsPp": 19.632260653347643
+            },
+            "FG": {
+              "n": 3926,
+              "maePp": 8.131954532282109,
+              "biasPp": -1.3308166941825028,
+              "rmsePp": 11.439863962453234,
+              "p90AbsPp": 19.649923942733555
+            },
+            "PUNT": {
+              "n": 3926,
+              "maePp": 27.318057605999726,
+              "biasPp": 22.808772401086316,
+              "rmsePp": 40.479904468500195,
+              "p90AbsPp": 78.40465679812098
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 3926,
+              "maePp": 1.7301111314485635,
+              "biasPp": -0.45536198858035715,
+              "rmsePp": 2.822267346786492
+            },
+            "GO_PUNT": {
+              "n": 3926,
+              "maePp": 24.84626075920555,
+              "biasPp": -24.59495108384922,
+              "rmsePp": 41.31459670374868
+            },
+            "FG_PUNT": {
+              "n": 3926,
+              "maePp": 24.766606090774243,
+              "biasPp": -24.139589095268835,
+              "rmsePp": 41.25529954177887
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1077,
+              "exactAgreement": 0.8867223769730733,
+              "decisionSafeRate": 0.9377901578458682,
+              "meanReferenceRegretPp": 0.13257516213259046,
+              "p95ReferenceRegretPp": 1.0150448130999992
+            },
+            "LEAN": {
+              "n": 1542,
+              "exactAgreement": 0.6329442282749675,
+              "decisionSafeRate": 0.7840466926070039,
+              "meanReferenceRegretPp": 0.48456425565529826,
+              "p95ReferenceRegretPp": 2.6145841137499986
+            },
+            "TOSS-UP": {
+              "n": 1307,
+              "exactAgreement": 0.5348125478194338,
+              "decisionSafeRate": 0.7773527161438408,
+              "meanReferenceRegretPp": 0.9216799371180429,
+              "p95ReferenceRegretPp": 4.136801981199996
+            }
+          }
+        },
+        {
+          "bucket": "Own 1-20",
+          "n": 1908,
+          "exactAgreement": 0.8301886792452831,
+          "decisionSafeRate": 0.9344863731656184,
+          "materialSplitRate": 0.06551362683438156,
+          "strongSplitRate": 0.018867924528301886,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.15030231915003428,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.26417024809999906,
+          "p95ReferenceRegretPp": 1.101975396449996,
+          "worstReferenceRegretPp": 11.211076929000003,
+          "coachExactAgreement": 0.7919287211740041,
+          "meanCoachRegretPp": 0.263883973187877,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 220,
+              "share": 0.11530398322851153
+            },
+            "FG": {
+              "count": 0,
+              "share": 0
+            },
+            "PUNT": {
+              "count": 1688,
+              "share": 0.8846960167714885
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 450,
+              "share": 0.2358490566037736
+            },
+            "FG": {
+              "count": 0,
+              "share": 0
+            },
+            "PUNT": {
+              "count": 1458,
+              "share": 0.7641509433962265
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 1908,
+              "maePp": 8.337529126003542,
+              "biasPp": -1.9172734701734264,
+              "rmsePp": 11.79292493040507,
+              "p90AbsPp": 19.94954516075986
+            },
+            "FG": {
+              "n": 0,
+              "maePp": null,
+              "biasPp": null,
+              "rmsePp": null,
+              "p90AbsPp": null
+            },
+            "PUNT": {
+              "n": 1908,
+              "maePp": 8.283804626196444,
+              "biasPp": -1.5873810425727728,
+              "rmsePp": 11.697115668525077,
+              "p90AbsPp": 19.670175008886783
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 0,
+              "maePp": null,
+              "biasPp": null,
+              "rmsePp": null
+            },
+            "GO_PUNT": {
+              "n": 1908,
+              "maePp": 1.1666933364963983,
+              "biasPp": -0.32989242760065657,
+              "rmsePp": 1.6433548250206655
+            },
+            "FG_PUNT": {
+              "n": 0,
+              "maePp": null,
+              "biasPp": null,
+              "rmsePp": null
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 899,
+              "exactAgreement": 0.9733036707452726,
+              "decisionSafeRate": 0.985539488320356,
+              "meanReferenceRegretPp": 0.037872309776373715,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 506,
+              "exactAgreement": 0.7628458498023716,
+              "decisionSafeRate": 0.8932806324110671,
+              "meanReferenceRegretPp": 0.23520851515262853,
+              "p95ReferenceRegretPp": 1.4661481342499991
+            },
+            "TOSS-UP": {
+              "n": 503,
+              "exactAgreement": 0.6421471172962226,
+              "decisionSafeRate": 0.8846918489065606,
+              "meanReferenceRegretPp": 0.26583322024269435,
+              "p95ReferenceRegretPp": 1.6781287484000034
+            }
+          }
+        },
+        {
+          "bucket": "Own 21-40",
+          "n": 6065,
+          "exactAgreement": 0.8016488046166529,
+          "decisionSafeRate": 0.9322341302555647,
+          "materialSplitRate": 0.06776586974443528,
+          "strongSplitRate": 0.015169002473206924,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.14853202150487624,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.40450323766000074,
+          "p95ReferenceRegretPp": 1.0192600642000007,
+          "worstReferenceRegretPp": 14.108318930800001,
+          "coachExactAgreement": 0.728441879637263,
+          "meanCoachRegretPp": 0.31724550416112535,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1268,
+              "share": 0.2090684253915911
+            },
+            "FG": {
+              "count": 0,
+              "share": 0
+            },
+            "PUNT": {
+              "count": 4797,
+              "share": 0.7909315746084089
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2128,
+              "share": 0.3508656224237428
+            },
+            "FG": {
+              "count": 3,
+              "share": 0.000494641384995878
+            },
+            "PUNT": {
+              "count": 3934,
+              "share": 0.6486397361912614
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 6065,
+              "maePp": 8.522946936673632,
+              "biasPp": -1.1328064762531735,
+              "rmsePp": 11.808970899463983,
+              "p90AbsPp": 20.492990271508933
+            },
+            "FG": {
+              "n": 0,
+              "maePp": null,
+              "biasPp": null,
+              "rmsePp": null,
+              "p90AbsPp": null
+            },
+            "PUNT": {
+              "n": 6065,
+              "maePp": 8.457306112718722,
+              "biasPp": -1.2674945488501745,
+              "rmsePp": 11.746597509211208,
+              "p90AbsPp": 20.243298007498016
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 0,
+              "maePp": null,
+              "biasPp": null,
+              "rmsePp": null
+            },
+            "GO_PUNT": {
+              "n": 6065,
+              "maePp": 1.2081403043529404,
+              "biasPp": 0.1346880725969973,
+              "rmsePp": 1.8400191665853491
+            },
+            "FG_PUNT": {
+              "n": 0,
+              "maePp": null,
+              "biasPp": null,
+              "rmsePp": null
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 936,
+              "exactAgreement": 0.9754273504273504,
+              "decisionSafeRate": 0.9807692307692307,
+              "meanReferenceRegretPp": 0.06835938317886754,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 2114,
+              "exactAgreement": 0.9489120151371807,
+              "decisionSafeRate": 0.9796594134342479,
+              "meanReferenceRegretPp": 0.050268521544304674,
+              "p95ReferenceRegretPp": 0.009492525449998995
+            },
+            "TOSS-UP": {
+              "n": 3015,
+              "exactAgreement": 0.6444444444444445,
+              "decisionSafeRate": 0.8839137645107794,
+              "meanReferenceRegretPp": 0.24231995795256872,
+              "p95ReferenceRegretPp": 1.4305758124700003
+            }
+          }
+        },
+        {
+          "bucket": "Red zone",
+          "n": 3491,
+          "exactAgreement": 0.7264394156402177,
+          "decisionSafeRate": 0.8579203666571183,
+          "materialSplitRate": 0.1420796333428817,
+          "strongSplitRate": 0.05786307648238327,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.36956197762430393,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.2684477315000005,
+          "p95ReferenceRegretPp": 2.204958274999999,
+          "worstReferenceRegretPp": 99.820169414,
+          "coachExactAgreement": 0.7507877399026067,
+          "meanCoachRegretPp": 0.30633168981533165,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1590,
+              "share": 0.4554568891435119
+            },
+            "FG": {
+              "count": 1900,
+              "share": 0.5442566599828129
+            },
+            "PUNT": {
+              "count": 1,
+              "share": 0.0002864508736751647
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1538,
+              "share": 0.4405614437124033
+            },
+            "FG": {
+              "count": 1953,
+              "share": 0.5594385562875966
+            },
+            "PUNT": {
+              "count": 0,
+              "share": 0
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3491,
+              "maePp": 8.116281051391468,
+              "biasPp": -1.548678759248463,
+              "rmsePp": 11.420150206099056,
+              "p90AbsPp": 19.583552050916882
+            },
+            "FG": {
+              "n": 3491,
+              "maePp": 8.415994994033165,
+              "biasPp": -1.8335755352704692,
+              "rmsePp": 11.792030245855761,
+              "p90AbsPp": 20.14617081290042
+            },
+            "PUNT": {
+              "n": 3491,
+              "maePp": 47.37979828276024,
+              "biasPp": 47.37979828276024,
+              "rmsePp": 56.106210566813694,
+              "p90AbsPp": 91.1539730593898
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 3491,
+              "maePp": 1.895531127117822,
+              "biasPp": 0.2848967760220003,
+              "rmsePp": 3.186258506155562
+            },
+            "GO_PUNT": {
+              "n": 3491,
+              "maePp": 48.94108685726856,
+              "biasPp": -48.92847704200857,
+              "rmsePp": 58.32955786799656
+            },
+            "FG_PUNT": {
+              "n": 3491,
+              "maePp": 49.33173594879445,
+              "biasPp": -49.21337381803064,
+              "rmsePp": 58.757695156640736
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 944,
+              "exactAgreement": 0.8707627118644068,
+              "decisionSafeRate": 0.9247881355932204,
+              "meanReferenceRegretPp": 0.2107411999379025,
+              "p95ReferenceRegretPp": 1.306883079560001
+            },
+            "LEAN": {
+              "n": 1215,
+              "exactAgreement": 0.7242798353909465,
+              "decisionSafeRate": 0.823045267489712,
+              "meanReferenceRegretPp": 0.4056909879429711,
+              "p95ReferenceRegretPp": 2.392545683799999
+            },
+            "TOSS-UP": {
+              "n": 1332,
+              "exactAgreement": 0.6261261261261262,
+              "decisionSafeRate": 0.8423423423423423,
+              "meanReferenceRegretPp": 0.4491641297254919,
+              "p95ReferenceRegretPp": 2.2746619430500044
+            }
+          }
+        }
+      ],
+      "scoreState": [
+        {
+          "bucket": "Leading 1-8",
+          "n": 4206,
+          "exactAgreement": 0.7857822158820732,
+          "decisionSafeRate": 0.8708987161198288,
+          "materialSplitRate": 0.1291012838801712,
+          "strongSplitRate": 0.056348074179743225,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.32321037597194474,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.1247283550000016,
+          "p95ReferenceRegretPp": 2.1404179992499994,
+          "worstReferenceRegretPp": 10.968245242999997,
+          "coachExactAgreement": 0.7941036614360437,
+          "meanCoachRegretPp": 0.30271438136661905,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 867,
+              "share": 0.20613409415121256
+            },
+            "FG": {
+              "count": 1439,
+              "share": 0.34213029006181644
+            },
+            "PUNT": {
+              "count": 1900,
+              "share": 0.45173561578697097
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1152,
+              "share": 0.2738944365192582
+            },
+            "FG": {
+              "count": 1121,
+              "share": 0.2665240133143129
+            },
+            "PUNT": {
+              "count": 1933,
+              "share": 0.45958155016642893
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4206,
+              "maePp": 9.776746321133652,
+              "biasPp": -1.348979711312234,
+              "rmsePp": 12.457998410903205,
+              "p90AbsPp": 20.702907590002482
+            },
+            "FG": {
+              "n": 2122,
+              "maePp": 9.042302675827408,
+              "biasPp": -0.6208740440884534,
+              "rmsePp": 11.740647870823059,
+              "p90AbsPp": 19.478411676355968
+            },
+            "PUNT": {
+              "n": 4206,
+              "maePp": 26.471508033860676,
+              "biasPp": 18.014324065843656,
+              "rmsePp": 38.76703381709587,
+              "p90AbsPp": 73.23618600769186
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2122,
+              "maePp": 2.1858425512137987,
+              "biasPp": -0.8568876296988629,
+              "rmsePp": 2.913634012191019
+            },
+            "GO_PUNT": {
+              "n": 4206,
+              "maePp": 20.952392532599717,
+              "biasPp": -19.363303777155885,
+              "rmsePp": 38.60461677708922
+            },
+            "FG_PUNT": {
+              "n": 2122,
+              "maePp": 40.68052248597806,
+              "biasPp": -38.278542648071294,
+              "rmsePp": 54.51892471806664
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1406,
+              "exactAgreement": 0.8968705547652916,
+              "decisionSafeRate": 0.9374110953058321,
+              "meanReferenceRegretPp": 0.15962859101137977,
+              "p95ReferenceRegretPp": 1.100779777499994
+            },
+            "LEAN": {
+              "n": 1538,
+              "exactAgreement": 0.7899869960988296,
+              "decisionSafeRate": 0.881664499349805,
+              "meanReferenceRegretPp": 0.29362570680364103,
+              "p95ReferenceRegretPp": 1.9858470603500056
+            },
+            "TOSS-UP": {
+              "n": 1262,
+              "exactAgreement": 0.6568938193343898,
+              "decisionSafeRate": 0.783676703645008,
+              "meanReferenceRegretPp": 0.5415124447797145,
+              "p95ReferenceRegretPp": 2.801213172800007
+            }
+          }
+        },
+        {
+          "bucket": "Leading 9+",
+          "n": 2794,
+          "exactAgreement": 0.7365783822476736,
+          "decisionSafeRate": 0.9470293486041518,
+          "materialSplitRate": 0.052970651395848244,
+          "strongSplitRate": 0.010021474588403722,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2556681386120258,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.2965027703000025,
+          "p95ReferenceRegretPp": 0.7923950046499977,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.7569792412312097,
+          "meanCoachRegretPp": 0.15326090209019333,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 564,
+              "share": 0.20186113099498926
+            },
+            "FG": {
+              "count": 976,
+              "share": 0.3493199713672155
+            },
+            "PUNT": {
+              "count": 1254,
+              "share": 0.44881889763779526
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 701,
+              "share": 0.25089477451682174
+            },
+            "FG": {
+              "count": 806,
+              "share": 0.2884753042233357
+            },
+            "PUNT": {
+              "count": 1287,
+              "share": 0.46062992125984253
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 2794,
+              "maePp": 3.7781557127760763,
+              "biasPp": -0.912341505517173,
+              "rmsePp": 6.074996498972597,
+              "p90AbsPp": 10.124443753491162
+            },
+            "FG": {
+              "n": 1481,
+              "maePp": 3.0248349600808146,
+              "biasPp": -0.8108129648669543,
+              "rmsePp": 5.0837452812377615,
+              "p90AbsPp": 8.120269356611532
+            },
+            "PUNT": {
+              "n": 2794,
+              "maePp": 30.427293871015298,
+              "biasPp": 26.888349975043987,
+              "rmsePp": 51.18904115512247,
+              "p90AbsPp": 98.85908583356976
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1481,
+              "maePp": 0.6551272085694493,
+              "biasPp": -0.023392090801819993,
+              "rmsePp": 1.1139657187005936
+            },
+            "GO_PUNT": {
+              "n": 2794,
+              "maePp": 28.348079255859567,
+              "biasPp": -27.800691480561156,
+              "rmsePp": 51.4313221426633
+            },
+            "FG_PUNT": {
+              "n": 1481,
+              "maePp": 53.13266607362734,
+              "biasPp": -52.484658669501776,
+              "rmsePp": 70.8061182559506
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 170,
+              "exactAgreement": 0.9764705882352941,
+              "decisionSafeRate": 1,
+              "meanReferenceRegretPp": 0.006611928241176434,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 629,
+              "exactAgreement": 0.8887122416534181,
+              "decisionSafeRate": 0.9745627980922098,
+              "meanReferenceRegretPp": 0.06543976093799686,
+              "p95ReferenceRegretPp": 0.42160304900000145
+            },
+            "TOSS-UP": {
+              "n": 1995,
+              "exactAgreement": 0.6681704260651629,
+              "decisionSafeRate": 0.9338345864661655,
+              "meanReferenceRegretPp": 0.3368677402761905,
+              "p95ReferenceRegretPp": 1.0060094039
+            }
+          }
+        },
+        {
+          "bucket": "Tied",
+          "n": 3857,
+          "exactAgreement": 0.7459165154264973,
+          "decisionSafeRate": 0.8345864661654135,
+          "materialSplitRate": 0.16541353383458646,
+          "strongSplitRate": 0.08115115374643506,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.41319196853531254,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.6540913420000003,
+          "p95ReferenceRegretPp": 2.6620329277999972,
+          "worstReferenceRegretPp": 18.260433645000006,
+          "coachExactAgreement": 0.7171376717656209,
+          "meanCoachRegretPp": 0.4408801996691207,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 763,
+              "share": 0.19782214156079855
+            },
+            "FG": {
+              "count": 1292,
+              "share": 0.33497536945812806
+            },
+            "PUNT": {
+              "count": 1802,
+              "share": 0.46720248898107336
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1428,
+              "share": 0.3702359346642468
+            },
+            "FG": {
+              "count": 790,
+              "share": 0.20482240082966036
+            },
+            "PUNT": {
+              "count": 1639,
+              "share": 0.42494166450609283
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 3857,
+              "maePp": 13.266560008006744,
+              "biasPp": -2.363115674350874,
+              "rmsePp": 16.22923121127836,
+              "p90AbsPp": 26.82541078867987
+            },
+            "FG": {
+              "n": 1852,
+              "maePp": 13.360639347167249,
+              "biasPp": -1.3315533897626148,
+              "rmsePp": 16.33203418485052,
+              "p90AbsPp": 26.885510830987727
+            },
+            "PUNT": {
+              "n": 3857,
+              "maePp": 22.782532041364163,
+              "biasPp": 11.07489765853697,
+              "rmsePp": 29.321660669847024,
+              "p90AbsPp": 52.18127529710745
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1852,
+              "maePp": 2.6325447610861232,
+              "biasPp": -1.0216181309640575,
+              "rmsePp": 3.4625766893903416
+            },
+            "GO_PUNT": {
+              "n": 3857,
+              "maePp": 14.470708873761549,
+              "biasPp": -13.43801333288781,
+              "rmsePp": 27.653769778056756
+            },
+            "FG_PUNT": {
+              "n": 1852,
+              "maePp": 29.14846383385148,
+              "biasPp": -27.257309652201524,
+              "rmsePp": 40.05968669679442
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 986,
+              "exactAgreement": 0.9543610547667343,
+              "decisionSafeRate": 0.9766734279918864,
+              "meanReferenceRegretPp": 0.0816392037687627,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 1598,
+              "exactAgreement": 0.723404255319149,
+              "decisionSafeRate": 0.811639549436796,
+              "meanReferenceRegretPp": 0.4125012023346682,
+              "p95ReferenceRegretPp": 2.474210287249993
+            },
+            "TOSS-UP": {
+              "n": 1273,
+              "exactAgreement": 0.612725844461901,
+              "decisionSafeRate": 0.753338570306363,
+              "meanReferenceRegretPp": 0.6708627230117051,
+              "p95ReferenceRegretPp": 3.536657265599996
+            }
+          }
+        },
+        {
+          "bucket": "Trailing 1-8",
+          "n": 5218,
+          "exactAgreement": 0.7527788424683787,
+          "decisionSafeRate": 0.8493675737830586,
+          "materialSplitRate": 0.15063242621694137,
+          "strongSplitRate": 0.05960137983901878,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.36822008244037263,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.2699325091000015,
+          "p95ReferenceRegretPp": 2.2303232785999962,
+          "worstReferenceRegretPp": 19.729450737999997,
+          "coachExactAgreement": 0.6954771943273285,
+          "meanCoachRegretPp": 0.5033924438957643,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1532,
+              "share": 0.29359908010732083
+            },
+            "FG": {
+              "count": 1553,
+              "share": 0.2976236105787658
+            },
+            "PUNT": {
+              "count": 2133,
+              "share": 0.4087773093139134
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 2433,
+              "share": 0.4662706017631276
+            },
+            "FG": {
+              "count": 1181,
+              "share": 0.22633192794174012
+            },
+            "PUNT": {
+              "count": 1604,
+              "share": 0.30739747029513226
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 5218,
+              "maePp": 9.678390897823174,
+              "biasPp": -2.2041657906176497,
+              "rmsePp": 12.545594707090656,
+              "p90AbsPp": 20.44795081048322
+            },
+            "FG": {
+              "n": 2563,
+              "maePp": 10.22897108445731,
+              "biasPp": -1.7945088332835415,
+              "rmsePp": 13.036599078821942,
+              "p90AbsPp": 21.040569546571987
+            },
+            "PUNT": {
+              "n": 5218,
+              "maePp": 14.800137077390401,
+              "biasPp": 7.2581612556758435,
+              "rmsePp": 19.580971244909623,
+              "p90AbsPp": 35.219191534195005
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2563,
+              "maePp": 2.8819429895257884,
+              "biasPp": -0.8140159961911786,
+              "rmsePp": 4.433661485550375
+            },
+            "GO_PUNT": {
+              "n": 5218,
+              "maePp": 9.913440226031845,
+              "biasPp": -9.4623270462935,
+              "rmsePp": 18.864371912009393
+            },
+            "FG_PUNT": {
+              "n": 2563,
+              "maePp": 18.881012101535752,
+              "biasPp": -17.742198035828483,
+              "rmsePp": 27.25859790592861
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1310,
+              "exactAgreement": 0.9595419847328245,
+              "decisionSafeRate": 0.9763358778625955,
+              "meanReferenceRegretPp": 0.0596119046499084,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 2080,
+              "exactAgreement": 0.7956730769230769,
+              "decisionSafeRate": 0.8831730769230769,
+              "meanReferenceRegretPp": 0.2721790660526872,
+              "p95ReferenceRegretPp": 1.8345091767999988
+            },
+            "TOSS-UP": {
+              "n": 1828,
+              "exactAgreement": 0.5557986870897156,
+              "decisionSafeRate": 0.7199124726477024,
+              "meanReferenceRegretPp": 0.6986588280595696,
+              "p95ReferenceRegretPp": 3.406924432749997
+            }
+          }
+        },
+        {
+          "bucket": "Trailing 9-16",
+          "n": 2464,
+          "exactAgreement": 0.7114448051948052,
+          "decisionSafeRate": 0.8835227272727273,
+          "materialSplitRate": 0.11647727272727272,
+          "strongSplitRate": 0.040584415584415584,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2695188868064141,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.9222739047999992,
+          "p95ReferenceRegretPp": 1.7338398489499993,
+          "worstReferenceRegretPp": 7.247381154999999,
+          "coachExactAgreement": 0.653814935064935,
+          "meanCoachRegretPp": 0.3112765652615371,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 861,
+              "share": 0.3494318181818182
+            },
+            "FG": {
+              "count": 712,
+              "share": 0.288961038961039
+            },
+            "PUNT": {
+              "count": 891,
+              "share": 0.36160714285714285
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1354,
+              "share": 0.549512987012987
+            },
+            "FG": {
+              "count": 483,
+              "share": 0.19602272727272727
+            },
+            "PUNT": {
+              "count": 627,
+              "share": 0.2544642857142857
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 2464,
+              "maePp": 4.94699419182251,
+              "biasPp": -1.0070802653217614,
+              "rmsePp": 7.472728821459606,
+              "p90AbsPp": 11.624103584708783
+            },
+            "FG": {
+              "n": 1181,
+              "maePp": 5.24721406910267,
+              "biasPp": -0.3885508705629261,
+              "rmsePp": 7.943307159685302,
+              "p90AbsPp": 12.531736180959928
+            },
+            "PUNT": {
+              "n": 2464,
+              "maePp": 5.831712803612443,
+              "biasPp": 2.1195233123557817,
+              "rmsePp": 8.36072671151375,
+              "p90AbsPp": 14.394711329515303
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1181,
+              "maePp": 1.5968664614249364,
+              "biasPp": -0.9390804234662607,
+              "rmsePp": 2.2512830920393063
+            },
+            "GO_PUNT": {
+              "n": 2464,
+              "maePp": 3.3363234387197935,
+              "biasPp": -3.126603577677542,
+              "rmsePp": 7.943321677949905
+            },
+            "FG_PUNT": {
+              "n": 1181,
+              "maePp": 6.032009426843827,
+              "biasPp": -5.167696183457871,
+              "rmsePp": 11.123146366737858
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 239,
+              "exactAgreement": 0.6485355648535565,
+              "decisionSafeRate": 0.7740585774058577,
+              "meanReferenceRegretPp": 0.5201362045819248,
+              "p95ReferenceRegretPp": 2.7636336155999985
+            },
+            "LEAN": {
+              "n": 663,
+              "exactAgreement": 0.8205128205128205,
+              "decisionSafeRate": 0.8929110105580694,
+              "meanReferenceRegretPp": 0.2324431675346606,
+              "p95ReferenceRegretPp": 1.698828827379999
+            },
+            "TOSS-UP": {
+              "n": 1562,
+              "exactAgreement": 0.674775928297055,
+              "decisionSafeRate": 0.8962868117797695,
+              "meanReferenceRegretPp": 0.2469091959797978,
+              "p95ReferenceRegretPp": 1.523192121599998
+            }
+          }
+        },
+        {
+          "bucket": "Trailing 17+",
+          "n": 1452,
+          "exactAgreement": 0.6349862258953168,
+          "decisionSafeRate": 0.9738292011019284,
+          "materialSplitRate": 0.026170798898071626,
+          "strongSplitRate": 0.003443526170798898,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.07558473866180712,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.19306210247400007,
+          "p95ReferenceRegretPp": 0.36755777317000027,
+          "worstReferenceRegretPp": 4.7722638740000045,
+          "coachExactAgreement": 0.6384297520661157,
+          "meanCoachRegretPp": 0.08762680047812688,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 839,
+              "share": 0.5778236914600551
+            },
+            "FG": {
+              "count": 279,
+              "share": 0.1921487603305785
+            },
+            "PUNT": {
+              "count": 334,
+              "share": 0.23002754820936638
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 949,
+              "share": 0.6535812672176309
+            },
+            "FG": {
+              "count": 195,
+              "share": 0.13429752066115702
+            },
+            "PUNT": {
+              "count": 308,
+              "share": 0.21212121212121213
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 1452,
+              "maePp": 1.1820203272951297,
+              "biasPp": 0.11102921424177394,
+              "rmsePp": 2.5587484921039403,
+              "p90AbsPp": 3.5316415881149528
+            },
+            "FG": {
+              "n": 675,
+              "maePp": 1.2689963407117235,
+              "biasPp": 0.22243124381017731,
+              "rmsePp": 2.6123002559610056,
+              "p90AbsPp": 3.732918229183021
+            },
+            "PUNT": {
+              "n": 1452,
+              "maePp": 1.306874401143854,
+              "biasPp": 0.6426051312625687,
+              "rmsePp": 2.6728619577102553,
+              "p90AbsPp": 4.289772868484346
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 675,
+              "maePp": 0.3760320584808347,
+              "biasPp": -0.2002107672518191,
+              "rmsePp": 0.7750032707118559
+            },
+            "GO_PUNT": {
+              "n": 1452,
+              "maePp": 0.5679527568701733,
+              "biasPp": -0.5315759170207948,
+              "rmsePp": 1.925834945240274
+            },
+            "FG_PUNT": {
+              "n": 675,
+              "maePp": 0.9667247554412887,
+              "biasPp": -0.8081697140944664,
+              "rmsePp": 2.5746911968656927
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            },
+            "LEAN": {
+              "n": 46,
+              "exactAgreement": 0.782608695652174,
+              "decisionSafeRate": 0.9565217391304348,
+              "meanReferenceRegretPp": 0.09738637044130434,
+              "p95ReferenceRegretPp": 0.687225352025
+            },
+            "TOSS-UP": {
+              "n": 1406,
+              "exactAgreement": 0.6301564722617354,
+              "decisionSafeRate": 0.9743954480796586,
+              "meanReferenceRegretPp": 0.07487145625650352,
+              "p95ReferenceRegretPp": 0.361688136825
+            }
+          }
+        }
+      ],
+      "clock": [
+        {
+          "bucket": "Q1",
+          "n": 4329,
+          "exactAgreement": 0.7158697158697158,
+          "decisionSafeRate": 0.8327558327558328,
+          "materialSplitRate": 0.16724416724416724,
+          "strongSplitRate": 0.0723030723030723,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.3918068197655812,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.4830176063999982,
+          "p95ReferenceRegretPp": 2.5103624425999898,
+          "worstReferenceRegretPp": 8.927348356000003,
+          "coachExactAgreement": 0.6863016863016863,
+          "meanCoachRegretPp": 0.3945785656966274,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 819,
+              "share": 0.1891891891891892
+            },
+            "FG": {
+              "count": 1365,
+              "share": 0.3153153153153153
+            },
+            "PUNT": {
+              "count": 2145,
+              "share": 0.4954954954954955
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1764,
+              "share": 0.4074844074844075
+            },
+            "FG": {
+              "count": 695,
+              "share": 0.16054516054516055
+            },
+            "PUNT": {
+              "count": 1870,
+              "share": 0.43197043197043195
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4329,
+              "maePp": 13.717991464190352,
+              "biasPp": -1.3131203644430518,
+              "rmsePp": 16.755537545801722,
+              "p90AbsPp": 27.205719728403345
+            },
+            "FG": {
+              "n": 1921,
+              "maePp": 13.994028713838967,
+              "biasPp": -0.005053409981878214,
+              "rmsePp": 17.064593702075392,
+              "p90AbsPp": 27.688235265437676
+            },
+            "PUNT": {
+              "n": 4329,
+              "maePp": 21.657683122522585,
+              "biasPp": 10.27880057530166,
+              "rmsePp": 28.23681433393767,
+              "p90AbsPp": 52.054921828902096
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1921,
+              "maePp": 2.2345179916178717,
+              "biasPp": -1.7327092950992138,
+              "rmsePp": 2.819554627811631
+            },
+            "GO_PUNT": {
+              "n": 4329,
+              "maePp": 12.517412731360638,
+              "biasPp": -11.59192093974468,
+              "rmsePp": 26.073503944325093
+            },
+            "FG_PUNT": {
+              "n": 1921,
+              "maePp": 26.603614367394044,
+              "biasPp": -24.71563895725284,
+              "rmsePp": 38.503099467254835
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 698,
+              "exactAgreement": 0.9627507163323782,
+              "decisionSafeRate": 0.9899713467048711,
+              "meanReferenceRegretPp": 0.01965904323638968,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 1883,
+              "exactAgreement": 0.7434944237918215,
+              "decisionSafeRate": 0.8385554965480616,
+              "meanReferenceRegretPp": 0.34051644194200736,
+              "p95ReferenceRegretPp": 2.2410627582
+            },
+            "TOSS-UP": {
+              "n": 1748,
+              "exactAgreement": 0.5875286041189931,
+              "decisionSafeRate": 0.7637299771167048,
+              "meanReferenceRegretPp": 0.5956620425683067,
+              "p95ReferenceRegretPp": 3.2561914495499975
+            }
+          }
+        },
+        {
+          "bucket": "Q2",
+          "n": 5636,
+          "exactAgreement": 0.7567423704755145,
+          "decisionSafeRate": 0.8795244854506742,
+          "materialSplitRate": 0.12047551454932576,
+          "strongSplitRate": 0.04382540809084457,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.27793355273759546,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.993555673999999,
+          "p95ReferenceRegretPp": 1.8617719907499983,
+          "worstReferenceRegretPp": 12.045684516,
+          "coachExactAgreement": 0.7519517388218595,
+          "meanCoachRegretPp": 0.28256620227333357,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1089,
+              "share": 0.193222143364088
+            },
+            "FG": {
+              "count": 2047,
+              "share": 0.36320085166784954
+            },
+            "PUNT": {
+              "count": 2500,
+              "share": 0.44357700496806246
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1907,
+              "share": 0.33836053938963806
+            },
+            "FG": {
+              "count": 1559,
+              "share": 0.27661462029808376
+            },
+            "PUNT": {
+              "count": 2170,
+              "share": 0.38502484031227824
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 5636,
+              "maePp": 10.3503451207486,
+              "biasPp": -1.4857662913682546,
+              "rmsePp": 13.071523408231181,
+              "p90AbsPp": 21.63146238294766
+            },
+            "FG": {
+              "n": 2899,
+              "maePp": 10.41454699080132,
+              "biasPp": -1.2018824931775907,
+              "rmsePp": 13.081613139858415,
+              "p90AbsPp": 21.642335355943246
+            },
+            "PUNT": {
+              "n": 5636,
+              "maePp": 21.35598554685245,
+              "biasPp": 13.055966646767928,
+              "rmsePp": 31.14878769263844,
+              "p90AbsPp": 59.40536771159658
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2899,
+              "maePp": 1.7770287256253747,
+              "biasPp": -0.31668277133350586,
+              "rmsePp": 2.411975095211202
+            },
+            "GO_PUNT": {
+              "n": 5636,
+              "maePp": 15.311106473597166,
+              "biasPp": -14.541732938136224,
+              "rmsePp": 30.72485465753844
+            },
+            "FG_PUNT": {
+              "n": 2899,
+              "maePp": 29.23666892166625,
+              "biasPp": -28.08592000261865,
+              "rmsePp": 43.19038425721123
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1030,
+              "exactAgreement": 0.9825242718446602,
+              "decisionSafeRate": 0.9951456310679612,
+              "meanReferenceRegretPp": 0.011729555911650471,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 2225,
+              "exactAgreement": 0.828314606741573,
+              "decisionSafeRate": 0.9186516853932585,
+              "meanReferenceRegretPp": 0.17034556176624713,
+              "p95ReferenceRegretPp": 1.2100893494000005
+            },
+            "TOSS-UP": {
+              "n": 2381,
+              "exactAgreement": 0.5921881562368753,
+              "decisionSafeRate": 0.7929441411171777,
+              "meanReferenceRegretPp": 0.49363006539697224,
+              "p95ReferenceRegretPp": 2.498491424999999
+            }
+          }
+        },
+        {
+          "bucket": "Q3",
+          "n": 4331,
+          "exactAgreement": 0.7437081505425999,
+          "decisionSafeRate": 0.88894019856846,
+          "materialSplitRate": 0.11105980143154005,
+          "strongSplitRate": 0.03855922419764488,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.29883584175979283,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.883697891999996,
+          "p95ReferenceRegretPp": 1.6934435950000006,
+          "worstReferenceRegretPp": 99.820169414,
+          "coachExactAgreement": 0.7049180327868853,
+          "meanCoachRegretPp": 0.3325727624819581,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1018,
+              "share": 0.235049642114985
+            },
+            "FG": {
+              "count": 1242,
+              "share": 0.2867697991226045
+            },
+            "PUNT": {
+              "count": 2071,
+              "share": 0.4781805587624105
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1656,
+              "share": 0.38235973216347263
+            },
+            "FG": {
+              "count": 977,
+              "share": 0.22558300623412605
+            },
+            "PUNT": {
+              "count": 1698,
+              "share": 0.3920572616024013
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4331,
+              "maePp": 6.81608482082793,
+              "biasPp": -1.8884217359660371,
+              "rmsePp": 9.236230158965618,
+              "p90AbsPp": 15.971367944333647
+            },
+            "FG": {
+              "n": 1966,
+              "maePp": 6.58794679493635,
+              "biasPp": -1.4701122267814641,
+              "rmsePp": 8.912809477751493,
+              "p90AbsPp": 15.63789659322207
+            },
+            "PUNT": {
+              "n": 4331,
+              "maePp": 16.51799787674828,
+              "biasPp": 10.281265662001166,
+              "rmsePp": 29.09021084231335,
+              "p90AbsPp": 55.37739128068739
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 1966,
+              "maePp": 1.79481864622679,
+              "biasPp": -0.5812084443188072,
+              "rmsePp": 2.5602745311143
+            },
+            "GO_PUNT": {
+              "n": 4331,
+              "maePp": 12.85908284020703,
+              "biasPp": -12.169687397967268,
+              "rmsePp": 29.08124530538916
+            },
+            "FG_PUNT": {
+              "n": 1966,
+              "maePp": 27.32673686824793,
+              "biasPp": -26.12052261773141,
+              "rmsePp": 43.417963346352174
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 854,
+              "exactAgreement": 0.9426229508196722,
+              "decisionSafeRate": 0.9672131147540983,
+              "meanReferenceRegretPp": 0.06902798813536298,
+              "p95ReferenceRegretPp": 0.3396518917499963
+            },
+            "LEAN": {
+              "n": 1359,
+              "exactAgreement": 0.8005886681383371,
+              "decisionSafeRate": 0.8852097130242825,
+              "meanReferenceRegretPp": 0.25601982560721115,
+              "p95ReferenceRegretPp": 1.8008768448000032
+            },
+            "TOSS-UP": {
+              "n": 2118,
+              "exactAgreement": 0.6270066100094429,
+              "decisionSafeRate": 0.8597733711048159,
+              "meanReferenceRegretPp": 0.41896939839181374,
+              "p95ReferenceRegretPp": 1.950146697850001
+            }
+          }
+        },
+        {
+          "bucket": "Q4 >10:00",
+          "n": 1633,
+          "exactAgreement": 0.7642375995101041,
+          "decisionSafeRate": 0.9014084507042254,
+          "materialSplitRate": 0.09859154929577464,
+          "strongSplitRate": 0.04225352112676056,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2434407918262234,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.682854673000006,
+          "p95ReferenceRegretPp": 1.7000879771200004,
+          "worstReferenceRegretPp": 7.247381154999999,
+          "coachExactAgreement": 0.6791181873851806,
+          "meanCoachRegretPp": 0.39866073206817154,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 573,
+              "share": 0.3508879363135334
+            },
+            "FG": {
+              "count": 506,
+              "share": 0.30985915492957744
+            },
+            "PUNT": {
+              "count": 554,
+              "share": 0.3392529087568892
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 697,
+              "share": 0.4268218003674219
+            },
+            "FG": {
+              "count": 413,
+              "share": 0.25290875688916103
+            },
+            "PUNT": {
+              "count": 523,
+              "share": 0.320269442743417
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 1633,
+              "maePp": 4.625298034279267,
+              "biasPp": -2.3695288945850708,
+              "rmsePp": 6.989808729382969,
+              "p90AbsPp": 12.343271735361196
+            },
+            "FG": {
+              "n": 858,
+              "maePp": 4.691655977245223,
+              "biasPp": -1.88519473453696,
+              "rmsePp": 6.961846588362543,
+              "p90AbsPp": 12.472108915119824
+            },
+            "PUNT": {
+              "n": 1633,
+              "maePp": 15.884374591835538,
+              "biasPp": 11.248675353576939,
+              "rmsePp": 31.56992750240583,
+              "p90AbsPp": 70.1263503125237
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 858,
+              "maePp": 1.914582656002839,
+              "biasPp": -0.5665389655775762,
+              "rmsePp": 2.7187790969899415
+            },
+            "GO_PUNT": {
+              "n": 1633,
+              "maePp": 14.147756118065118,
+              "biasPp": -13.618204248162009,
+              "rmsePp": 32.07445356040602
+            },
+            "FG_PUNT": {
+              "n": 858,
+              "maePp": 26.393499718457328,
+              "biasPp": -25.12965638334827,
+              "rmsePp": 44.38125761854566
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 386,
+              "exactAgreement": 0.8264248704663213,
+              "decisionSafeRate": 0.8911917098445595,
+              "meanReferenceRegretPp": 0.24351875099196896,
+              "p95ReferenceRegretPp": 1.7203589372499999
+            },
+            "LEAN": {
+              "n": 404,
+              "exactAgreement": 0.8143564356435643,
+              "decisionSafeRate": 0.8688118811881188,
+              "meanReferenceRegretPp": 0.33211788881014864,
+              "p95ReferenceRegretPp": 2.392614833750002
+            },
+            "TOSS-UP": {
+              "n": 843,
+              "exactAgreement": 0.7117437722419929,
+              "decisionSafeRate": 0.9217081850533808,
+              "meanReferenceRegretPp": 0.20090741173193688,
+              "p95ReferenceRegretPp": 1.2719869765000005
+            }
+          }
+        },
+        {
+          "bucket": "Q4 ≤2:00",
+          "n": 1082,
+          "exactAgreement": 0.7024029574861368,
+          "decisionSafeRate": 0.8567467652495379,
+          "materialSplitRate": 0.14325323475046212,
+          "strongSplitRate": 0.08040665434380777,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.6103867461143501,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.5037610811299995,
+          "p95ReferenceRegretPp": 3.0753963863800005,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.7661737523105361,
+          "meanCoachRegretPp": 0.560732891059321,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 641,
+              "share": 0.5924214417744916
+            },
+            "FG": {
+              "count": 257,
+              "share": 0.23752310536044363
+            },
+            "PUNT": {
+              "count": 184,
+              "share": 0.17005545286506468
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 687,
+              "share": 0.6349353049907579
+            },
+            "FG": {
+              "count": 213,
+              "share": 0.19685767097966728
+            },
+            "PUNT": {
+              "count": 182,
+              "share": 0.16820702402957485
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 1082,
+              "maePp": 2.9758566291575215,
+              "biasPp": 0.08370694981588703,
+              "rmsePp": 5.34572167863494,
+              "p90AbsPp": 8.982095729733883
+            },
+            "FG": {
+              "n": 648,
+              "maePp": 4.344557838230623,
+              "biasPp": 0.10602932417270074,
+              "rmsePp": 7.832102475969889,
+              "p90AbsPp": 13.38031961814551
+            },
+            "PUNT": {
+              "n": 1082,
+              "maePp": 16.89487407652786,
+              "biasPp": 16.36620886584577,
+              "rmsePp": 36.058144563237796,
+              "p90AbsPp": 94.03430866456124
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 648,
+              "maePp": 4.045755550200046,
+              "biasPp": -0.647439499309493,
+              "rmsePp": 7.367966976401924
+            },
+            "GO_PUNT": {
+              "n": 1082,
+              "maePp": 17.143983218531783,
+              "biasPp": -16.282501916029883,
+              "rmsePp": 36.15519325290172
+            },
+            "FG_PUNT": {
+              "n": 648,
+              "maePp": 27.50198006256789,
+              "biasPp": -25.611688282548023,
+              "rmsePp": 47.622882179796626
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 323,
+              "exactAgreement": 0.8513931888544891,
+              "decisionSafeRate": 0.8699690402476781,
+              "meanReferenceRegretPp": 0.4386924006614861,
+              "p95ReferenceRegretPp": 3.0693827777599987
+            },
+            "LEAN": {
+              "n": 176,
+              "exactAgreement": 0.6477272727272727,
+              "decisionSafeRate": 0.7329545454545454,
+              "meanReferenceRegretPp": 0.9688108566225001,
+              "p95ReferenceRegretPp": 6.335807771749998
+            },
+            "TOSS-UP": {
+              "n": 583,
+              "exactAgreement": 0.6363636363636364,
+              "decisionSafeRate": 0.8867924528301887,
+              "meanReferenceRegretPp": 0.5973072094622767,
+              "p95ReferenceRegretPp": 2.0114105904999997
+            }
+          }
+        },
+        {
+          "bucket": "Q4 2:01-5:00",
+          "n": 1301,
+          "exactAgreement": 0.7432744043043813,
+          "decisionSafeRate": 0.9131437355880092,
+          "materialSplitRate": 0.08685626441199078,
+          "strongSplitRate": 0.04688700999231361,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.26020979056784405,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.4836593740000006,
+          "p95ReferenceRegretPp": 1.7842537699999994,
+          "worstReferenceRegretPp": 10.645669730999996,
+          "coachExactAgreement": 0.7594158339738662,
+          "meanCoachRegretPp": 0.24585552726918813,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 594,
+              "share": 0.4565718677940046
+            },
+            "FG": {
+              "count": 357,
+              "share": 0.2744043043812452
+            },
+            "PUNT": {
+              "count": 350,
+              "share": 0.2690238278247502
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 574,
+              "share": 0.4411990776325903
+            },
+            "FG": {
+              "count": 314,
+              "share": 0.24135280553420446
+            },
+            "PUNT": {
+              "count": 413,
+              "share": 0.31744811683320523
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 1301,
+              "maePp": 2.7785128481786954,
+              "biasPp": -1.6079397548710728,
+              "rmsePp": 4.910847402847016,
+              "p90AbsPp": 8.72538420780301
+            },
+            "FG": {
+              "n": 708,
+              "maePp": 2.5558251147408644,
+              "biasPp": -1.323556904298263,
+              "rmsePp": 4.905106640087092,
+              "p90AbsPp": 8.093244275598392
+            },
+            "PUNT": {
+              "n": 1301,
+              "maePp": 16.460751162919966,
+              "biasPp": 13.637338339855743,
+              "rmsePp": 35.40845968990992,
+              "p90AbsPp": 85.58002688934687
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 708,
+              "maePp": 1.7489872291060864,
+              "biasPp": -0.36613386446727775,
+              "rmsePp": 2.8756151681723594
+            },
+            "GO_PUNT": {
+              "n": 1301,
+              "maePp": 16.0837702254235,
+              "biasPp": -15.245278094726794,
+              "rmsePp": 35.753187499931485
+            },
+            "FG_PUNT": {
+              "n": 708,
+              "maePp": 28.90531387235616,
+              "biasPp": -27.727085335141542,
+              "rmsePp": 48.79956322293128
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 377,
+              "exactAgreement": 0.8381962864721485,
+              "decisionSafeRate": 0.9018567639257294,
+              "meanReferenceRegretPp": 0.29941530257877985,
+              "p95ReferenceRegretPp": 2.1494925474000044
+            },
+            "LEAN": {
+              "n": 183,
+              "exactAgreement": 0.7486338797814208,
+              "decisionSafeRate": 0.819672131147541,
+              "meanReferenceRegretPp": 0.5475928213208195,
+              "p95ReferenceRegretPp": 3.769986294999997
+            },
+            "TOSS-UP": {
+              "n": 741,
+              "exactAgreement": 0.6936572199730094,
+              "decisionSafeRate": 0.941970310391363,
+              "meanReferenceRegretPp": 0.16928998941276008,
+              "p95ReferenceRegretPp": 0.8931113490000087
+            }
+          }
+        },
+        {
+          "bucket": "Q4 5:01-10:00",
+          "n": 1679,
+          "exactAgreement": 0.764145324597975,
+          "decisionSafeRate": 0.9243597379392495,
+          "materialSplitRate": 0.07564026206075045,
+          "strongSplitRate": 0.029779630732578916,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2437900801249816,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.3496095504960004,
+          "p95ReferenceRegretPp": 1.2710471313799987,
+          "worstReferenceRegretPp": 99.937246469,
+          "coachExactAgreement": 0.714711137581894,
+          "meanCoachRegretPp": 0.3598532198601992,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 692,
+              "share": 0.4121500893388922
+            },
+            "FG": {
+              "count": 477,
+              "share": 0.28409767718880286
+            },
+            "PUNT": {
+              "count": 510,
+              "share": 0.30375223347230496
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 732,
+              "share": 0.43597379392495533
+            },
+            "FG": {
+              "count": 405,
+              "share": 0.24121500893388922
+            },
+            "PUNT": {
+              "count": 542,
+              "share": 0.32281119714115547
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 1679,
+              "maePp": 3.350677582822594,
+              "biasPp": -1.8172517199189737,
+              "rmsePp": 5.470768560646109,
+              "p90AbsPp": 9.043826572851195
+            },
+            "FG": {
+              "n": 874,
+              "maePp": 3.438665202111037,
+              "biasPp": -1.1697199932166085,
+              "rmsePp": 5.804001186896415,
+              "p90AbsPp": 9.944356018595418
+            },
+            "PUNT": {
+              "n": 1679,
+              "maePp": 15.739438291884957,
+              "biasPp": 12.633002576153658,
+              "rmsePp": 33.56161828370547,
+              "p90AbsPp": 83.04670873292591
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 874,
+              "maePp": 1.7561118193542486,
+              "biasPp": -0.5965761394935857,
+              "rmsePp": 2.7124834756861707
+            },
+            "GO_PUNT": {
+              "n": 1679,
+              "maePp": 14.988383435248062,
+              "biasPp": -14.450254296072622,
+              "rmsePp": 34.014178054252056
+            },
+            "FG_PUNT": {
+              "n": 874,
+              "maePp": 28.199083984649523,
+              "biasPp": -26.908505935817285,
+              "rmsePp": 47.256578122694776
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 443,
+              "exactAgreement": 0.8600451467268623,
+              "decisionSafeRate": 0.9209932279909706,
+              "meanReferenceRegretPp": 0.16960140104085777,
+              "p95ReferenceRegretPp": 1.2691540799699987
+            },
+            "LEAN": {
+              "n": 324,
+              "exactAgreement": 0.7839506172839507,
+              "decisionSafeRate": 0.8734567901234568,
+              "meanReferenceRegretPp": 0.31981116134783943,
+              "p95ReferenceRegretPp": 2.4659503743999918
+            },
+            "TOSS-UP": {
+              "n": 912,
+              "exactAgreement": 0.7105263157894737,
+              "decisionSafeRate": 0.944078947368421,
+              "meanReferenceRegretPp": 0.25281941621934667,
+              "p95ReferenceRegretPp": 0.8751145944149981
+            }
+          }
+        }
+      ],
+      "referenceCall": [
+        {
+          "bucket": "FG",
+          "n": 4576,
+          "exactAgreement": 0.8529283216783217,
+          "decisionSafeRate": 0.9335664335664335,
+          "materialSplitRate": 0.06643356643356643,
+          "strongSplitRate": 0.027753496503496504,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.22349103816069193,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.24476334600000427,
+          "p95ReferenceRegretPp": 1.1419907005000036,
+          "worstReferenceRegretPp": 99.820169414,
+          "coachExactAgreement": 0.815777972027972,
+          "meanCoachRegretPp": 0.2015926044290319,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 655,
+              "share": 0.1431381118881119
+            },
+            "FG": {
+              "count": 3903,
+              "share": 0.8529283216783217
+            },
+            "PUNT": {
+              "count": 18,
+              "share": 0.003933566433566434
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 0,
+              "share": 0
+            },
+            "FG": {
+              "count": 4576,
+              "share": 1
+            },
+            "PUNT": {
+              "count": 0,
+              "share": 0
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4576,
+              "maePp": 8.151782156964257,
+              "biasPp": -1.3384375011575504,
+              "rmsePp": 11.317870306425016,
+              "p90AbsPp": 19.387356459894164
+            },
+            "FG": {
+              "n": 4570,
+              "maePp": 8.481124811148483,
+              "biasPp": -2.3778934340099913,
+              "rmsePp": 11.701363479517829,
+              "p90AbsPp": 20.071422720044623
+            },
+            "PUNT": {
+              "n": 4576,
+              "maePp": 39.50256906321036,
+              "biasPp": 36.916976964380865,
+              "rmsePp": 50.94341731426932,
+              "p90AbsPp": 89.92534520685368
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 4570,
+              "maePp": 1.6078670327255447,
+              "biasPp": 1.0353073651432314,
+              "rmsePp": 2.8750083686828005
+            },
+            "GO_PUNT": {
+              "n": 4576,
+              "maePp": 38.4495804941952,
+              "biasPp": -38.25541446553835,
+              "rmsePp": 52.470394041106395
+            },
+            "FG_PUNT": {
+              "n": 4570,
+              "maePp": 39.55995147781264,
+              "biasPp": -39.339568270571704,
+              "rmsePp": 53.32690589990637
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1420,
+              "exactAgreement": 0.95,
+              "decisionSafeRate": 0.9690140845070423,
+              "meanReferenceRegretPp": 0.09377734910408449,
+              "p95ReferenceRegretPp": 0.0004469934999991419
+            },
+            "LEAN": {
+              "n": 1808,
+              "exactAgreement": 0.8926991150442478,
+              "decisionSafeRate": 0.9286504424778761,
+              "meanReferenceRegretPp": 0.17184777909004434,
+              "p95ReferenceRegretPp": 1.2250741481999945
+            },
+            "TOSS-UP": {
+              "n": 1348,
+              "exactAgreement": 0.6973293768545994,
+              "decisionSafeRate": 0.9028189910979229,
+              "meanReferenceRegretPp": 0.42939938449608905,
+              "p95ReferenceRegretPp": 1.7676215570500013
+            }
+          }
+        },
+        {
+          "bucket": "GO",
+          "n": 8017,
+          "exactAgreement": 0.5450916801796183,
+          "decisionSafeRate": 0.7756018460770862,
+          "materialSplitRate": 0.22439815392291382,
+          "strongSplitRate": 0.08918548085318698,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.5576415537976611,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.8528932257999973,
+          "p95ReferenceRegretPp": 2.7547937201999995,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.4238493201945865,
+          "meanCoachRegretPp": 0.7394875234669418,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 4370,
+              "share": 0.5450916801796183
+            },
+            "FG": {
+              "count": 1921,
+              "share": 0.23961581639017088
+            },
+            "PUNT": {
+              "count": 1726,
+              "share": 0.2152925034302108
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 8017,
+              "share": 1
+            },
+            "FG": {
+              "count": 0,
+              "share": 0
+            },
+            "PUNT": {
+              "count": 0,
+              "share": 0
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 8017,
+              "maePp": 7.905821196610636,
+              "biasPp": -2.376392208660156,
+              "rmsePp": 11.379697319143457,
+              "p90AbsPp": 19.591394384872014
+            },
+            "FG": {
+              "n": 4394,
+              "maePp": 8.104595079074372,
+              "biasPp": -0.17331885831205832,
+              "rmsePp": 11.640885141672271,
+              "p90AbsPp": 19.97376316949195
+            },
+            "PUNT": {
+              "n": 8017,
+              "maePp": 16.284239926935133,
+              "biasPp": 10.043801110294512,
+              "rmsePp": 27.710667280414068,
+              "p90AbsPp": 52.31772545323687
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 4394,
+              "maePp": 2.48963797360511,
+              "biasPp": -2.3059879557591483,
+              "rmsePp": 3.5447395119933014
+            },
+            "GO_PUNT": {
+              "n": 8017,
+              "maePp": 12.4632037092004,
+              "biasPp": -12.420193318954654,
+              "rmsePp": 27.378401082219202
+            },
+            "FG_PUNT": {
+              "n": 4394,
+              "maePp": 20.87519055834936,
+              "biasPp": -19.21428662234306,
+              "rmsePp": 36.178174108281496
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 837,
+              "exactAgreement": 0.7646356033452808,
+              "decisionSafeRate": 0.8685782556750299,
+              "meanReferenceRegretPp": 0.3187920948036558,
+              "p95ReferenceRegretPp": 2.1595073822
+            },
+            "LEAN": {
+              "n": 1872,
+              "exactAgreement": 0.4497863247863248,
+              "decisionSafeRate": 0.6875,
+              "meanReferenceRegretPp": 0.6921693873748768,
+              "p95ReferenceRegretPp": 2.8759935726
+            },
+            "TOSS-UP": {
+              "n": 5308,
+              "exactAgreement": 0.5440844009042954,
+              "decisionSafeRate": 0.7920120572720422,
+              "meanReferenceRegretPp": 0.5478602600375708,
+              "p95ReferenceRegretPp": 2.7505352196499957
+            }
+          }
+        },
+        {
+          "bucket": "PUNT",
+          "n": 7398,
+          "exactAgreement": 0.8880778588807786,
+          "decisionSafeRate": 0.9544471478778048,
+          "materialSplitRate": 0.04555285212219519,
+          "strongSplitRate": 0.020546093538794268,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.11751144682932238,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0.0013865569999982437,
+          "p95ReferenceRegretPp": 0.5932467959999961,
+          "worstReferenceRegretPp": 10.645669730999996,
+          "coachExactAgreement": 0.980940794809408,
+          "meanCoachRegretPp": 0.009714069807631441,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 401,
+              "share": 0.054203838875371724
+            },
+            "FG": {
+              "count": 427,
+              "share": 0.05771830224384969
+            },
+            "PUNT": {
+              "count": 6570,
+              "share": 0.8880778588807786
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 0,
+              "share": 0
+            },
+            "FG": {
+              "count": 0,
+              "share": 0
+            },
+            "PUNT": {
+              "count": 7398,
+              "share": 1
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 7398,
+              "maePp": 8.998417310664378,
+              "biasPp": -0.8087010132680147,
+              "rmsePp": 12.281125099427594,
+              "p90AbsPp": 21.112895769705652
+            },
+            "FG": {
+              "n": 910,
+              "maePp": 8.034620874277417,
+              "biasPp": 1.9078316793583732,
+              "rmsePp": 11.402675328379395,
+              "p90AbsPp": 20.350141900805657
+            },
+            "PUNT": {
+              "n": 7398,
+              "maePp": 8.976044562107703,
+              "biasPp": -1.596973431426706,
+              "rmsePp": 12.247845621705313,
+              "p90AbsPp": 21.02041176618971
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 910,
+              "maePp": 1.8931795649384213,
+              "biasPp": -1.8399547720763074,
+              "rmsePp": 2.534117654021115
+            },
+            "GO_PUNT": {
+              "n": 7398,
+              "maePp": 1.0887720379025148,
+              "biasPp": 0.7882724181586974,
+              "rmsePp": 1.5810541102013926
+            },
+            "FG_PUNT": {
+              "n": 910,
+              "maePp": 2.912431849287277,
+              "biasPp": 2.9123083900719484,
+              "rmsePp": 3.65744488552575
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 1854,
+              "exactAgreement": 0.9660194174757282,
+              "decisionSafeRate": 0.9773462783171522,
+              "meanReferenceRegretPp": 0.05850561520334412,
+              "p95ReferenceRegretPp": 0
+            },
+            "LEAN": {
+              "n": 2874,
+              "exactAgreement": 0.94258872651357,
+              "decisionSafeRate": 0.964857341684064,
+              "meanReferenceRegretPp": 0.09402054306527488,
+              "p95ReferenceRegretPp": 0.2336888085999923
+            },
+            "TOSS-UP": {
+              "n": 2670,
+              "exactAgreement": 0.7752808988764045,
+              "decisionSafeRate": 0.9273408239700375,
+              "meanReferenceRegretPp": 0.18376974992012243,
+              "p95ReferenceRegretPp": 1.3928671376999984
+            }
+          }
+        }
+      ],
+      "primaryCertainty": [
+        {
+          "bucket": "CLEAR",
+          "n": 4111,
+          "exactAgreement": 0.9194843103867673,
+          "decisionSafeRate": 0.9523230357577231,
+          "materialSplitRate": 0.04767696424227682,
+          "strongSplitRate": 0.021162734127949404,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.12368334460361456,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 0,
+          "p95ReferenceRegretPp": 0.6829194200500023,
+          "worstReferenceRegretPp": 18.260433645000006,
+          "coachExactAgreement": 0.8980783264412552,
+          "meanCoachRegretPp": 0.2426393053355827,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 731,
+              "share": 0.17781561663828752
+            },
+            "FG": {
+              "count": 1551,
+              "share": 0.37728046703964974
+            },
+            "PUNT": {
+              "count": 1829,
+              "share": 0.4449039163220628
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 837,
+              "share": 0.20360009729992704
+            },
+            "FG": {
+              "count": 1420,
+              "share": 0.3454147409389443
+            },
+            "PUNT": {
+              "count": 1854,
+              "share": 0.4509851617611287
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 4111,
+              "maePp": 9.387408788382759,
+              "biasPp": -2.051815992720176,
+              "rmsePp": 12.222841934542723,
+              "p90AbsPp": 20.319577696494004
+            },
+            "FG": {
+              "n": 2151,
+              "maePp": 9.36636766226699,
+              "biasPp": -2.228656660026136,
+              "rmsePp": 12.307215696822928,
+              "p90AbsPp": 21.027162238476983
+            },
+            "PUNT": {
+              "n": 4111,
+              "maePp": 22.03165284295447,
+              "biasPp": 14.6414445155957,
+              "rmsePp": 31.766370482362365,
+              "p90AbsPp": 59.195276412697886
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 2151,
+              "maePp": 2.9454673080918776,
+              "biasPp": 0.06627117661207405,
+              "rmsePp": 4.6844740789306085
+            },
+            "GO_PUNT": {
+              "n": 4111,
+              "maePp": 18.213145027910844,
+              "biasPp": -16.693260508315845,
+              "rmsePp": 32.121039851414274
+            },
+            "FG_PUNT": {
+              "n": 2151,
+              "maePp": 33.656470996280945,
+              "biasPp": -32.612907318085384,
+              "rmsePp": 44.986522015793085
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 4111,
+              "exactAgreement": 0.9194843103867673,
+              "decisionSafeRate": 0.9523230357577231,
+              "meanReferenceRegretPp": 0.12368334460361456,
+              "p95ReferenceRegretPp": 0.6829194200500023
+            },
+            "LEAN": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            },
+            "TOSS-UP": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            }
+          }
+        },
+        {
+          "bucket": "LEAN",
+          "n": 6554,
+          "exactAgreement": 0.7880683552029295,
+          "decisionSafeRate": 0.8756484589563626,
+          "materialSplitRate": 0.12435154104363748,
+          "strongSplitRate": 0.049588037839487335,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.2863376439624917,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.0828344460000003,
+          "p95ReferenceRegretPp": 1.989377148100001,
+          "worstReferenceRegretPp": 12.070871460000001,
+          "coachExactAgreement": 0.7866951480012206,
+          "meanCoachRegretPp": 0.3171622654602804,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 1050,
+              "share": 0.16020750686603602
+            },
+            "FG": {
+              "count": 2559,
+              "share": 0.3904485810192249
+            },
+            "PUNT": {
+              "count": 2945,
+              "share": 0.44934391211473906
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 1872,
+              "share": 0.28562709795544705
+            },
+            "FG": {
+              "count": 1808,
+              "share": 0.27586206896551724
+            },
+            "PUNT": {
+              "count": 2874,
+              "share": 0.4385108330790357
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 6554,
+              "maePp": 10.109753780866045,
+              "biasPp": -1.818087850475755,
+              "rmsePp": 13.033718228732893,
+              "p90AbsPp": 21.816693436345854
+            },
+            "FG": {
+              "n": 3375,
+              "maePp": 10.073516571368952,
+              "biasPp": -1.1888185178061694,
+              "rmsePp": 13.089317179335895,
+              "p90AbsPp": 21.757337790075603
+            },
+            "PUNT": {
+              "n": 6554,
+              "maePp": 21.081569502980557,
+              "biasPp": 12.755137090095879,
+              "rmsePp": 31.071855111386622,
+              "p90AbsPp": 57.30485707849187
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 3375,
+              "maePp": 1.9803383590038337,
+              "biasPp": -0.7496405802250342,
+              "rmsePp": 2.721543146727585
+            },
+            "GO_PUNT": {
+              "n": 6554,
+              "maePp": 15.50507724299713,
+              "biasPp": -14.573224940571677,
+              "rmsePp": 30.70829691982632
+            },
+            "FG_PUNT": {
+              "n": 3375,
+              "maePp": 29.065176585087283,
+              "biasPp": -27.84721626394697,
+              "rmsePp": 42.86830501043002
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            },
+            "LEAN": {
+              "n": 6554,
+              "exactAgreement": 0.7880683552029295,
+              "decisionSafeRate": 0.8756484589563626,
+              "meanReferenceRegretPp": 0.2863376439624917,
+              "p95ReferenceRegretPp": 1.989377148100001
+            },
+            "TOSS-UP": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            }
+          }
+        },
+        {
+          "bucket": "TOSS-UP",
+          "n": 9326,
+          "exactAgreement": 0.6324254771606262,
+          "decisionSafeRate": 0.8467724640789192,
+          "materialSplitRate": 0.15322753592108085,
+          "strongSplitRate": 0.062406176281363926,
+          "unsupportedPrimaryChoices": 0,
+          "meanReferenceRegretPp": 0.4264998780685057,
+          "medianReferenceRegretPp": 0,
+          "p90ReferenceRegretPp": 1.3285631139999976,
+          "p95ReferenceRegretPp": 2.3060552935000005,
+          "worstReferenceRegretPp": 99.983770261,
+          "coachExactAgreement": 0.5940381728500965,
+          "meanCoachRegretPp": 0.4124653924380569,
+          "primaryActionDistribution": {
+            "GO": {
+              "count": 3645,
+              "share": 0.39084280506111946
+            },
+            "FG": {
+              "count": 2141,
+              "share": 0.22957323611408964
+            },
+            "PUNT": {
+              "count": 3540,
+              "share": 0.3795839588247909
+            }
+          },
+          "referenceActionDistribution": {
+            "GO": {
+              "count": 5308,
+              "share": 0.569161484023161
+            },
+            "FG": {
+              "count": 1348,
+              "share": 0.14454214025305598
+            },
+            "PUNT": {
+              "count": 2670,
+              "share": 0.28629637572378297
+            }
+          },
+          "optionWpError": {
+            "GO": {
+              "n": 9326,
+              "maePp": 6.691277196971192,
+              "biasPp": -1.1589355693964705,
+              "rmsePp": 10.420073306991078,
+              "p90AbsPp": 18.382483971800827
+            },
+            "FG": {
+              "n": 4348,
+              "maePp": 6.333178677572997,
+              "biasPp": -0.24984044510593925,
+              "rmsePp": 10.007332351854327,
+              "p90AbsPp": 17.79246807557425
+            },
+            "PUNT": {
+              "n": 9326,
+              "maePp": 15.974539334981953,
+              "biasPp": 10.063337309933598,
+              "rmsePp": 30.48258921125981,
+              "p90AbsPp": 54.48713711507537
+            }
+          },
+          "pairwiseMarginError": {
+            "GO_FG": {
+              "n": 4348,
+              "maePp": 1.6078364439574448,
+              "biasPp": -1.078203220819599,
+              "rmsePp": 2.474766391393049
+            },
+            "GO_PUNT": {
+              "n": 9326,
+              "maePp": 11.518658004949039,
+              "biasPp": -11.222272879330072,
+              "rmsePp": 29.66002318466012
+            },
+            "FG_PUNT": {
+              "n": 4348,
+              "maePp": 24.074249876304574,
+              "biasPp": -22.406734877667894,
+              "rmsePp": 43.437579988963215
+            }
+          },
+          "certainty": {
+            "CLEAR": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            },
+            "LEAN": {
+              "n": 0,
+              "exactAgreement": null,
+              "decisionSafeRate": null,
+              "meanReferenceRegretPp": null,
+              "p95ReferenceRegretPp": null
+            },
+            "TOSS-UP": {
+              "n": 9326,
+              "exactAgreement": 0.6324254771606262,
+              "decisionSafeRate": 0.8467724640789192,
+              "meanReferenceRegretPp": 0.4264998780685057,
+              "p95ReferenceRegretPp": 2.3060552935000005
+            }
+          }
+        }
+      ]
+    }
+  }
+}
