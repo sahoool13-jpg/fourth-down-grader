@@ -1,260 +1,8 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-09-26T13:23:52.289Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T13:51:44.745Z",
   "holdoutSeason": 2025,
   "rows": [
-    {
-      "season": 2023,
-      "week": 15,
-      "seasonType": "REG",
-      "gameId": "2023_15_BAL_JAX",
-      "playId": "4192",
-      "posteam": "BAL",
-      "defteam": "JAX",
-      "quarter": 4,
-      "quarterSecondsRemaining": 30,
-      "gameSecondsRemaining": 30,
-      "ydstogo": 3,
-      "yardline100": 30,
-      "scoreDiff": 16,
-      "actual": "GO",
-      "description": "(:30) 35-G.Edwards up the middle to JAX 25 for 5 yards (33-D.Lloyd).",
-      "referenceOptimal": "GO",
-      "referenceOptions": {
-        "GO": 0.99983770261,
-        "FG": 0.99972319948,
-        "PUNT": 0
-      },
-      "referenceEdgePp": 0.01145031300000543,
-      "referenceCertainty": "TOSS-UP",
-      "primaryOptimal": "PUNT",
-      "primaryOptions": {
-        "GO": 0.9988274426718595,
-        "FG": 0.9988923445447995,
-        "PUNT": 0.9989999999999999
-      },
-      "primaryEdgePp": 0.01076554552004172,
-      "primaryCertainty": "TOSS-UP",
-      "exact": false,
-      "decisionSafe": false,
-      "materialSplit": true,
-      "strongSplit": true,
-      "unsupportedPrimary": false,
-      "referenceRegretPp": 99.983770261,
-      "coachRegretPp": 0,
-      "coachExact": true,
-      "wpErrorsPp": {
-        "GO": -0.1010259938140523,
-        "FG": -0.08308549352005201,
-        "PUNT": 99.89999999999999
-      },
-      "pairwiseMarginErrorsPp": {
-        "GO_FG": -0.017940500294000294,
-        "GO_PUNT": -100.00102599381404,
-        "FG_PUNT": -99.98308549352004
-      },
-      "alternateWpErrorsPp": {
-        "structural": {
-          "GO": -0.10311819047950088,
-          "FG": -0.08435095603435139,
-          "PUNT": 99.9
-        },
-        "vegasAnchor": {
-          "GO": -0.1010259938140523,
-          "FG": -0.08308549352005201,
-          "PUNT": 99.89999999999999
-        }
-      }
-    },
-    {
-      "season": 2021,
-      "week": 9,
-      "seasonType": "REG",
-      "gameId": "2021_09_DEN_DAL",
-      "playId": "3294",
-      "posteam": "DEN",
-      "defteam": "DAL",
-      "quarter": 4,
-      "quarterSecondsRemaining": 396,
-      "gameSecondsRemaining": 396,
-      "ydstogo": 5,
-      "yardline100": 24,
-      "scoreDiff": 27,
-      "actual": "FG",
-      "description": "(6:36) 8-B.McManus 42 yard field goal is GOOD, Center-46-J.Bobenmoyer, Holder-6-S.Martin.",
-      "referenceOptimal": "GO",
-      "referenceOptions": {
-        "GO": 0.99937246469,
-        "FG": 0.99924585365,
-        "PUNT": 0
-      },
-      "referenceEdgePp": 0.0126611040000002,
-      "referenceCertainty": "TOSS-UP",
-      "primaryOptimal": "PUNT",
-      "primaryOptions": {
-        "GO": 0.9989166577776747,
-        "FG": 0.9989711927917642,
-        "PUNT": 0.9989774652576601
-      },
-      "primaryEdgePp": 0.0006272465895906798,
-      "primaryCertainty": "TOSS-UP",
-      "exact": false,
-      "decisionSafe": false,
-      "materialSplit": true,
-      "strongSplit": true,
-      "unsupportedPrimary": false,
-      "referenceRegretPp": 99.937246469,
-      "coachRegretPp": 0.0126611040000002,
-      "coachExact": false,
-      "wpErrorsPp": {
-        "GO": -0.04558069123252739,
-        "FG": -0.02746608582357979,
-        "PUNT": 99.89774652576601
-      },
-      "pairwiseMarginErrorsPp": {
-        "GO_FG": -0.018114605408947604,
-        "GO_PUNT": -99.94332721699854,
-        "FG_PUNT": -99.92521261158959
-      },
-      "alternateWpErrorsPp": {
-        "structural": {
-          "GO": -0.04654852719769842,
-          "FG": -0.027791240092378544,
-          "PUNT": 99.89749302898726
-        },
-        "vegasAnchor": {
-          "GO": -0.04558069123252739,
-          "FG": -0.02746608582357979,
-          "PUNT": 99.89774652576601
-        }
-      }
-    },
-    {
-      "season": 2024,
-      "week": 3,
-      "seasonType": "REG",
-      "gameId": "2024_03_JAX_BUF",
-      "playId": "3144",
-      "posteam": "BUF",
-      "defteam": "JAX",
-      "quarter": 3,
-      "quarterSecondsRemaining": 306,
-      "gameSecondsRemaining": 1206,
-      "ydstogo": 7,
-      "yardline100": 9,
-      "scoreDiff": 24,
-      "actual": "FG",
-      "description": "(5:06) 2-T.Bass 27 yard field goal is GOOD, Center-69-R.Ferguson, Holder-8-S.Martin.",
-      "referenceOptimal": "FG",
-      "referenceOptions": {
-        "GO": 0.99685926889,
-        "FG": 0.99820169414,
-        "PUNT": 0
-      },
-      "referenceEdgePp": 0.13424252500000566,
-      "referenceCertainty": "TOSS-UP",
-      "primaryOptimal": "PUNT",
-      "primaryOptions": {
-        "GO": 0.9980371033782945,
-        "FG": 0.9981081565311729,
-        "PUNT": 0.9982490865570499
-      },
-      "primaryEdgePp": 0.014093002587700632,
-      "primaryCertainty": "TOSS-UP",
-      "exact": false,
-      "decisionSafe": false,
-      "materialSplit": true,
-      "strongSplit": true,
-      "unsupportedPrimary": false,
-      "referenceRegretPp": 99.820169414,
-      "coachRegretPp": 0,
-      "coachExact": true,
-      "wpErrorsPp": {
-        "GO": 0.11778344882945602,
-        "FG": -0.009353760882713225,
-        "PUNT": 99.82490865570499
-      },
-      "pairwiseMarginErrorsPp": {
-        "GO_FG": 0.12713720971216924,
-        "GO_PUNT": -99.70712520687553,
-        "FG_PUNT": -99.8342624165877
-      },
-      "alternateWpErrorsPp": {
-        "structural": {
-          "GO": -4.046284427035851,
-          "FG": -4.012529551390365,
-          "PUNT": 96.14041878251986
-        },
-        "vegasAnchor": {
-          "GO": 0.1870511279381426,
-          "FG": 0.05740963455010961,
-          "PUNT": 99.88670425806372
-        }
-      }
-    },
-    {
-      "season": 2021,
-      "week": 6,
-      "seasonType": "REG",
-      "gameId": "2021_06_LAC_BAL",
-      "playId": "2479",
-      "posteam": "BAL",
-      "defteam": "LAC",
-      "quarter": 3,
-      "quarterSecondsRemaining": 306,
-      "gameSecondsRemaining": 1206,
-      "ydstogo": 13,
-      "yardline100": 21,
-      "scoreDiff": 18,
-      "actual": "FG",
-      "description": "(5:06) 9-J.Tucker 39 yard field goal is GOOD, Center-46-N.Moore, Holder-4-S.Koch.",
-      "referenceOptimal": "FG",
-      "referenceOptions": {
-        "GO": 0.9738699711,
-        "FG": 0.97508200919,
-        "PUNT": 0
-      },
-      "referenceEdgePp": 0.12120380900000338,
-      "referenceCertainty": "TOSS-UP",
-      "primaryOptimal": "PUNT",
-      "primaryOptions": {
-        "GO": 0.9614014363246639,
-        "FG": 0.9668612663328099,
-        "PUNT": 0.969995828606907
-      },
-      "primaryEdgePp": 0.3134562274097141,
-      "primaryCertainty": "TOSS-UP",
-      "exact": false,
-      "decisionSafe": false,
-      "materialSplit": true,
-      "strongSplit": true,
-      "unsupportedPrimary": false,
-      "referenceRegretPp": 97.508200919,
-      "coachRegretPp": 0,
-      "coachExact": true,
-      "wpErrorsPp": {
-        "GO": -1.2468534775336049,
-        "FG": -0.82207428571901,
-        "PUNT": 96.99958286069071
-      },
-      "pairwiseMarginErrorsPp": {
-        "GO_FG": -0.4247791918145949,
-        "GO_PUNT": -98.24643633822431,
-        "FG_PUNT": -97.8216571464097
-      },
-      "alternateWpErrorsPp": {
-        "structural": {
-          "GO": -7.330399689599087,
-          "FG": -5.984846948940136,
-          "PUNT": 92.36695757476943
-        },
-        "vegasAnchor": {
-          "GO": -0.3488594254045685,
-          "FG": -0.047747650293494814,
-          "PUNT": 97.70240715364807
-        }
-      }
-    },
     {
       "season": 2021,
       "week": 9,
@@ -275,8 +23,22 @@
       "referenceOptions": {
         "GO": 0.52123950594,
         "FG": 0.71853401332,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 19.729450737999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -287,34 +49,37 @@
       },
       "primaryEdgePp": 0.4161648793801431,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 19.729450737999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -0.39941351230154964,
         "FG": -20.54502912968169,
-        "PUNT": 31.005419070763736
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 20.14561561738014,
-        "GO_PUNT": -31.404832583065286,
-        "FG_PUNT": -51.55044820044543
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 6.329154278847371,
           "FG": -13.850593420822932,
-          "PUNT": 34.88689776888717
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 16.628717190370846,
           "FG": -3.4598035611106637,
-          "PUNT": 47.99374558769325
+          "PUNT": null
         }
       }
     },
@@ -338,8 +103,22 @@
       "referenceOptions": {
         "GO": 0.76288089051,
         "FG": 0.94548522696,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 18.260433645000006,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -350,34 +129,37 @@
       },
       "primaryEdgePp": 2.9694574496526016,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 18.260433645000006,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -14.361081288969935,
         "FG": -35.59097238362254,
-        "PUNT": 44.0941540477105
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 21.229891094652608,
-        "GO_PUNT": -58.45523533668043,
-        "FG_PUNT": -79.68512643133305
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -2.375578416571944,
           "FG": -23.38413566283024,
-          "PUNT": 55.90264336654324
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 4.69725949300882,
           "FG": -15.550304387703429,
-          "PUNT": 67.37654543947824
+          "PUNT": null
         }
       }
     },
@@ -401,8 +183,24 @@
       "referenceOptions": {
         "GO": 0.15239303679,
         "FG": 0,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 15.239303678999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -413,34 +211,37 @@
       },
       "primaryEdgePp": 0.3180632211171902,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 15.239303678999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 3.1841992840090594,
         "FG": 18.74156618412625,
-        "PUNT": 12.39687201246394
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -15.55736690011719,
-        "GO_PUNT": -9.21267272845488,
-        "FG_PUNT": 6.344694171662309
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 10.404420612001491,
           "FG": 26.091658218909497,
-          "PUNT": 17.023431408089163
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 9.13496853852197,
           "FG": 24.763882874775987,
-          "PUNT": 16.801978881643905
+          "PUNT": null
         }
       }
     },
@@ -466,6 +267,19 @@
         "FG": 0,
         "PUNT": 0.010428388032
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 14.108318930800001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -476,12 +290,15 @@
       },
       "primaryEdgePp": 0.6058899702103909,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 14.108318930800001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -527,8 +344,22 @@
       "referenceOptions": {
         "GO": 0.46755321053,
         "FG": 0.60405331644,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 13.650010591000006,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -539,34 +370,37 @@
       },
       "primaryEdgePp": 0.5185727166892751,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 13.650010591000006,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -5.185432392350453,
         "FG": -19.354015700039735,
-        "PUNT": 23.706033247360885
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 14.16858330768928,
-        "GO_PUNT": -28.89146563971134,
-        "FG_PUNT": -43.06004894740062
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 4.074025387700653,
           "FG": -10.170053202827589,
-          "PUNT": 29.16719679292593
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 9.435203446799756,
           "FG": -4.742016355291334,
-          "PUNT": 35.90451244001272
+          "PUNT": null
         }
       }
     },
@@ -592,6 +426,19 @@
         "FG": 0,
         "PUNT": 0.00088756013741
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 11.982115446259002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -602,12 +449,15 @@
       },
       "primaryEdgePp": 1.1480956615582725,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 12.070871460000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -653,8 +503,22 @@
       "referenceOptions": {
         "GO": 0.345726315,
         "FG": 0.46618316016,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 12.045684516,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -665,34 +529,37 @@
       },
       "primaryEdgePp": 0.04778371170495177,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 12.045684516,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 8.154433354370067,
         "FG": -3.939034873334885,
-        "PUNT": 38.56320658863532
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 12.093468227704951,
-        "GO_PUNT": -30.40877323426525,
-        "FG_PUNT": -42.5022414619702
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 13.11576563154619,
           "FG": 1.0159514318393237,
-          "PUNT": 42.93667532694857
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 11.644088007734494,
           "FG": -0.4501369114662146,
-          "PUNT": 41.96194759265123
+          "PUNT": null
         }
       }
     },
@@ -716,8 +583,22 @@
       "referenceOptions": {
         "GO": 0.50385568195,
         "FG": 0.62359597227,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 11.974029032,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -728,34 +609,37 @@
       },
       "primaryEdgePp": 5.229675407113021,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 11.974029032,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 6.013619032149498,
         "FG": -11.190085406963524,
-        "PUNT": 29.77651883720041
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 17.20370443911302,
-        "GO_PUNT": -23.762899805050914,
-        "FG_PUNT": -40.96660424416393
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 9.438774648534853,
           "FG": -8.26472557108623,
-          "PUNT": 30.129957516382945
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 13.663299783529304,
           "FG": -3.28872824808647,
-          "PUNT": 36.868651999786465
+          "PUNT": null
         }
       }
     },
@@ -781,6 +665,17 @@
         "FG": 0.21259722114,
         "PUNT": 0.37805768235
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 11.211076929000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -791,12 +686,15 @@
       },
       "primaryEdgePp": 1.9944907253513833,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 11.211076929000003,
+      "coachComparable": true,
       "coachRegretPp": 11.211076929000003,
       "coachExact": false,
       "wpErrorsPp": {
@@ -842,8 +740,22 @@
       "referenceOptions": {
         "GO": 0.5462608872,
         "FG": 0.65594333963,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 10.968245242999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -854,34 +766,37 @@
       },
       "primaryEdgePp": 0.025453364756411467,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 10.968245242999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 17.596799342570613,
         "FG": 6.603100734814205,
-        "PUNT": 68.72627287136001
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 10.993698607756407,
-        "GO_PUNT": -51.129473528789404,
-        "FG_PUNT": -62.12317213654581
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 10.378661055131976,
           "FG": -0.6216516319657917,
-          "PUNT": 60.643913166399784
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 4.248253031850191,
           "FG": -6.750707078275886,
-          "PUNT": 54.75017397427943
+          "PUNT": null
         }
       }
     },
@@ -907,6 +822,17 @@
         "FG": 0.43820863962,
         "PUNT": 0.67286081008
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 10.645669730999996,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -917,12 +843,15 @@
       },
       "primaryEdgePp": 1.1407458369246726,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 10.645669730999996,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -968,8 +897,22 @@
       "referenceOptions": {
         "GO": 0.71599802251,
         "FG": 0.81752445215,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 10.152642964000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -980,34 +923,37 @@
       },
       "primaryEdgePp": 0.8670318073604188,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 10.152642964000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -17.816748687985474,
         "FG": -28.836423459345895,
-        "PUNT": 42.24035892456962
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 11.019674771360421,
-        "GO_PUNT": -60.05710761255509,
-        "FG_PUNT": -71.07678238391551
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -2.155251385576551,
           "FG": -13.13539909495407,
-          "PUNT": 57.56266170795281
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -1.1795006478792724,
           "FG": -12.06295886073966,
-          "PUNT": 59.93763645245589
+          "PUNT": null
         }
       }
     },
@@ -1033,6 +979,19 @@
         "FG": 0,
         "PUNT": 0.007918421205
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 9.9376331095,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -1043,12 +1002,15 @@
       },
       "primaryEdgePp": 0.5524207717601093,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 9.9376331095,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1096,6 +1058,17 @@
         "FG": 0.66284134288,
         "PUNT": 0.75438950095
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.418119079000006,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1106,12 +1079,15 @@
       },
       "primaryEdgePp": 0.7211363959930273,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 9.154815807000006,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1157,8 +1133,22 @@
       "referenceOptions": {
         "GO": 0.34788401947,
         "FG": 0.43863851719,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 9.075449771999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -1169,34 +1159,37 @@
       },
       "primaryEdgePp": 1.1591349805146811,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 9.075449771999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 8.00033959321788,
         "FG": -2.2342451592967993,
-        "PUNT": 24.765941711009283
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 10.23458475251468,
-        "GO_PUNT": -16.765602117791403,
-        "FG_PUNT": -27.000186870306088
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 18.308207466217052,
           "FG": 7.915931902560692,
-          "PUNT": 31.263691135193366
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -9.148970837804404,
           "FG": -19.119912682327037,
-          "PUNT": 13.176374828134897
+          "PUNT": null
         }
       }
     },
@@ -1222,6 +1215,17 @@
         "FG": 0.52512431145,
         "PUNT": 0.83579296421
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 9.073465967000004,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -1232,12 +1236,15 @@
       },
       "primaryEdgePp": 0.06786388045393332,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 9.073465967000004,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1285,6 +1292,17 @@
         "FG": 0.4398821485,
         "PUNT": 0.4635215126
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.563411946000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1295,12 +1313,15 @@
       },
       "primaryEdgePp": 0.08229028662894988,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 8.927348356000003,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1348,6 +1369,19 @@
         "FG": 0,
         "PUNT": 0.0052285751117
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 8.58704244733,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -1358,12 +1392,15 @@
       },
       "primaryEdgePp": 0.5690140344257424,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 8.58704244733,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1411,6 +1448,17 @@
         "FG": 0.42506250739,
         "PUNT": 0.66981423608
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 8.557137652000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -1421,12 +1469,15 @@
       },
       "primaryEdgePp": 1.0677370008206344,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 8.557137652000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1472,8 +1523,22 @@
       "referenceOptions": {
         "GO": 0.66180333964,
         "FG": 0.74509184523,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 8.328850559000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -1484,34 +1549,37 @@
       },
       "primaryEdgePp": 0.6244777206657726,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 8.328850559000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 6.81684320140461,
         "FG": -2.1364850782611633,
-        "PUNT": 68.50872392405594
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 8.953328279665772,
-        "GO_PUNT": -61.69188072265134,
-        "FG_PUNT": -70.64520900231712
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 0.23609539166346005,
           "FG": -8.87672467582602,
-          "PUNT": 60.838819857066916
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 7.941078311469463,
           "FG": -0.9956842020780066,
-          "PUNT": 69.7423719400011
+          "PUNT": null
         }
       }
     },
@@ -1537,6 +1605,17 @@
         "FG": 0.45382097363,
         "PUNT": 0.67132419666
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 8.189822725999996,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -1547,12 +1626,15 @@
       },
       "primaryEdgePp": 3.6469358688481446,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 8.189822725999996,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1600,6 +1682,17 @@
         "FG": 0.47998463012,
         "PUNT": 0.49837258947
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.805860560000004,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1610,12 +1703,15 @@
       },
       "primaryEdgePp": 0.26644705452825157,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.6446564950000075,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1663,6 +1759,17 @@
         "FG": 0.32098865075,
         "PUNT": 0.26996825624
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.533637817,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1673,12 +1780,15 @@
       },
       "primaryEdgePp": 0.009674887043203961,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.533637817,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1726,6 +1836,17 @@
         "FG": 0.40551272035,
         "PUNT": 0.62514859334
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.4151142440000095,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -1736,12 +1857,15 @@
       },
       "primaryEdgePp": 0.04073989615810403,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.4151142440000095,
+      "coachComparable": true,
       "coachRegretPp": 7.4151142440000095,
       "coachExact": false,
       "wpErrorsPp": {
@@ -1789,6 +1913,17 @@
         "FG": 0.78903126779,
         "PUNT": 0.82781852865
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.510374013999995,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1799,12 +1934,15 @@
       },
       "primaryEdgePp": 0.16147270867785668,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.389100100000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1850,8 +1988,24 @@
       "referenceOptions": {
         "GO": 0.073703276503,
         "FG": 0,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 7.3703276503,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1862,34 +2016,37 @@
       },
       "primaryEdgePp": 0.20680698949068071,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.3703276503,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 0.18202569284378745,
         "FG": 7.759160332634468,
-        "PUNT": 5.131818262547446
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -7.577134639790681,
-        "GO_PUNT": -4.949792569703659,
-        "FG_PUNT": 2.627342070087022
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 7.224283363467089,
           "FG": 15.00445194142673,
-          "PUNT": 9.75448340657407
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 0.979968837763015,
           "FG": 8.576926477146744,
-          "PUNT": 5.689759809204035
+          "PUNT": null
         }
       }
     },
@@ -1915,6 +2072,19 @@
         "FG": 0,
         "PUNT": 0.0050295382942
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.31076166948,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -1925,12 +2095,15 @@
       },
       "primaryEdgePp": 0.6768695656510739,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.31076166948,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -1978,6 +2151,17 @@
         "FG": 0.19124081703,
         "PUNT": 0.16280676104
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.247381154999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -1988,12 +2172,15 @@
       },
       "primaryEdgePp": 1.6602264751605396,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.247381154999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2041,6 +2228,19 @@
         "FG": 0,
         "PUNT": 0.00081357065538
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.118401958862,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2051,12 +2251,15 @@
       },
       "primaryEdgePp": 1.8609738265843736,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.1997590244000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2104,6 +2307,17 @@
         "FG": 0.24849143472,
         "PUNT": 0.0034373844171
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.130694975999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2114,12 +2328,15 @@
       },
       "primaryEdgePp": 1.007267857974986,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.130694975999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2165,8 +2382,22 @@
       "referenceOptions": {
         "GO": 0.32555040352,
         "FG": 0.39675838606,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 7.120798254000005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2177,34 +2408,37 @@
       },
       "primaryEdgePp": 1.9134611073537533,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.120798254000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 17.3495258626893,
         "FG": 8.315266501335545,
-        "PUNT": 43.18540385486544
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 9.034259361353758,
-        "GO_PUNT": -25.835877992176144,
-        "FG_PUNT": -34.8701373535299
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 20.61370759706318,
           "FG": 11.369739450256455,
-          "PUNT": 45.67071988418364
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 0.2198086692929313,
           "FG": -8.565539124730643,
-          "PUNT": 27.11374319920229
+          "PUNT": null
         }
       }
     },
@@ -2230,6 +2464,17 @@
         "FG": 0.20238015056,
         "PUNT": 0.35351820347
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 7.065714706999998,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -2240,12 +2485,15 @@
       },
       "primaryEdgePp": 2.2343237110178604,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 7.065714706999998,
+      "coachComparable": true,
       "coachRegretPp": 7.065714706999998,
       "coachExact": false,
       "wpErrorsPp": {
@@ -2293,6 +2541,17 @@
         "FG": 0.49212190249,
         "PUNT": 0.50470930223
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.690813446999998,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2303,12 +2562,15 @@
       },
       "primaryEdgePp": 0.16213833841725034,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.949553420999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2354,8 +2616,22 @@
       "referenceOptions": {
         "GO": 0.35783849332,
         "FG": 0.28962443667,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.821405665000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2366,34 +2642,37 @@
       },
       "primaryEdgePp": 0.3703597448079299,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.821405665000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -4.955072722853105,
         "FG": 2.236692686954828,
-        "PUNT": 28.40280257815945
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -7.191765409807932,
-        "GO_PUNT": -33.357875301012555,
-        "FG_PUNT": -26.16610989120462
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 2.6432919156345323,
           "FG": 9.920785420468532,
-          "PUNT": 35.415479703102335
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -1.1702529147407603,
           "FG": 6.043970244899144,
-          "PUNT": 32.02769132935116
+          "PUNT": null
         }
       }
     },
@@ -2417,8 +2696,22 @@
       "referenceOptions": {
         "GO": 0.63576099186,
         "FG": 0.70330595068,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.7544958820000005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2429,34 +2722,37 @@
       },
       "primaryEdgePp": 0.0666435218787731,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.7544958820000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -2.2178972951628517,
         "FG": -9.039036699041624,
-        "PUNT": 56.69232051873463
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 6.821139403878773,
-        "GO_PUNT": -58.91021781389748,
-        "FG_PUNT": -65.73135721777625
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -7.469149027271826,
           "FG": -14.300547685222377,
-          "PUNT": 50.77404401395583
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 2.6193890289861965,
           "FG": -4.198012567531695,
-          "PUNT": 61.749576986931444
+          "PUNT": null
         }
       }
     },
@@ -2482,6 +2778,17 @@
         "FG": 0.36007871932,
         "PUNT": 0.35546780435
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.7540099799999975,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2492,12 +2799,15 @@
       },
       "primaryEdgePp": 0.2537741564142326,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.7540099799999975,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2545,6 +2855,17 @@
         "FG": 0.40979903483,
         "PUNT": 0.41617031511
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.073031547999996,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2555,12 +2876,15 @@
       },
       "primaryEdgePp": 0.14042191506914714,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.710159575999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2608,6 +2932,17 @@
         "FG": 0.65508984029,
         "PUNT": 0.86419636505
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.6880763799999965,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2618,12 +2953,15 @@
       },
       "primaryEdgePp": 0.7093232080171208,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.6880763799999965,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2671,6 +3009,17 @@
         "FG": 0.5372890234,
         "PUNT": 0.70188577008
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.652331352000007,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -2681,12 +3030,15 @@
       },
       "primaryEdgePp": 0.2648067511346275,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.652331352000007,
+      "coachComparable": true,
       "coachRegretPp": 6.652331352000007,
       "coachExact": false,
       "wpErrorsPp": {
@@ -2734,6 +3086,17 @@
         "FG": 0.56275212765,
         "PUNT": 0.78186800691
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.601880888,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2744,12 +3107,15 @@
       },
       "primaryEdgePp": 0.8432300906369594,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.601880888,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2797,6 +3163,17 @@
         "FG": 0.40725229051,
         "PUNT": 0.42077685524
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.2050451159999955,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -2807,12 +3184,15 @@
       },
       "primaryEdgePp": 0.450132384091817,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.5575015889999975,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2860,6 +3240,17 @@
         "FG": 0.86422885927,
         "PUNT": 0.77429460405
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.540739207000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2870,12 +3261,15 @@
       },
       "primaryEdgePp": 0.5890952251521142,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.540739207000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -2921,8 +3315,22 @@
       "referenceOptions": {
         "GO": 0.6679796687,
         "FG": 0.73303341701,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.505374830999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2933,34 +3341,37 @@
       },
       "primaryEdgePp": 2.386266060164388,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.505374830999999,
+      "coachComparable": true,
       "coachRegretPp": 6.505374830999999,
       "coachExact": false,
       "wpErrorsPp": {
         "GO": 12.250611884879369,
         "FG": 3.3589709937149825,
-        "PUNT": 69.23570168180517
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 8.891640891164387,
-        "GO_PUNT": -56.985089796925806,
-        "FG_PUNT": -65.87673068809019
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 13.62979211942884,
           "FG": 4.5879240825574925,
-          "PUNT": 69.82845410185374
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 1.3369853943098642,
           "FG": -8.248170582306159,
-          "PUNT": 56.05233419340484
+          "PUNT": null
         }
       }
     },
@@ -2986,6 +3397,17 @@
         "FG": 0.69052451849,
         "PUNT": 0.90273288185
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.464383225000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -2996,12 +3418,15 @@
       },
       "primaryEdgePp": 1.9820469411298114,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.464383225000003,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3049,6 +3474,17 @@
         "FG": 0.245461207,
         "PUNT": 0.24927828675
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.082535551999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3059,12 +3495,15 @@
       },
       "primaryEdgePp": 0.4986780154637882,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.464243526999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3112,6 +3551,17 @@
         "FG": 0.5325811826,
         "PUNT": 0.54568970562
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.1077540280000004,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3122,12 +3572,15 @@
       },
       "primaryEdgePp": 0.34774140990095903,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.4186063299999985,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3175,6 +3628,17 @@
         "FG": 0.15076997555,
         "PUNT": 0.10890707065
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.417732920000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3185,12 +3649,15 @@
       },
       "primaryEdgePp": 2.101781880918062,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.417732920000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3238,6 +3705,17 @@
         "FG": 0.44480732083,
         "PUNT": 0.64159889732
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.415002258000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -3248,12 +3726,15 @@
       },
       "primaryEdgePp": 0.33107521745203705,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.415002258000002,
+      "coachComparable": true,
       "coachRegretPp": 6.415002258000002,
       "coachExact": false,
       "wpErrorsPp": {
@@ -3301,6 +3782,17 @@
         "FG": 0.41689527049,
         "PUNT": 0.41074173811
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.404887786999996,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3311,12 +3803,15 @@
       },
       "primaryEdgePp": 0.4663297190279414,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.404887786999996,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3362,8 +3857,22 @@
       "referenceOptions": {
         "GO": 0.24179703685,
         "FG": 0.30568394895,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.38869121,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -3374,34 +3883,37 @@
       },
       "primaryEdgePp": 1.3820342824480192,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.38869121,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 2.452141659588944,
         "FG": -5.318583832859075,
-        "PUNT": 11.763713198569855
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 7.770725492448019,
-        "GO_PUNT": -9.311571538980909,
-        "FG_PUNT": -17.08229703142893
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 12.835110764237099,
           "FG": 4.6027081476984035,
-          "PUNT": 16.185525048483797
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -7.076202259243941,
           "FG": -14.461018993805396,
-          "PUNT": 7.044157722606268
+          "PUNT": null
         }
       }
     },
@@ -3425,8 +3937,22 @@
       "referenceOptions": {
         "GO": 0.4297482413,
         "FG": 0.36592553499,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.382270630999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3437,34 +3963,37 @@
       },
       "primaryEdgePp": 0.010242010605515661,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.382270630999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -17.30290510510307,
         "FG": -10.910392463497553,
-        "PUNT": 22.694749787978736
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -6.392512641605514,
-        "GO_PUNT": -39.9976548930818,
-        "FG_PUNT": -33.605142251476295
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -5.0643002225634,
           "FG": 1.3320077167640498,
-          "PUNT": 33.76141339904961
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -2.261503919262231,
           "FG": 4.133721566717768,
-          "PUNT": 36.8567650527919
+          "PUNT": null
         }
       }
     },
@@ -3490,6 +4019,17 @@
         "FG": 0.67476603883,
         "PUNT": 0.73856464904
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 2.7770499309999974,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3500,12 +4040,15 @@
       },
       "primaryEdgePp": 0.513890063413569,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.379861021,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3553,6 +4096,17 @@
         "FG": 0.45967791392,
         "PUNT": 0.41908135993
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.376953497999994,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3563,12 +4117,15 @@
       },
       "primaryEdgePp": 0.04539215496662252,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.376953497999994,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3616,6 +4173,17 @@
         "FG": 0.40718044215,
         "PUNT": 0.4156252552
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.491255293000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3626,12 +4194,15 @@
       },
       "primaryEdgePp": 0.2560941299042663,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.335736598000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3677,8 +4248,22 @@
       "referenceOptions": {
         "GO": 0.43671722803,
         "FG": 0.373381927,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.333530103000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3689,34 +4274,37 @@
       },
       "primaryEdgePp": 0.8153026427239474,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.333530103000001,
+      "coachComparable": true,
       "coachRegretPp": 6.333530103000001,
       "coachExact": false,
       "wpErrorsPp": {
         "GO": 0.3346425927864827,
         "FG": 7.483475338510432,
-        "PUNT": 39.914594392707514
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -7.148832745723949,
-        "GO_PUNT": -39.579951799921034,
-        "FG_PUNT": -32.43111905419708
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -0.14847726072163558,
           "FG": 7.089070209758585,
-          "PUNT": 38.999450676398126
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 0.5784801505067438,
           "FG": 7.72819450533464,
-          "PUNT": 40.152017532216796
+          "PUNT": null
         }
       }
     },
@@ -3742,6 +4330,17 @@
         "FG": 0.17011927797,
         "PUNT": 0.18055186341
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.274921414999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3752,12 +4351,15 @@
       },
       "primaryEdgePp": 1.269580816682099,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.318179958999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3803,8 +4405,22 @@
       "referenceOptions": {
         "GO": 0.67984126283,
         "FG": 0.74266006457,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.2818801739999985,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -3815,34 +4431,37 @@
       },
       "primaryEdgePp": 0.0541728091737359,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.2818801739999985,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 14.520209509200521,
         "FG": 8.184156526026786,
-        "PUNT": 79.83758809883258
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 6.336052983173735,
-        "GO_PUNT": -65.31737858963207,
-        "FG_PUNT": -71.6534315728058
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 9.626816300900865,
           "FG": 3.2724824323000057,
-          "PUNT": 74.05826292840271
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 2.900847795766881,
           "FG": -3.458452914312804,
-          "PUNT": 67.15228300474952
+          "PUNT": null
         }
       }
     },
@@ -3868,6 +4487,17 @@
         "FG": 0.20804310123,
         "PUNT": 0.09894552686
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 6.2558521670000005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -3878,12 +4508,15 @@
       },
       "primaryEdgePp": 0.6745209823567327,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.2558521670000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -3929,8 +4562,22 @@
       "referenceOptions": {
         "GO": 0.38524166072,
         "FG": 0.44673238734,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.149072661999999,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -3941,34 +4588,37 @@
       },
       "primaryEdgePp": 0.4212130837346506,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.149072661999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 24.615714566811764,
         "FG": 18.045428821077113,
-        "PUNT": 58.18287417700394
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 6.570285745734649,
-        "GO_PUNT": -33.56715961019218,
-        "FG_PUNT": -40.13744535592683
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 20.486514323562723,
           "FG": 13.851312566693608,
-          "PUNT": 53.32920334985858
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 12.138473711660547,
           "FG": 5.538038553641633,
-          "PUNT": 45.47664684896313
+          "PUNT": null
         }
       }
     },
@@ -3992,8 +4642,22 @@
       "referenceOptions": {
         "GO": 0.61507105786,
         "FG": 0.67603298667,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 6.096192880999995,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -4004,34 +4668,37 @@
       },
       "primaryEdgePp": 0.9192575453762841,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.096192880999995,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -12.691214316104071,
         "FG": -19.70666474248035,
-        "PUNT": 42.69406689995519
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 7.01545042637628,
-        "GO_PUNT": -55.385281216059255,
-        "FG_PUNT": -62.40073164243554
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -6.609905391372905,
           "FG": -13.720711243996686,
-          "PUNT": 48.05362923932027
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -0.34647234726270515,
           "FG": -7.320599284147589,
-          "PUNT": 55.15903407385715
+          "PUNT": null
         }
       }
     },
@@ -4057,6 +4724,17 @@
         "FG": 0.37944966159,
         "PUNT": 0.42306506404
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 1.682497209,
       "referenceCertainty": "LEAN",
       "primaryOptimal": "FG",
@@ -4067,12 +4745,15 @@
       },
       "primaryEdgePp": 0.12007957936325808,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.044037454000001,
+      "coachComparable": true,
       "coachRegretPp": 1.682497209,
       "coachExact": false,
       "wpErrorsPp": {
@@ -4120,6 +4801,17 @@
         "FG": 0.76899432506,
         "PUNT": 0.82928591202
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.1196779249999973,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4130,12 +4822,15 @@
       },
       "primaryEdgePp": 0.6058556488705236,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.029158696000003,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -4183,6 +4878,17 @@
         "FG": 0.51565427182,
         "PUNT": 0.52749228174
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 4.829697204000006,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4193,12 +4899,15 @@
       },
       "primaryEdgePp": 0.35218508050516295,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 6.0134981960000005,
+      "coachComparable": true,
       "coachRegretPp": 4.829697204000006,
       "coachExact": false,
       "wpErrorsPp": {
@@ -4244,8 +4953,22 @@
       "referenceOptions": {
         "GO": 0.52472321259,
         "FG": 0.46482485002,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.989836256999998,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4256,34 +4979,37 @@
       },
       "primaryEdgePp": 0.4011787302277303,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.989836256999998,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -8.773285026817673,
         "FG": -2.3822700395899457,
-        "PUNT": 40.645205361294764
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -6.391014987227727,
-        "GO_PUNT": -49.41849038811243,
-        "FG_PUNT": -43.027475400884704
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -7.156216294220491,
           "FG": -0.7174901624397045,
-          "PUNT": 41.89484338391416
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 0.14089352421752244,
           "FG": 6.5366787889877545,
-          "PUNT": 49.48395594328256
+          "PUNT": null
         }
       }
     },
@@ -4309,6 +5035,17 @@
         "FG": 0.4622870204,
         "PUNT": 0.40852520176
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.970712095999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4319,12 +5056,15 @@
       },
       "primaryEdgePp": 0.14355154495678257,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.970712095999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -4372,6 +5112,17 @@
         "FG": 0.44926820805,
         "PUNT": 0.45140818088
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.732151368999993,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4382,12 +5133,15 @@
       },
       "primaryEdgePp": 0.132163198876728,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.946148651999994,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -4435,6 +5189,17 @@
         "FG": 0.69970691127,
         "PUNT": 0.75912552997
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 4.575660208000009,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4445,12 +5210,15 @@
       },
       "primaryEdgePp": 0.8684473959149397,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.941861870000009,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -4498,6 +5266,17 @@
         "FG": 0.35117174685,
         "PUNT": 0.476334657
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.928502600999996,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -4508,12 +5287,15 @@
       },
       "primaryEdgePp": 0.045963220230627044,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.928502600999996,
+      "coachComparable": true,
       "coachRegretPp": 5.928502600999996,
       "coachExact": false,
       "wpErrorsPp": {
@@ -4561,6 +5343,17 @@
         "FG": 0.43987223342,
         "PUNT": 0.44243134008
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.6270015770000015,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4571,12 +5364,15 @@
       },
       "primaryEdgePp": 0.28377373625522173,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.882912243000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -4624,6 +5420,17 @@
         "FG": 0.42327736823,
         "PUNT": 0.44688073417
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.5197905659999975,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4634,12 +5441,15 @@
       },
       "primaryEdgePp": 0.47591605567386397,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.880127159999998,
+      "coachComparable": true,
       "coachRegretPp": 3.5197905659999975,
       "coachExact": false,
       "wpErrorsPp": {
@@ -4687,6 +5497,17 @@
         "FG": 0.42903417165,
         "PUNT": 0.4642364313
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 2.297516297000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4697,12 +5518,15 @@
       },
       "primaryEdgePp": 0.02846177705057018,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.817742261999998,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -4748,8 +5572,22 @@
       "referenceOptions": {
         "GO": 0.63790095605,
         "FG": 0.69597606947,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.807511342000005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -4760,34 +5598,37 @@
       },
       "primaryEdgePp": 0.4830866713735782,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.807511342000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -11.30425227754791,
         "FG": -17.594850290921492,
-        "PUNT": 43.6375899496921
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 6.290598013373582,
-        "GO_PUNT": -54.94184222724001,
-        "FG_PUNT": -61.232440240613585
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -1.3271848478615844,
           "FG": -7.640467127667927,
-          "PUNT": 52.85577248835295
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -1.5036130171596218,
           "FG": -7.76703108009057,
-          "PUNT": 53.65165053942364
+          "PUNT": null
         }
       }
     },
@@ -4813,6 +5654,17 @@
         "FG": 0.80345391326,
         "PUNT": 0.86151076738
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 0.1402283589999942,
       "referenceCertainty": "TOSS-UP",
       "primaryOptimal": "FG",
@@ -4823,12 +5675,15 @@
       },
       "primaryEdgePp": 0.5773848257386804,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.8056854119999945,
+      "coachComparable": true,
       "coachRegretPp": 0.1402283589999942,
       "coachExact": false,
       "wpErrorsPp": {
@@ -4874,8 +5729,22 @@
       "referenceOptions": {
         "GO": 0.49655963548,
         "FG": 0.43863094473,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.792869074999995,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4886,34 +5755,37 @@
       },
       "primaryEdgePp": 0.20885821535252536,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.792869074999995,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -16.337364634558742,
         "FG": -10.335637344206223,
-        "PUNT": 30.2381871416251
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -6.001727290352521,
-        "GO_PUNT": -46.57555177618384,
-        "FG_PUNT": -40.573824485831324
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -10.189706914255625,
           "FG": -4.147414455043102,
-          "PUNT": 35.7616904728308
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -5.629019827643877,
           "FG": 0.3952798087098752,
-          "PUNT": 40.558687152271006
+          "PUNT": null
         }
       }
     },
@@ -4939,6 +5811,17 @@
         "FG": 0.61377436351,
         "PUNT": 0.61721193983
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.354430369999996,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -4949,12 +5832,15 @@
       },
       "primaryEdgePp": 0.5397062553216703,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.698188001999993,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5002,6 +5888,17 @@
         "FG": 0.38771136894,
         "PUNT": 0.38480032994
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.689705959999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5012,12 +5909,15 @@
       },
       "primaryEdgePp": 0.42114595989499737,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.689705959999997,
+      "coachComparable": true,
       "coachRegretPp": 5.980809859999997,
       "coachExact": false,
       "wpErrorsPp": {
@@ -5063,8 +5963,22 @@
       "referenceOptions": {
         "GO": 0.57103760588,
         "FG": 0.62789072877,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.685312289,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -5075,34 +5989,37 @@
       },
       "primaryEdgePp": 0.9277628024279561,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.685312289,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -12.374317160547438,
         "FG": -18.987392251975393,
-        "PUNT": 38.698183440498454
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 6.613075091427955,
-        "GO_PUNT": -51.07250060104589,
-        "FG_PUNT": -57.68557569247385
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -5.018902141476556,
           "FG": -11.747775013237927,
-          "PUNT": 45.20065470249672
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 0.4263773911261537,
           "FG": -6.180269054204091,
-          "PUNT": 51.37729644250532
+          "PUNT": null
         }
       }
     },
@@ -5126,8 +6043,22 @@
       "referenceOptions": {
         "GO": 0.26266176196,
         "FG": 0.20653350871,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.612825325000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5138,34 +6069,37 @@
       },
       "primaryEdgePp": 1.319067148061928,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.612825325000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -4.817801980306976,
         "FG": 2.1140904927549524,
-        "PUNT": 13.966886390217212
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -6.931892473061929,
-        "GO_PUNT": -18.78468837052419,
-        "FG_PUNT": -11.85279589746226
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -1.0395955499914344,
           "FG": 6.212614993986756,
-          "PUNT": 15.9189544037542
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -3.5659634358546355,
           "FG": 3.4193232771686373,
-          "PUNT": 14.864697400618478
+          "PUNT": null
         }
       }
     },
@@ -5191,6 +6125,17 @@
         "FG": 0.67805234458,
         "PUNT": 0.73386125478
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.753609717999995,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5201,12 +6146,15 @@
       },
       "primaryEdgePp": 1.164316654169828,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.580891020000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5252,8 +6200,22 @@
       "referenceOptions": {
         "GO": 0.46367548731,
         "FG": 0.40803367508,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.564181223000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5264,34 +6226,37 @@
       },
       "primaryEdgePp": 2.1184253739848833,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.564181223000003,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": -18.325734431299693,
         "FG": -10.643127834314809,
-        "PUNT": 18.51405833980741
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -7.682606596984886,
-        "GO_PUNT": -36.839792771107106,
-        "FG_PUNT": -29.157186174122216
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -10.84835052122321,
           "FG": -2.6294442863304957,
-          "PUNT": 23.22318346392082
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -12.960975806373638,
           "FG": -5.07431993953657,
-          "PUNT": 22.62925971812229
+          "PUNT": null
         }
       }
     },
@@ -5317,6 +6282,17 @@
         "FG": 0.71420096915,
         "PUNT": 0.70570485207
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.563668375999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5327,12 +6303,15 @@
       },
       "primaryEdgePp": 0.6438850492951231,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.563668375999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5378,8 +6357,22 @@
       "referenceOptions": {
         "GO": 0.15330308257,
         "FG": 0.09766839846,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.563468411,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5390,34 +6383,37 @@
       },
       "primaryEdgePp": 2.651631033626685,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.563468411,
+      "coachComparable": true,
       "coachRegretPp": 5.563468411,
       "coachExact": false,
       "wpErrorsPp": {
         "GO": -7.53608092236902,
         "FG": 0.6790185222576641,
-        "PUNT": 3.133006820904328
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": -8.215099444626684,
-        "GO_PUNT": -10.669087743273348,
-        "FG_PUNT": -2.4539882986466646
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": -5.221889423695048,
           "FG": 4.087319790597757,
-          "PUNT": 3.7230450583052446
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": -5.70847713581224,
           "FG": 3.0420090824098023,
-          "PUNT": 3.9140350637360544
+          "PUNT": null
         }
       }
     },
@@ -5443,6 +6439,17 @@
         "FG": 0.52761516132,
         "PUNT": 0.51739684448
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.551357359999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5453,12 +6460,15 @@
       },
       "primaryEdgePp": 0.8464720462468212,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.551357359999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5506,6 +6516,17 @@
         "FG": 0.50127429435,
         "PUNT": 0.52035848513
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.6423340569999962,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5516,12 +6537,15 @@
       },
       "primaryEdgePp": 0.3268621958911033,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.550753134999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5569,6 +6593,17 @@
         "FG": 0.57213166019,
         "PUNT": 0.59921301328
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 2.838111443000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5579,12 +6614,15 @@
       },
       "primaryEdgePp": 0.18972736451633443,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.546246752000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5632,6 +6670,17 @@
         "FG": 0.46187046093,
         "PUNT": 0.45709142292
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.538259472000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5642,12 +6691,15 @@
       },
       "primaryEdgePp": 0.13329619786526803,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.538259472000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5695,6 +6747,17 @@
         "FG": 0.5227458179,
         "PUNT": 0.74164747924
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.488873709999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -5705,12 +6768,15 @@
       },
       "primaryEdgePp": 6.01804058466604,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.488873709999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5758,6 +6824,17 @@
         "FG": 0.64161911524,
         "PUNT": 0.65437193821
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 4.202061166000004,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5768,12 +6845,15 @@
       },
       "primaryEdgePp": 0.43054766328514127,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.477343462999995,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5821,6 +6901,17 @@
         "FG": 0.41785318335,
         "PUNT": 0.41247774811
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.463540639000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5831,12 +6922,15 @@
       },
       "primaryEdgePp": 0.21052019617069373,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.463540639000003,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5884,6 +6978,17 @@
         "FG": 0.85640611107,
         "PUNT": 0.91050976626
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.610647569000003,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5894,12 +6999,15 @@
       },
       "primaryEdgePp": 0.45735928451544616,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.410365519000004,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -5947,6 +7055,17 @@
         "FG": 0.39528982802,
         "PUNT": 0.37335115351
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.406359180999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -5957,12 +7076,15 @@
       },
       "primaryEdgePp": 0.08708150951935167,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.406359180999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6010,6 +7132,17 @@
         "FG": 0.4253410822,
         "PUNT": 0.45566634065
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 2.3669340019999985,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6020,12 +7153,15 @@
       },
       "primaryEdgePp": 0.10284633087338513,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.399459846999999,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6073,6 +7209,17 @@
         "FG": 0.71326702711,
         "PUNT": 0.7672443999
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 1.876944444000006,
       "referenceCertainty": "LEAN",
       "primaryOptimal": "FG",
@@ -6083,12 +7230,15 @@
       },
       "primaryEdgePp": 0.9584752202224323,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.397737279000003,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6136,6 +7286,17 @@
         "FG": 0.43103698915,
         "PUNT": 0.44417118135
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 4.080199807000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6146,12 +7307,15 @@
       },
       "primaryEdgePp": 0.028662083619052092,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.3936190270000015,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6199,6 +7363,17 @@
         "FG": 0.59907504727,
         "PUNT": 0.61165190454
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 4.128500170000004,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6209,12 +7384,15 @@
       },
       "primaryEdgePp": 0.3601914056112432,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.386185896999995,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6262,6 +7440,17 @@
         "FG": 0.47207891941,
         "PUNT": 0.7009863901
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.355751590000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -6272,12 +7461,15 @@
       },
       "primaryEdgePp": 2.896895211095285,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.355751590000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6325,6 +7517,17 @@
         "FG": 0.41551544811,
         "PUNT": 0.39452934099
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.3307985040000005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6335,12 +7538,15 @@
       },
       "primaryEdgePp": 0.5957947042954104,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.3307985040000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6388,6 +7594,17 @@
         "FG": 0.21707093371,
         "PUNT": 0.18752145705
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.304999891999998,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6398,12 +7615,15 @@
       },
       "primaryEdgePp": 1.8174428174936446,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.304999891999998,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6451,6 +7671,17 @@
         "FG": 0.49650568042,
         "PUNT": 0.49883373355
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.065975423999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6461,12 +7692,15 @@
       },
       "primaryEdgePp": 1.036949380619856,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.298780736999998,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6514,6 +7748,17 @@
         "FG": 0.28452909579,
         "PUNT": 0.35813275408
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.296139874,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -6524,12 +7769,15 @@
       },
       "primaryEdgePp": 0.6549972316759245,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.296139874,
+      "coachComparable": true,
       "coachRegretPp": 5.296139874,
       "coachExact": false,
       "wpErrorsPp": {
@@ -6577,6 +7825,17 @@
         "FG": 0.44758651634,
         "PUNT": 0.43643943845
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.283742986999995,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6587,12 +7846,15 @@
       },
       "primaryEdgePp": 0.2604085561774938,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.283742986999995,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6640,6 +7902,17 @@
         "FG": 0.29191492761,
         "PUNT": 0.27250833244
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.273733947000004,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6650,12 +7923,15 @@
       },
       "primaryEdgePp": 0.1289877314323784,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.273733947000004,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6703,6 +7979,19 @@
         "FG": 0,
         "PUNT": 0.0067184250254
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.26779170496,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "PUNT",
@@ -6713,12 +8002,15 @@
       },
       "primaryEdgePp": 3.1249532313170727,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.26779170496,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6766,6 +8058,17 @@
         "FG": 0.47671451513,
         "PUNT": 0.49781211722
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.1372706569999966,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6776,12 +8079,15 @@
       },
       "primaryEdgePp": 0.7176684716693638,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.247030865999997,
+      "coachComparable": true,
       "coachRegretPp": 3.1372706569999966,
       "coachExact": false,
       "wpErrorsPp": {
@@ -6829,6 +8135,17 @@
         "FG": 0.80552115989,
         "PUNT": 0.85779441924
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 1.0005154969999985,
       "referenceCertainty": "LEAN",
       "primaryOptimal": "FG",
@@ -6839,12 +8156,15 @@
       },
       "primaryEdgePp": 0.6828534779219408,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.227325935000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6892,6 +8212,17 @@
         "FG": 0.3301309778,
         "PUNT": 0.29003262675
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.21827151,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6902,12 +8233,15 @@
       },
       "primaryEdgePp": 0.1262979680646814,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.21827151,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -6955,6 +8289,17 @@
         "FG": 0.47250038127,
         "PUNT": 0.43340438028
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.216770845000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -6965,12 +8310,15 @@
       },
       "primaryEdgePp": 1.2868248209734645,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.216770845000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7018,6 +8366,17 @@
         "FG": 0.78873315225,
         "PUNT": 0.84083367067
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 2.2193552399999983,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -7028,12 +8387,15 @@
       },
       "primaryEdgePp": 0.5459643730165609,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.2100518420000075,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7081,6 +8443,17 @@
         "FG": 0.47019245242,
         "PUNT": 0.48516791893
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 3.7002002499999964,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -7091,12 +8464,15 @@
       },
       "primaryEdgePp": 0.37511818338719083,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.197746900999994,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7144,6 +8520,17 @@
         "FG": 0.41064644059,
         "PUNT": 0.40765416819
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.195468386000002,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -7154,12 +8541,15 @@
       },
       "primaryEdgePp": 0.052448006489413945,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.195468386000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7205,8 +8595,22 @@
       "referenceOptions": {
         "GO": 0.75313200645,
         "FG": 0.80481772685,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.168572039999997,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -7217,34 +8621,37 @@
       },
       "primaryEdgePp": 3.566259678391659,
       "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.168572039999997,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 7.190906347099968,
         "FG": -1.5439253712916878,
-        "PUNT": 74.35676396705281
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 8.734831718391655,
-        "GO_PUNT": -67.16585761995285,
-        "FG_PUNT": -75.90068933834449
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 3.1298232896355027,
           "FG": -6.665285944980681,
-          "PUNT": 67.94736738804393
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 3.0814660118161474,
           "FG": -6.229598397153369,
-          "PUNT": 69.0515113788755
+          "PUNT": null
         }
       }
     },
@@ -7270,6 +8677,17 @@
         "FG": 0.59861084189,
         "PUNT": 0.6502692614
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 2.6107949419999943,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -7280,12 +8698,15 @@
       },
       "primaryEdgePp": 1.4664601884253337,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.165841950999994,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7333,6 +8754,19 @@
         "FG": 0,
         "PUNT": 0.00060662811607
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [
+        "FG"
+      ],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.0640303810930005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -7343,12 +8777,15 @@
       },
       "primaryEdgePp": 1.8282858744232953,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.1246931927,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7396,6 +8833,17 @@
         "FG": 0.70851184544,
         "PUNT": 0.75950411493
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 1.7726770070000009,
       "referenceCertainty": "LEAN",
       "primaryOptimal": "FG",
@@ -7406,12 +8854,15 @@
       },
       "primaryEdgePp": 1.6352265349193762,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.099226949000002,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7457,8 +8908,22 @@
       "referenceOptions": {
         "GO": 0.54638478819,
         "FG": 0.59735159801,
-        "PUNT": 0
+        "PUNT": null
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
       "referenceEdgePp": 5.096680982000001,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "GO",
@@ -7469,34 +8934,37 @@
       },
       "primaryEdgePp": 0.8843123229900995,
       "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.096680982000001,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
         "GO": 1.5714386117246626,
         "FG": -4.409554693265438,
-        "PUNT": 50.17600025278818
+        "PUNT": null
       },
       "pairwiseMarginErrorsPp": {
         "GO_FG": 5.9809933049901005,
-        "GO_PUNT": -48.60456164106351,
-        "FG_PUNT": -54.58555494605362
+        "GO_PUNT": null,
+        "FG_PUNT": null
       },
       "alternateWpErrorsPp": {
         "structural": {
           "GO": 0.17228664409965067,
           "FG": -5.912786958384009,
-          "PUNT": 48.086467360564725
+          "PUNT": null
         },
         "vegasAnchor": {
           "GO": 2.7707349455946106,
           "FG": -3.204768977980632,
-          "PUNT": 51.39766234636798
+          "PUNT": null
         }
       }
     },
@@ -7522,6 +8990,17 @@
         "FG": 0.67486382127,
         "PUNT": 0.64634887339
       },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
       "referenceEdgePp": 5.065475497000005,
       "referenceCertainty": "CLEAR",
       "primaryOptimal": "FG",
@@ -7532,12 +9011,15 @@
       },
       "primaryEdgePp": 0.33464101643617683,
       "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
       "exact": false,
       "decisionSafe": false,
       "materialSplit": true,
       "strongSplit": true,
       "unsupportedPrimary": false,
       "referenceRegretPp": 5.065475497000005,
+      "coachComparable": true,
       "coachRegretPp": 0,
       "coachExact": true,
       "wpErrorsPp": {
@@ -7560,6 +9042,639 @@
           "GO": 4.324969731278516,
           "FG": 9.68548604452314,
           "PUNT": 10.483454271575532
+        }
+      }
+    },
+    {
+      "season": 2025,
+      "week": 5,
+      "seasonType": "REG",
+      "gameId": "2025_05_TEN_ARI",
+      "playId": "4479",
+      "posteam": "ARI",
+      "defteam": "TEN",
+      "quarter": 4,
+      "quarterSecondsRemaining": 120,
+      "gameSecondsRemaining": 120,
+      "ydstogo": 8,
+      "yardline100": 65,
+      "scoreDiff": 2,
+      "actual": "PUNT",
+      "description": "(2:00) 12-B.Gillikin punts 47 yards to TEN 18, Center-46-A.Brewer, fair catch by 17-C.Dike.",
+      "referenceOptimal": "PUNT",
+      "referenceOptions": {
+        "GO": 0.66287136728,
+        "FG": 0.49097771943,
+        "PUNT": 0.71348017918
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
+      "referenceEdgePp": 5.06088119,
+      "referenceCertainty": "CLEAR",
+      "primaryOptimal": "GO",
+      "primaryOptions": {
+        "GO": 0.8039939115367118,
+        "FG": null,
+        "PUNT": 0.768798264871911
+      },
+      "primaryEdgePp": 3.5195646664800795,
+      "primaryCertainty": "CLEAR",
+      "primaryReferenceSupported": true,
+      "comparable": true,
+      "exact": false,
+      "decisionSafe": false,
+      "materialSplit": true,
+      "strongSplit": true,
+      "unsupportedPrimary": false,
+      "referenceRegretPp": 5.06088119,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": 14.112254425671189,
+        "FG": null,
+        "PUNT": 5.53180856919111
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": null,
+        "GO_PUNT": 8.580445856480079,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": 1.7295651315781702,
+          "FG": null,
+          "PUNT": -8.60265326316223
+        },
+        "vegasAnchor": {
+          "GO": 13.414439939804701,
+          "FG": null,
+          "PUNT": 4.745949224697277
+        }
+      }
+    },
+    {
+      "season": 2024,
+      "week": 8,
+      "seasonType": "REG",
+      "gameId": "2024_08_IND_HOU",
+      "playId": "4293",
+      "posteam": "HOU",
+      "defteam": "IND",
+      "quarter": 4,
+      "quarterSecondsRemaining": 63,
+      "gameSecondsRemaining": 63,
+      "ydstogo": 7,
+      "yardline100": 59,
+      "scoreDiff": 3,
+      "actual": "PUNT",
+      "description": "(1:03) 6-T.Townsend punts 41 yards to IND 18, Center-46-J.Weeks. 1-J.Downs to IND 27 for 9 yards (87-C.Stover). PENALTY on IND-38-K.Joseph, Illegal Block Above the Waist, 9 yards, enforced at IND 18.",
+      "referenceOptimal": "PUNT",
+      "referenceOptions": {
+        "GO": 0.79104211202,
+        "FG": 0.60967250168,
+        "PUNT": 0.84154325695
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
+      "referenceEdgePp": 5.050114493000002,
+      "referenceCertainty": "CLEAR",
+      "primaryOptimal": "GO",
+      "primaryOptions": {
+        "GO": 0.8976894158882063,
+        "FG": null,
+        "PUNT": 0.878032513273755
+      },
+      "primaryEdgePp": 1.96569026144513,
+      "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
+      "exact": false,
+      "decisionSafe": false,
+      "materialSplit": true,
+      "strongSplit": true,
+      "unsupportedPrimary": false,
+      "referenceRegretPp": 5.050114493000002,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": 10.664730386820631,
+        "FG": null,
+        "PUNT": 3.6489256323754993
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": null,
+        "GO_PUNT": 7.015804754445131,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": -3.016013119745975,
+          "FG": null,
+          "PUNT": -12.291807809169853
+        },
+        "vegasAnchor": {
+          "GO": 13.249744440392996,
+          "FG": null,
+          "PUNT": 6.679886804641222
+        }
+      }
+    },
+    {
+      "season": 2023,
+      "week": 12,
+      "seasonType": "REG",
+      "gameId": "2023_12_CHI_MIN",
+      "playId": "3656",
+      "posteam": "MIN",
+      "defteam": "CHI",
+      "quarter": 4,
+      "quarterSecondsRemaining": 156,
+      "gameSecondsRemaining": 156,
+      "ydstogo": 15,
+      "yardline100": 48,
+      "scoreDiff": 1,
+      "actual": "PUNT",
+      "description": "(2:36) 14-R.Wright punts 26 yards to CHI 22, Center-42-A.DePaola, out of bounds.",
+      "referenceOptimal": "PUNT",
+      "referenceOptions": {
+        "GO": 0.59724674783,
+        "FG": 0.5701612077,
+        "PUNT": 0.64735878385
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG",
+        "PUNT"
+      ],
+      "referenceUnavailableActions": [],
+      "referenceUnavailableReasons": {},
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 3,
+      "referenceComplete": true,
+      "referencePartial": false,
+      "referenceEdgePp": 5.011203602000003,
+      "referenceCertainty": "CLEAR",
+      "primaryOptimal": "GO",
+      "primaryOptions": {
+        "GO": 0.6108216472603424,
+        "FG": 0.589815789827134,
+        "PUNT": 0.6097752222060787
+      },
+      "primaryEdgePp": 0.10464250542636666,
+      "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": true,
+      "comparable": true,
+      "exact": false,
+      "decisionSafe": false,
+      "materialSplit": true,
+      "strongSplit": true,
+      "unsupportedPrimary": false,
+      "referenceRegretPp": 5.011203602000003,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": 1.3574899430342402,
+        "FG": 1.9654582127134002,
+        "PUNT": -3.7583561643921293
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": -0.60796826967916,
+        "GO_PUNT": 5.1158461074263695,
+        "FG_PUNT": 5.72381437710553
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": 0.15892200692145808,
+          "FG": 0.5093853852726538,
+          "PUNT": -4.96977954957366
+        },
+        "vegasAnchor": {
+          "GO": -2.4608755167214613,
+          "FG": -1.9075360598894808,
+          "PUNT": -7.579787156000273
+        }
+      }
+    },
+    {
+      "season": 2024,
+      "week": 9,
+      "seasonType": "REG",
+      "gameId": "2024_09_MIA_BUF",
+      "playId": "2775",
+      "posteam": "MIA",
+      "defteam": "BUF",
+      "quarter": 3,
+      "quarterSecondsRemaining": 182,
+      "gameSecondsRemaining": 1082,
+      "ydstogo": 4,
+      "yardline100": 5,
+      "scoreDiff": -2,
+      "actual": "FG",
+      "description": "(3:02) 7-J.Sanders 23 yard field goal is GOOD, Center-49-M.Overton, Holder-16-J.Bailey.",
+      "referenceOptimal": "FG",
+      "referenceOptions": {
+        "GO": 0.37592828839,
+        "FG": 0.42600473537,
+        "PUNT": null
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
+      "referenceEdgePp": 5.007644698000002,
+      "referenceCertainty": "CLEAR",
+      "primaryOptimal": "GO",
+      "primaryOptions": {
+        "GO": 0.45353798037143533,
+        "FG": 0.4341804073661545,
+        "PUNT": 0.3729713680966573
+      },
+      "primaryEdgePp": 1.9357573005280848,
+      "primaryCertainty": "LEAN",
+      "primaryReferenceSupported": true,
+      "comparable": true,
+      "exact": false,
+      "decisionSafe": false,
+      "materialSplit": true,
+      "strongSplit": true,
+      "unsupportedPrimary": false,
+      "referenceRegretPp": 5.007644698000002,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": 7.760969198143536,
+        "FG": 0.8175671996154488,
+        "PUNT": null
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": 6.943401998528087,
+        "GO_PUNT": null,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": 15.71282932634142,
+          "FG": 8.531226902499972,
+          "PUNT": null
+        },
+        "vegasAnchor": {
+          "GO": -3.3260360694501556,
+          "FG": -10.07785943304299,
+          "PUNT": null
+        }
+      }
+    }
+  ],
+  "referenceGaps": [
+    {
+      "season": 2024,
+      "week": 3,
+      "seasonType": "REG",
+      "gameId": "2024_03_JAX_BUF",
+      "playId": "3144",
+      "posteam": "BUF",
+      "defteam": "JAX",
+      "quarter": 3,
+      "quarterSecondsRemaining": 306,
+      "gameSecondsRemaining": 1206,
+      "ydstogo": 7,
+      "yardline100": 9,
+      "scoreDiff": 24,
+      "actual": "FG",
+      "description": "(5:06) 2-T.Bass 27 yard field goal is GOOD, Center-69-R.Ferguson, Holder-8-S.Martin.",
+      "referenceOptimal": "FG",
+      "referenceOptions": {
+        "GO": 0.99685926889,
+        "FG": 0.99820169414,
+        "PUNT": null
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
+      "referenceEdgePp": 0.13424252500000566,
+      "referenceCertainty": "TOSS-UP",
+      "primaryOptimal": "PUNT",
+      "primaryOptions": {
+        "GO": 0.9980371033782945,
+        "FG": 0.9981081565311729,
+        "PUNT": 0.9982490865570499
+      },
+      "primaryEdgePp": 0.014093002587700632,
+      "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": false,
+      "comparable": false,
+      "exact": null,
+      "decisionSafe": null,
+      "materialSplit": null,
+      "strongSplit": null,
+      "unsupportedPrimary": true,
+      "referenceRegretPp": null,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": 0.11778344882945602,
+        "FG": -0.009353760882713225,
+        "PUNT": null
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": 0.12713720971216924,
+        "GO_PUNT": null,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": -4.046284427035851,
+          "FG": -4.012529551390365,
+          "PUNT": null
+        },
+        "vegasAnchor": {
+          "GO": 0.1870511279381426,
+          "FG": 0.05740963455010961,
+          "PUNT": null
+        }
+      }
+    },
+    {
+      "season": 2023,
+      "week": 15,
+      "seasonType": "REG",
+      "gameId": "2023_15_BAL_JAX",
+      "playId": "4192",
+      "posteam": "BAL",
+      "defteam": "JAX",
+      "quarter": 4,
+      "quarterSecondsRemaining": 30,
+      "gameSecondsRemaining": 30,
+      "ydstogo": 3,
+      "yardline100": 30,
+      "scoreDiff": 16,
+      "actual": "GO",
+      "description": "(:30) 35-G.Edwards up the middle to JAX 25 for 5 yards (33-D.Lloyd).",
+      "referenceOptimal": "GO",
+      "referenceOptions": {
+        "GO": 0.99983770261,
+        "FG": 0.99972319948,
+        "PUNT": null
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
+      "referenceEdgePp": 0.01145031300000543,
+      "referenceCertainty": "TOSS-UP",
+      "primaryOptimal": "PUNT",
+      "primaryOptions": {
+        "GO": 0.9988274426718595,
+        "FG": 0.9988923445447995,
+        "PUNT": 0.9989999999999999
+      },
+      "primaryEdgePp": 0.01076554552004172,
+      "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": false,
+      "comparable": false,
+      "exact": null,
+      "decisionSafe": null,
+      "materialSplit": null,
+      "strongSplit": null,
+      "unsupportedPrimary": true,
+      "referenceRegretPp": null,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": -0.1010259938140523,
+        "FG": -0.08308549352005201,
+        "PUNT": null
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": -0.017940500294000294,
+        "GO_PUNT": null,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": -0.10311819047950088,
+          "FG": -0.08435095603435139,
+          "PUNT": null
+        },
+        "vegasAnchor": {
+          "GO": -0.1010259938140523,
+          "FG": -0.08308549352005201,
+          "PUNT": null
+        }
+      }
+    },
+    {
+      "season": 2021,
+      "week": 6,
+      "seasonType": "REG",
+      "gameId": "2021_06_LAC_BAL",
+      "playId": "2479",
+      "posteam": "BAL",
+      "defteam": "LAC",
+      "quarter": 3,
+      "quarterSecondsRemaining": 306,
+      "gameSecondsRemaining": 1206,
+      "ydstogo": 13,
+      "yardline100": 21,
+      "scoreDiff": 18,
+      "actual": "FG",
+      "description": "(5:06) 9-J.Tucker 39 yard field goal is GOOD, Center-46-N.Moore, Holder-4-S.Koch.",
+      "referenceOptimal": "FG",
+      "referenceOptions": {
+        "GO": 0.9738699711,
+        "FG": 0.97508200919,
+        "PUNT": null
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
+      "referenceEdgePp": 0.12120380900000338,
+      "referenceCertainty": "TOSS-UP",
+      "primaryOptimal": "PUNT",
+      "primaryOptions": {
+        "GO": 0.9614014363246639,
+        "FG": 0.9668612663328099,
+        "PUNT": 0.969995828606907
+      },
+      "primaryEdgePp": 0.3134562274097141,
+      "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": false,
+      "comparable": false,
+      "exact": null,
+      "decisionSafe": null,
+      "materialSplit": null,
+      "strongSplit": null,
+      "unsupportedPrimary": true,
+      "referenceRegretPp": null,
+      "coachComparable": true,
+      "coachRegretPp": 0,
+      "coachExact": true,
+      "wpErrorsPp": {
+        "GO": -1.2468534775336049,
+        "FG": -0.82207428571901,
+        "PUNT": null
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": -0.4247791918145949,
+        "GO_PUNT": null,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": -7.330399689599087,
+          "FG": -5.984846948940136,
+          "PUNT": null
+        },
+        "vegasAnchor": {
+          "GO": -0.3488594254045685,
+          "FG": -0.047747650293494814,
+          "PUNT": null
+        }
+      }
+    },
+    {
+      "season": 2021,
+      "week": 9,
+      "seasonType": "REG",
+      "gameId": "2021_09_DEN_DAL",
+      "playId": "3294",
+      "posteam": "DEN",
+      "defteam": "DAL",
+      "quarter": 4,
+      "quarterSecondsRemaining": 396,
+      "gameSecondsRemaining": 396,
+      "ydstogo": 5,
+      "yardline100": 24,
+      "scoreDiff": 27,
+      "actual": "FG",
+      "description": "(6:36) 8-B.McManus 42 yard field goal is GOOD, Center-46-J.Bobenmoyer, Holder-6-S.Martin.",
+      "referenceOptimal": "GO",
+      "referenceOptions": {
+        "GO": 0.99937246469,
+        "FG": 0.99924585365,
+        "PUNT": null
+      },
+      "referenceAvailableActions": [
+        "GO",
+        "FG"
+      ],
+      "referenceUnavailableActions": [
+        "PUNT"
+      ],
+      "referenceUnavailableReasons": {
+        "PUNT": "NFL4TH_PUNT_REFERENCE_OUTSIDE_SUPPORT_RANGE"
+      },
+      "genuineZeroReferenceActions": [],
+      "referenceSupportCount": 2,
+      "referenceComplete": false,
+      "referencePartial": true,
+      "referenceEdgePp": 0.0126611040000002,
+      "referenceCertainty": "TOSS-UP",
+      "primaryOptimal": "PUNT",
+      "primaryOptions": {
+        "GO": 0.9989166577776747,
+        "FG": 0.9989711927917642,
+        "PUNT": 0.9989774652576601
+      },
+      "primaryEdgePp": 0.0006272465895906798,
+      "primaryCertainty": "TOSS-UP",
+      "primaryReferenceSupported": false,
+      "comparable": false,
+      "exact": null,
+      "decisionSafe": null,
+      "materialSplit": null,
+      "strongSplit": null,
+      "unsupportedPrimary": true,
+      "referenceRegretPp": null,
+      "coachComparable": true,
+      "coachRegretPp": 0.0126611040000002,
+      "coachExact": false,
+      "wpErrorsPp": {
+        "GO": -0.04558069123252739,
+        "FG": -0.02746608582357979,
+        "PUNT": null
+      },
+      "pairwiseMarginErrorsPp": {
+        "GO_FG": -0.018114605408947604,
+        "GO_PUNT": null,
+        "FG_PUNT": null
+      },
+      "alternateWpErrorsPp": {
+        "structural": {
+          "GO": -0.04654852719769842,
+          "FG": -0.027791240092378544,
+          "PUNT": null
+        },
+        "vegasAnchor": {
+          "GO": -0.04558069123252739,
+          "FG": -0.02746608582357979,
+          "PUNT": null
         }
       }
     }
