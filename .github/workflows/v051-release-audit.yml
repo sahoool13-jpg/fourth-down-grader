@@ -1,0 +1,148 @@
+name: v0.5.1 release audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type AUDIT-V051 to audit the frozen v0.5.1 candidate"
+        required: true
+        default: "LOCKED"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fourth-down-v051-release-audit
+  cancel-in-progress: false
+
+jobs:
+  release-audit:
+    if: ${{ github.event.inputs.confirmation == 'AUDIT-V051' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    env:
+      START_SEASON: "2025"
+      END_SEASON: "2025"
+      HOLDOUT_SEASON: "2025"
+      RELEASE_BOOTSTRAP_REPS: "10000"
+      RELEASE_BOOTSTRAP_SEED: "5102025"
+      EVALUATED_CANDIDATE_COMMIT: "8daaa8f75787e4f28d25af6462142518f4594e9a"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify evaluated model files are still frozen
+        run: |
+          git diff --exit-code "$EVALUATED_CANDIDATE_COMMIT"..HEAD -- \
+            lib/decision-engine.js \
+            lib/endgame.js \
+            lib/calibration.js \
+            scripts/run_v051_experiment.mjs
+
+      - name: Verify committed development and holdout evidence
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const dev = JSON.parse(fs.readFileSync('public/calibration/v051-development.json', 'utf8'));
+          const hold = JSON.parse(fs.readFileSync('public/calibration/v051-holdout.json', 'utf8'));
+
+          if (dev?.productVersion !== 'v0.5.1' || dev?.phase !== 'development' || dev?.promotionGate?.status !== 'PASS') {
+            console.error('Development evidence is not a v0.5.1 PASS.');
+            process.exit(1);
+          }
+
+          if (hold?.productVersion !== 'v0.5.1' || hold?.phase !== 'holdout' || Number(hold?.rowsScored) !== 3946) {
+            console.error('Committed 2025 holdout evidence is missing or unexpected.');
+            process.exit(1);
+          }
+
+          console.log('Frozen development + holdout evidence verified.');
+          NODE
+
+      - name: Unit tests
+        run: npm test
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            github::nflverse/nfl4th
+            any::dplyr
+            any::jsonlite
+            any::stringr
+
+      - name: Export 2025 reference for audit reproduction
+        run: Rscript scripts/export_nfl4th_reference.R
+
+      - name: Verify reference provenance
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const ref = JSON.parse(fs.readFileSync('.calibration/reference.json', 'utf8'));
+          const rows = Array.isArray(ref) ? ref : (ref?.rows || []);
+          const meta = Array.isArray(ref) ? {} : (ref?.metadata || {});
+          const seasons = [...new Set(rows.map(r => Number(r.season)).filter(Number.isFinite))].sort();
+
+          if (seasons.length !== 1 || seasons[0] !== 2025) {
+            console.error(`Expected 2025 only, got [${seasons.join(', ')}]`);
+            process.exit(1);
+          }
+          if (rows.length !== 3946) {
+            console.error(`Expected 3946 reference rows, got ${rows.length}`);
+            process.exit(1);
+          }
+          if (String(meta?.nfl4th_version || '') !== '1.0.7') {
+            console.error(`Expected nfl4th 1.0.7, got ${meta?.nfl4th_version || 'unknown'}`);
+            process.exit(1);
+          }
+
+          console.log('Reference provenance verified: 2025 only, 3946 rows, nfl4th 1.0.7.');
+          NODE
+
+      - name: Run paired release audit
+        run: node scripts/run_v051_release_audit.mjs
+
+      - name: Upload release-audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v051-release-audit
+          path: |
+            public/calibration/v051-release-audit.json
+            public/calibration/v051-release-audit.md
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Add report to Actions summary
+        if: always()
+        run: |
+          if [ -f public/calibration/v051-release-audit.md ]; then
+            cat public/calibration/v051-release-audit.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit release-audit evidence
+        if: success()
+        run: |
+          STATUS="$(git status --porcelain -- public/calibration/v051-release-audit*)"
+          if [ -z "$STATUS" ]; then
+            echo "No release-audit changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/calibration/v051-release-audit.json public/calibration/v051-release-audit.md
+          git commit -m "Record v0.5.1 release audit [skip v051]"
+          git push
