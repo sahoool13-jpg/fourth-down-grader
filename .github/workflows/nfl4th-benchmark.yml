@@ -9,8 +9,9 @@ on:
         default: "2026_03_ATL_GB"
   push:
     branches: [main]
-    paths-ignore:
-      - "public/benchmarks/**"
+    paths:
+      - ".github/workflows/nfl4th-benchmark.yml"
+      - "scripts/run_nfl4th_benchmark.R"
 
 permissions:
   contents: write
@@ -36,17 +37,74 @@ jobs:
             any::dplyr
             any::jsonlite
 
-      - name: Run exact nfl4th benchmark
-        run: Rscript scripts/run_nfl4th_benchmark.R
-
-      - name: Commit benchmark output
+      - name: Historical nfl4th plumbing smoke test
+        env:
+          GAME_ID: "2023_01_DET_KC"
+          BENCHMARK_OUTPUT_DIR: ".benchmark-smoke"
         run: |
-          if git diff --quiet -- public/benchmarks; then
+          rm -rf .benchmark-smoke
+          Rscript scripts/run_nfl4th_benchmark.R
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const status = JSON.parse(fs.readFileSync('.benchmark-smoke/_status.json', 'utf8'));
+          if (status.code !== 'BENCHMARK_READY') {
+            console.error(`Historical smoke test failed: ${status.code} ${status.message || ''}`);
+            process.exit(1);
+          }
+          if (!status.output_file || !fs.existsSync(status.output_file) || fs.statSync(status.output_file).size === 0) {
+            console.error('Historical smoke test did not produce a benchmark JSON file');
+            process.exit(1);
+          }
+          console.log(`Historical plumbing verified: ${status.game_id} -> ${status.output_file}`);
+          NODE
+          rm -rf .benchmark-smoke
+
+      - name: Run target nfl4th benchmark
+        id: target
+        continue-on-error: true
+        run: |
+          rm -f public/benchmarks/_status.json
+          Rscript scripts/run_nfl4th_benchmark.R
+
+      - name: Commit benchmark output and status
+        if: always()
+        run: |
+          if [ ! -s public/benchmarks/_status.json ]; then
+            echo "::error::Benchmark runner produced no status file"
+            exit 1
+          fi
+
+          STATUS="$(git status --porcelain -- public/benchmarks)"
+          if [ -z "$STATUS" ]; then
             echo "No benchmark changes"
             exit 0
           fi
+
+          echo "$STATUS"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/benchmarks
+          git add -A public/benchmarks
           git commit -m "Update nfl4th benchmark for ${GAME_ID} [skip benchmark]"
           git push
+
+      - name: Require target benchmark JSON
+        if: always()
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const path = 'public/benchmarks/_status.json';
+          if (!fs.existsSync(path)) {
+            console.error('PIPELINE ERROR: public/benchmarks/_status.json is missing');
+            process.exit(1);
+          }
+          const status = JSON.parse(fs.readFileSync(path, 'utf8'));
+          console.log(`Benchmark status: ${status.label || status.code}`);
+          if (status.code !== 'BENCHMARK_READY') {
+            console.error(`${status.label || status.code}: ${status.message || 'benchmark JSON was not produced'}`);
+            process.exit(1);
+          }
+          if (!status.output_file || !fs.existsSync(status.output_file) || fs.statSync(status.output_file).size === 0) {
+            console.error('PIPELINE ERROR: status says ready but benchmark JSON is missing or empty');
+            process.exit(1);
+          }
+          NODE

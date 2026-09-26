@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fetchScoreboard, fetchSummary, parseGameSummary, parseScoreboard } from './lib/espn.js';
 import { evaluateFourthDown, gradeActualDecision, evaluateThirdDownPlanning } from './lib/decision-engine.js';
-import { fetchNfl4thBenchmark, summarizeBenchmarkAgreement } from './lib/benchmark.js';
+import { fetchNfl4thBenchmarkState } from './lib/benchmark.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
@@ -47,6 +47,20 @@ async function getSummaryCached(id, maxAgeMs = 4000) {
   return raw;
 }
 
+function inferNflverseGameId(raw) {
+  const header = raw?.header || {};
+  const comp = header?.competitions?.[0] || {};
+  const competitors = comp?.competitors || [];
+  const home = competitors.find(c => c.homeAway === 'home');
+  const away = competitors.find(c => c.homeAway === 'away');
+  const homeAbbr = home?.team?.abbreviation;
+  const awayAbbr = away?.team?.abbreviation;
+  const year = Number(header?.season?.year ?? raw?.season?.year ?? header?.season);
+  const week = Number(header?.week?.number ?? header?.week ?? raw?.week?.number ?? raw?.week ?? comp?.week?.number);
+  if (!Number.isFinite(year) || !Number.isFinite(week) || !homeAbbr || !awayAbbr) return null;
+  return `${year}_${String(Math.trunc(week)).padStart(2, '0')}_${awayAbbr}_${homeAbbr}`;
+}
+
 function enrichGame(raw) {
   const game = parseGameSummary(raw);
   if (game.pendingFourthDown?.yardline100) {
@@ -60,8 +74,6 @@ function enrichGame(raw) {
       return { ...d, grade: 'REVIEW', wpRegret: null, reason: d.fieldPositionConflict || 'insufficient-feed-fields' };
     }
     const ev = evaluateFourthDown({ ...d, indoor: game.indoor, baselineWp: d.baselineWp });
-    // Preserve the raw play metadata. v0.2 accidentally replaced the original
-    // quarter/clock/distance/field-position fields with only the model output.
     return { ...d, ...gradeActualDecision(ev, d.actualDecision) };
   });
   return game;
@@ -73,8 +85,6 @@ async function getLiveBoard() {
   const trackable = games.filter(g => ['in', 'post'].includes(String(g.state).toLowerCase()));
   const enriched = [];
 
-  // Active games refresh quickly. Completed games are cached much longer so today's
-  // decision tape does not disappear the instant a final whistle arrives.
   const results = await Promise.allSettled(trackable.map(async g => {
     const ttl = String(g.state).toLowerCase() === 'in' ? 4000 : 60000;
     return enrichGame(await getSummaryCached(g.id, ttl));
@@ -108,7 +118,7 @@ async function api(req, res, url) {
   if (url.pathname === '/api/health') {
     return json(res, 200, {
       ok: true,
-      modelVersion: 'v0.3-consensus-validation',
+      modelVersion: 'v0.3.1-benchmark-hardening',
       now: new Date().toISOString()
     });
   }
@@ -129,15 +139,22 @@ async function api(req, res, url) {
     }
   }
 
-
   if (url.pathname.startsWith('/api/benchmark/')) {
     const id = url.pathname.split('/').pop();
     try {
-      const benchmark = await fetchNfl4thBenchmark(id, 30_000);
-      if (!benchmark) return json(res, 404, { available: false, eventId: id });
-      return json(res, 200, { available: true, eventId: id, benchmark });
+      let expectedGameId = null;
+      try {
+        expectedGameId = inferNflverseGameId(await getSummaryCached(id, 60000));
+      } catch {}
+      const state = await fetchNfl4thBenchmarkState(id, expectedGameId, 30_000);
+      return json(res, 200, { eventId: id, nflverseGameId: expectedGameId, ...state });
     } catch (e) {
-      return json(res, 502, { error: 'BENCHMARK_UNAVAILABLE', message: e.message });
+      return json(res, 502, {
+        available: false,
+        eventId: id,
+        error: 'BENCHMARK_UNAVAILABLE',
+        status: { code: 'PIPELINE_ERROR', label: 'PIPELINE ERROR', message: e.message }
+      });
     }
   }
 
@@ -207,4 +224,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.3 running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.3.1 running on http://localhost:${PORT}`));

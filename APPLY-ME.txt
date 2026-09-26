@@ -1,0 +1,12 @@
+v0.3.1 benchmark-pipeline hardening
+
+Replace the matching files in your fourth-down-grader repo with the files in this folder.
+
+Main fix:
+- The old workflow used `git diff --quiet -- public/benchmarks`, which does not detect newly-created untracked JSON files.
+- v0.3.1 uses `git status --porcelain` + `git add -A`.
+- The R runner always writes a `_status.json`.
+- Statuses are explicit: BENCHMARK READY, 2026 DATA NOT YET AVAILABLE, GAME NOT FOUND, PIPELINE ERROR.
+- A historical nfl4th smoke test checks the R -> nfl4th -> JSON plumbing.
+- The workflow fails loudly if the target benchmark JSON was not actually produced.
+- The web UI shows the specific benchmark state rather than `pending / unavailable`.

@@ -113,7 +113,6 @@ function renderAlerts(data) {
   strip.querySelectorAll('.alertCard').forEach(el => el.addEventListener('click', () => selectGame(el.dataset.id, 'Live game')));
 }
 
-
 function benchmarkOptionsText(b) {
   if (!b) return '';
   const vals = [['GO', b.go_wp], ['FG', b.fg_wp], ['PUNT', b.punt_wp]]
@@ -139,12 +138,26 @@ function benchmarkRelation(row, b) {
   return { kind: 'MODEL_SPLIT', label: 'MODEL SPLIT • REVIEW', split: true };
 }
 
+function benchmarkUnavailableLabel(benchmark) {
+  if (!selectedGameId) return 'SELECT A GAME TO CROSS-CHECK';
+  return benchmark?.pipeline_status?.label || 'GAME NOT FOUND';
+}
+
 function renderBenchmarkStatus(rows = [], benchmark = null) {
   const el = $('#benchmarkStatus');
   if (!el) return;
   if (!benchmark?.rows?.length) {
-    el.textContent = selectedGameId ? 'NFL4TH BENCHMARK: pending / unavailable' : 'NFL4TH BENCHMARK: select a game';
-    el.className = 'benchmarkStatus muted';
+    if (!selectedGameId) {
+      el.textContent = 'NFL4TH BENCHMARK: select a game';
+      el.className = 'benchmarkStatus muted';
+      el.removeAttribute('title');
+      return;
+    }
+    const status = benchmark?.pipeline_status;
+    el.textContent = `NFL4TH BENCHMARK: ${benchmarkUnavailableLabel(benchmark)}`;
+    el.className = `benchmarkStatus ${status?.code === 'PIPELINE_ERROR' ? 'hasSplit' : 'muted'}`;
+    if (status?.message) el.title = status.message;
+    else el.removeAttribute('title');
     return;
   }
   const byId = benchmarkByPlay(benchmark);
@@ -160,8 +173,9 @@ function renderBenchmarkStatus(rows = [], benchmark = null) {
     if (rel.split) strongSplits++;
   }
   const pct = eligible ? Math.round(100 * agree / eligible) : 0;
-  el.textContent = `NFL4TH BENCHMARK: ${matched}/${rows.length} matched • ${pct}% exact-call agreement${strongSplits ? ` • ${strongSplits} strong split${strongSplits === 1 ? '' : 's'}` : ''}`;
+  el.textContent = `NFL4TH BENCHMARK: READY • ${matched}/${rows.length} matched • ${pct}% exact-call agreement${strongSplits ? ` • ${strongSplits} strong split${strongSplits === 1 ? '' : 's'}` : ''}`;
   el.className = `benchmarkStatus ${strongSplits ? 'hasSplit' : 'hasConsensus'}`;
+  el.removeAttribute('title');
 }
 
 async function getBenchmark(eventId) {
@@ -170,17 +184,17 @@ async function getBenchmark(eventId) {
   if (hit && Date.now() - hit.at < 30_000) return hit.data;
   try {
     const r = await fetch(`/api/benchmark/${encodeURIComponent(id)}`);
-    if (!r.ok) {
-      benchmarkCache.set(id, { at: Date.now(), data: null });
-      return null;
-    }
-    const payload = await r.json();
-    const data = payload?.benchmark || null;
+    const payload = await r.json().catch(() => ({}));
+    const status = payload?.status || (r.ok ? null : { code: 'PIPELINE_ERROR', label: 'PIPELINE ERROR', message: payload?.message || payload?.error || `Benchmark API ${r.status}` });
+    const data = payload?.benchmark
+      ? { ...payload.benchmark, pipeline_status: status }
+      : { rows: [], pipeline_status: status || { code: 'GAME_NOT_FOUND', label: 'GAME NOT FOUND', message: 'No nfl4th benchmark exists for this game yet.' } };
     benchmarkCache.set(id, { at: Date.now(), data });
     return data;
-  } catch {
-    benchmarkCache.set(id, { at: Date.now(), data: null });
-    return null;
+  } catch (e) {
+    const data = { rows: [], pipeline_status: { code: 'PIPELINE_ERROR', label: 'PIPELINE ERROR', message: e?.message || 'Benchmark request failed.' } };
+    benchmarkCache.set(id, { at: Date.now(), data });
+    return data;
   }
 }
 
@@ -243,7 +257,7 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger', benchmark = 
         <strong>${esc(d.reviewRequired ? 'NOT GRADED' : modelLabel)}</strong>
         <span class="cellSub">${esc(d.reviewRequired ? (d.reason || 'state needs review') : `${confidence} stability • ${quality}`)}</span>
         ${optionSummary ? `<span class="modelOptions">PRIMARY • ${esc(optionSummary)}</span>` : ''}
-        ${b ? `<span class="benchmarkLine ${esc(relation.kind)}"><b>${esc(relation.label)}</b><br>NFL4TH • ${esc(benchmarkSummary)}${Number.isFinite(Number(b.edge_pp)) ? ` • edge ${Number(b.edge_pp).toFixed(1)} pp` : ''}</span>` : `<span class="benchmarkLine PRIMARY_ONLY">NFL4TH benchmark not loaded</span>`}
+        ${b ? `<span class="benchmarkLine ${esc(relation.kind)}"><b>${esc(relation.label)}</b><br>NFL4TH • ${esc(benchmarkSummary)}${Number.isFinite(Number(b.edge_pp)) ? ` • edge ${Number(b.edge_pp).toFixed(1)} pp` : ''}</span>` : `<span class="benchmarkLine PRIMARY_ONLY">NFL4TH • ${esc(benchmarkUnavailableLabel(benchmark))}</span>`}
       </td>
       <td>${fmtWp(d.baselineWp)}</td>
       <td>${burnDisplay}</td>
