@@ -56,7 +56,7 @@ function enrichGame(raw) {
   }
   game.completedFourthDowns = (game.completedFourthDowns || []).map(d => {
     if (!d.verifiedState || !d.yardline100 || !Number.isFinite(Number(d.ydstogo))) {
-      return { ...d, grade: null, reason: 'insufficient-feed-fields' };
+      return { ...d, grade: 'REVIEW', wpRegret: null, reason: d.fieldPositionConflict || 'insufficient-feed-fields' };
     }
     const ev = evaluateFourthDown({ ...d, indoor: game.indoor, baselineWp: d.baselineWp });
     // Preserve the raw play metadata. v0.2 accidentally replaced the original
@@ -90,7 +90,7 @@ async function getLiveBoard() {
 
   const ledger = enriched
     .flatMap(g => (g.completedFourthDowns || []).map(d => ({ eventId: g.eventId, gameName: g.name, ...d })))
-    .filter(d => d.grade && d.grade !== 'N/A');
+    .filter(d => d.actualDecision);
 
   return {
     generatedAt: new Date().toISOString(),
@@ -107,7 +107,7 @@ async function api(req, res, url) {
   if (url.pathname === '/api/health') {
     return json(res, 200, {
       ok: true,
-      modelVersion: 'v0.2.2-anchored-counterfactual',
+      modelVersion: 'v0.2.3-anchored-counterfactual',
       now: new Date().toISOString()
     });
   }
@@ -194,4 +194,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.2.2 running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.2.3 running on http://localhost:${PORT}`));

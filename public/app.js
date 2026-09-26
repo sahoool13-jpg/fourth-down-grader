@@ -114,7 +114,7 @@ function renderAlerts(data) {
 function renderLedger(rows = [], title = 'Live fourth-down ledger') {
   $('#ledgerTitle').textContent = title;
   const tbody = $('#decisionFeed tbody');
-  $('#gradedCount').textContent = rows.filter(r => r.grade && r.grade !== 'N/A').length;
+  $('#gradedCount').textContent = rows.filter(r => r.grade && !['N/A','REVIEW'].includes(r.grade)).length;
   if (!rows.length) {
     tbody.innerHTML = `<tr><td colspan="8" class="empty">No gradable fourth-down decisions in this view yet.</td></tr>`;
     return;
@@ -131,8 +131,13 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger') {
     const optimalDisplay = d.certainty === 'TOSS-UP' ? `TOSS-UP (${d.optimal || '—'} lean)` : (d.optimal || '—');
     const confidence = d.sensitivity?.confidence || '—';
     const quality = d.stateQuality || (d.verifiedState ? 'VERIFIED' : 'REVIEW');
+    const spotAudit = d.fieldPositionSource ? `spot: ${d.fieldPositionSource}${d.fieldPositionSourceConflict ? ' • source-side conflict corrected' : ''}${d.numericFieldConflict ? ' • numeric feed conflict ignored' : ''}` : '';
+    const gradeDisplay = d.reviewRequired || d.grade === 'REVIEW' ? 'REVIEW' : (d.grade || '—');
     const teamColor = d.offense?.color ? `#${String(d.offense.color).replace('#','')}` : '#9cff31';
     const playText = d.text || '';
+    const optionSummary = d.options && !d.reviewRequired
+      ? Object.entries(d.options).sort((a,b) => b[1]-a[1]).map(([k,v]) => `${k} ${(v*100).toFixed(1)}%`).join(' • ')
+      : '';
     return `<tr class="decisionRow ${quality === 'REVIEW' ? 'reviewRow' : ''}">
       <td><strong>${esc(d.gameName || selectedGameName || '')}</strong></td>
       <td>
@@ -142,13 +147,14 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger') {
       <td class="stateCell" title="${esc(playText)}">
         <strong>${esc(score)}</strong>
         <span class="cellSub">${esc(sit)}</span>
+        ${spotAudit ? `<span class="dataAudit">${esc(spotAudit)}</span>` : ''}
         ${playText ? `<span class="playText">${esc(playText)}</span>` : ''}
       </td>
-      <td><strong>${esc(d.actual || d.actualDecision || '—')}</strong><span class="cellSub">${esc(offense)} decision</span></td>
-      <td><strong>${esc(optimalDisplay)}</strong><span class="cellSub">${esc(confidence)} stability • ${esc(quality)}</span></td>
+      <td><strong>${esc(d.actual || d.actualDecision || '—')}</strong><span class="cellSub">${esc(offense)} chose this</span></td>
+      <td><strong>${esc(d.reviewRequired ? 'NOT GRADED' : optimalDisplay)}</strong><span class="cellSub">${esc(d.reviewRequired ? (d.reason || 'state needs review') : `${confidence} stability • ${quality}`)}</span>${optionSummary ? `<span class="modelOptions">${esc(optionSummary)}</span>` : ''}</td>
       <td>${fmtWp(d.baselineWp)}</td>
       <td>${fmtBurn(d.wpRegret)}</td>
-      <td class="grade ${esc(d.grade || '')}">${esc(d.grade || '—')}</td>
+      <td class="grade ${esc(gradeDisplay)}">${esc(gradeDisplay)}</td>
     </tr>`;
   }).join('');
 }

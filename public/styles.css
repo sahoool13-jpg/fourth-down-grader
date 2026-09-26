@@ -13,7 +13,7 @@ main{max-width:1380px;margin:0 auto;padding:42px 24px 70px}.hero{display:grid;gr
 @media(max-width:600px){main{padding-left:14px;padding-right:14px}.topbar{padding:0 14px}.lab{grid-template-columns:1fr}.hero h1{font-size:44px}.lede{font-size:15px}.panelHead{padding:16px}.lab,.decisionOutput{padding-left:16px;padding-right:16px}.kpis{grid-template-columns:1fr 1fr}.kpis strong{font-size:20px}th,td{padding:12px}.topright{font-size:9px}.model{display:none}.barrow{grid-template-columns:40px 1fr 50px}.barrow small{display:none}}
 
 
-/* v0.2.2 ledger clarity */
+/* v0.2.3 ledger clarity */
 .decisionRow td{vertical-align:top}
 .teamPill{display:inline-flex;align-items:center;justify-content:center;min-width:42px;padding:5px 9px;border:1px solid color-mix(in srgb,var(--team-color) 70%,transparent);border-radius:999px;background:color-mix(in srgb,var(--team-color) 14%,transparent);font-weight:900;letter-spacing:.08em;color:#f5f7f8}
 .cellSub{display:block;margin-top:5px;color:var(--muted);font-size:9px;letter-spacing:.05em;text-transform:uppercase}
@@ -22,3 +22,8 @@ main{max-width:1380px;margin:0 auto;padding:42px 24px 70px}.hero{display:grid;gr
 .playText{display:block;max-width:420px;margin-top:6px;color:#8fa0a8;font-size:10px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:none;letter-spacing:0}
 .reviewRow{opacity:.72}
 @media (max-width:900px){.stateCell{min-width:240px}.playText{max-width:300px}}
+
+.dataAudit{display:block;margin-top:5px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7bd7e5;opacity:.8}
+.grade.REVIEW{color:#f4cf62}.reviewRow{background:rgba(244,207,98,.035)}
+
+.modelOptions{display:block;margin-top:5px;font-size:10px;color:var(--muted);white-space:nowrap}
