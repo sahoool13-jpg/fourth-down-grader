@@ -1,0 +1,219 @@
+name: v0.5.1 holdout result recovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type RECOVER-2025 to reproduce and persist the already-opened frozen v0.5.1 evaluation"
+        required: true
+        default: "LOCKED"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fourth-down-v051-holdout-recovery
+  cancel-in-progress: false
+
+jobs:
+  recovery:
+    if: ${{ github.event.inputs.confirmation == 'RECOVER-2025' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      START_SEASON: "2025"
+      END_SEASON: "2025"
+      HOLDOUT_SEASON: "2025"
+      V051_PHASE: "holdout"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            github::nflverse/nfl4th
+            any::dplyr
+            any::jsonlite
+            any::stringr
+
+      - name: Verify frozen v0.5.1 candidate
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const p = 'public/calibration/v051-development.json';
+          if (!fs.existsSync(p)) {
+            console.error('Missing v0.5.1 development report.');
+            process.exit(1);
+          }
+
+          const r = JSON.parse(fs.readFileSync(p, 'utf8'));
+
+          if (r?.productVersion !== 'v0.5.1') {
+            console.error(`Expected v0.5.1, got ${r?.productVersion}`);
+            process.exit(1);
+          }
+          if (r?.phase !== 'development') {
+            console.error(`Expected development phase, got ${r?.phase}`);
+            process.exit(1);
+          }
+          if (r?.promotionGate?.status !== 'PASS') {
+            console.error(`Development gate is ${r?.promotionGate?.status || 'UNKNOWN'}, not PASS.`);
+            process.exit(1);
+          }
+
+          console.log('Frozen v0.5.1 development candidate verified: PASS.');
+          NODE
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Export exact 2025 reference
+        run: Rscript scripts/export_nfl4th_reference.R
+
+      - name: Prove 2025-only isolation and save provenance
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const ref = JSON.parse(fs.readFileSync('.calibration/reference.json', 'utf8'));
+          const rows = Array.isArray(ref) ? ref : (ref?.rows || []);
+          const seasons = [...new Set(rows.map(r => Number(r.season)).filter(Number.isFinite))].sort();
+
+          if (seasons.length !== 1 || seasons[0] !== 2025) {
+            console.error(`HOLDOUT ISOLATION FAILURE: expected [2025], got [${seasons.join(', ')}]`);
+            process.exit(1);
+          }
+
+          if (rows.length < 500) {
+            console.error(`Holdout sample unexpectedly small: ${rows.length}`);
+            process.exit(1);
+          }
+
+          fs.mkdirSync('public/calibration', { recursive: true });
+          fs.writeFileSync(
+            'public/calibration/v051-holdout-isolation.json',
+            JSON.stringify({
+              schemaVersion: 1,
+              candidate: 'v0.5.1',
+              phase: 'holdout',
+              seasons,
+              referenceRows: rows.length,
+              verifiedAt: new Date().toISOString(),
+              note: 'Row-level source isolation verified before scoring. This is authoritative for holdout season provenance.'
+            }, null, 2)
+          );
+
+          console.log(`2025-only isolation VERIFIED on ${rows.length} reference rows.`);
+          NODE
+
+      - name: Reproduce frozen v0.5.1 2025 score
+        run: node scripts/run_v051_experiment.mjs
+
+      - name: Preserve raw holdout output before any post-score checks
+        uses: actions/upload-artifact@v4
+        with:
+          name: v051-2025-holdout-result
+          path: |
+            public/calibration/v051-holdout*.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Verify stable holdout result schema
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const p = 'public/calibration/v051-holdout.json';
+          if (!fs.existsSync(p)) {
+            console.error('v0.5.1 holdout report was not generated.');
+            process.exit(1);
+          }
+
+          const r = JSON.parse(fs.readFileSync(p, 'utf8'));
+
+          if (r?.productVersion !== 'v0.5.1') {
+            console.error(`Wrong candidate version: ${r?.productVersion}`);
+            process.exit(1);
+          }
+          if (r?.phase !== 'holdout') {
+            console.error(`Wrong phase: ${r?.phase}`);
+            process.exit(1);
+          }
+          if (!Number.isFinite(Number(r?.rowsScored)) || Number(r.rowsScored) < 500) {
+            console.error(`Invalid holdout sample size: ${r?.rowsScored}`);
+            process.exit(1);
+          }
+
+          const requiredNumbers = [
+            ['legacy.exactAgreement', r?.legacy?.exactAgreement],
+            ['candidate.exactAgreement', r?.candidate?.exactAgreement],
+            ['legacy.decisionSafeRate', r?.legacy?.decisionSafeRate],
+            ['candidate.decisionSafeRate', r?.candidate?.decisionSafeRate],
+            ['legacy.meanReferenceRegretPp', r?.legacy?.meanReferenceRegretPp],
+            ['candidate.meanReferenceRegretPp', r?.candidate?.meanReferenceRegretPp],
+            ['legacy.strongSplitRate', r?.legacy?.strongSplitRate],
+            ['candidate.strongSplitRate', r?.candidate?.strongSplitRate],
+            ['endgame.legacy.meanReferenceRegretPp', r?.endgame?.legacy?.meanReferenceRegretPp],
+            ['endgame.candidate.meanReferenceRegretPp', r?.endgame?.candidate?.meanReferenceRegretPp],
+            ['flips.netReferenceRegretSavedPp', r?.flips?.netReferenceRegretSavedPp],
+            ['flips.worstHarmPp', r?.flips?.worstHarmPp]
+          ];
+
+          const bad = requiredNumbers.filter(([_, v]) => !Number.isFinite(Number(v)));
+          if (bad.length) {
+            console.error(`Missing/non-numeric result fields: ${bad.map(([n]) => n).join(', ')}`);
+            process.exit(1);
+          }
+
+          console.log('Stable v0.5.1 holdout result schema VERIFIED.');
+          console.log('Season provenance was already proven directly from the source rows.');
+          NODE
+
+      - name: Print 2025 evaluation verdict
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const r = JSON.parse(fs.readFileSync('public/calibration/v051-holdout.json', 'utf8'));
+
+          console.log('====================================================');
+          console.log('        v0.5.1 2025 HOLDOUT EVALUATION');
+          console.log('====================================================');
+          console.log(`Rows scored:       ${r.rowsScored}`);
+          console.log(`Exact:             ${(100*r.legacy.exactAgreement).toFixed(2)}% -> ${(100*r.candidate.exactAgreement).toFixed(2)}%`);
+          console.log(`Decision-safe:     ${(100*r.legacy.decisionSafeRate).toFixed(2)}% -> ${(100*r.candidate.decisionSafeRate).toFixed(2)}%`);
+          console.log(`Mean regret:       ${r.legacy.meanReferenceRegretPp.toFixed(3)} -> ${r.candidate.meanReferenceRegretPp.toFixed(3)} pp`);
+          console.log(`Strong splits:     ${(100*r.legacy.strongSplitRate).toFixed(2)}% -> ${(100*r.candidate.strongSplitRate).toFixed(2)}%`);
+          console.log(`Endgame regret:    ${r.endgame.legacy.meanReferenceRegretPp.toFixed(3)} -> ${r.endgame.candidate.meanReferenceRegretPp.toFixed(3)} pp`);
+          console.log(`Final-two regret:  ${r.endgame.finalTwoLegacy.meanReferenceRegretPp.toFixed(3)} -> ${r.endgame.finalTwoCandidate.meanReferenceRegretPp.toFixed(3)} pp`);
+          console.log(`Net regret saved:  ${r.flips.netReferenceRegretSavedPp.toFixed(2)} pp`);
+          console.log(`Flips:             ${r.flips.beneficial} beneficial / ${r.flips.harmful} harmful / ${r.flips.neutral} neutral`);
+          console.log(`Worst harm:        ${r.flips.worstHarmPp.toFixed(2)} pp`);
+          console.log('====================================================');
+          NODE
+
+      - name: Commit recovered immutable 2025 evaluation
+        run: |
+          STATUS="$(git status --porcelain -- public/calibration/v051-holdout*)"
+          if [ -z "$STATUS" ]; then
+            echo "No holdout output changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/calibration/v051-holdout*.json
+          git commit -m "Recover frozen v0.5.1 2025 holdout evaluation [skip v051]"
+          git push
