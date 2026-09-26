@@ -1,102 +1,12 @@
-name: v0.5 endgame development audit
+name: v0.5 endgame development audit (archived)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "lib/endgame.js"
-      - "lib/decision-engine.js"
-      - "scripts/run_v05_experiment.mjs"
-      - "test/endgame.test.js"
-      - "test/v05-integration.test.js"
-      - ".github/workflows/v05-endgame-development.yml"
-
-permissions:
-  contents: write
-
-concurrency:
-  group: fourth-down-v05-development
-  cancel-in-progress: true
 
 jobs:
-  development:
+  note:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-    env:
-      START_SEASON: "2021"
-      END_SEASON: "2024"
-      HOLDOUT_SEASON: "2024"
-      V05_PHASE: "development"
-
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
-
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: |
-            github::nflverse/nfl4th
-            any::dplyr
-            any::jsonlite
-            any::stringr
-
-      - name: Unit tests
-        run: npm test
-
-      - name: Export locked development reference (2021-2024 only)
-        run: Rscript scripts/export_nfl4th_reference.R
-
-      - name: Verify holdout is absent
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const ref = JSON.parse(fs.readFileSync('.calibration/reference.json','utf8'));
-          const seasons = [...new Set((ref.rows || []).map(r => Number(r.season)))].sort();
-          if (!seasons.length || seasons.some(s => s >= 2025)) {
-            console.error(`HOLDOUT BREACH: development reference contains ${seasons.join(', ')}`);
-            process.exit(1);
-          }
-          console.log(`Holdout lock verified. Development seasons: ${seasons.join(', ')}`);
-          NODE
-
-      - name: Score v0.5 endgame layer against legacy core
-        run: node scripts/run_v05_experiment.mjs
-
-      - name: Verify experiment output
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const p = 'public/calibration/v05-development.json';
-          if (!fs.existsSync(p)) throw new Error('v0.5 development report missing');
-          const r = JSON.parse(fs.readFileSync(p,'utf8'));
-          if (r.phase !== 'development') throw new Error(`Wrong phase: ${r.phase}`);
-          if ((r.referenceMetadata?.seasons || []).some(s => Number(s) >= 2025)) throw new Error('2025 leaked into development report');
-          if (!r.rowsScored || r.rowsScored < 1000) throw new Error(`Sample too small: ${r.rowsScored}`);
-          console.log(`Promotion gate: ${r.promotionGate?.status}`);
-          console.log(`Exact delta: ${r.deltas.overall.exactAgreementPp.toFixed(2)} pp`);
-          console.log(`Mean-regret delta: ${r.deltas.overall.meanRegretPp.toFixed(3)} pp`);
-          console.log(`Endgame-regret delta: ${r.deltas.endgame.meanRegretPp.toFixed(3)} pp`);
-          NODE
-
-      - name: Commit development experiment
-        run: |
-          STATUS="$(git status --porcelain -- public/calibration/v05-development*)"
-          if [ -z "$STATUS" ]; then
-            echo "No v0.5 development changes"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A public/calibration/v05-development*.json
-          git commit -m "Update v0.5 endgame development audit [skip v05]"
-          git push
+      - run: |
+          echo "v0.5 is archived after its 2021-2024 promotion gate returned REVIEW."
+          echo "Use v0.5.1 gated endgame development audit for the current candidate."
