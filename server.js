@@ -118,7 +118,7 @@ async function api(req, res, url) {
   if (url.pathname === '/api/health') {
     return json(res, 200, {
       ok: true,
-      modelVersion: 'v0.3.2-benchmark-mapping',
+      modelVersion: 'v0.5-endgame-intelligence',
       now: new Date().toISOString()
     });
   }
@@ -224,4 +224,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.3.2 running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.5 running on http://localhost:${PORT}`));

@@ -1,0 +1,40 @@
+4TH DOWN v0.5 — ENDGAME INTELLIGENCE
+
+IMPORTANT: DO NOT RUN THE 2025 HOLDOUT WORKFLOW YET.
+
+INSTALL
+1. Extract this ZIP.
+2. Open the extracted folder.
+3. Copy ALL files/folders inside into your existing repo:
+   Documents > GitHub > fourth-down-grader
+4. Choose Replace the files in the destination when Windows asks.
+5. Do NOT delete or replace the hidden .git folder in your repo.
+6. Inside the repo root, double-click:
+   APPLY-V05.bat
+
+The batch file patches your existing decision-engine.js, updates the version labels,
+and runs the full Node test suite. If it says V0.5 APPLIED AND TESTS PASSED, continue.
+
+GITHUB DESKTOP
+Summary:
+Add v0.5 endgame intelligence and locked development audit
+
+Then:
+Commit to main -> Push origin
+
+WHAT HAPPENS NEXT
+- GitHub Actions automatically runs: v0.5 endgame development audit
+- That workflow loads 2021, 2022, 2023 and 2024 ONLY.
+- It will NOT load 2025.
+- It compares the exact same engine with endgame layer OFF vs ON.
+- It commits v05-development.json and the gain/regression tapes.
+
+RENDER
+After pushing:
+Render -> Manual Deploy -> Deploy latest commit
+Then hard refresh the site with Ctrl+Shift+R.
+Open ENDGAME LAB from the top navigation.
+
+HOLDOUT
+Leave `v0.5 holdout unlock` alone. Do not type UNLOCK-2025 until we have reviewed
+the development dashboard together.

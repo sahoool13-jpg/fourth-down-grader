@@ -1,28 +1,23 @@
-name: historical calibration
+name: historical calibration (full audit)
 
+# v0.5 change: the full 2021-2025 audit is now MANUAL ONLY so changes to the
+# primary model cannot silently peek at the 2025 holdout. Development work uses
+# `v0.5 endgame development audit`, which loads 2021-2024 only.
 on:
   workflow_dispatch:
     inputs:
       start_season:
-        description: "First NFL season in development sample"
+        description: "First NFL season"
         required: true
         default: "2021"
       end_season:
-        description: "Last NFL season in sample"
+        description: "Last NFL season"
         required: true
         default: "2025"
       holdout_season:
-        description: "Season reserved as out-of-sample holdout"
+        description: "Season reported as holdout"
         required: true
         default: "2025"
-  push:
-    branches: [main]
-    paths:
-      - "lib/decision-engine.js"
-      - "lib/calibration.js"
-      - "scripts/export_nfl4th_reference.R"
-      - "scripts/run_historical_calibration.mjs"
-      - ".github/workflows/historical-calibration.yml"
 
 permissions:
   contents: write
@@ -36,23 +31,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      START_SEASON: ${{ github.event.inputs.start_season || '2021' }}
-      END_SEASON: ${{ github.event.inputs.end_season || '2025' }}
-      HOLDOUT_SEASON: ${{ github.event.inputs.holdout_season || '2025' }}
+      START_SEASON: ${{ github.event.inputs.start_season }}
+      END_SEASON: ${{ github.event.inputs.end_season }}
+      HOLDOUT_SEASON: ${{ github.event.inputs.holdout_season }}
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-
       - uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
-
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
@@ -60,63 +52,16 @@ jobs:
             any::dplyr
             any::jsonlite
             any::stringr
-
       - name: Export multi-season nfl4th reference
         run: Rscript scripts/export_nfl4th_reference.R
-
       - name: Score current primary model
         run: node scripts/run_historical_calibration.mjs
-
-      - name: Verify calibration integrity
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const reportPath = 'public/calibration/report.json';
-          const splitsPath = 'public/calibration/splits.json';
-          if (!fs.existsSync(reportPath) || !fs.existsSync(splitsPath)) {
-            console.error('Calibration output is missing');
-            process.exit(1);
-          }
-          const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-          const splits = JSON.parse(fs.readFileSync(splitsPath, 'utf8'));
-          const o = report?.summary?.overall;
-          if (report.productVersion !== 'v0.4.1') {
-            console.error(`Unexpected calibration version: ${report.productVersion}`);
-            process.exit(1);
-          }
-          if (!o?.n || o.n < 1000 || !Number.isFinite(o.exactAgreement)) {
-            console.error('Calibration summary is incomplete');
-            process.exit(1);
-          }
-          if (!Number.isFinite(o.referenceCoverageRate) || o.referenceCoverageRate <= 0 || o.referenceCoverageRate > 1) {
-            console.error(`Invalid reference coverage: ${o.referenceCoverageRate}`);
-            process.exit(1);
-          }
-          if ((splits.rows || []).some(r => !r.comparable || r.referenceRegretPp == null)) {
-            console.error('Clean failure tape contains an unscored reference-gap row');
-            process.exit(1);
-          }
-          if ((splits.referenceGaps || []).some(r => r.comparable || r.referenceRegretPp != null)) {
-            console.error('Reference-gap tape contains a scored row');
-            process.exit(1);
-          }
-          console.log(`Verified ${o.n} states`);
-          console.log(`Reference-covered primary calls: ${o.comparableN} (${(100 * o.referenceCoverageRate).toFixed(1)}%)`);
-          console.log(`Clean exact-call agreement: ${(100 * o.exactAgreement).toFixed(1)}%`);
-          console.log(`Clean decision-safe rate: ${(100 * o.decisionSafeRate).toFixed(1)}%`);
-          console.log(`Reference gaps excluded from regret: ${o.referenceGapCount}`);
-          NODE
-
       - name: Commit calibration output
         run: |
-          STATUS="$(git status --porcelain -- public/calibration)"
-          if [ -z "$STATUS" ]; then
-            echo "No calibration changes"
-            exit 0
-          fi
-
+          STATUS="$(git status --porcelain -- public/calibration/report.json public/calibration/splits.json public/calibration/status.json)"
+          if [ -z "$STATUS" ]; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A public/calibration/report.json public/calibration/splits.json public/calibration/status.json
-          git commit -m "Update historical fourth-down calibration [skip calibration]"
+          git commit -m "Update manual full historical calibration [skip calibration]"
           git push

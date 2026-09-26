@@ -14,7 +14,7 @@
       <div class="brandMark">4</div>
       <div><strong>4TH DOWN</strong><small>DECISION INTELLIGENCE</small></div>
     </div>
-    <div class="topright"><span class="dot"></span><span id="feedStatus">CONNECTING</span><a class="model" href="/calibration.html">CALIBRATION</a><span class="model">MODEL v0.3.2 • CAL v0.4.1</span></div>
+    <div class="topright"><span class="dot"></span><span id="feedStatus">CONNECTING</span><a class="model" href="/calibration.html">CALIBRATION</a><a class="model" href="/endgame-lab.html">ENDGAME LAB</a><span class="model">MODEL v0.5 • CAL v0.4.1</span></div>
   </header>
 
   <main>
@@ -27,7 +27,7 @@
       <div class="heroStat">
         <span>MODEL CORE</span>
         <strong>WP Δ</strong>
-        <p>Live game-state anchoring plus counterfactual decision pricing and sensitivity testing.</p>
+        <p>Live game-state anchoring, endgame possession intelligence, counterfactual pricing and sensitivity testing.</p>
       </div>
     </section>
 
@@ -35,7 +35,7 @@
       <div><span>ACTIVE GAMES</span><strong id="activeGames">0</strong></div>
       <div><span>LIVE 4TH DOWNS</span><strong id="liveFourths">0</strong></div>
       <div><span>GRADED DECISIONS</span><strong id="gradedCount">0</strong></div>
-      <div><span>MODEL</span><strong class="smallKpi">AUDITED CORE v0.3.2</strong></div>
+      <div><span>MODEL</span><strong class="smallKpi">ENDGAME INTELLIGENCE v0.5</strong></div>
     </section>
 
     <section id="alertStrip" class="alertStrip hidden"></section>
@@ -85,16 +85,16 @@
 
     <section class="method">
       <div><span>01</span><h3>Freeze state</h3><p>Score, exact field position, distance, clock and timeouts are captured before the strategic decision.</p></div>
-      <div><span>02</span><h3>Anchor + price</h3><p>When live WP is available, the primary model anchors to it, then prices GO, FG and PUNT as counterfactual paths.</p></div>
+      <div><span>02</span><h3>Endgame layer</h3><p>Inside five minutes, score-value and possession scarcity alter the value of giving the ball away or banking three points.</p></div>
       <div><span>03</span><h3>Stress test</h3><p>Conversion, kicking and punt assumptions are perturbed. Fragile recommendations are marked TOSS-UP instead of fake precision.</p></div>
       <div><span>04</span><h3>Cross-check</h3><p>Audited games are compared play-by-play with exact nfl4th output. Strong model disagreements become REVIEW, not fake certainty.</p></div>
     </section>
   </main>
 
   <footer>
-    <span>Model core v0.3.2 • historical calibration integrity v0.4.1</span>
+    <span>Model core v0.5 • endgame intelligence • calibration integrity v0.4.1</span>
     <span>Live-data adapter: ESPN public endpoints</span>
-    <span>Validation: nfl4th live cross-check + multi-season holdout audit</span>
+    <span>Validation: nfl4th live cross-check + locked development / holdout audit</span>
   </footer>
   <script type="module" src="/app.js"></script>
 </body>

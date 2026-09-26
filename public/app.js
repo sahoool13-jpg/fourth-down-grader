@@ -33,7 +33,7 @@ function renderEvaluation(ev) {
         <small>RECOMMENDATION</small>
         <strong>${ev.certainty === 'TOSS-UP' ? 'TOSS-UP' : esc(ev.optimal)}</strong>
         <div class="muted">${ev.certainty === 'TOSS-UP' ? `Slight lean: ${esc(ev.optimal)} • ` : ''}+${(ev.edge * 100).toFixed(1)} WP vs next-best</div>
-        <div class="anchorPill">${ev.diagnostics?.liveAnchorUsed ? 'LIVE WP ANCHORED' : 'STRUCTURAL MODE'}</div>
+        <div class="anchorPill">${ev.diagnostics?.liveAnchorUsed ? 'LIVE WP ANCHORED' : 'STRUCTURAL MODE'}</div>\n        ${ev.diagnostics?.endgame?.active ? `<div class="anchorPill">ENDGAME • ${esc((ev.diagnostics.endgame.tags || []).join(' • ') || 'TERMINAL WINDOW')}</div>` : ''}
       </div>
       <div>
         <div class="bars">${entries.map(([d, wp]) => {

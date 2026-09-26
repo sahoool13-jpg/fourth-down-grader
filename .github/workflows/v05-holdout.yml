@@ -1,0 +1,83 @@
+name: v0.5 holdout unlock
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type UNLOCK-2025 only after the development audit has been reviewed"
+        required: true
+        default: "LOCKED"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fourth-down-v05-holdout
+  cancel-in-progress: false
+
+jobs:
+  holdout:
+    if: ${{ github.event.inputs.confirmation == 'UNLOCK-2025' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      START_SEASON: "2025"
+      END_SEASON: "2025"
+      HOLDOUT_SEASON: "2025"
+      V05_PHASE: "holdout"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            github::nflverse/nfl4th
+            any::dplyr
+            any::jsonlite
+            any::stringr
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Export holdout reference (2025 only)
+        run: Rscript scripts/export_nfl4th_reference.R
+
+      - name: Verify holdout isolation
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const ref = JSON.parse(fs.readFileSync('.calibration/reference.json','utf8'));
+          const seasons = [...new Set((ref.rows || []).map(r => Number(r.season)))];
+          if (seasons.length !== 1 || seasons[0] !== 2025) {
+            console.error(`Expected only 2025, got ${seasons.join(', ')}`);
+            process.exit(1);
+          }
+          console.log('2025 holdout isolation verified');
+          NODE
+
+      - name: Score v0.5 on untouched holdout
+        run: node scripts/run_v05_experiment.mjs
+
+      - name: Commit holdout result
+        run: |
+          STATUS="$(git status --porcelain -- public/calibration/v05-holdout*)"
+          if [ -z "$STATUS" ]; then
+            echo "No v0.5 holdout changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/calibration/v05-holdout*.json
+          git commit -m "Unlock v0.5 2025 holdout result [skip v05]"
+          git push

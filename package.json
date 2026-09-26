@@ -1,13 +1,14 @@
 {
   "name": "fourth-down-grader",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "test": "node --test test/*.test.js",
-    "calibration:score": "node scripts/run_historical_calibration.mjs"
+    "test": "node --test",
+    "calibration:score": "node scripts/run_historical_calibration.mjs",
+    "v05:development": "node scripts/run_v05_experiment.mjs"
   },
   "engines": {
     "node": ">=20"
