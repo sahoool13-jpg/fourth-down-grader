@@ -12,7 +12,7 @@ if (!nzchar(gid)) {
 
 out_dir <- Sys.getenv("BENCHMARK_OUTPUT_DIR", unset = "public/benchmarks")
 status_path <- Sys.getenv("BENCHMARK_STATUS_PATH", unset = file.path(out_dir, "_status.json"))
-pipeline_version <- "v0.3.1"
+pipeline_version <- "v0.3.2"
 
 parts <- strsplit(gid, "_", fixed = TRUE)[[1]]
 season <- suppressWarnings(if (length(parts) >= 1) as.integer(parts[[1]]) else NA_integer_)
@@ -78,6 +78,13 @@ if (inherits(probs_result, "error")) {
   finish_failure("PIPELINE_ERROR", "PIPELINE ERROR", conditionMessage(probs_result), 4)
 }
 probs <- probs_result
+
+# Remove fourth-down states that are explicitly marked as "No Play".
+# They are not coach GO/FG/PUNT decisions and our live ESPN parser excludes them.
+if ("desc" %in% names(probs)) {
+  probs <- probs |>
+    filter(is.na(desc) | !grepl("No Play", desc, ignore.case = TRUE))
+}
 
 pick_option <- function(go, fg, punt) {
   vals <- c(GO = go, FG = fg, PUNT = punt)

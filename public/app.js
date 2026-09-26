@@ -121,8 +121,98 @@ function benchmarkOptionsText(b) {
   return vals.join(' • ');
 }
 
-function benchmarkByPlay(benchmark) {
-  return new Map((benchmark?.rows || []).map(r => [String(r.play_id), r]));
+function quarterClockSeconds(clock) {
+  const m = String(clock || '').match(/^(\d+):(\d{2})$/);
+  if (!m) return null;
+  return Number(m[1]) * 60 + Number(m[2]);
+}
+
+function benchmarkStateScore(row, b) {
+  const offense = String(row?.offense?.abbreviation || '').toUpperCase();
+  const posteam = String(b?.posteam || '').toUpperCase();
+  if (!offense || !posteam || offense !== posteam) return -Infinity;
+
+  const q = Number(row?.quarter);
+  const bq = Number(b?.qtr);
+  if (!Number.isFinite(q) || !Number.isFinite(bq) || q !== bq) return -Infinity;
+
+  let score = 8;
+
+  const rowClock = quarterClockSeconds(row?.clock);
+  const benchClock = Number(b?.quarter_seconds_remaining);
+  if (Number.isFinite(rowClock) && Number.isFinite(benchClock)) {
+    const dt = Math.abs(rowClock - benchClock);
+    if (dt <= 1) score += 6;
+    else if (dt <= 5) score += 4;
+    else if (dt <= 15) score += 1;
+    else return -Infinity;
+  }
+
+  const rowToGo = Number(row?.ydstogo);
+  const benchToGo = Number(b?.ydstogo);
+  if (Number.isFinite(rowToGo) && Number.isFinite(benchToGo)) {
+    const dd = Math.abs(rowToGo - benchToGo);
+    if (dd <= 0.1) score += 4;
+    else if (dd <= 1) score += 2;
+    else return -Infinity;
+  }
+
+  const rowY100 = Number(row?.yardline100);
+  const benchY100 = Number(b?.yardline_100);
+  if (Number.isFinite(rowY100) && Number.isFinite(benchY100)) {
+    const dy = Math.abs(rowY100 - benchY100);
+    if (dy <= 1) score += 5;
+    else if (dy <= 2) score += 3;
+    else if (dy <= 5) score += 1;
+    else return -Infinity;
+  }
+
+  const rowDiff = Number(row?.scoreDiff);
+  const benchDiff = Number(b?.score_differential);
+  if (Number.isFinite(rowDiff) && Number.isFinite(benchDiff)) {
+    if (rowDiff === benchDiff) score += 3;
+    else if (Math.abs(rowDiff - benchDiff) <= 3) score += 1;
+  }
+
+  return score;
+}
+
+function buildBenchmarkMatches(rows = [], benchmark = null) {
+  const matches = new Map();
+  const benchRows = benchmark?.rows || [];
+  if (!benchRows.length) return matches;
+
+  const exact = new Map(benchRows.map(r => [String(r.play_id), r]));
+  const used = new Set();
+
+  for (const row of rows) {
+    const hit = exact.get(String(row.id));
+    if (hit) {
+      matches.set(String(row.id), hit);
+      used.add(String(hit.play_id));
+    }
+  }
+
+  for (const row of rows) {
+    const key = String(row.id);
+    if (matches.has(key)) continue;
+
+    const candidates = benchRows
+      .filter(b => !used.has(String(b.play_id)))
+      .map(b => ({ b, score: benchmarkStateScore(row, b) }))
+      .filter(x => Number.isFinite(x.score))
+      .sort((a, b) => b.score - a.score);
+
+    const best = candidates[0];
+    const second = candidates[1];
+    if (!best || best.score < 18) continue;
+    if (second && second.score === best.score) continue;
+
+    matches.set(key, best.b);
+    used.add(String(best.b.play_id));
+  }
+
+  return matches;
 }
 
 function benchmarkRelation(row, b) {
@@ -160,10 +250,10 @@ function renderBenchmarkStatus(rows = [], benchmark = null) {
     else el.removeAttribute('title');
     return;
   }
-  const byId = benchmarkByPlay(benchmark);
+  const matches = buildBenchmarkMatches(rows, benchmark);
   let matched = 0, eligible = 0, agree = 0, strongSplits = 0;
   for (const row of rows) {
-    const b = byId.get(String(row.id));
+    const b = matches.get(String(row.id));
     if (!b) continue;
     matched++;
     if (!row.optimal || !b.optimal) continue;
@@ -201,7 +291,7 @@ async function getBenchmark(eventId) {
 function renderLedger(rows = [], title = 'Live fourth-down ledger', benchmark = null) {
   $('#ledgerTitle').textContent = title;
   const tbody = $('#decisionFeed tbody');
-  const benchForCount = benchmarkByPlay(benchmark);
+  const benchForCount = buildBenchmarkMatches(rows, benchmark);
   const effectiveGraded = rows.filter(r => {
     if (!r.grade || ['N/A','REVIEW'].includes(r.grade)) return false;
     const b = benchForCount.get(String(r.id));
@@ -214,7 +304,7 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger', benchmark = 
     return;
   }
 
-  const byId = benchmarkByPlay(benchmark);
+  const byId = buildBenchmarkMatches(rows, benchmark);
   tbody.innerHTML = [...rows].reverse().map(d => {
     const b = byId.get(String(d.id));
     const relation = benchmarkRelation(d, b);
