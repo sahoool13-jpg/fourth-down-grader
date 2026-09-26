@@ -1,13 +1,43 @@
-4TH DOWN v0.3.2 — benchmark mapping fix
+4TH DOWN v0.4 — HISTORICAL CALIBRATION
 
-The v0.3.1 pipeline is now confirmed working and produced a real nfl4th benchmark.
-This update fixes the final join between that benchmark and the live ESPN ledger.
+WHAT THIS ADDS
+- Exact multi-season nfl4th benchmark runner.
+- Default sample: 2021–2025.
+- 2025 is treated as a locked holdout season.
+- Thousands of real fourth-down decisions are replayed through the current JS model.
+- Report includes exact-call agreement, reference regret, strong splits, WP bias,
+  confidence calibration, and context buckets.
+- New calibration dashboard: /calibration.html
+- Top failure cases are saved separately for model diagnosis.
+- The workflow does NOT automatically tune the model. That is intentional.
+  We diagnose first, then change parameters, then re-run the holdout.
 
-Key fixes:
-- resolves ESPN/nflverse event-ID aliases using the successful pipeline status
-- matches benchmark rows by frozen game state when play IDs differ
-- removes explicit "No Play" penalty rows from nfl4th output
-- updates visible version labels to v0.3.2
+HOW TO INSTALL
+1. Extract this ZIP.
+2. Copy everything inside into:
+   Documents > GitHub > fourth-down-grader
+3. Replace matching files. Do not delete .git.
+4. GitHub Desktop Summary:
+   Add multi-season historical calibration v0.4
+5. Commit to main, then Push origin.
+6. GitHub Actions will start "historical calibration".
+   The exact nfl4th run can take several minutes.
+7. Render > Manual Deploy > Deploy latest commit.
+8. Hard refresh the site with Ctrl+Shift+R.
+9. Open the new CALIBRATION link at the top.
 
-Copy over the matching files, commit/push, manually deploy latest commit in Render,
-then hard refresh with Ctrl+Shift+R.
+IMPORTANT
+The calibration report is fetched directly from GitHub. Once the workflow commits a
+new report, future calibration updates do not require a Render deployment.
+
+DEFAULT METHODOLOGY
+Development: 2021–2024
+Holdout:     2025
+
+Headline diagnostic:
+reference regret = nfl4th WP(optimal) - nfl4th WP(primary model choice)
+
+<= 0.75 pp regret = decision-safe disagreement
+>= 2.00 pp regret = strong split
+
+nfl4th is a validation reference, not ground truth.

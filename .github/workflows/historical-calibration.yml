@@ -1,0 +1,105 @@
+name: historical calibration
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_season:
+        description: "First NFL season in development sample"
+        required: true
+        default: "2021"
+      end_season:
+        description: "Last NFL season in sample"
+        required: true
+        default: "2025"
+      holdout_season:
+        description: "Season reserved as out-of-sample holdout"
+        required: true
+        default: "2025"
+  push:
+    branches: [main]
+    paths:
+      - "lib/decision-engine.js"
+      - "lib/calibration.js"
+      - "scripts/export_nfl4th_reference.R"
+      - "scripts/run_historical_calibration.mjs"
+      - ".github/workflows/historical-calibration.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fourth-down-historical-calibration
+  cancel-in-progress: true
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      START_SEASON: ${{ github.event.inputs.start_season || '2021' }}
+      END_SEASON: ${{ github.event.inputs.end_season || '2025' }}
+      HOLDOUT_SEASON: ${{ github.event.inputs.holdout_season || '2025' }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            github::nflverse/nfl4th
+            any::dplyr
+            any::jsonlite
+            any::stringr
+
+      - name: Export multi-season nfl4th reference
+        run: Rscript scripts/export_nfl4th_reference.R
+
+      - name: Score current primary model
+        run: node scripts/run_historical_calibration.mjs
+
+      - name: Verify calibration report
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const path = 'public/calibration/report.json';
+          if (!fs.existsSync(path)) {
+            console.error('Calibration report is missing');
+            process.exit(1);
+          }
+          const report = JSON.parse(fs.readFileSync(path, 'utf8'));
+          if (!report?.summary?.overall?.n || report.summary.overall.n < 1000) {
+            console.error(`Calibration sample unexpectedly small: ${report?.summary?.overall?.n ?? 0}`);
+            process.exit(1);
+          }
+          if (!Number.isFinite(report.summary.overall.exactAgreement)) {
+            console.error('Calibration exact-agreement metric missing');
+            process.exit(1);
+          }
+          console.log(`Verified ${report.summary.overall.n} decisions`);
+          console.log(`Exact-call agreement: ${(100 * report.summary.overall.exactAgreement).toFixed(1)}%`);
+          console.log(`Decision-safe rate: ${(100 * report.summary.overall.decisionSafeRate).toFixed(1)}%`);
+          NODE
+
+      - name: Commit calibration output
+        run: |
+          STATUS="$(git status --porcelain -- public/calibration)"
+          if [ -z "$STATUS" ]; then
+            echo "No calibration changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/calibration/report.json public/calibration/splits.json public/calibration/status.json
+          git commit -m "Update historical fourth-down calibration [skip calibration]"
+          git push
