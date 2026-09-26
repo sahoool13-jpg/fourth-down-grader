@@ -18,7 +18,7 @@ function renderEvaluation(ev) {
   const entries = Object.entries(ev.options).sort((a, b) => b[1] - a[1]);
   $('#decisionTitle').textContent = 'Optimal call';
   const badge = $('#certaintyBadge');
-  badge.textContent = `${ev.certainty} • ${ev.sensitivity?.confidence || '—'} CONF`;
+  badge.textContent = `${ev.certainty} • ${ev.sensitivity?.confidence || '—'} STABILITY`;
   badge.className = `badge ${badgeClass(ev.certainty)}`;
 
   const max = Math.max(...entries.map(x => x[1]));
@@ -119,19 +119,35 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger') {
     tbody.innerHTML = `<tr><td colspan="8" class="empty">No gradable fourth-down decisions in this view yet.</td></tr>`;
     return;
   }
+
   tbody.innerHTML = [...rows].reverse().map(d => {
+    const offense = d.offense?.abbreviation || '—';
+    const defense = d.defense?.abbreviation || '—';
     const downText = Number.isFinite(Number(d.ydstogo)) ? `4th & ${Number(d.ydstogo)}` : '4th down';
     const spot = d.fieldPositionText || (d.yardline100 ? `y100 ${Math.round(d.yardline100)}` : '');
     const sit = `Q${d.quarter ?? '?'} ${d.clock || '—'} • ${downText}${spot ? ` • ${spot}` : ''}`;
+    const score = d.scoreText || (Number.isFinite(Number(d.offenseScore)) && Number.isFinite(Number(d.defenseScore))
+      ? `${offense} ${d.offenseScore}–${d.defenseScore} ${defense}` : 'Score unavailable');
     const optimalDisplay = d.certainty === 'TOSS-UP' ? `TOSS-UP (${d.optimal || '—'} lean)` : (d.optimal || '—');
-    return `<tr>
-      <td>${esc(d.gameName || selectedGameName || '')}</td>
-      <td title="${esc(d.text || '')}">${esc(sit)}</td>
-      <td>${esc(d.actual || d.actualDecision || '—')}</td>
-      <td>${esc(optimalDisplay)}</td>
+    const confidence = d.sensitivity?.confidence || '—';
+    const quality = d.stateQuality || (d.verifiedState ? 'VERIFIED' : 'REVIEW');
+    const teamColor = d.offense?.color ? `#${String(d.offense.color).replace('#','')}` : '#9cff31';
+    const playText = d.text || '';
+    return `<tr class="decisionRow ${quality === 'REVIEW' ? 'reviewRow' : ''}">
+      <td><strong>${esc(d.gameName || selectedGameName || '')}</strong></td>
+      <td>
+        <span class="teamPill" style="--team-color:${esc(teamColor)}">${esc(offense)}</span>
+        <span class="cellSub">vs ${esc(defense)}</span>
+      </td>
+      <td class="stateCell" title="${esc(playText)}">
+        <strong>${esc(score)}</strong>
+        <span class="cellSub">${esc(sit)}</span>
+        ${playText ? `<span class="playText">${esc(playText)}</span>` : ''}
+      </td>
+      <td><strong>${esc(d.actual || d.actualDecision || '—')}</strong><span class="cellSub">${esc(offense)} decision</span></td>
+      <td><strong>${esc(optimalDisplay)}</strong><span class="cellSub">${esc(confidence)} stability • ${esc(quality)}</span></td>
       <td>${fmtWp(d.baselineWp)}</td>
       <td>${fmtBurn(d.wpRegret)}</td>
-      <td>${esc(d.sensitivity?.confidence || '—')}</td>
       <td class="grade ${esc(d.grade || '')}">${esc(d.grade || '—')}</td>
     </tr>`;
   }).join('');
@@ -170,8 +186,12 @@ function showLiveSituation(p, gameName = '') {
     box.classList.add('hidden');
     return;
   }
+  const offense = p.offense?.abbreviation || 'OFF';
+  const defense = p.defense?.abbreviation || 'DEF';
+  const score = p.scoreText || `score diff ${p.scoreDiff >= 0 ? '+' : ''}${p.scoreDiff}`;
+  const spot = p.fieldPositionText || (p.yardline100 ? `${Math.round(p.yardline100)} yards from goal` : 'field position unavailable');
   box.classList.remove('hidden');
-  box.innerHTML = `<span class="kicker">LIVE GAME STATE</span><h3>${esc(gameName)} • ${esc(p.offense?.abbreviation)} • 4th & ${esc(p.ydstogo)}</h3><div class="muted">${esc(p.clock)} Q${esc(p.quarter)} • score diff ${p.scoreDiff >= 0 ? '+' : ''}${esc(p.scoreDiff)} • ${Math.round(p.yardline100)} yards from goal • pre-decision WP ${fmtWp(p.baselineWp)}</div>`;
+  box.innerHTML = `<span class="kicker">LIVE GAME STATE</span><h3>${esc(offense)} BALL • ${esc(gameName)} • 4th & ${esc(p.ydstogo)}</h3><div class="muted">${esc(score)} • ${esc(p.clock)} Q${esc(p.quarter)} • ${esc(spot)} • vs ${esc(defense)} • pre-decision WP ${fmtWp(p.baselineWp)}</div>`;
 }
 
 async function selectGame(id, name = '') {

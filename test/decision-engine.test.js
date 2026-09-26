@@ -74,3 +74,30 @@ test('down 20 late in Q4 does not recommend a field goal that preserves a three-
   assert.ok(ev.options.GO > ev.options.FG);
   assert.ok(ev.options.GO > ev.options.PUNT);
 });
+
+test('4th and 9 from own 12 is a punt, not a field goal', () => {
+  const ev = evaluateFourthDown({
+    ydstogo: 9,
+    yardline100: 88,
+    scoreDiff: 0,
+    secondsRemaining: 2382,
+    timeouts: 3,
+    opponentTimeouts: 3
+  });
+  assert.equal(ev.optimal, 'PUNT');
+  assert.equal(ev.options.FG, undefined);
+});
+
+test('toss-up decisions are not assigned punitive C/D/F grades', () => {
+  // Build a real evaluation, then emulate a fragile center-estimate disagreement.
+  const ev = evaluateFourthDown({ ydstogo: 2, yardline100: 43, scoreDiff: 0, secondsRemaining: 1800 });
+  const fragile = {
+    ...ev,
+    certainty: 'TOSS-UP',
+    optimal: 'FG',
+    options: { ...ev.options, FG: 0.54, PUNT: 0.50, GO: 0.49 }
+  };
+  const graded = gradeActualDecision(fragile, 'PUNT');
+  assert.equal(graded.grade, 'B');
+  assert.ok(graded.gradeNote);
+});

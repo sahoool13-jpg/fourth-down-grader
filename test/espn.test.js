@@ -54,3 +54,58 @@ test('completed fourth down carries displayable situation metadata', () => {
   assert.equal(d.fieldPositionText, 'MIA 45');
   assert.equal(d.verifiedState, true);
 });
+
+test('ESPN yardLine is offense-relative y100 and possession comes from pre-snap start.team', () => {
+  const x = structuredClone(fixture);
+  x.plays = [{
+    id: 'gb-own-12',
+    sequenceNumber: '200',
+    type: { text: 'Punt' },
+    text: 'Punter punts 52 yards.',
+    // Deliberately conflicting attribution fallback: start.team must win.
+    team: { id: '2' },
+    period: { number: 2 },
+    clock: { displayValue: '9:42' },
+    homeScore: 7,
+    awayScore: 7,
+    start: {
+      down: 4,
+      distance: 9,
+      yardLine: 88,
+      yardsToEndzone: 88,
+      possessionText: 'MIA 12',
+      team: { $ref: 'https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/teams/15' }
+    }
+  }];
+  const g = parseGameSummary(x);
+  const d = g.completedFourthDowns[0];
+  assert.equal(d.offense.abbreviation, 'MIA');
+  assert.equal(d.defense.abbreviation, 'BUF');
+  assert.equal(d.yardline100, 88);
+  assert.equal(d.fieldPositionText, 'MIA 12');
+  assert.equal(d.possessionVerified, true);
+});
+
+test('completed scoring play uses pre-play score rather than leaking the made kick into state', () => {
+  const x = structuredClone(fixture);
+  x.plays = [
+    {
+      id: 'prior', sequenceNumber: '100', type: { text: 'Pass Incompletion' }, text: 'Incomplete.',
+      period: { number: 2 }, clock: { displayValue: '4:55' }, homeScore: 7, awayScore: 7,
+      start: { down: 3, distance: 2, yardLine: 26, team: { id: '15' } }
+    },
+    {
+      id: 'fg', sequenceNumber: '200', type: { text: 'Field Goal Good' }, text: 'Kicker 44 yard field goal is GOOD.',
+      period: { number: 2 }, clock: { displayValue: '4:48' }, homeScore: 7, awayScore: 10,
+      scoringPlay: true, scoreValue: 3,
+      start: { down: 4, distance: 2, yardLine: 26, yardsToEndzone: 26, possessionText: 'BUF 26', team: { id: '15' } }
+    }
+  ];
+  const g = parseGameSummary(x);
+  const d = g.completedFourthDowns[0];
+  assert.equal(d.offense.abbreviation, 'MIA');
+  assert.equal(d.offenseScore, 7);
+  assert.equal(d.defenseScore, 7);
+  assert.equal(d.scoreDiff, 0);
+  assert.equal(d.scoreText, 'MIA 7–7 BUF');
+});
