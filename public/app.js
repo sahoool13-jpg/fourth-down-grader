@@ -8,6 +8,8 @@ let selectedGameName = null;
 let lastLiveData = null;
 let liveTimer = null;
 let selectedTimer = null;
+const benchmarkCache = new Map();
+let selectedBenchmark = null;
 
 function badgeClass(certainty) {
   return certainty === 'CLEAR' ? 'clear' : certainty === 'LEAN' ? 'lean' : 'neutral';
@@ -16,7 +18,7 @@ function badgeClass(certainty) {
 function renderEvaluation(ev) {
   if (!ev?.options) return;
   const entries = Object.entries(ev.options).sort((a, b) => b[1] - a[1]);
-  $('#decisionTitle').textContent = 'Optimal call';
+  $('#decisionTitle').textContent = 'Primary optimal call';
   const badge = $('#certaintyBadge');
   badge.textContent = `${ev.certainty} • ${ev.sensitivity?.confidence || '—'} STABILITY`;
   badge.className = `badge ${badgeClass(ev.certainty)}`;
@@ -111,16 +113,97 @@ function renderAlerts(data) {
   strip.querySelectorAll('.alertCard').forEach(el => el.addEventListener('click', () => selectGame(el.dataset.id, 'Live game')));
 }
 
-function renderLedger(rows = [], title = 'Live fourth-down ledger') {
+
+function benchmarkOptionsText(b) {
+  if (!b) return '';
+  const vals = [['GO', b.go_wp], ['FG', b.fg_wp], ['PUNT', b.punt_wp]]
+    .filter(([,v]) => Number.isFinite(Number(v)))
+    .map(([k,v]) => `${k} ${(Number(v) * 100).toFixed(1)}%`);
+  return vals.join(' • ');
+}
+
+function benchmarkByPlay(benchmark) {
+  return new Map((benchmark?.rows || []).map(r => [String(r.play_id), r]));
+}
+
+function benchmarkRelation(row, b) {
+  if (!b?.optimal || !row?.optimal) return { kind: 'PRIMARY_ONLY', label: 'PRIMARY ONLY', split: false };
+  const a = String(row.optimal).toUpperCase();
+  const ref = String(b.optimal).toUpperCase();
+  if (a === ref) return { kind: 'CONSENSUS', label: 'CONSENSUS WITH NFL4TH', split: false };
+  const primaryFragile = row.certainty === 'TOSS-UP';
+  const benchmarkFragile = b.certainty === 'TOSS-UP' || Number(b.edge_pp) < 0.75;
+  if (primaryFragile || benchmarkFragile) {
+    return { kind: 'SOFT_SPLIT', label: 'MODEL DIFFERENCE • LOW MARGIN', split: false };
+  }
+  return { kind: 'MODEL_SPLIT', label: 'MODEL SPLIT • REVIEW', split: true };
+}
+
+function renderBenchmarkStatus(rows = [], benchmark = null) {
+  const el = $('#benchmarkStatus');
+  if (!el) return;
+  if (!benchmark?.rows?.length) {
+    el.textContent = selectedGameId ? 'NFL4TH BENCHMARK: pending / unavailable' : 'NFL4TH BENCHMARK: select a game';
+    el.className = 'benchmarkStatus muted';
+    return;
+  }
+  const byId = benchmarkByPlay(benchmark);
+  let matched = 0, eligible = 0, agree = 0, strongSplits = 0;
+  for (const row of rows) {
+    const b = byId.get(String(row.id));
+    if (!b) continue;
+    matched++;
+    if (!row.optimal || !b.optimal) continue;
+    eligible++;
+    const rel = benchmarkRelation(row, b);
+    if (String(row.optimal).toUpperCase() === String(b.optimal).toUpperCase()) agree++;
+    if (rel.split) strongSplits++;
+  }
+  const pct = eligible ? Math.round(100 * agree / eligible) : 0;
+  el.textContent = `NFL4TH BENCHMARK: ${matched}/${rows.length} matched • ${pct}% exact-call agreement${strongSplits ? ` • ${strongSplits} strong split${strongSplits === 1 ? '' : 's'}` : ''}`;
+  el.className = `benchmarkStatus ${strongSplits ? 'hasSplit' : 'hasConsensus'}`;
+}
+
+async function getBenchmark(eventId) {
+  const id = String(eventId || '');
+  const hit = benchmarkCache.get(id);
+  if (hit && Date.now() - hit.at < 30_000) return hit.data;
+  try {
+    const r = await fetch(`/api/benchmark/${encodeURIComponent(id)}`);
+    if (!r.ok) {
+      benchmarkCache.set(id, { at: Date.now(), data: null });
+      return null;
+    }
+    const payload = await r.json();
+    const data = payload?.benchmark || null;
+    benchmarkCache.set(id, { at: Date.now(), data });
+    return data;
+  } catch {
+    benchmarkCache.set(id, { at: Date.now(), data: null });
+    return null;
+  }
+}
+
+function renderLedger(rows = [], title = 'Live fourth-down ledger', benchmark = null) {
   $('#ledgerTitle').textContent = title;
   const tbody = $('#decisionFeed tbody');
-  $('#gradedCount').textContent = rows.filter(r => r.grade && !['N/A','REVIEW'].includes(r.grade)).length;
+  const benchForCount = benchmarkByPlay(benchmark);
+  const effectiveGraded = rows.filter(r => {
+    if (!r.grade || ['N/A','REVIEW'].includes(r.grade)) return false;
+    const b = benchForCount.get(String(r.id));
+    return !benchmarkRelation(r, b).split;
+  }).length;
+  $('#gradedCount').textContent = effectiveGraded;
+  renderBenchmarkStatus(rows, benchmark);
   if (!rows.length) {
     tbody.innerHTML = `<tr><td colspan="8" class="empty">No gradable fourth-down decisions in this view yet.</td></tr>`;
     return;
   }
 
+  const byId = benchmarkByPlay(benchmark);
   tbody.innerHTML = [...rows].reverse().map(d => {
+    const b = byId.get(String(d.id));
+    const relation = benchmarkRelation(d, b);
     const offense = d.offense?.abbreviation || '—';
     const defense = d.defense?.abbreviation || '—';
     const downText = Number.isFinite(Number(d.ydstogo)) ? `4th & ${Number(d.ydstogo)}` : '4th down';
@@ -132,13 +215,18 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger') {
     const confidence = d.sensitivity?.confidence || '—';
     const quality = d.stateQuality || (d.verifiedState ? 'VERIFIED' : 'REVIEW');
     const spotAudit = d.fieldPositionSource ? `spot: ${d.fieldPositionSource}${d.fieldPositionSourceConflict ? ' • source-side conflict corrected' : ''}${d.numericFieldConflict ? ' • numeric feed conflict ignored' : ''}` : '';
-    const gradeDisplay = d.reviewRequired || d.grade === 'REVIEW' ? 'REVIEW' : (d.grade || '—');
+    const rawGrade = d.reviewRequired || d.grade === 'REVIEW' ? 'REVIEW' : (d.grade || '—');
+    const gradeDisplay = relation.split ? 'REVIEW' : rawGrade;
     const teamColor = d.offense?.color ? `#${String(d.offense.color).replace('#','')}` : '#9cff31';
     const playText = d.text || '';
     const optionSummary = d.options && !d.reviewRequired
       ? Object.entries(d.options).sort((a,b) => b[1]-a[1]).map(([k,v]) => `${k} ${(v*100).toFixed(1)}%`).join(' • ')
       : '';
-    return `<tr class="decisionRow ${quality === 'REVIEW' ? 'reviewRow' : ''}">
+    const benchmarkSummary = benchmarkOptionsText(b);
+    const burnDisplay = relation.split ? '—' : fmtBurn(d.wpRegret);
+    const modelLabel = relation.split ? `${optimalDisplay} • REVIEW` : optimalDisplay;
+
+    return `<tr class="decisionRow ${quality === 'REVIEW' ? 'reviewRow' : ''} ${relation.split ? 'modelSplitRow' : ''}">
       <td><strong>${esc(d.gameName || selectedGameName || '')}</strong></td>
       <td>
         <span class="teamPill" style="--team-color:${esc(teamColor)}">${esc(offense)}</span>
@@ -151,9 +239,14 @@ function renderLedger(rows = [], title = 'Live fourth-down ledger') {
         ${playText ? `<span class="playText">${esc(playText)}</span>` : ''}
       </td>
       <td><strong>${esc(d.actual || d.actualDecision || '—')}</strong><span class="cellSub">${esc(offense)} chose this</span></td>
-      <td><strong>${esc(d.reviewRequired ? 'NOT GRADED' : optimalDisplay)}</strong><span class="cellSub">${esc(d.reviewRequired ? (d.reason || 'state needs review') : `${confidence} stability • ${quality}`)}</span>${optionSummary ? `<span class="modelOptions">${esc(optionSummary)}</span>` : ''}</td>
+      <td>
+        <strong>${esc(d.reviewRequired ? 'NOT GRADED' : modelLabel)}</strong>
+        <span class="cellSub">${esc(d.reviewRequired ? (d.reason || 'state needs review') : `${confidence} stability • ${quality}`)}</span>
+        ${optionSummary ? `<span class="modelOptions">PRIMARY • ${esc(optionSummary)}</span>` : ''}
+        ${b ? `<span class="benchmarkLine ${esc(relation.kind)}"><b>${esc(relation.label)}</b><br>NFL4TH • ${esc(benchmarkSummary)}${Number.isFinite(Number(b.edge_pp)) ? ` • edge ${Number(b.edge_pp).toFixed(1)} pp` : ''}</span>` : `<span class="benchmarkLine PRIMARY_ONLY">NFL4TH benchmark not loaded</span>`}
+      </td>
       <td>${fmtWp(d.baselineWp)}</td>
-      <td>${fmtBurn(d.wpRegret)}</td>
+      <td>${burnDisplay}</td>
       <td class="grade ${esc(gradeDisplay)}">${esc(gradeDisplay)}</td>
     </tr>`;
   }).join('');
@@ -213,11 +306,15 @@ async function selectGame(id, name = '') {
 async function loadSelectedGame() {
   if (!selectedGameId) return;
   try {
-    const r = await fetch(`/api/game/${encodeURIComponent(selectedGameId)}`);
-    if (!r.ok) throw new Error('game');
-    const { game } = await r.json();
+    const [gameResp, benchmark] = await Promise.all([
+      fetch(`/api/game/${encodeURIComponent(selectedGameId)}`),
+      getBenchmark(selectedGameId)
+    ]);
+    if (!gameResp.ok) throw new Error('game');
+    const { game } = await gameResp.json();
+    selectedBenchmark = benchmark;
     selectedGameName = game.name || selectedGameName;
-    renderLedger((game.completedFourthDowns || []).map(d => ({ ...d, gameName: game.name })), `${game.name || 'Selected game'} ledger`);
+    renderLedger((game.completedFourthDowns || []).map(d => ({ ...d, gameName: game.name })), `${game.name || 'Selected game'} ledger`, benchmark);
     const p = game.pendingFourthDown;
     if (p?.evaluation) {
       showLiveSituation(p, game.name);
@@ -236,12 +333,13 @@ async function loadSelectedGame() {
 function returnToAllLive() {
   selectedGameId = null;
   selectedGameName = null;
+  selectedBenchmark = null;
   clearInterval(selectedTimer);
   selectedTimer = null;
   $('#allLiveBtn').classList.add('activeBtn');
   $('#liveSituation').classList.add('hidden');
   renderGames(lastLiveData?.games || []);
-  renderLedger(lastLiveData?.ledger || [], 'Live fourth-down ledger');
+  renderLedger(lastLiveData?.ledger || [], 'Live fourth-down ledger', null);
 }
 
 $('#labForm').addEventListener('submit', evaluateManual);

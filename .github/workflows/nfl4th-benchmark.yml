@@ -1,0 +1,52 @@
+name: nfl4th benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      game_id:
+        description: "nflverse game id, e.g. 2026_03_ATL_GB"
+        required: true
+        default: "2026_03_ATL_GB"
+  push:
+    branches: [main]
+    paths-ignore:
+      - "public/benchmarks/**"
+
+permissions:
+  contents: write
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    env:
+      GAME_ID: ${{ github.event.inputs.game_id || '2026_03_ATL_GB' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            github::nflverse/nfl4th
+            any::dplyr
+            any::jsonlite
+
+      - name: Run exact nfl4th benchmark
+        run: Rscript scripts/run_nfl4th_benchmark.R
+
+      - name: Commit benchmark output
+        run: |
+          if git diff --quiet -- public/benchmarks; then
+            echo "No benchmark changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/benchmarks
+          git commit -m "Update nfl4th benchmark for ${GAME_ID} [skip benchmark]"
+          git push

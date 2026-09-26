@@ -14,7 +14,7 @@
       <div class="brandMark">4</div>
       <div><strong>4TH DOWN</strong><small>DECISION INTELLIGENCE</small></div>
     </div>
-    <div class="topright"><span class="dot"></span><span id="feedStatus">CONNECTING</span><span class="model">MODEL v0.2.3</span></div>
+    <div class="topright"><span class="dot"></span><span id="feedStatus">CONNECTING</span><span class="model">MODEL v0.3</span></div>
   </header>
 
   <main>
@@ -35,7 +35,7 @@
       <div><span>ACTIVE GAMES</span><strong id="activeGames">0</strong></div>
       <div><span>LIVE 4TH DOWNS</span><strong id="liveFourths">0</strong></div>
       <div><span>GRADED DECISIONS</span><strong id="gradedCount">0</strong></div>
-      <div><span>MODEL</span><strong class="smallKpi">ANCHORED v0.2.3</strong></div>
+      <div><span>MODEL</span><strong class="smallKpi">AUDITED v0.3</strong></div>
     </section>
 
     <section id="alertStrip" class="alertStrip hidden"></section>
@@ -73,7 +73,7 @@
     <section class="panel feedPanel">
       <div class="panelHead">
         <div><span class="kicker">DECISION TAPE</span><h2 id="ledgerTitle">Live fourth-down ledger</h2></div>
-        <span class="muted">Outcome-blind grading • newest decision first</span>
+        <span id="benchmarkStatus" class="benchmarkStatus muted">NFL4TH BENCHMARK: select a game</span>
       </div>
       <div id="decisionFeed" class="tableWrap">
         <table>
@@ -85,15 +85,16 @@
 
     <section class="method">
       <div><span>01</span><h3>Freeze state</h3><p>Score, exact field position, distance, clock and timeouts are captured before the strategic decision.</p></div>
-      <div><span>02</span><h3>Anchor + price</h3><p>When live WP is available, the model anchors to it, then prices GO, FG and PUNT as counterfactual paths.</p></div>
+      <div><span>02</span><h3>Anchor + price</h3><p>When live WP is available, the primary model anchors to it, then prices GO, FG and PUNT as counterfactual paths.</p></div>
       <div><span>03</span><h3>Stress test</h3><p>Conversion, kicking and punt assumptions are perturbed. Fragile recommendations are marked TOSS-UP instead of fake precision.</p></div>
+      <div><span>04</span><h3>Cross-check</h3><p>Audited games are compared play-by-play with exact nfl4th output. Strong model disagreements become REVIEW, not fake certainty.</p></div>
     </section>
   </main>
 
   <footer>
-    <span>Model v0.2.3 • anchored counterfactual</span>
+    <span>Model v0.3 • anchored counterfactual + nfl4th validation</span>
     <span>Live-data adapter: ESPN public endpoints</span>
-    <span>Historical benchmark path: nflverse + nfl4th validation</span>
+    <span>Validation layer: exact nfl4th benchmark when available</span>
   </footer>
   <script type="module" src="/app.js"></script>
 </body>

@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fetchScoreboard, fetchSummary, parseGameSummary, parseScoreboard } from './lib/espn.js';
 import { evaluateFourthDown, gradeActualDecision, evaluateThirdDownPlanning } from './lib/decision-engine.js';
+import { fetchNfl4thBenchmark, summarizeBenchmarkAgreement } from './lib/benchmark.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
@@ -107,7 +108,7 @@ async function api(req, res, url) {
   if (url.pathname === '/api/health') {
     return json(res, 200, {
       ok: true,
-      modelVersion: 'v0.2.3-anchored-counterfactual',
+      modelVersion: 'v0.3-consensus-validation',
       now: new Date().toISOString()
     });
   }
@@ -125,6 +126,18 @@ async function api(req, res, url) {
       return json(res, 200, await getLiveBoard());
     } catch (e) {
       return json(res, 502, { error: 'LIVE_BOARD_UNAVAILABLE', message: e.message });
+    }
+  }
+
+
+  if (url.pathname.startsWith('/api/benchmark/')) {
+    const id = url.pathname.split('/').pop();
+    try {
+      const benchmark = await fetchNfl4thBenchmark(id, 30_000);
+      if (!benchmark) return json(res, 404, { available: false, eventId: id });
+      return json(res, 200, { available: true, eventId: id, benchmark });
+    } catch (e) {
+      return json(res, 502, { error: 'BENCHMARK_UNAVAILABLE', message: e.message });
     }
   }
 
@@ -194,4 +207,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.2.3 running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.3 running on http://localhost:${PORT}`));
