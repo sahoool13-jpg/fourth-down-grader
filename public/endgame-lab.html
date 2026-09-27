@@ -4,41 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#080b0d">
-  <title>4TH DOWN — v0.5 Endgame Lab</title>
+  <title>4TH DOWN — v0.5.1 Release Audit</title>
   <link rel="stylesheet" href="/endgame-lab.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="/"><span class="mark">4</span><span><b>4TH DOWN</b><small>ENDGAME INTELLIGENCE LAB</small></span></a>
-    <div class="topright"><span id="dot" class="dot"></span><span id="status">WAITING FOR DEVELOPMENT AUDIT</span><span>MODEL v0.5</span></div>
+    <a class="brand" href="/"><span class="mark">4</span><span><b>4TH DOWN</b><small>GATED ENDGAME INTELLIGENCE</small></span></a>
+    <div class="topright"><span id="dot" class="dot"></span><span id="status">LOADING RELEASE EVIDENCE</span><span>MODEL v0.5.1</span></div>
   </header>
 
   <main>
     <section class="hero">
-      <span class="eyebrow">V0.5 • DEVELOPMENT GATE</span>
-      <h1>Does the model understand<br><span>when the game is ending?</span></h1>
-      <p>v0.5 adds score-value and possession-scarcity logic only in the final five minutes. The automatic audit loads <b>2021–2024 only</b>. The 2025 holdout remains physically absent from the development job.</p>
-      <div id="holdoutBanner" class="lock">🔒 2025 HOLDOUT LOCKED</div>
+      <span class="eyebrow">V0.5.1 • RELEASE AUDIT</span>
+      <h1>The model had to<br><span>earn production.</span></h1>
+      <p>v0.5.1 was tuned only on 2021–2024, evaluated on a separate 2025 season, then subjected to a paired-bootstrap release audit. The production candidate is frozen.</p>
+      <div id="holdoutBanner" class="lock unlocked">✅ RELEASE AUDIT: PROMOTE</div>
     </section>
 
     <section id="meta" class="meta"></section>
 
     <section class="kpis" id="kpis">
-      <div><span>DEV STATES</span><strong>—</strong></div>
-      <div><span>EXACT Δ</span><strong>—</strong></div>
-      <div><span>SAFE Δ</span><strong>—</strong></div>
-      <div><span>MEAN REGRET Δ</span><strong>—</strong></div>
-      <div><span>ENDGAME REGRET Δ</span><strong>—</strong></div>
-      <div><span>PROMOTION GATE</span><strong>—</strong></div>
+      <div><span>2025 STATES</span><strong>—</strong></div>
+      <div><span>EXACT</span><strong>—</strong></div>
+      <div><span>DECISION-SAFE</span><strong>—</strong></div>
+      <div><span>MEAN REGRET</span><strong>—</strong></div>
+      <div><span>FINAL-2 REGRET</span><strong>—</strong></div>
+      <div><span>RELEASE</span><strong>—</strong></div>
     </section>
 
     <section class="panel">
-      <div class="panelHead"><div><span class="kicker">BEFORE / AFTER</span><h2>Development sample</h2></div><span class="subtle">Identical 2021–2024 states, endgame layer OFF vs ON</span></div>
+      <div class="panelHead"><div><span class="kicker">HOLDOUT</span><h2>2025 legacy vs v0.5.1</h2></div><span class="subtle">Frozen candidate • no post-holdout tuning</span></div>
       <div id="comparison" class="comparison"></div>
     </section>
 
     <section class="panel">
-      <div class="panelHead"><div><span class="kicker">TERMINAL WINDOW</span><h2>Final five minutes</h2></div><span class="subtle">Where v0.5 is allowed to change the call</span></div>
+      <div class="panelHead"><div><span class="kicker">TERMINAL WINDOW</span><h2>Final five minutes</h2></div><span class="subtle">Where gated endgame intelligence earns its keep</span></div>
       <div id="endgameComparison" class="comparison"></div>
     </section>
 
@@ -48,24 +48,19 @@
         <div id="flips"></div>
       </section>
       <section class="panel">
-        <div class="panelHead"><div><span class="kicker">GATE LOGIC</span><h2>Promotion criteria</h2></div></div>
+        <div class="panelHead"><div><span class="kicker">RELEASE GATE</span><h2>Promotion criteria</h2></div></div>
         <div id="criteria"></div>
       </section>
     </section>
 
     <section class="panel">
-      <div class="panelHead"><div><span class="kicker">BIGGEST WINS</span><h2>Endgame mistakes v0.5 fixed</h2></div><span class="subtle">Sorted by nfl4th reference regret saved</span></div>
-      <div id="gains"></div>
-    </section>
-
-    <section class="panel">
-      <div class="panelHead"><div><span class="kicker">REGRESSION TAPE</span><h2>Changes that made things worse</h2></div><span class="subtle">These block blind promotion</span></div>
+      <div class="panelHead"><div><span class="kicker">FAILURE TAPE</span><h2>Harmful flips</h2></div><span class="subtle">Kept visible instead of polished away</span></div>
       <div id="harms"></div>
     </section>
 
     <section class="panel holdoutPanel">
-      <div class="panelHead"><div><span class="kicker">OUT-OF-SAMPLE</span><h2>2025 holdout</h2></div><span id="holdoutStatus" class="subtle">LOCKED</span></div>
-      <div id="holdout"><div class="empty">The holdout has not been evaluated. That is intentional.</div></div>
+      <div class="panelHead"><div><span class="kicker">STATISTICAL CHECK</span><h2>Paired bootstrap</h2></div><span id="holdoutStatus" class="subtle">10,000 resamples</span></div>
+      <div id="holdout"></div>
     </section>
   </main>
 

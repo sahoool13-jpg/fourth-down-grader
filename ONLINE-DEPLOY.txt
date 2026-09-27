@@ -1,34 +1,65 @@
-4TH DOWN v0.3 - PUT IT ONLINE WITH RENDER
-=========================================
+4TH DOWN v0.5.1 - PRODUCTION RELEASE
+========================================
 
-Your existing Render service can keep using the same public URL.
+IMPORTANT
+This release changes production metadata, UI labels and smoke-test infrastructure.
+It does NOT change the frozen football decision logic that passed the v0.5.1 release audit.
 
-UPDATE AN EXISTING INSTALL
-1. Extract this v0.3 ZIP.
-2. Copy everything inside it into your cloned GitHub folder:
+CURRENT RENDER CONFIG
+render.yaml uses autoDeployTrigger: commit.
+
+THAT MEANS:
+Pushing this production-release commit to main should trigger Render automatically.
+
+INSTALL
+1. Extract the production ZIP.
+2. Copy everything inside into:
    Documents > GitHub > fourth-down-grader
-3. Do NOT delete the .git folder in the cloned repo.
-4. Replace existing files when Windows asks.
-5. In GitHub Desktop, commit to main and Push origin.
-6. Render is connected through the public-repository URL route, so go to the Render service and choose:
-   Manual Deploy > Deploy latest commit
-7. Hard refresh the website with Ctrl + Shift + R.
+3. Replace matching files.
+4. Do NOT delete .git.
+5. In GitHub Desktop use:
 
-NEW IN v0.3: NFL4TH VALIDATION
-- The repo now includes .github/workflows/nfl4th-benchmark.yml and scripts/run_nfl4th_benchmark.R.
-- A push to main triggers the benchmark workflow for 2026_03_ATL_GB by default.
-- The workflow computes exact nfl4th::add_4th_probs() results and commits a JSON file under public/benchmarks/.
-- The live app fetches that benchmark directly from GitHub, so the benchmark can appear without another Render deploy.
+   Summary:
+   Promote v0.5.1 production release
 
-IF THE BENCHMARK WORKFLOW CANNOT COMMIT
-GitHub > repository Settings > Actions > General > Workflow permissions
-Choose: Read and write permissions
-Then rerun the "nfl4th benchmark" workflow.
+6. Commit to main.
+7. Push origin.
 
-BENCHMARK ANOTHER GAME
-GitHub > Actions > nfl4th benchmark > Run workflow
-Enter an nflverse game ID such as:
-2026_03_ATL_GB
+WHAT THE PUSH CHANGES
+- package version -> 0.5.1
+- /api/health reports v0.5.1 + PROMOTED
+- public UI reports v0.5.1
+- endgame lab becomes the v0.5.1 release-audit page
+- local Windows launcher reports v0.5.1
+- adds production parity / live-feed smoke workflow
+- adds release manifest
+- leaves lib/decision-engine.js, lib/endgame.js and all football coefficients untouched
 
-FREE RENDER NOTE
-Free services may spin down after inactivity, so the first visit after a quiet period can take longer to load.
+AFTER PUSH
+Do not manually edit anything.
+
+Go to:
+GitHub > Actions > v0.5.1 production smoke + tag
+
+Click Run workflow.
+
+Confirmation:
+PROMOTE-V051
+
+Leave the production base URL as:
+https://fourth-down-grader.onrender.com
+
+The workflow will:
+1. verify the release audit is PROMOTE
+2. verify the football model files still match the evaluated candidate
+3. run the full test suite
+4. wait for Render to serve v0.5.1
+5. compare production decisions against the exact local model across multiple edge states
+6. test the ESPN scoreboard and live-board adapters
+7. upload smoke evidence
+8. tag the exact successful commit as v0.5.1
+
+ONLY AFTER A GREEN PRODUCTION SMOKE
+Treat v0.5.1 as released.
+
+If the smoke fails, do not tune the model. Diagnose deployment/API/feed parity first.

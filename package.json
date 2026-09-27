@@ -1,6 +1,6 @@
 {
   "name": "fourth-down-grader",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "dev": "node server.js",
     "test": "node --test",
     "calibration:score": "node scripts/run_historical_calibration.mjs",
-    "v05:development": "node scripts/run_v05_experiment.mjs"
+    "v05:development": "node scripts/run_v05_experiment.mjs",
+    "smoke:production": "node scripts/smoke-production.mjs"
   },
   "engines": {
     "node": ">=20"

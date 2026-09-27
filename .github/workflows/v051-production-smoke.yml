@@ -1,0 +1,145 @@
+name: v0.5.1 production smoke + tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type PROMOTE-V051 after Render has started deploying the production-release commit"
+        required: true
+        default: "LOCKED"
+      base_url:
+        description: "Production base URL"
+        required: true
+        default: "https://fourth-down-grader.onrender.com"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fourth-down-v051-production
+  cancel-in-progress: false
+
+jobs:
+  production-smoke:
+    if: ${{ github.event.inputs.confirmation == 'PROMOTE-V051' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    env:
+      SMOKE_BASE_URL: ${{ github.event.inputs.base_url }}
+      EVALUATED_CANDIDATE_COMMIT: "8daaa8f75787e4f28d25af6462142518f4594e9a"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify release audit says PROMOTE
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const r = JSON.parse(fs.readFileSync('public/calibration/v051-release-audit.json','utf8'));
+          if (r?.productVersion !== 'v0.5.1' || r?.verdict !== 'PROMOTE' || r?.reproduction?.pass !== true) {
+            console.error('v0.5.1 release audit is not a clean PROMOTE.');
+            process.exit(1);
+          }
+          console.log('Release audit verified: PROMOTE.');
+          NODE
+
+      - name: Verify football model is still the evaluated candidate
+        run: |
+          git diff --exit-code "$EVALUATED_CANDIDATE_COMMIT"..HEAD -- \
+            lib/decision-engine.js \
+            lib/endgame.js \
+            lib/calibration.js \
+            lib/benchmark.js \
+            lib/espn.js \
+            scripts/run_v051_experiment.mjs
+          echo "Frozen football model verified."
+
+      - name: Full test suite
+        run: npm test
+
+      - name: Verify production metadata
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const pkg = JSON.parse(fs.readFileSync('package.json','utf8'));
+          const rel = JSON.parse(fs.readFileSync('public/release.json','utf8'));
+          if (pkg.version !== '0.5.1') throw new Error(`package version ${pkg.version}`);
+          if (rel.releaseVersion !== 'v0.5.1' || rel.status !== 'PROMOTED' || rel.releaseAudit !== 'PROMOTE') {
+            throw new Error('release.json is inconsistent');
+          }
+          console.log('Production metadata verified.');
+          NODE
+
+      - name: Wait for Render to serve v0.5.1
+        run: |
+          echo "Waiting for $SMOKE_BASE_URL/api/health"
+          for i in $(seq 1 45); do
+            BODY="$(curl -fsS --max-time 20 "$SMOKE_BASE_URL/api/health" 2>/dev/null || true)"
+            if echo "$BODY" | grep -q '"releaseVersion":"v0.5.1"' && echo "$BODY" | grep -q '"releaseStatus":"PROMOTED"'; then
+              echo "Render is serving v0.5.1."
+              echo "$BODY"
+              exit 0
+            fi
+            echo "Attempt $i/45: production not ready yet."
+            sleep 20
+          done
+          echo "Timed out waiting for the v0.5.1 deployment."
+          exit 1
+
+      - name: Run remote parity and live-feed smoke
+        env:
+          SMOKE_OUTPUT: v051-production-smoke.json
+        run: npm run smoke:production
+
+      - name: Upload production smoke evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v051-production-smoke
+          path: v051-production-smoke.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Add smoke verdict to summary
+        if: always()
+        run: |
+          if [ -f v051-production-smoke.json ]; then
+            node --input-type=module <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          import fs from 'node:fs';
+          const r = JSON.parse(fs.readFileSync('v051-production-smoke.json','utf8'));
+          console.log('# 4TH DOWN v0.5.1 Production Smoke');
+          console.log('');
+          console.log(`**Verdict: ${r.pass ? 'PASS ✅' : 'FAIL ❌'}**`);
+          console.log('');
+          console.log(`Base URL: ${r.baseUrl}`);
+          console.log('');
+          console.log(`Checks: ${r.summary.passed}/${r.summary.total} passed`);
+          console.log('');
+          for (const c of r.checks) console.log(`- ${c.ok ? '✅' : '❌'} ${c.name}${c.detail ? `: ${c.detail}` : ''}`);
+          NODE
+          fi
+
+      - name: Tag exact production release
+        if: success()
+        run: |
+          git fetch --tags
+          if git rev-parse "v0.5.1" >/dev/null 2>&1; then
+            EXISTING="$(git rev-list -n 1 v0.5.1)"
+            if [ "$EXISTING" != "$GITHUB_SHA" ]; then
+              echo "Tag v0.5.1 already points to $EXISTING, not $GITHUB_SHA."
+              exit 1
+            fi
+            echo "Tag v0.5.1 already correctly exists."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a v0.5.1 -m "4TH DOWN v0.5.1 production release"
+          git push origin v0.5.1

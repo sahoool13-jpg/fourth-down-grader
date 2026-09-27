@@ -10,6 +10,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
 const publicDir = path.join(__dirname, 'public');
 
+const RELEASE_VERSION = 'v0.5.1';
+const RELEASE_STATUS = 'PROMOTED';
+const RELEASE_AUDIT = 'PROMOTE';
+const ENGINE_VERSION = 'v0.5-endgame-intelligence';
+const EVALUATED_CANDIDATE_COMMIT = '8daaa8f75787e4f28d25af6462142518f4594e9a';
+
 const scoreboardCache = { at: 0, data: null };
 const summaryCache = new Map();
 
@@ -29,6 +35,16 @@ const staticTypes = {
   '.svg': 'image/svg+xml',
   '.json': 'application/json; charset=utf-8'
 };
+
+const stampRelease = value => (
+  value && typeof value === 'object'
+    ? {
+        ...value,
+        releaseVersion: RELEASE_VERSION,
+        releaseStatus: RELEASE_STATUS
+      }
+    : value
+);
 
 async function getScoreboardCached(maxAgeMs = 10000) {
   if (scoreboardCache.data && Date.now() - scoreboardCache.at < maxAgeMs) return scoreboardCache.data;
@@ -64,7 +80,7 @@ function inferNflverseGameId(raw) {
 function enrichGame(raw) {
   const game = parseGameSummary(raw);
   if (game.pendingFourthDown?.yardline100) {
-    game.pendingFourthDown.evaluation = evaluateFourthDown(game.pendingFourthDown);
+    game.pendingFourthDown.evaluation = stampRelease(evaluateFourthDown(game.pendingFourthDown));
   }
   if (game.pendingThirdDown?.yardline100) {
     game.pendingThirdDown.planning = evaluateThirdDownPlanning(game.pendingThirdDown);
@@ -74,7 +90,7 @@ function enrichGame(raw) {
       return { ...d, grade: 'REVIEW', wpRegret: null, reason: d.fieldPositionConflict || 'insufficient-feed-fields' };
     }
     const ev = evaluateFourthDown({ ...d, indoor: game.indoor, baselineWp: d.baselineWp });
-    return { ...d, ...gradeActualDecision(ev, d.actualDecision) };
+    return { ...d, ...gradeActualDecision(ev, d.actualDecision), releaseVersion: RELEASE_VERSION };
   });
   return game;
 }
@@ -106,6 +122,7 @@ async function getLiveBoard() {
   return {
     generatedAt: new Date().toISOString(),
     source: 'espn-live-adapter',
+    releaseVersion: RELEASE_VERSION,
     games,
     activeGameCount: active.length,
     pendingFourthDowns,
@@ -118,14 +135,21 @@ async function api(req, res, url) {
   if (url.pathname === '/api/health') {
     return json(res, 200, {
       ok: true,
-      modelVersion: 'v0.5-endgame-intelligence',
+      releaseVersion: RELEASE_VERSION,
+      releaseStatus: RELEASE_STATUS,
+      releaseAudit: RELEASE_AUDIT,
+      modelVersion: 'v0.5.1-gated-endgame',
+      engineVersion: ENGINE_VERSION,
+      calibrationVersion: 'v0.4.1',
+      evaluatedCandidateCommit: EVALUATED_CANDIDATE_COMMIT,
+      deployCommit: process.env.RENDER_GIT_COMMIT || null,
       now: new Date().toISOString()
     });
   }
 
   if (url.pathname === '/api/scoreboard') {
     try {
-      return json(res, 200, { source: 'espn-live-adapter', games: await getScoreboardCached() });
+      return json(res, 200, { source: 'espn-live-adapter', releaseVersion: RELEASE_VERSION, games: await getScoreboardCached() });
     } catch (e) {
       return json(res, 502, { error: 'LIVE_FEED_UNAVAILABLE', message: e.message });
     }
@@ -147,11 +171,12 @@ async function api(req, res, url) {
         expectedGameId = inferNflverseGameId(await getSummaryCached(id, 60000));
       } catch {}
       const state = await fetchNfl4thBenchmarkState(id, expectedGameId, 30_000);
-      return json(res, 200, { eventId: id, nflverseGameId: expectedGameId, ...state });
+      return json(res, 200, { eventId: id, nflverseGameId: expectedGameId, releaseVersion: RELEASE_VERSION, ...state });
     } catch (e) {
       return json(res, 502, {
         available: false,
         eventId: id,
+        releaseVersion: RELEASE_VERSION,
         error: 'BENCHMARK_UNAVAILABLE',
         status: { code: 'PIPELINE_ERROR', label: 'PIPELINE ERROR', message: e.message }
       });
@@ -162,7 +187,7 @@ async function api(req, res, url) {
     const id = url.pathname.split('/').pop();
     try {
       const raw = await getSummaryCached(id, 2500);
-      return json(res, 200, { source: 'espn-live-adapter', game: enrichGame(raw) });
+      return json(res, 200, { source: 'espn-live-adapter', releaseVersion: RELEASE_VERSION, game: enrichGame(raw) });
     } catch (e) {
       return json(res, 502, { error: 'GAME_FEED_UNAVAILABLE', message: e.message });
     }
@@ -175,7 +200,7 @@ async function api(req, res, url) {
       const input = JSON.parse(body || '{}');
       const evaluation = evaluateFourthDown(input);
       const result = input.actualDecision ? gradeActualDecision(evaluation, input.actualDecision) : evaluation;
-      return json(res, 200, result);
+      return json(res, 200, stampRelease(result));
     } catch (e) {
       return json(res, 400, { error: 'BAD_INPUT', message: e.message });
     }
@@ -185,7 +210,10 @@ async function api(req, res, url) {
     let body = '';
     for await (const chunk of req) body += chunk;
     try {
-      return json(res, 200, evaluateThirdDownPlanning(JSON.parse(body || '{}')));
+      return json(res, 200, {
+        ...evaluateThirdDownPlanning(JSON.parse(body || '{}')),
+        releaseVersion: RELEASE_VERSION
+      });
     } catch (e) {
       return json(res, 400, { error: 'BAD_INPUT', message: e.message });
     }
@@ -224,4 +252,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.5 running on http://localhost:${PORT}`));
+server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.5.1 running on http://localhost:${PORT}`));
