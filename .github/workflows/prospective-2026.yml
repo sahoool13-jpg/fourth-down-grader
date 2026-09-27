@@ -1,0 +1,81 @@
+name: 2026 prospective monitor
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force a collection run even outside Aug-Feb"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fourth-down-prospective-2026
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PRODUCTION_BASE_URL: "https://fourth-down-grader.onrender.com"
+      PROSPECTIVE_FORCE: ${{ github.event.inputs.force || 'false' }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify frozen production tag still exists
+        run: |
+          git fetch --tags --force
+          TAG_COMMIT="$(git rev-list -n 1 v0.5.1)"
+          if [ "$TAG_COMMIT" != "7c3de82cfe023ffb066c1c585df8eca8801fa152" ]; then
+            echo "v0.5.1 tag moved: $TAG_COMMIT"
+            exit 1
+          fi
+          echo "v0.5.1 tag is still immutable at $TAG_COMMIT"
+
+      - name: Prospective monitor tests
+        run: node --test test/prospective-monitor.test.js
+
+      - name: Collect prospective decisions
+        run: node scripts/prospective-collector.mjs
+
+      - name: Guard against collector modifying code
+        run: |
+          BAD="$(git status --porcelain | grep -vE '^[ MARC?]{2} data/prospective/2026/' || true)"
+          if [ -n "$BAD" ]; then
+            echo "Collector modified unexpected paths:"
+            echo "$BAD"
+            exit 1
+          fi
+
+      - name: Commit material monitor updates
+        run: |
+          git add data/prospective/2026
+          if git diff --cached --quiet; then
+            echo "No prospective data change."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update 2026 prospective monitor [skip render]"
+
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin main; then
+              exit 0
+            fi
+            echo "Push attempt $i failed; retrying."
+            sleep $((i * 5))
+          done
+          exit 1

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "season": 2026,
+  "monitorStartAt": "2026-09-27T09:57:27Z",
+  "releaseTag": "v0.5.1",
+  "releaseCommit": "7c3de82cfe023ffb066c1c585df8eca8801fa152",
+  "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+  "baseline2025": {
+    "rows": 3946,
+    "exactAgreement": 0.7493664470349721,
+    "decisionSafeRate": 0.8755701976685251,
+    "meanReferenceRegretPp": 0.3046850034279557,
+    "strongSplitRate": 0.05347187024835276,
+    "endgameMeanReferenceRegretPp": 0.3360798536072284,
+    "finalTwoMeanReferenceRegretPp": 0.33654983239761055
+  },
+  "minimumSamplesBeforeModelChange": {
+    "totalGradable": 500,
+    "referenceComparable": 250,
+    "endgameReferenceComparable": 75
+  },
+  "reviewTriggers": {
+    "exactAgreementBelow": 0.72,
+    "decisionSafeRateBelow": 0.84,
+    "meanReferenceRegretPpAbove": 0.405,
+    "strongSplitRateAbove": 0.075,
+    "singleReferenceRegretPpAtLeast": 8.0,
+    "sameDiagnosticTagHarmfulCountAtLeast": 8,
+    "sameDiagnosticTagCumulativeHarmPpAtLeast": 12.0,
+    "v051VsLegacyNetReferenceRegretSavedPpBelow": 0.0,
+    "v051VsLegacyMinimumFlipsForNetTrigger": 20
+  },
+  "rules": [
+    "v0.5.1 is frozen. Do not tune it using 2026 games.",
+    "Games that kicked off before the v0.5.1 production tag timestamp are excluded from the prospective sample.",
+    "Actual play outcomes are stored separately from the pre-snap model snapshot.",
+    "A single strange game can trigger review, never automatic retuning.",
+    "No v0.6 model work is eligible before the minimum sample sizes are met, except for data-integrity or software bugs.",
+    "nfl4th unavailable/null options are treated as unavailable, never as 0% win probability.",
+    "Strong model/reference disagreements remain REVIEW evidence, not proof that either model is ground truth."
+  ]
+}

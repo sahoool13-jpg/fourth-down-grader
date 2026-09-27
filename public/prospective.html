@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b0d">
+  <title>4TH DOWN — 2026 Prospective Monitor</title>
+  <link rel="stylesheet" href="/prospective.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="mark">4</span>
+      <span><b>4TH DOWN</b><small>2026 PROSPECTIVE MONITOR</small></span>
+    </a>
+    <div class="topright">
+      <span class="dot"></span>
+      <span id="status">LOADING ARCHIVE</span>
+      <span class="model">FROZEN MODEL v0.5.1</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">PROSPECTIVE VALIDATION • 2026</span>
+        <h1>Observe first.<br><span>Tune later.</span></h1>
+        <p>Every eligible 2026 fourth down is archived against the exact production v0.5.1 model. Games that began before the production tag are excluded. Outcomes are kept separate from the pre-snap decision snapshot.</p>
+      </div>
+      <div class="seal">
+        <span>PRODUCTION FREEZE</span>
+        <strong>v0.5.1 🔒</strong>
+        <p id="startText">Prospective window begins at the release tag.</p>
+      </div>
+    </section>
+
+    <section class="kpis" id="kpis">
+      <div><span>ARCHIVED</span><strong>—</strong></div>
+      <div><span>GRADABLE</span><strong>—</strong></div>
+      <div><span>NFL4TH MATCHED</span><strong>—</strong></div>
+      <div><span>MEAN MODEL BURN</span><strong>—</strong></div>
+      <div><span>COACH / MODEL MATCH</span><strong>—</strong></div>
+      <div><span>MODEL HEALTH</span><strong>—</strong></div>
+    </section>
+
+    <section class="panel healthPanel">
+      <div class="panelHead">
+        <div><span class="kicker">SAMPLE MATURITY</span><h2 id="healthHeadline">Waiting for eligible games</h2></div>
+        <span id="updatedAt" class="subtle">No archive update yet</span>
+      </div>
+      <div id="progress" class="progressGrid"></div>
+      <div id="triggers" class="triggers"></div>
+    </section>
+
+    <section class="twoCol">
+      <section class="panel">
+        <div class="panelHead">
+          <div><span class="kicker">COACHING LEDGER</span><h2>Who is burning win probability?</h2></div>
+          <span class="subtle">Model-relative, outcome-blind</span>
+        </div>
+        <div class="tableWrap"><table id="teamsTable">
+          <thead><tr><th>TEAM</th><th>N</th><th>MATCH</th><th>ACTUAL GO</th><th>MODEL GO</th><th>MEAN BURN</th><th>TOTAL BURN</th><th>2+ PP</th></tr></thead>
+          <tbody><tr><td colspan="8" class="empty">No eligible decisions yet.</td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section class="panel">
+        <div class="panelHead">
+          <div><span class="kicker">REFERENCE WATCH</span><h2>v0.5.1 vs nfl4th</h2></div>
+          <span class="subtle">Independent reference, not ground truth</span>
+        </div>
+        <div id="referenceCards" class="referenceCards"></div>
+        <div id="pipeline" class="pipeline"></div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <div><span class="kicker">FAILURE TAPE</span><h2>Biggest prospective coaching mistakes</h2></div>
+        <span class="subtle">Sorted by v0.5.1 WPA burn</span>
+      </div>
+      <div class="tableWrap"><table id="mistakesTable">
+        <thead><tr><th>GAME</th><th>STATE</th><th>ACTUAL</th><th>MODEL</th><th>BURN</th><th>GRADE</th><th>NFL4TH</th></tr></thead>
+        <tbody><tr><td colspan="7" class="empty">No eligible decisions yet.</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <div><span class="kicker">LIVE ARCHIVE</span><h2>Most recently captured</h2></div>
+        <span class="subtle">Automatic GitHub archive</span>
+      </div>
+      <div class="tableWrap"><table id="recentTable">
+        <thead><tr><th>CAPTURED</th><th>GAME</th><th>POSSESSION</th><th>STATE</th><th>ACTUAL</th><th>MODEL</th><th>BURN</th><th>REFERENCE</th></tr></thead>
+        <tbody><tr><td colspan="8" class="empty">Waiting for the first eligible fourth down.</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section class="panel guardrails">
+      <div class="panelHead">
+        <div><span class="kicker">V0.6 GUARDRAILS</span><h2>What would justify reopening model research?</h2></div>
+        <span class="subtle">Preregistered before the 2026 sample accumulates</span>
+      </div>
+      <div class="guardGrid">
+        <div><b>500</b><span>gradable 2026 decisions before tuning eligibility</span></div>
+        <div><b>250</b><span>nfl4th-comparable decisions before reference-drift conclusions</span></div>
+        <div><b>&lt;84%</b><span>decision-safe rate becomes a drift trigger</span></div>
+        <div><b>&gt;0.405 pp</b><span>mean reference regret becomes a drift trigger</span></div>
+        <div><b>&gt;7.5%</b><span>strong-split rate becomes a drift trigger</span></div>
+        <div><b>≥8 pp</b><span>single reference miss triggers immediate review, never automatic retuning</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>4TH DOWN • v0.5.1 prospective validation</span>
+    <span>Production tag: 27 Sep 2026 09:57:27 UTC</span>
+    <span>Data source: frozen Render production model + ESPN live adapter + nfl4th when available</span>
+  </footer>
+
+  <script type="module" src="/prospective.js"></script>
+</body>
+</html>
