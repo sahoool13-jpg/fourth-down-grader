@@ -21,6 +21,12 @@ const DATA_PATH = path.join(DATA_DIR, 'decisions.json');
 const POLICY_PATH = path.join(DATA_DIR, 'policy.json');
 const SUMMARY_PATH = path.join(DATA_DIR, 'summary.json');
 const FORCE = String(process.env.PROSPECTIVE_FORCE || '').toLowerCase() === 'true';
+const PHASE = String(process.env.PROSPECTIVE_PHASE || 'full').toLowerCase();
+const VALID_PHASES = new Set(['capture', 'enrich', 'full']);
+
+if (!VALID_PHASES.has(PHASE)) {
+  throw new Error(`Invalid PROSPECTIVE_PHASE=${PHASE}. Expected capture, enrich or full.`);
+}
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -29,18 +35,18 @@ async function readJson(file, fallback) {
   catch { return fallback; }
 }
 
-async function fetchJson(url, options = {}, attempts = 5) {
+async function fetchJson(url, options = {}, attempts = 5, timeoutMs = 30000) {
   let last;
   for (let i = 1; i <= attempts; i++) {
     try {
       const r = await fetch(url, {
         ...options,
         headers: {
-          'user-agent': 'FourthDownProspectiveMonitor/0.1',
+          'user-agent': 'FourthDownProspectiveMonitor/0.2',
           'accept': 'application/json',
           ...(options.headers || {})
         },
-        signal: AbortSignal.timeout(30000)
+        signal: AbortSignal.timeout(timeoutMs)
       });
       const text = await r.text();
       let body = null;
@@ -162,7 +168,25 @@ async function gradeLegacy(row) {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(inputFromLedger(row, false))
-  });
+  }, 1, 10000);
+}
+
+async function mapLimit(items, limit, fn) {
+  if (!items.length) return [];
+  const out = new Array(items.length);
+  let next = 0;
+
+  async function worker() {
+    while (true) {
+      const i = next++;
+      if (i >= items.length) return;
+      out[i] = await fn(items[i], i);
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(limit, items.length) }, () => worker());
+  await Promise.all(workers);
+  return out;
 }
 
 async function enrichReferences(records) {
@@ -172,12 +196,11 @@ async function enrichReferences(records) {
     groups.get(r.game.eventId).push(r);
   }
 
-  let changed = false;
-
-  for (const [eventId, gameRecords] of groups) {
+  const entries = [...groups.entries()];
+  const results = await mapLimit(entries, 3, async ([eventId, gameRecords]) => {
     let env;
     try {
-      env = benchmarkEnvelope(await fetchJson(`${BASE_URL}/api/benchmark/${encodeURIComponent(eventId)}`, {}, 2));
+      env = benchmarkEnvelope(await fetchJson(`${BASE_URL}/api/benchmark/${encodeURIComponent(eventId)}`, {}, 2, 15000));
     } catch (e) {
       env = { rows: [], status: { code: 'PIPELINE_ERROR', label: 'PIPELINE ERROR', message: e.message } };
     }
@@ -189,6 +212,7 @@ async function enrichReferences(records) {
     };
 
     const matches = matchBenchmarkRows(gameRecords, env.rows);
+    let changed = false;
 
     for (const record of gameRecords) {
       const oldPipeline = JSON.stringify(record.referencePipeline || {});
@@ -197,30 +221,27 @@ async function enrichReferences(records) {
 
       const hit = matches.get(record.id);
       if (hit) {
-        const next = buildReferenceMatch(hit.row, hit.method);
-        if (JSON.stringify(record.reference) !== JSON.stringify(next)) {
-          record.reference = next;
+        const nextRef = buildReferenceMatch(hit.row, hit.method);
+        if (JSON.stringify(record.reference) !== JSON.stringify(nextRef)) {
+          record.reference = nextRef;
           changed = true;
         }
       } else if (env.rows.length && record.reference?.status !== 'MATCHED') {
-        const next = { status: 'NO_MATCH' };
-        if (JSON.stringify(record.reference) !== JSON.stringify(next)) {
-          record.reference = next;
+        const nextRef = { status: 'NO_MATCH' };
+        if (JSON.stringify(record.reference) !== JSON.stringify(nextRef)) {
+          record.reference = nextRef;
           changed = true;
         }
       }
     }
-  }
 
-  return changed;
+    return changed;
+  });
+
+  return results.some(Boolean);
 }
 
-async function main() {
-  if (!FORCE && !inSeasonWindow()) {
-    console.log('Outside Aug-Feb prospective season window. No-op.');
-    return;
-  }
-
+async function loadFrozenState() {
   await fs.mkdir(DATA_DIR, { recursive: true });
   const policy = await readJson(POLICY_PATH, null);
   if (!policy) throw new Error(`Missing policy file: ${POLICY_PATH}`);
@@ -246,48 +267,10 @@ async function main() {
     throw new Error(`Production identity mismatch: ${JSON.stringify(health)}`);
   }
 
-  const live = await fetchJson(`${BASE_URL}/api/live`);
-  const games = Array.isArray(live?.games) ? live.games : [];
-  const gameMap = new Map(games.map(g => [String(g.id), g]));
-  const eligibleGameIds = new Set(
-    games.filter(g => isProspectiveEligibleGame(g, RELEASE_START_AT)).map(g => String(g.id))
-  );
+  return { policy, store, health };
+}
 
-  const existing = new Map((store.records || []).map(r => [r.id, r]));
-  let materialChange = false;
-  let added = 0;
-
-  const newRows = (live?.ledger || []).filter(row => {
-    const eventId = String(row?.eventId || '');
-    return eligibleGameIds.has(eventId);
-  });
-
-  for (const row of newRows) {
-    const id = stableRecordId(row);
-    if (existing.has(id)) continue;
-
-    if (!row?.actualDecision) continue;
-    const eventId = String(row.eventId || '');
-    const game = gameMap.get(eventId);
-    if (!game || !isProspectiveEligibleGame(game, RELEASE_START_AT)) continue;
-
-    let legacy = {};
-    try {
-      legacy = await gradeLegacy(row);
-    } catch (e) {
-      legacy = { optimal: null, certainty: null, options: {}, grade: null, wpRegret: null, diagnostics: { legacyFetchError: e.message } };
-    }
-
-    const record = makeRecord(row, game, health, legacy);
-    existing.set(record.id, record);
-    materialChange = true;
-    added++;
-  }
-
-  const records = [...existing.values()];
-  const referenceChanged = await enrichReferences(records);
-  if (referenceChanged) materialChange = true;
-
+async function persistState({ policy, store, health, records, materialChange, added = 0, phase }) {
   const oldSummary = await readJson(SUMMARY_PATH, null);
   const lastMaterialUpdateAt = materialChange
     ? new Date().toISOString()
@@ -309,14 +292,103 @@ async function main() {
     store.records = records.sort((a, b) => String(a.id).localeCompare(String(b.id)));
     await fs.writeFile(DATA_PATH, JSON.stringify(store, null, 2) + '\n');
     await fs.writeFile(SUMMARY_PATH, JSON.stringify(summary, null, 2) + '\n');
-    console.log(`Material update: +${added} new decision(s), ${records.length} total archived.`);
+    console.log(`[${phase}] Material update: +${added} new decision(s), ${records.length} total archived.`);
   } else {
-    console.log(`No material change. ${records.length} decision(s) already archived.`);
+    console.log(`[${phase}] No material change. ${records.length} decision(s) already archived.`);
   }
 
-  console.log(`Prospective status: ${summary.modelHealth.state}`);
-  console.log(`Gradable: ${summary.sample.gradable}/${summary.maturity.totalGradableTarget}`);
-  console.log(`Reference comparable: ${summary.sample.referenceComparable}/${summary.maturity.referenceComparableTarget}`);
+  console.log(`[${phase}] Prospective status: ${summary.modelHealth.state}`);
+  console.log(`[${phase}] Gradable: ${summary.sample.gradable}/${summary.maturity.totalGradableTarget}`);
+  console.log(`[${phase}] Reference comparable: ${summary.sample.referenceComparable}/${summary.maturity.referenceComparableTarget}`);
+}
+
+async function capturePrimary({ policy, store, health }) {
+  const live = await fetchJson(`${BASE_URL}/api/live`);
+  const games = Array.isArray(live?.games) ? live.games : [];
+  const gameMap = new Map(games.map(g => [String(g.id), g]));
+  const eligibleGameIds = new Set(
+    games.filter(g => isProspectiveEligibleGame(g, RELEASE_START_AT)).map(g => String(g.id))
+  );
+
+  const existing = new Map((store.records || []).map(r => [r.id, r]));
+  const candidates = [];
+
+  for (const row of (live?.ledger || [])) {
+    const eventId = String(row?.eventId || '');
+    if (!eligibleGameIds.has(eventId)) continue;
+
+    const id = stableRecordId(row);
+    if (existing.has(id) || !row?.actualDecision) continue;
+
+    const game = gameMap.get(eventId);
+    if (!game || !isProspectiveEligibleGame(game, RELEASE_START_AT)) continue;
+    candidates.push({ row, game });
+  }
+
+  const captured = await mapLimit(candidates, 6, async ({ row, game }) => {
+    let legacy = {};
+    try {
+      legacy = await gradeLegacy(row);
+    } catch (e) {
+      console.warn(`[capture] Legacy comparison unavailable for ${stableRecordId(row)}: ${e.message}`);
+      legacy = { optimal: null, certainty: null, options: {}, grade: null, wpRegret: null, diagnostics: { legacyFetchError: e.message } };
+    }
+    return makeRecord(row, game, health, legacy);
+  });
+
+  for (const record of captured) existing.set(record.id, record);
+
+  await persistState({
+    policy,
+    store,
+    health,
+    records: [...existing.values()],
+    materialChange: captured.length > 0,
+    added: captured.length,
+    phase: 'capture'
+  });
+}
+
+async function enrichOnly({ policy, store, health }) {
+  const records = [...(store.records || [])];
+  if (!records.length) {
+    console.log('[enrich] No archived decisions yet. Nothing to enrich.');
+    return;
+  }
+
+  const referenceChanged = await enrichReferences(records);
+  await persistState({
+    policy,
+    store,
+    health,
+    records,
+    materialChange: referenceChanged,
+    added: 0,
+    phase: 'enrich'
+  });
+}
+
+async function main() {
+  if (!FORCE && !inSeasonWindow()) {
+    console.log('Outside Aug-Feb prospective season window. No-op.');
+    return;
+  }
+
+  const frozen = await loadFrozenState();
+
+  if (PHASE === 'capture') {
+    await capturePrimary(frozen);
+    return;
+  }
+
+  if (PHASE === 'enrich') {
+    await enrichOnly(frozen);
+    return;
+  }
+
+  await capturePrimary(frozen);
+  const refreshedStore = await readJson(DATA_PATH, frozen.store);
+  await enrichOnly({ ...frozen, store: refreshedStore });
 }
 
 await main();

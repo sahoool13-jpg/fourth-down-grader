@@ -19,20 +19,27 @@ concurrency:
 
 jobs:
   collect:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
       PRODUCTION_BASE_URL: "https://fourth-down-grader.onrender.com"
       PROSPECTIVE_FORCE: ${{ github.event.inputs.force || 'false' }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          persist-credentials: true
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
+          package-manager-cache: false
+
+      - name: Configure archive writer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Verify frozen production tag still exists
         run: |
@@ -45,37 +52,91 @@ jobs:
           echo "v0.5.1 tag is still immutable at $TAG_COMMIT"
 
       - name: Prospective monitor tests
-        run: node --test test/prospective-monitor.test.js
+        run: node --test test/prospective-monitor.test.js test/prospective-reliability.test.js
 
-      - name: Collect prospective decisions
+      - name: Verify authenticated archive write-back path
+        run: |
+          git fetch origin main
+          git push --dry-run origin HEAD:main
+          echo "Authenticated dry-run to main succeeded."
+
+      # CRITICAL PATH: capture first, commit first. No nfl4th call occurs here.
+      - name: Capture primary v0.5.1 decisions
+        env:
+          PROSPECTIVE_PHASE: capture
         run: node scripts/prospective-collector.mjs
 
-      - name: Guard against collector modifying code
+      - name: Guard primary capture paths
         run: |
           BAD="$(git status --porcelain | grep -vE '^[ MARC?]{2} data/prospective/2026/' || true)"
           if [ -n "$BAD" ]; then
-            echo "Collector modified unexpected paths:"
+            echo "Primary collector modified unexpected paths:"
             echo "$BAD"
             exit 1
           fi
 
-      - name: Commit material monitor updates
+      - name: Commit primary archive before enrichment
         run: |
           git add data/prospective/2026
           if git diff --cached --quiet; then
-            echo "No prospective data change."
+            echo "No new primary decisions to archive."
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update 2026 prospective monitor [skip render]"
+          git commit -m "Archive 2026 fourth-down decisions [skip render]"
 
           for i in 1 2 3; do
             if git pull --rebase origin main && git push origin main; then
+              echo "Primary prospective archive safely written to main."
               exit 0
             fi
-            echo "Push attempt $i failed; retrying."
+            echo "Primary push attempt $i failed; retrying."
             sleep $((i * 5))
           done
           exit 1
+
+      # SECONDARY PATH: nfl4th enrichment can fail without risking the primary archive.
+      - name: Enrich archived decisions with nfl4th
+        id: enrich
+        continue-on-error: true
+        env:
+          PROSPECTIVE_PHASE: enrich
+        run: node scripts/prospective-collector.mjs
+
+      - name: Guard enrichment paths
+        if: always()
+        run: |
+          BAD="$(git status --porcelain | grep -vE '^[ MARC?]{2} data/prospective/2026/' || true)"
+          if [ -n "$BAD" ]; then
+            echo "Enrichment modified unexpected paths:"
+            echo "$BAD"
+            exit 1
+          fi
+
+      - name: Commit reference enrichment
+        id: enrichment_push
+        if: always()
+        continue-on-error: true
+        run: |
+          git add data/prospective/2026
+          if git diff --cached --quiet; then
+            echo "No reference enrichment change."
+            exit 0
+          fi
+
+          git commit -m "Enrich 2026 prospective archive [skip render]"
+
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin main; then
+              echo "Reference enrichment written to main."
+              exit 0
+            fi
+            echo "Enrichment push attempt $i failed; retrying."
+            sleep $((i * 5))
+          done
+          exit 1
+
+      - name: Surface non-critical enrichment warning
+        if: always() && (steps.enrich.outcome == 'failure' || steps.enrichment_push.outcome == 'failure')
+        run: |
+          echo "::warning::Primary v0.5.1 archive is safe, but nfl4th enrichment failed or could not be pushed. It will retry on the next monitor run."
