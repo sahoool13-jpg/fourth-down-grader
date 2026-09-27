@@ -2,9 +2,6 @@ import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { fetchScoreboard, fetchSummary, parseGameSummary, parseScoreboard } from './lib/espn.js';
-import { evaluateFourthDown, gradeActualDecision, evaluateThirdDownPlanning } from './lib/decision-engine.js';
-import { fetchNfl4thBenchmarkState } from './lib/benchmark.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
@@ -18,6 +15,12 @@ const EVALUATED_CANDIDATE_COMMIT = '8daaa8f75787e4f28d25af6462142518f4594e9a';
 
 const scoreboardCache = { at: 0, data: null };
 const summaryCache = new Map();
+
+let core = null;
+let bootState = 'STARTING';
+let bootError = null;
+let bootStartedAt = new Date().toISOString();
+let bootReadyAt = null;
 
 const json = (res, status, body) => {
   res.writeHead(status, {
@@ -46,10 +49,73 @@ const stampRelease = value => (
     : value
 );
 
+function healthPayload() {
+  return {
+    ok: bootState === 'READY',
+    bootState,
+    bootError,
+    bootStartedAt,
+    bootReadyAt,
+    releaseVersion: RELEASE_VERSION,
+    releaseStatus: RELEASE_STATUS,
+    releaseAudit: RELEASE_AUDIT,
+    modelVersion: 'v0.5.1-gated-endgame',
+    engineVersion: ENGINE_VERSION,
+    calibrationVersion: 'v0.4.1',
+    evaluatedCandidateCommit: EVALUATED_CANDIDATE_COMMIT,
+    deployCommit: process.env.RENDER_GIT_COMMIT || null,
+    nodeVersion: process.version,
+    port: PORT,
+    now: new Date().toISOString()
+  };
+}
+
+async function loadCore() {
+  try {
+    bootState = 'LOADING_MODULES';
+    console.log(`[boot] port is open; loading application modules on Node ${process.version}...`);
+
+    const [espn, decision, benchmark] = await Promise.all([
+      import('./lib/espn.js'),
+      import('./lib/decision-engine.js'),
+      import('./lib/benchmark.js')
+    ]);
+
+    core = {
+      fetchScoreboard: espn.fetchScoreboard,
+      fetchSummary: espn.fetchSummary,
+      parseGameSummary: espn.parseGameSummary,
+      parseScoreboard: espn.parseScoreboard,
+      evaluateFourthDown: decision.evaluateFourthDown,
+      gradeActualDecision: decision.gradeActualDecision,
+      evaluateThirdDownPlanning: decision.evaluateThirdDownPlanning,
+      fetchNfl4thBenchmarkState: benchmark.fetchNfl4thBenchmarkState
+    };
+
+    bootState = 'READY';
+    bootReadyAt = new Date().toISOString();
+    console.log(`[boot] application modules loaded; ${RELEASE_VERSION} is READY.`);
+  } catch (error) {
+    bootState = 'FAILED';
+    bootError = error?.stack || error?.message || String(error);
+    console.error('[boot] application module load FAILED:', bootError);
+  }
+}
+
+function requireCore(res) {
+  if (bootState === 'READY' && core) return true;
+  const status = bootState === 'FAILED' ? 500 : 503;
+  json(res, status, {
+    error: bootState === 'FAILED' ? 'APP_BOOT_FAILED' : 'APP_BOOTING',
+    ...healthPayload()
+  });
+  return false;
+}
+
 async function getScoreboardCached(maxAgeMs = 10000) {
   if (scoreboardCache.data && Date.now() - scoreboardCache.at < maxAgeMs) return scoreboardCache.data;
-  const raw = await fetchScoreboard();
-  const parsed = parseScoreboard(raw);
+  const raw = await core.fetchScoreboard();
+  const parsed = core.parseScoreboard(raw);
   scoreboardCache.at = Date.now();
   scoreboardCache.data = parsed;
   return parsed;
@@ -58,7 +124,7 @@ async function getScoreboardCached(maxAgeMs = 10000) {
 async function getSummaryCached(id, maxAgeMs = 4000) {
   const hit = summaryCache.get(id);
   if (hit && Date.now() - hit.at < maxAgeMs) return hit.data;
-  const raw = await fetchSummary(id);
+  const raw = await core.fetchSummary(id);
   summaryCache.set(id, { at: Date.now(), data: raw });
   return raw;
 }
@@ -78,20 +144,39 @@ function inferNflverseGameId(raw) {
 }
 
 function enrichGame(raw) {
-  const game = parseGameSummary(raw);
+  const game = core.parseGameSummary(raw);
+
   if (game.pendingFourthDown?.yardline100) {
-    game.pendingFourthDown.evaluation = stampRelease(evaluateFourthDown(game.pendingFourthDown));
+    game.pendingFourthDown.evaluation = stampRelease(core.evaluateFourthDown(game.pendingFourthDown));
   }
+
   if (game.pendingThirdDown?.yardline100) {
-    game.pendingThirdDown.planning = evaluateThirdDownPlanning(game.pendingThirdDown);
+    game.pendingThirdDown.planning = core.evaluateThirdDownPlanning(game.pendingThirdDown);
   }
+
   game.completedFourthDowns = (game.completedFourthDowns || []).map(d => {
     if (!d.verifiedState || !d.yardline100 || !Number.isFinite(Number(d.ydstogo))) {
-      return { ...d, grade: 'REVIEW', wpRegret: null, reason: d.fieldPositionConflict || 'insufficient-feed-fields' };
+      return {
+        ...d,
+        grade: 'REVIEW',
+        wpRegret: null,
+        reason: d.fieldPositionConflict || 'insufficient-feed-fields'
+      };
     }
-    const ev = evaluateFourthDown({ ...d, indoor: game.indoor, baselineWp: d.baselineWp });
-    return { ...d, ...gradeActualDecision(ev, d.actualDecision), releaseVersion: RELEASE_VERSION };
+
+    const ev = core.evaluateFourthDown({
+      ...d,
+      indoor: game.indoor,
+      baselineWp: d.baselineWp
+    });
+
+    return {
+      ...d,
+      ...core.gradeActualDecision(ev, d.actualDecision),
+      releaseVersion: RELEASE_VERSION
+    };
   });
+
   return game;
 }
 
@@ -105,7 +190,10 @@ async function getLiveBoard() {
     const ttl = String(g.state).toLowerCase() === 'in' ? 4000 : 60000;
     return enrichGame(await getSummaryCached(g.id, ttl));
   }));
-  for (const r of results) if (r.status === 'fulfilled') enriched.push(r.value);
+
+  for (const r of results) {
+    if (r.status === 'fulfilled') enriched.push(r.value);
+  }
 
   const pendingFourthDowns = enriched
     .filter(g => String(g.state).toLowerCase() === 'in' && g.pendingFourthDown?.evaluation)
@@ -116,7 +204,11 @@ async function getLiveBoard() {
     .map(g => ({ eventId: g.eventId, gameName: g.name, ...g.pendingThirdDown }));
 
   const ledger = enriched
-    .flatMap(g => (g.completedFourthDowns || []).map(d => ({ eventId: g.eventId, gameName: g.name, ...d })))
+    .flatMap(g => (g.completedFourthDowns || []).map(d => ({
+      eventId: g.eventId,
+      gameName: g.name,
+      ...d
+    })))
     .filter(d => d.actualDecision);
 
   return {
@@ -133,25 +225,23 @@ async function getLiveBoard() {
 
 async function api(req, res, url) {
   if (url.pathname === '/api/health') {
-    return json(res, 200, {
-      ok: true,
-      releaseVersion: RELEASE_VERSION,
-      releaseStatus: RELEASE_STATUS,
-      releaseAudit: RELEASE_AUDIT,
-      modelVersion: 'v0.5.1-gated-endgame',
-      engineVersion: ENGINE_VERSION,
-      calibrationVersion: 'v0.4.1',
-      evaluatedCandidateCommit: EVALUATED_CANDIDATE_COMMIT,
-      deployCommit: process.env.RENDER_GIT_COMMIT || null,
-      now: new Date().toISOString()
-    });
+    return json(res, bootState === 'READY' ? 200 : (bootState === 'FAILED' ? 500 : 503), healthPayload());
   }
+
+  if (!requireCore(res)) return true;
 
   if (url.pathname === '/api/scoreboard') {
     try {
-      return json(res, 200, { source: 'espn-live-adapter', releaseVersion: RELEASE_VERSION, games: await getScoreboardCached() });
+      return json(res, 200, {
+        source: 'espn-live-adapter',
+        releaseVersion: RELEASE_VERSION,
+        games: await getScoreboardCached()
+      });
     } catch (e) {
-      return json(res, 502, { error: 'LIVE_FEED_UNAVAILABLE', message: e.message });
+      return json(res, 502, {
+        error: 'LIVE_FEED_UNAVAILABLE',
+        message: e.message
+      });
     }
   }
 
@@ -159,97 +249,155 @@ async function api(req, res, url) {
     try {
       return json(res, 200, await getLiveBoard());
     } catch (e) {
-      return json(res, 502, { error: 'LIVE_BOARD_UNAVAILABLE', message: e.message });
+      return json(res, 502, {
+        error: 'LIVE_BOARD_UNAVAILABLE',
+        message: e.message
+      });
     }
   }
 
   if (url.pathname.startsWith('/api/benchmark/')) {
     const id = url.pathname.split('/').pop();
+
     try {
       let expectedGameId = null;
+
       try {
         expectedGameId = inferNflverseGameId(await getSummaryCached(id, 60000));
       } catch {}
-      const state = await fetchNfl4thBenchmarkState(id, expectedGameId, 30_000);
-      return json(res, 200, { eventId: id, nflverseGameId: expectedGameId, releaseVersion: RELEASE_VERSION, ...state });
+
+      const state = await core.fetchNfl4thBenchmarkState(id, expectedGameId, 30_000);
+
+      return json(res, 200, {
+        eventId: id,
+        nflverseGameId: expectedGameId,
+        releaseVersion: RELEASE_VERSION,
+        ...state
+      });
     } catch (e) {
       return json(res, 502, {
         available: false,
         eventId: id,
         releaseVersion: RELEASE_VERSION,
         error: 'BENCHMARK_UNAVAILABLE',
-        status: { code: 'PIPELINE_ERROR', label: 'PIPELINE ERROR', message: e.message }
+        status: {
+          code: 'PIPELINE_ERROR',
+          label: 'PIPELINE ERROR',
+          message: e.message
+        }
       });
     }
   }
 
   if (url.pathname.startsWith('/api/game/')) {
     const id = url.pathname.split('/').pop();
+
     try {
       const raw = await getSummaryCached(id, 2500);
-      return json(res, 200, { source: 'espn-live-adapter', releaseVersion: RELEASE_VERSION, game: enrichGame(raw) });
+      return json(res, 200, {
+        source: 'espn-live-adapter',
+        releaseVersion: RELEASE_VERSION,
+        game: enrichGame(raw)
+      });
     } catch (e) {
-      return json(res, 502, { error: 'GAME_FEED_UNAVAILABLE', message: e.message });
+      return json(res, 502, {
+        error: 'GAME_FEED_UNAVAILABLE',
+        message: e.message
+      });
     }
   }
 
   if (url.pathname === '/api/evaluate' && req.method === 'POST') {
     let body = '';
     for await (const chunk of req) body += chunk;
+
     try {
       const input = JSON.parse(body || '{}');
-      const evaluation = evaluateFourthDown(input);
-      const result = input.actualDecision ? gradeActualDecision(evaluation, input.actualDecision) : evaluation;
+      const evaluation = core.evaluateFourthDown(input);
+      const result = input.actualDecision
+        ? core.gradeActualDecision(evaluation, input.actualDecision)
+        : evaluation;
+
       return json(res, 200, stampRelease(result));
     } catch (e) {
-      return json(res, 400, { error: 'BAD_INPUT', message: e.message });
+      return json(res, 400, {
+        error: 'BAD_INPUT',
+        message: e.message
+      });
     }
   }
 
   if (url.pathname === '/api/evaluate-third' && req.method === 'POST') {
     let body = '';
     for await (const chunk of req) body += chunk;
+
     try {
       return json(res, 200, {
-        ...evaluateThirdDownPlanning(JSON.parse(body || '{}')),
+        ...core.evaluateThirdDownPlanning(JSON.parse(body || '{}')),
         releaseVersion: RELEASE_VERSION
       });
     } catch (e) {
-      return json(res, 400, { error: 'BAD_INPUT', message: e.message });
+      return json(res, 400, {
+        error: 'BAD_INPUT',
+        message: e.message
+      });
     }
   }
+
   return false;
 }
 
 const server = http.createServer(async (req, res) => {
-  const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-  if (url.pathname.startsWith('/api/')) {
-    const handled = await api(req, res, url);
-    if (handled !== false) return;
-  }
-
-  const pathname = url.pathname === '/' ? '/index.html' : url.pathname;
-  const safePath = path.normalize(pathname).replace(/^\.\.(\/|\\|$)/, '');
-  const file = path.join(publicDir, safePath);
-  if (!file.startsWith(publicDir)) {
-    res.writeHead(403);
-    return res.end('Forbidden');
-  }
-
   try {
-    const buf = await fs.readFile(file);
-    res.writeHead(200, { 'content-type': staticTypes[path.extname(file)] || 'application/octet-stream' });
-    res.end(buf);
-  } catch {
+    const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+
+    if (url.pathname.startsWith('/api/')) {
+      const handled = await api(req, res, url);
+      if (handled !== false) return;
+    }
+
+    const pathname = url.pathname === '/' ? '/index.html' : url.pathname;
+    const safePath = path.normalize(pathname).replace(/^\.\.(\/|\\|$)/, '');
+    const file = path.join(publicDir, safePath);
+
+    if (!file.startsWith(publicDir)) {
+      res.writeHead(403);
+      return res.end('Forbidden');
+    }
+
     try {
-      const buf = await fs.readFile(path.join(publicDir, 'index.html'));
-      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+      const buf = await fs.readFile(file);
+      res.writeHead(200, {
+        'content-type': staticTypes[path.extname(file)] || 'application/octet-stream'
+      });
       res.end(buf);
     } catch {
-      res.writeHead(404);
-      res.end('Not found');
+      try {
+        const buf = await fs.readFile(path.join(publicDir, 'index.html'));
+        res.writeHead(200, {
+          'content-type': 'text/html; charset=utf-8'
+        });
+        res.end(buf);
+      } catch {
+        res.writeHead(404);
+        res.end('Not found');
+      }
     }
+  } catch (error) {
+    console.error('[request] unhandled error:', error?.stack || error);
+    if (!res.headersSent) res.writeHead(500);
+    res.end('Internal server error');
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => console.log(`4TH DOWN v0.5.1 running on http://localhost:${PORT}`));
+server.on('error', error => {
+  console.error('[server] listen error:', error?.stack || error);
+  process.exitCode = 1;
+});
+
+server.listen(PORT, '0.0.0.0', () => {
+  const address = server.address();
+  const actualPort = typeof address === 'object' && address ? address.port : PORT;
+  console.log(`4TH DOWN ${RELEASE_VERSION} port OPEN on 0.0.0.0:${actualPort}`);
+  void loadCore();
+});
