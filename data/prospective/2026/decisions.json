@@ -18650,6 +18650,1448 @@
       },
       "reference": null,
       "snapshotHash": "bec6fffd1600928aeadac1e110d9a9703e57421eccc4a7c0e43969c1a3b6bf91"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729621183",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.037Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "13:17",
+        "secondsRemaining": 2597,
+        "ydstogo": 12,
+        "yardline100": 18,
+        "fieldPositionText": "DEN 18",
+        "scoreDiff": 7,
+        "scoreText": "LAR 7–0 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.8204,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729621183",
+        "actual": "FG",
+        "situationText": "4th & 12 at DEN 18"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01789912020605966,
+          "baselineWp": 0.8204,
+          "options": {
+            "GO": 0.7930175729512395,
+            "FG": 0.8109166931572992,
+            "PUNT": 0.7854684900885047
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01789912020605966,
+          "baselineWp": 0.8204,
+          "options": {
+            "GO": 0.7930175729512395,
+            "FG": 0.8109166931572992,
+            "PUNT": 0.7854684900885047
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b56ee83e140d2cc7cff8b1c3661680f1a2c67fa1ae3b719a090cb8ed86fb240f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729621303",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.056Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "11:51",
+        "secondsRemaining": 2511,
+        "ydstogo": 3,
+        "yardline100": 62,
+        "fieldPositionText": "DEN 38",
+        "scoreDiff": -10,
+        "scoreText": "DEN 0–10 LAR",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1506,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729621303",
+        "actual": "PUNT",
+        "situationText": "4th & 3 at DEN 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0006224560185789929,
+          "baselineWp": 0.1506,
+          "options": {
+            "GO": 0.1396749270303178,
+            "FG": null,
+            "PUNT": 0.1402973830488968
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0006224560185789929,
+          "baselineWp": 0.1506,
+          "options": {
+            "GO": 0.1396749270303178,
+            "FG": null,
+            "PUNT": 0.1402973830488968
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "08d9edf2415c38cfc144ba193778e818d9e41cc2551586c048dab7f97d78a4b4"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729621750",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.227Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "4:43",
+        "secondsRemaining": 2083,
+        "ydstogo": 11,
+        "yardline100": 16,
+        "fieldPositionText": "DEN 16",
+        "scoreDiff": 10,
+        "scoreText": "LAR 10–0 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.877,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729621750",
+        "actual": "FG",
+        "situationText": "4th & 11 at DEN 16"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.013076847328778896,
+          "baselineWp": 0.877,
+          "options": {
+            "GO": 0.8534985376833848,
+            "FG": 0.8665753850121637,
+            "PUNT": 0.8455914471967666
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.013076847328778896,
+          "baselineWp": 0.877,
+          "options": {
+            "GO": 0.8534985376833848,
+            "FG": 0.8665753850121637,
+            "PUNT": 0.8455914471967666
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "24dcb168bb1474f397155e49a84abce1b72c2a514dd40b564f8ed27803096c26"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729622047",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.224Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:18",
+        "secondsRemaining": 1878,
+        "ydstogo": 14,
+        "yardline100": 55,
+        "fieldPositionText": "DEN 45",
+        "scoreDiff": -13,
+        "scoreText": "DEN 0–13 LAR",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.0975,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729622047",
+        "actual": "PUNT",
+        "situationText": "4th & 14 at DEN 45"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0050396977237764096,
+          "baselineWp": 0.0975,
+          "options": {
+            "GO": 0.08352753911544279,
+            "FG": null,
+            "PUNT": 0.0885672368392192
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0050396977237764096,
+          "baselineWp": 0.0975,
+          "options": {
+            "GO": 0.08352753911544279,
+            "FG": null,
+            "PUNT": 0.0885672368392192
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "963779c7933c01e61c095e7d90cc23bc5eab5e265fa0f64a0b96ace7edf5404c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:401872962226",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.043Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "11:05",
+        "secondsRemaining": 3365,
+        "ydstogo": 9,
+        "yardline100": 47,
+        "fieldPositionText": "DEN 47",
+        "scoreDiff": 0,
+        "scoreText": "LAR 0–0 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6325000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872962226",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at DEN 47"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0007766222013270152,
+          "baselineWp": 0.6325000000000001,
+          "options": {
+            "GO": 0.6098057264993797,
+            "FG": 0.61203327760348,
+            "PUNT": 0.611256655402153
+          },
+          "grade": "A",
+          "wpRegret": 0.0007766222013270152,
+          "wpRegretPp": 0.07766222013270152,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0007766222013270152,
+          "baselineWp": 0.6325000000000001,
+          "options": {
+            "GO": 0.6098057264993797,
+            "FG": 0.61203327760348,
+            "PUNT": 0.611256655402153
+          },
+          "grade": "A",
+          "wpRegret": 0.0007766222013270152,
+          "wpRegretPp": 0.07766222013270152,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "198f32cc8ecd6dd7099365d1feb9446c6ae841efec6d8bb4d46e9272ef0cdca4"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729622468",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.138Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "14:08",
+        "secondsRemaining": 1748,
+        "ydstogo": 4,
+        "yardline100": 62,
+        "fieldPositionText": "DEN 38",
+        "scoreDiff": -16,
+        "scoreText": "DEN 0–16 LAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.0522,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729622468",
+        "actual": "PUNT",
+        "situationText": "4th & 4 at DEN 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0003981541018079071,
+          "baselineWp": 0.0522,
+          "options": {
+            "GO": 0.04694134657304982,
+            "FG": null,
+            "PUNT": 0.047339500674857725
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0003981541018079071,
+          "baselineWp": 0.0522,
+          "options": {
+            "GO": 0.04694134657304982,
+            "FG": null,
+            "PUNT": 0.047339500674857725
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "59382a7a3c1ac854bcc666c9b1a6a44d1b2ade3784c3f85cc1b02a1cca39d2ff"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729622572",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.146Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "13:04",
+        "secondsRemaining": 1684,
+        "ydstogo": 7,
+        "yardline100": 87,
+        "fieldPositionText": "LAR 13",
+        "scoreDiff": 16,
+        "scoreText": "LAR 16–0 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9272,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729622572",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at LAR 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.009278190101705719,
+          "baselineWp": 0.9272,
+          "options": {
+            "GO": 0.9105862894355429,
+            "FG": null,
+            "PUNT": 0.9198644795372486
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.009278190101705719,
+          "baselineWp": 0.9272,
+          "options": {
+            "GO": 0.9105862894355429,
+            "FG": null,
+            "PUNT": 0.9198644795372486
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d563f2dc5cf1d0ac13b34978e2d5a3435122564d435219b78a41087d1a95fd32"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729623167",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.224Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "5:22",
+        "secondsRemaining": 1222,
+        "ydstogo": 32,
+        "yardline100": 88,
+        "fieldPositionText": "LAR 12",
+        "scoreDiff": 8,
+        "scoreText": "LAR 16–8 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8123,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729623167",
+        "actual": "PUNT",
+        "situationText": "4th & 32 at LAR 12"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.04470928014765163,
+          "baselineWp": 0.8123,
+          "options": {
+            "GO": 0.7480305470883849,
+            "FG": null,
+            "PUNT": 0.7927398272360365
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.04470928014765163,
+          "baselineWp": 0.8123,
+          "options": {
+            "GO": 0.7480305470883849,
+            "FG": null,
+            "PUNT": 0.7927398272360365
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6942dcf502ba2f07730ee4e5f666ec8bbbfae0f18a2493afa0c2b49a9c490805"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:401872962323",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.020Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "9:36",
+        "secondsRemaining": 3276,
+        "ydstogo": 6,
+        "yardline100": 82,
+        "fieldPositionText": "DEN 18",
+        "scoreDiff": 0,
+        "scoreText": "DEN 0–0 LAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3253,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872962323",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at DEN 18"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.011409029135070747,
+          "baselineWp": 0.3253,
+          "options": {
+            "GO": 0.29890675920126514,
+            "FG": null,
+            "PUNT": 0.3103157883363359
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.011409029135070747,
+          "baselineWp": 0.3253,
+          "options": {
+            "GO": 0.29890675920126514,
+            "FG": null,
+            "PUNT": 0.3103157883363359
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1f4c80ef35e9e9ba5fffe12e21c9e6e5d3d0355094a5d39d1d47646c76f91908"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729623584",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.141Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "14:50",
+        "secondsRemaining": 890,
+        "ydstogo": 19,
+        "yardline100": 68,
+        "fieldPositionText": "LAR 32",
+        "scoreDiff": 0,
+        "scoreText": "LAR 16–16 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5373,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729623584",
+        "actual": "PUNT",
+        "situationText": "4th & 19 at LAR 32"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.04297735427946903,
+          "baselineWp": 0.5373,
+          "options": {
+            "GO": 0.46021114770325156,
+            "FG": null,
+            "PUNT": 0.5031885019827206
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.04297735427946903,
+          "baselineWp": 0.5373,
+          "options": {
+            "GO": 0.46021114770325156,
+            "FG": null,
+            "PUNT": 0.5031885019827206
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5ad82d87b3b140b22a95cfec6bfdf1869fa9703cac93c93fa1a4c8d82ba542d8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729623891",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.243Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "8:40",
+        "secondsRemaining": 520,
+        "ydstogo": 15,
+        "yardline100": 30,
+        "fieldPositionText": "DEN 30",
+        "scoreDiff": 0,
+        "scoreText": "LAR 16–16 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.628,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729623891",
+        "actual": "FG",
+        "situationText": "4th & 15 at DEN 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.050785521792003574,
+          "baselineWp": 0.628,
+          "options": {
+            "GO": 0.5428108627318302,
+            "FG": 0.5958428304804303,
+            "PUNT": 0.5450573086884267
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.050785521792003574,
+          "baselineWp": 0.628,
+          "options": {
+            "GO": 0.5428108627318302,
+            "FG": 0.5958428304804303,
+            "PUNT": 0.5450573086884267
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "03b632f9ffb6b886d7375707041004714cf134b4ee2270285b32b3913a0f0182"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:4018729624010",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.243Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "7:10",
+        "secondsRemaining": 430,
+        "ydstogo": 2,
+        "yardline100": 62,
+        "fieldPositionText": "DEN 38",
+        "scoreDiff": -3,
+        "scoreText": "DEN 16–19 LAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2434,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729624010",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at DEN 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "CLEAR",
+          "edge": 0.026203007307122106,
+          "baselineWp": 0.2434,
+          "options": {
+            "GO": 0.19732851040798083,
+            "FG": null,
+            "PUNT": 0.17112550310085872
+          },
+          "grade": "C",
+          "wpRegret": 0.026203007307122106,
+          "wpRegretPp": 2.6203007307122106,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "CLEAR",
+          "edge": 0.026203007307122106,
+          "baselineWp": 0.2434,
+          "options": {
+            "GO": 0.19732851040798083,
+            "FG": null,
+            "PUNT": 0.17112550310085872
+          },
+          "grade": "C",
+          "wpRegret": 0.026203007307122106,
+          "wpRegretPp": 2.6203007307122106,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0c6aa1097d37a4ff86ca7d650fe0c170429c7bdab7f40859fa48c7b7b7ce1a0a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:401872962441",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.007Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "7:30",
+        "secondsRemaining": 3150,
+        "ydstogo": 4,
+        "yardline100": 35,
+        "fieldPositionText": "DEN 35",
+        "scoreDiff": 0,
+        "scoreText": "LAR 0–0 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.651,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872962441",
+        "actual": "GO",
+        "situationText": "4th & 4 at DEN 35"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.012362441194981755,
+          "baselineWp": 0.651,
+          "options": {
+            "GO": 0.632805442809754,
+            "FG": 0.6451678840047358,
+            "PUNT": 0.6209613312690191
+          },
+          "grade": "B",
+          "wpRegret": 0.012362441194981755,
+          "wpRegretPp": 1.2362441194981755,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.012362441194981755,
+          "baselineWp": 0.651,
+          "options": {
+            "GO": 0.632805442809754,
+            "FG": 0.6451678840047358,
+            "PUNT": 0.6209613312690191
+          },
+          "grade": "B",
+          "wpRegret": 0.012362441194981755,
+          "wpRegretPp": 1.2362441194981755,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "830da045fe6e3dd1b17133be0ef26b1974666c19c7cd0314f1fd77a098ed7d31"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872962:401872962949",
+      "season": 2026,
+      "capturedAt": "2026-09-28T05:15:01.045Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872962",
+        "name": "LAR @ DEN",
+        "kickoff": "2026-09-28T00:20Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "1:23",
+        "secondsRemaining": 2783,
+        "ydstogo": 6,
+        "yardline100": 25,
+        "fieldPositionText": "LAR 25",
+        "scoreDiff": -7,
+        "scoreText": "DEN 0–7 LAR",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2493,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872962949",
+        "actual": "FG",
+        "situationText": "4th & 6 at LAR 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.012071720581806944,
+          "baselineWp": 0.2493,
+          "options": {
+            "GO": 0.22991078212505384,
+            "FG": 0.24198250270686078,
+            "PUNT": 0.21713507168409865
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.012071720581806944,
+          "baselineWp": 0.2493,
+          "options": {
+            "GO": 0.22991078212505384,
+            "FG": 0.24198250270686078,
+            "PUNT": 0.21713507168409865
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "923a2649102268df36b0375b89a977b724dbc9a246a4e00fa8251e910b7e8326"
     }
   ]
 }
