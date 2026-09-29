@@ -20106,6 +20106,1345 @@
       },
       "reference": null,
       "snapshotHash": "923a2649102268df36b0375b89a977b724dbc9a246a4e00fa8251e910b7e8326"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729631109",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.086Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "14:02",
+        "secondsRemaining": 2642,
+        "ydstogo": 3,
+        "yardline100": 3,
+        "fieldPositionText": "PHI 3",
+        "scoreDiff": 7,
+        "scoreText": "CHI 7–0 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6315,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729631109",
+        "actual": "GO",
+        "situationText": "4th & Goal at PHI 3"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01641480778879456,
+          "baselineWp": 0.6315,
+          "options": {
+            "GO": 0.6094011665005019,
+            "FG": 0.5929863587117074,
+            "PUNT": 0.5508724462050139
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01641480778879456,
+          "baselineWp": 0.6315,
+          "options": {
+            "GO": 0.6094011665005019,
+            "FG": 0.5929863587117074,
+            "PUNT": 0.5508724462050139
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d1185f54bbf08a72fa6aa9225c93d920b2fb01454b6199d221469c70d43a33db"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729631824",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.196Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:52",
+        "secondsRemaining": 1912,
+        "ydstogo": 11,
+        "yardline100": 11,
+        "fieldPositionText": "PHI 11",
+        "scoreDiff": 7,
+        "scoreText": "CHI 7–0 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.6814,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729631824",
+        "actual": "FG",
+        "situationText": "4th & Goal at PHI 11"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01803543467992419,
+          "baselineWp": 0.6814,
+          "options": {
+            "GO": 0.6339405926982862,
+            "FG": 0.6519760273782104,
+            "PUNT": 0.6092193033121308
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01803543467992419,
+          "baselineWp": 0.6814,
+          "options": {
+            "GO": 0.6339405926982862,
+            "FG": 0.6519760273782104,
+            "PUNT": 0.6092193033121308
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "9b7c20ae509da9501b9bb8a43b00b7feea1a131140598df0b355d2bc82b2259c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729632231",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.103Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "13:34",
+        "secondsRemaining": 1714,
+        "ydstogo": 5,
+        "yardline100": 75,
+        "fieldPositionText": "PHI 25",
+        "scoreDiff": -3,
+        "scoreText": "PHI 7–10 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.46630000000000005,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729632231",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at PHI 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01288274166069786,
+          "baselineWp": 0.46630000000000005,
+          "options": {
+            "GO": 0.4281945831537541,
+            "FG": null,
+            "PUNT": 0.44107732481445194
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01288274166069786,
+          "baselineWp": 0.46630000000000005,
+          "options": {
+            "GO": 0.4281945831537541,
+            "FG": null,
+            "PUNT": 0.44107732481445194
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "3328fd7ecd5aa093dfe80346bb39dac76a24c9e0e399cca783827d129fa1d9db"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729632408",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.122Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "10:17",
+        "secondsRemaining": 1517,
+        "ydstogo": 5,
+        "yardline100": 30,
+        "fieldPositionText": "PHI 30",
+        "scoreDiff": 3,
+        "scoreText": "CHI 10–7 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5511,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729632408",
+        "actual": "FG",
+        "situationText": "4th & 5 at PHI 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01698517362361185,
+          "baselineWp": 0.5511,
+          "options": {
+            "GO": 0.5162706680046374,
+            "FG": 0.5332558416282492,
+            "PUNT": 0.49637037495617153
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01698517362361185,
+          "baselineWp": 0.5511,
+          "options": {
+            "GO": 0.5162706680046374,
+            "FG": 0.5332558416282492,
+            "PUNT": 0.49637037495617153
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "cb5f1fa55569a2999e73d147280b45e5a1adb075033895cddfcc89970ee51a74"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:401872963246",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.039Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "10:52",
+        "secondsRemaining": 3352,
+        "ydstogo": 1,
+        "yardline100": 32,
+        "fieldPositionText": "PHI 32",
+        "scoreDiff": 0,
+        "scoreText": "CHI 0–0 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3804,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872963246",
+        "actual": "GO",
+        "situationText": "4th & 1 at PHI 32"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.005743991901381418,
+          "baselineWp": 0.3804,
+          "options": {
+            "GO": 0.36962087272776345,
+            "FG": 0.37536486462914487,
+            "PUNT": 0.34960255951674746
+          },
+          "grade": "B",
+          "wpRegret": 0.005743991901381418,
+          "wpRegretPp": 0.5743991901381418,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.005743991901381418,
+          "baselineWp": 0.3804,
+          "options": {
+            "GO": 0.36962087272776345,
+            "FG": 0.37536486462914487,
+            "PUNT": 0.34960255951674746
+          },
+          "grade": "B",
+          "wpRegret": 0.005743991901381418,
+          "wpRegretPp": 0.5743991901381418,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "58cb430142b6ffdc64ee05263be6aa9b4f3f40e6e5111b3c9741a2601ccf9df6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729632522",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.162Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "8:47",
+        "secondsRemaining": 1427,
+        "ydstogo": 12,
+        "yardline100": 67,
+        "fieldPositionText": "PHI 33",
+        "scoreDiff": -6,
+        "scoreText": "PHI 7–13 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.348,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729632522",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at PHI 33"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.020183552530817828,
+          "baselineWp": 0.348,
+          "options": {
+            "GO": 0.3028289866848387,
+            "FG": null,
+            "PUNT": 0.32301253921565654
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.020183552530817828,
+          "baselineWp": 0.348,
+          "options": {
+            "GO": 0.3028289866848387,
+            "FG": null,
+            "PUNT": 0.32301253921565654
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "3edb2c5b847838748f648580117665d23c4edbeb71d516ccba99a96a145781e5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729632830",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.336Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "3:22",
+        "secondsRemaining": 1102,
+        "ydstogo": 6,
+        "yardline100": 56,
+        "fieldPositionText": "PHI 44",
+        "scoreDiff": -13,
+        "scoreText": "PHI 7–20 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1109,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729632830",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at PHI 44"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0005350536544271173,
+          "baselineWp": 0.1109,
+          "options": {
+            "GO": 0.09578031845618276,
+            "FG": null,
+            "PUNT": 0.09524526480175564
+          },
+          "grade": "A",
+          "wpRegret": 0.0005350536544271173,
+          "wpRegretPp": 0.05350536544271173,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0005350536544271173,
+          "baselineWp": 0.1109,
+          "options": {
+            "GO": 0.09578031845618276,
+            "FG": null,
+            "PUNT": 0.09524526480175564
+          },
+          "grade": "A",
+          "wpRegret": 0.0005350536544271173,
+          "wpRegretPp": 0.05350536544271173,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5bc7279e55a0aa3ecd8f0cb259ca08567d68d10b99ac7114bc3511bfbac62858"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729632951",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.306Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "2:45",
+        "secondsRemaining": 1065,
+        "ydstogo": 12,
+        "yardline100": 87,
+        "fieldPositionText": "CHI 13",
+        "scoreDiff": 13,
+        "scoreText": "CHI 20–7 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8404,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729632951",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at CHI 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.03365957612096715,
+          "baselineWp": 0.8404,
+          "options": {
+            "GO": 0.7892884627741366,
+            "FG": null,
+            "PUNT": 0.8229480388951037
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.03365957612096715,
+          "baselineWp": 0.8404,
+          "options": {
+            "GO": 0.7892884627741366,
+            "FG": null,
+            "PUNT": 0.8229480388951037
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "8838d63cec5696d00335cbd110917f5f0d3b7bdc2d134b56396b45e67d52a886"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729633095",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.203Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "0:27",
+        "secondsRemaining": 927,
+        "ydstogo": 5,
+        "yardline100": 46,
+        "fieldPositionText": "CHI 46",
+        "scoreDiff": -13,
+        "scoreText": "PHI 7–20 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.10050000000000003,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729633095",
+        "actual": "GO",
+        "situationText": "4th & 5 at CHI 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.005954847395106808,
+          "baselineWp": 0.10050000000000003,
+          "options": {
+            "GO": 0.08413390833705259,
+            "FG": 0.07817906094194578,
+            "PUNT": 0.07648551844675472
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.005954847395106808,
+          "baselineWp": 0.10050000000000003,
+          "options": {
+            "GO": 0.08413390833705259,
+            "FG": 0.07817906094194578,
+            "PUNT": 0.07648551844675472
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0ee5950becfc94a8ece485cda55fdf20e17e0b23a6e0aacdc422791fe4218956"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729633772",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.242Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "5:19",
+        "secondsRemaining": 319,
+        "ydstogo": 22,
+        "yardline100": 39,
+        "fieldPositionText": "CHI 39",
+        "scoreDiff": -20,
+        "scoreText": "PHI 7–27 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.0010000000000000009,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729633772",
+        "actual": "GO",
+        "situationText": "4th & 22 at CHI 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0,
+          "baselineWp": 0.0010000000000000009,
+          "options": {
+            "GO": 0.001,
+            "FG": 0.001,
+            "PUNT": 0.001
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0,
+          "baselineWp": 0.0010000000000000009,
+          "options": {
+            "GO": 0.001,
+            "FG": 0.001,
+            "PUNT": 0.001
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "322f2ba1fcd35bba78b19f3252d80efbcd486d03e9bd46e7e987c37497f98b72"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:4018729633905",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.271Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "2:00",
+        "secondsRemaining": 120,
+        "ydstogo": 1,
+        "yardline100": 34,
+        "fieldPositionText": "PHI 34",
+        "scoreDiff": 20,
+        "scoreText": "CHI 27–7 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.999,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729633905",
+        "actual": "GO",
+        "situationText": "4th & 1 at PHI 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0,
+          "baselineWp": 0.999,
+          "options": {
+            "GO": 0.9989999999999999,
+            "FG": 0.9989999999999999,
+            "PUNT": 0.9989999999999999
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0,
+          "baselineWp": 0.999,
+          "options": {
+            "GO": 0.9989999999999999,
+            "FG": 0.9989999999999999,
+            "PUNT": 0.9989999999999999
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "f8bc39b69a160bf48d0b3dbf98e510de347c73a3756037602808c60010c5f06a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:401872963519",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.258Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "6:15",
+        "secondsRemaining": 3075,
+        "ydstogo": 12,
+        "yardline100": 46,
+        "fieldPositionText": "CHI 46",
+        "scoreDiff": -7,
+        "scoreText": "PHI 0–7 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.44589999999999996,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872963519",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at CHI 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.003583028777068231,
+          "baselineWp": 0.44589999999999996,
+          "options": {
+            "GO": 0.4179035230136075,
+            "FG": 0.4250133742975937,
+            "PUNT": 0.4214303455205255
+          },
+          "grade": "A",
+          "wpRegret": 0.003583028777068231,
+          "wpRegretPp": 0.3583028777068231,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.003583028777068231,
+          "baselineWp": 0.44589999999999996,
+          "options": {
+            "GO": 0.4179035230136075,
+            "FG": 0.4250133742975937,
+            "PUNT": 0.4214303455205255
+          },
+          "grade": "A",
+          "wpRegret": 0.003583028777068231,
+          "wpRegretPp": 0.3583028777068231,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "754f3947ce6e7756fb3d91d77940c526a16eda485af4dc11d25c101e5d054212"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872963:401872963743",
+      "season": 2026,
+      "capturedAt": "2026-09-29T06:08:36.066Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872963",
+        "name": "PHI @ CHI",
+        "kickoff": "2026-09-29T00:15Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "2:02",
+        "secondsRemaining": 2822,
+        "ydstogo": 6,
+        "yardline100": 50,
+        "fieldPositionText": "50",
+        "scoreDiff": 7,
+        "scoreText": "CHI 7–0 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5536,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872963743",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at 50"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0007786871942202511,
+          "baselineWp": 0.5536,
+          "options": {
+            "GO": 0.5315835618102707,
+            "FG": 0.5213621568881656,
+            "PUNT": 0.5308048746160504
+          },
+          "grade": "A",
+          "wpRegret": 0.0007786871942202511,
+          "wpRegretPp": 0.07786871942202511,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0007786871942202511,
+          "baselineWp": 0.5536,
+          "options": {
+            "GO": 0.5315835618102707,
+            "FG": 0.5213621568881656,
+            "PUNT": 0.5308048746160504
+          },
+          "grade": "A",
+          "wpRegret": 0.0007786871942202511,
+          "wpRegretPp": 0.07786871942202511,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "51825ad3ce5d729588ffffaf1dabb5c3b7607c004f2042d3b144d52c89c3e09a"
     }
   ]
 }
