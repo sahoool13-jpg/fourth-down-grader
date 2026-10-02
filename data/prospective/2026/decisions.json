@@ -22293,6 +22293,315 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872964:4018729643792",
+      "season": 2026,
+      "capturedAt": "2026-10-02T03:29:10.589Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "6:37",
+        "secondsRemaining": 397,
+        "ydstogo": 2,
+        "yardline100": 26,
+        "fieldPositionText": "PIT 26",
+        "scoreDiff": 5,
+        "scoreText": "CLE 21–16 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8113,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729643792",
+        "actual": "FG",
+        "situationText": "4th & 2 at PIT 26"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.007109873656997889,
+          "baselineWp": 0.8113,
+          "options": {
+            "GO": 0.7758444722213014,
+            "FG": 0.7829543458782993,
+            "PUNT": 0.7397612277088214
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.007109873656997889,
+          "baselineWp": 0.8113,
+          "options": {
+            "GO": 0.7758444722213014,
+            "FG": 0.7829543458782993,
+            "PUNT": 0.7397612277088214
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c5a638a8b03be3b81da7285799f68206ff25100a3176c26478604dc5371caef3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872964:4018729643915",
+      "season": 2026,
+      "capturedAt": "2026-10-02T03:29:10.593Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "defense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "5:40",
+        "secondsRemaining": 340,
+        "ydstogo": 5,
+        "yardline100": 63,
+        "fieldPositionText": "PIT 37",
+        "scoreDiff": -8,
+        "scoreText": "PIT 16–24 CLE",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.07850000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729643915",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at PIT 37"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.00701426479465668,
+          "baselineWp": 0.07850000000000001,
+          "options": {
+            "GO": 0.056034521705683946,
+            "FG": null,
+            "PUNT": 0.049020256911027266
+          },
+          "grade": "B",
+          "wpRegret": 0.00701426479465668,
+          "wpRegretPp": 0.7014264794656679,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.00701426479465668,
+          "baselineWp": 0.07850000000000001,
+          "options": {
+            "GO": 0.056034521705683946,
+            "FG": null,
+            "PUNT": 0.049020256911027266
+          },
+          "grade": "B",
+          "wpRegret": 0.00701426479465668,
+          "wpRegretPp": 0.7014264794656679,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "327606e61f43de0363cb2de68e170f8a9e51250664a2765b096cbc08c2bda188"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872964:4018729644070",
+      "season": 2026,
+      "capturedAt": "2026-10-02T03:29:10.593Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "3:41",
+        "secondsRemaining": 221,
+        "ydstogo": 8,
+        "yardline100": 81,
+        "fieldPositionText": "CLE 19",
+        "scoreDiff": 8,
+        "scoreText": "CLE 24–16 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.8825,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729644070",
+        "actual": "PUNT",
+        "situationText": "4th & 8 at CLE 19"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.03441057170211337,
+          "baselineWp": 0.8825,
+          "options": {
+            "GO": 0.8249881181634324,
+            "FG": null,
+            "PUNT": 0.8593986898655458
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.03441057170211337,
+          "baselineWp": 0.8825,
+          "options": {
+            "GO": 0.8249881181634324,
+            "FG": null,
+            "PUNT": 0.8593986898655458
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "77191a6f3e240d45481e88160dce91d9bc033549a6cac131646f1b6f87721138"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872964:401872964833",
       "season": 2026,
       "capturedAt": "2026-10-02T00:59:55.502Z",
