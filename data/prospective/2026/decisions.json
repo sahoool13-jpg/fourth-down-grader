@@ -21458,6 +21458,212 @@
       },
       "reference": null,
       "snapshotHash": "51825ad3ce5d729588ffffaf1dabb5c3b7607c004f2042d3b144d52c89c3e09a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872964:401872964147",
+      "season": 2026,
+      "capturedAt": "2026-10-02T00:59:55.500Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:59",
+        "secondsRemaining": 3479,
+        "ydstogo": 1,
+        "yardline100": 75,
+        "fieldPositionText": "CLE 25",
+        "scoreDiff": 0,
+        "scoreText": "CLE 0–0 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.418,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872964147",
+        "actual": "PUNT",
+        "situationText": "4th & 1 at CLE 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0028560125479883958,
+          "baselineWp": 0.418,
+          "options": {
+            "GO": 0.40489312650124376,
+            "FG": null,
+            "PUNT": 0.40203711395325537
+          },
+          "grade": "A",
+          "wpRegret": 0.0028560125479883958,
+          "wpRegretPp": 0.2856012547988396,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0028560125479883958,
+          "baselineWp": 0.418,
+          "options": {
+            "GO": 0.40489312650124376,
+            "FG": null,
+            "PUNT": 0.40203711395325537
+          },
+          "grade": "A",
+          "wpRegret": 0.0028560125479883958,
+          "wpRegretPp": 0.2856012547988396,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5ad3a0bec8096c6933f663b0d20ecd0e1f922168e76d8b7540e480793c8a5eda"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872964:401872964833",
+      "season": 2026,
+      "capturedAt": "2026-10-02T00:59:55.502Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "1:29",
+        "secondsRemaining": 2789,
+        "ydstogo": 9,
+        "yardline100": 43,
+        "fieldPositionText": "PIT 43",
+        "scoreDiff": -7,
+        "scoreText": "CLE 0–7 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2714,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872964833",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at PIT 43"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010035788995562234,
+          "baselineWp": 0.2714,
+          "options": {
+            "GO": 0.25015789780657427,
+            "FG": 0.2601936868021365,
+            "PUNT": 0.2491431111969906
+          },
+          "grade": "B",
+          "wpRegret": 0.011050575605145913,
+          "wpRegretPp": 1.1050575605145911,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010035788995562234,
+          "baselineWp": 0.2714,
+          "options": {
+            "GO": 0.25015789780657427,
+            "FG": 0.2601936868021365,
+            "PUNT": 0.2491431111969906
+          },
+          "grade": "B",
+          "wpRegret": 0.011050575605145913,
+          "wpRegretPp": 1.1050575605145911,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "46e9190657a60330180279465104a8c1d18bf8327db1908e49741e5c2063015d"
     }
   ]
 }
