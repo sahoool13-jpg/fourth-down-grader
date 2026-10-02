@@ -21461,6 +21461,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872964:4018729641237",
+      "season": 2026,
+      "capturedAt": "2026-10-02T01:38:45.072Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "defense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "10:46",
+        "secondsRemaining": 2446,
+        "ydstogo": 5,
+        "yardline100": 72,
+        "fieldPositionText": "PIT 28",
+        "scoreDiff": 0,
+        "scoreText": "PIT 7–7 CLE",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5132,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729641237",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at PIT 28"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.009747508197819554,
+          "baselineWp": 0.5132,
+          "options": {
+            "GO": 0.4826607354498377,
+            "FG": null,
+            "PUNT": 0.49240824364765723
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.009747508197819554,
+          "baselineWp": 0.5132,
+          "options": {
+            "GO": 0.4826607354498377,
+            "FG": null,
+            "PUNT": 0.49240824364765723
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b874c9d3a74a81a29f968e7d9e61b88f28b1ee6d1ab8fb507ae53782be282917"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872964:401872964147",
       "season": 2026,
       "capturedAt": "2026-10-02T00:59:55.500Z",
@@ -21562,6 +21665,109 @@
       },
       "reference": null,
       "snapshotHash": "5ad3a0bec8096c6933f663b0d20ecd0e1f922168e76d8b7540e480793c8a5eda"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872964:4018729641562",
+      "season": 2026,
+      "capturedAt": "2026-10-02T01:38:45.169Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872964",
+        "name": "PIT @ CLE",
+        "kickoff": "2026-10-02T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "defense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "5:26",
+        "secondsRemaining": 2126,
+        "ydstogo": 10,
+        "yardline100": 30,
+        "fieldPositionText": "CLE 30",
+        "scoreDiff": -7,
+        "scoreText": "PIT 7–14 CLE",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3712,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729641562",
+        "actual": "FG",
+        "situationText": "4th & 10 at CLE 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.02239310673491618,
+          "baselineWp": 0.3712,
+          "options": {
+            "GO": 0.3377012361682213,
+            "FG": 0.36009434290313747,
+            "PUNT": 0.3290392374824242
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.02239310673491618,
+          "baselineWp": 0.3712,
+          "options": {
+            "GO": 0.3377012361682213,
+            "FG": 0.36009434290313747,
+            "PUNT": 0.3290392374824242
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d09012e74564693e4ba84af7e501e087408138deae3ff2a1354a2540bdf1f90e"
     },
     {
       "schemaVersion": 1,
