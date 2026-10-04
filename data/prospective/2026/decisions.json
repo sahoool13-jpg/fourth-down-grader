@@ -37920,6 +37920,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872974:4018729743717",
+      "season": 2026,
+      "capturedAt": "2026-10-04T23:20:26.981Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872974",
+        "name": "MIA @ MIN",
+        "kickoff": "2026-10-04T20:05Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "15",
+        "abbreviation": "MIA",
+        "name": "Miami Dolphins"
+      },
+      "defense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "5:48",
+        "secondsRemaining": 348,
+        "ydstogo": 8,
+        "yardline100": 80,
+        "fieldPositionText": "MIA 20",
+        "scoreDiff": -5,
+        "scoreText": "MIA 10–15 MIN",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.09960000000000002,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729743717",
+        "actual": "PUNT",
+        "situationText": "4th & 8 at MIA 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.00034204474591659206,
+          "baselineWp": 0.09960000000000002,
+          "options": {
+            "GO": 0.06280644445233635,
+            "FG": null,
+            "PUNT": 0.06314848919825294
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.00034204474591659206,
+          "baselineWp": 0.09960000000000002,
+          "options": {
+            "GO": 0.06280644445233635,
+            "FG": null,
+            "PUNT": 0.06314848919825294
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6749dbf36de3c2758d0b7becca0650aded6b01ca8f28355a9092ff10926db487"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872974:401872974501",
       "season": 2026,
       "capturedAt": "2026-10-04T21:02:50.322Z",
@@ -39165,6 +39268,109 @@
       },
       "reference": null,
       "snapshotHash": "b752564ee0c5c5cf42145f887711ee91c20413ce4f115f9b4f83ad842ccdb560"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872975:4018729753328",
+      "season": 2026,
+      "capturedAt": "2026-10-04T23:20:26.814Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872975",
+        "name": "DEN @ SF",
+        "kickoff": "2026-10-04T20:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "14:08",
+        "secondsRemaining": 848,
+        "ydstogo": 2,
+        "yardline100": 22,
+        "fieldPositionText": "SF 22",
+        "scoreDiff": -7,
+        "scoreText": "DEN 3–10 SF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.16410000000000002,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729753328",
+        "actual": "FG",
+        "situationText": "4th & 2 at SF 22"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.005300241325499749,
+          "baselineWp": 0.16410000000000002,
+          "options": {
+            "GO": 0.1398682289820014,
+            "FG": 0.13456798765650166,
+            "PUNT": 0.11099976034096673
+          },
+          "grade": "B",
+          "wpRegret": 0.005300241325499749,
+          "wpRegretPp": 0.5300241325499749,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.005300241325499749,
+          "baselineWp": 0.16410000000000002,
+          "options": {
+            "GO": 0.1398682289820014,
+            "FG": 0.13456798765650166,
+            "PUNT": 0.11099976034096673
+          },
+          "grade": "B",
+          "wpRegret": 0.005300241325499749,
+          "wpRegretPp": 0.5300241325499749,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "3de9eff5f76280ec2017b211386730c2b3e6135be1fa1ac1b557c8d812fa490c"
     },
     {
       "schemaVersion": 1,
@@ -40624,6 +40830,315 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872976:4018729763343",
+      "season": 2026,
+      "capturedAt": "2026-10-04T23:20:26.983Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872976",
+        "name": "KC @ LV",
+        "kickoff": "2026-10-04T20:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "13",
+        "abbreviation": "LV",
+        "name": "Las Vegas Raiders"
+      },
+      "defense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "11:12",
+        "secondsRemaining": 672,
+        "ydstogo": 11,
+        "yardline100": 26,
+        "fieldPositionText": "KC 26",
+        "scoreDiff": -4,
+        "scoreText": "LV 13–17 KC",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2848,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729763343",
+        "actual": "FG",
+        "situationText": "4th & 11 at KC 26"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016056659553832814,
+          "baselineWp": 0.2848,
+          "options": {
+            "GO": 0.21260078220146278,
+            "FG": 0.2286574417552956,
+            "PUNT": 0.19226644239740387
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016056659553832814,
+          "baselineWp": 0.2848,
+          "options": {
+            "GO": 0.21260078220146278,
+            "FG": 0.2286574417552956,
+            "PUNT": 0.19226644239740387
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "558832a913516b64a3a7fc29a0cdfa581623ab999d2283a1672fc8df3308d590"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872976:4018729763463",
+      "season": 2026,
+      "capturedAt": "2026-10-04T23:20:26.814Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872976",
+        "name": "KC @ LV",
+        "kickoff": "2026-10-04T20:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "defense": {
+        "id": "13",
+        "abbreviation": "LV",
+        "name": "Las Vegas Raiders"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "9:50",
+        "secondsRemaining": 590,
+        "ydstogo": 5,
+        "yardline100": 65,
+        "fieldPositionText": "KC 35",
+        "scoreDiff": 1,
+        "scoreText": "KC 17–16 LV",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.6305000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729763463",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at KC 35"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013360474747391216,
+          "baselineWp": 0.6305000000000001,
+          "options": {
+            "GO": 0.5793370495165006,
+            "FG": null,
+            "PUNT": 0.5926975242638918
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013360474747391216,
+          "baselineWp": 0.6305000000000001,
+          "options": {
+            "GO": 0.5793370495165006,
+            "FG": null,
+            "PUNT": 0.5926975242638918
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "9f7a28e0bb588a380b7d636f11c822f2e6b8f94db7d6f3c057a2e3b8a5f0e9b6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872976:4018729763687",
+      "season": 2026,
+      "capturedAt": "2026-10-04T23:20:26.804Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872976",
+        "name": "KC @ LV",
+        "kickoff": "2026-10-04T20:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "13",
+        "abbreviation": "LV",
+        "name": "Las Vegas Raiders"
+      },
+      "defense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "4:53",
+        "secondsRemaining": 293,
+        "ydstogo": 2,
+        "yardline100": 30,
+        "fieldPositionText": "KC 30",
+        "scoreDiff": -1,
+        "scoreText": "LV 16–17 KC",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4223,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729763687",
+        "actual": "FG",
+        "situationText": "4th & 2 at KC 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.021349862708787637,
+          "baselineWp": 0.4223,
+          "options": {
+            "GO": 0.3441147440314421,
+            "FG": 0.36546460674022974,
+            "PUNT": 0.25933105866246864
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.021349862708787637,
+          "baselineWp": 0.4223,
+          "options": {
+            "GO": 0.3441147440314421,
+            "FG": 0.36546460674022974,
+            "PUNT": 0.25933105866246864
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "fc2a33f65aa34630ea56123ea80d5789188d5cc6d8f8015c550532784a8749d0"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872976:401872976888",
       "season": 2026,
       "capturedAt": "2026-10-04T21:02:50.422Z",
@@ -41557,6 +42072,109 @@
       },
       "reference": null,
       "snapshotHash": "a50cdde59bb9d8eabf8b6dc632a979a46f1c853d1fcb2cdc28274a6fdb8d9751"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872977:4018729773331",
+      "season": 2026,
+      "capturedAt": "2026-10-04T23:20:26.818Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872977",
+        "name": "LAC @ SEA",
+        "kickoff": "2026-10-04T20:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "1:19",
+        "secondsRemaining": 979,
+        "ydstogo": 7,
+        "yardline100": 17,
+        "fieldPositionText": "LAC 17",
+        "scoreDiff": 14,
+        "scoreText": "SEA 27–13 LAC",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9764,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729773331",
+        "actual": "FG",
+        "situationText": "4th & 7 at LAC 17"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.007988453062403034,
+          "baselineWp": 0.9764,
+          "options": {
+            "GO": 0.9699823692076261,
+            "FG": 0.9779708222700292,
+            "PUNT": 0.9663904941352967
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.007988453062403034,
+          "baselineWp": 0.9764,
+          "options": {
+            "GO": 0.9699823692076261,
+            "FG": 0.9779708222700292,
+            "PUNT": 0.9663904941352967
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "3890c9eed635969c574be18d6f8264698e023fd2c60bf63e6fdcafccec57b655"
     },
     {
       "schemaVersion": 1,
