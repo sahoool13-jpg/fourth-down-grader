@@ -22813,6 +22813,1139 @@
       },
       "reference": null,
       "snapshotHash": "46e9190657a60330180279465104a8c1d18bf8327db1908e49741e5c2063015d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:4018729651182",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.194Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "12:45",
+        "secondsRemaining": 2565,
+        "ydstogo": 8,
+        "yardline100": 73,
+        "fieldPositionText": "WSH 27",
+        "scoreDiff": 6,
+        "scoreText": "WSH 6–0 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5856,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729651182",
+        "actual": "PUNT",
+        "situationText": "4th & 8 at WSH 27"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015269899607035953,
+          "baselineWp": 0.5856,
+          "options": {
+            "GO": 0.5507356848853009,
+            "FG": null,
+            "PUNT": 0.5660055844923368
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015269899607035953,
+          "baselineWp": 0.5856,
+          "options": {
+            "GO": 0.5507356848853009,
+            "FG": null,
+            "PUNT": 0.5660055844923368
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "e536f4d210a164b09ec3d1a29087ab1d23375390b362d4b0b7f96d5e97176c6b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:4018729651281",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.214Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "10:35",
+        "secondsRemaining": 2435,
+        "ydstogo": 1,
+        "yardline100": 52,
+        "fieldPositionText": "IND 48",
+        "scoreDiff": -6,
+        "scoreText": "IND 0–6 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.37339999999999995,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729651281",
+        "actual": "GO",
+        "situationText": "4th & 1 at IND 48"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.010661890687487297,
+          "baselineWp": 0.37339999999999995,
+          "options": {
+            "GO": 0.3615752639386774,
+            "FG": null,
+            "PUNT": 0.3509133732511901
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.010661890687487297,
+          "baselineWp": 0.37339999999999995,
+          "options": {
+            "GO": 0.3615752639386774,
+            "FG": null,
+            "PUNT": 0.3509133732511901
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "76691e849057820935d7e5d634552ede0dcacbe64b9de33d2defc1d9cafd457b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:4018729651473",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.209Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "8:34",
+        "secondsRemaining": 2314,
+        "ydstogo": 1,
+        "yardline100": 54,
+        "fieldPositionText": "WSH 46",
+        "scoreDiff": 6,
+        "scoreText": "WSH 6–0 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6156,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729651473",
+        "actual": "GO",
+        "situationText": "4th & 1 at WSH 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.009369513167670984,
+          "baselineWp": 0.6156,
+          "options": {
+            "GO": 0.6024275796976164,
+            "FG": null,
+            "PUNT": 0.5930580665299454
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.009369513167670984,
+          "baselineWp": 0.6156,
+          "options": {
+            "GO": 0.6024275796976164,
+            "FG": null,
+            "PUNT": 0.5930580665299454
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "528351e202df51d3010aa5f245da196ee7d550c9736da3d30a47d9fa4acc4b50"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:401872965189",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.092Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:57",
+        "secondsRemaining": 3477,
+        "ydstogo": 2,
+        "yardline100": 13,
+        "fieldPositionText": "IND 13",
+        "scoreDiff": 0,
+        "scoreText": "WSH 0–0 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4843,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872965189",
+        "actual": "FG",
+        "situationText": "4th & 2 at IND 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.007838973794527582,
+          "baselineWp": 0.4843,
+          "options": {
+            "GO": 0.4623198928413891,
+            "FG": 0.47015886663591666,
+            "PUNT": 0.43266021407275507
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.007838973794527582,
+          "baselineWp": 0.4843,
+          "options": {
+            "GO": 0.4623198928413891,
+            "FG": 0.47015886663591666,
+            "PUNT": 0.43266021407275507
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b217655725c04074d3383093c64cfcb5485de7e9c39cf9b67f643439acc34865"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:4018729651900",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.295Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:16",
+        "secondsRemaining": 1876,
+        "ydstogo": 6,
+        "yardline100": 56,
+        "fieldPositionText": "WSH 44",
+        "scoreDiff": -1,
+        "scoreText": "WSH 6–7 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4069,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729651900",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at WSH 44"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003958799270553648,
+          "baselineWp": 0.4069,
+          "options": {
+            "GO": 0.3786772771348672,
+            "FG": null,
+            "PUNT": 0.38263607640542086
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003958799270553648,
+          "baselineWp": 0.4069,
+          "options": {
+            "GO": 0.3786772771348672,
+            "FG": null,
+            "PUNT": 0.38263607640542086
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "4936a99157e61ac9adc00b186e0ae8ae00bd5a39380654c17c625535164dd0ef"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:4018729652107",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.326Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "0:00",
+        "secondsRemaining": 1800,
+        "ydstogo": 6,
+        "yardline100": 30,
+        "fieldPositionText": "WSH 30",
+        "scoreDiff": 1,
+        "scoreText": "IND 7–6 WSH",
+        "timeouts": 0,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6446000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729652107",
+        "actual": "FG",
+        "situationText": "4th & 6 at WSH 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016350796398148515,
+          "baselineWp": 0.6446000000000001,
+          "options": {
+            "GO": 0.6142743810948116,
+            "FG": 0.6306251774929601,
+            "PUNT": 0.5971423602003019
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016350796398148515,
+          "baselineWp": 0.6446000000000001,
+          "options": {
+            "GO": 0.6142743810948116,
+            "FG": 0.6306251774929601,
+            "PUNT": 0.5971423602003019
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "983aa8f776997eb5859cc7620ac981420689f858371a9b4e062a4f690d966ffb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:401872965313",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.101Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "10:50",
+        "secondsRemaining": 3350,
+        "ydstogo": 3,
+        "yardline100": 64,
+        "fieldPositionText": "IND 36",
+        "scoreDiff": -3,
+        "scoreText": "IND 0–3 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.46709999999999996,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872965313",
+        "actual": "PUNT",
+        "situationText": "4th & 3 at IND 36"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0021173137402932807,
+          "baselineWp": 0.46709999999999996,
+          "options": {
+            "GO": 0.4481040729910133,
+            "FG": null,
+            "PUNT": 0.45022138673130657
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0021173137402932807,
+          "baselineWp": 0.46709999999999996,
+          "options": {
+            "GO": 0.4481040729910133,
+            "FG": null,
+            "PUNT": 0.45022138673130657
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "3644012a0c3c90acd06fe51977e74b12e64c729d31832b8898d9d91a008c7a91"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:401872965515",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.110Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "6:21",
+        "secondsRemaining": 3081,
+        "ydstogo": 11,
+        "yardline100": 11,
+        "fieldPositionText": "IND 11",
+        "scoreDiff": 3,
+        "scoreText": "WSH 3–0 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5718,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872965515",
+        "actual": "FG",
+        "situationText": "4th & Goal at IND 11"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015126069262959785,
+          "baselineWp": 0.5718,
+          "options": {
+            "GO": 0.5371149547796091,
+            "FG": 0.5522410240425689,
+            "PUNT": 0.5127607880034498
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015126069262959785,
+          "baselineWp": 0.5718,
+          "options": {
+            "GO": 0.5371149547796091,
+            "FG": 0.5522410240425689,
+            "PUNT": 0.5127607880034498
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "422012faf0b49bc56606ee856e627b6bfe64ab264355da960621abff710b7a4e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:401872965639",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.105Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "5:31",
+        "secondsRemaining": 3031,
+        "ydstogo": 8,
+        "yardline100": 76,
+        "fieldPositionText": "IND 24",
+        "scoreDiff": -6,
+        "scoreText": "IND 0–6 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.36760000000000004,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872965639",
+        "actual": "PUNT",
+        "situationText": "4th & 8 at IND 24"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013107250276539528,
+          "baselineWp": 0.36760000000000004,
+          "options": {
+            "GO": 0.3376626368522606,
+            "FG": null,
+            "PUNT": 0.35076988712880014
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013107250276539528,
+          "baselineWp": 0.36760000000000004,
+          "options": {
+            "GO": 0.3376626368522606,
+            "FG": null,
+            "PUNT": 0.35076988712880014
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "e5c6c7313aa4c223a10fc4bf945945e5c98eb81afb853666c26dac28db6073b7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:401872965834",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.107Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "2:43",
+        "secondsRemaining": 2863,
+        "ydstogo": 2,
+        "yardline100": 67,
+        "fieldPositionText": "WSH 33",
+        "scoreDiff": 6,
+        "scoreText": "WSH 6–0 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5799,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872965834",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at WSH 33"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.001538598267683322,
+          "baselineWp": 0.5799,
+          "options": {
+            "GO": 0.5600175576212659,
+            "FG": null,
+            "PUNT": 0.5615561558889492
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.001538598267683322,
+          "baselineWp": 0.5799,
+          "options": {
+            "GO": 0.5600175576212659,
+            "FG": null,
+            "PUNT": 0.5615561558889492
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "9224ded67eeb10a01aa5074d5b4b0ae74d018cd0a25b57c4f8065ff1c377185c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872965:401872965976",
+      "season": 2026,
+      "capturedAt": "2026-10-04T15:21:05.292Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872965",
+        "name": "IND VS WSH",
+        "kickoff": "2026-10-04T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "0:27",
+        "secondsRemaining": 2727,
+        "ydstogo": 1,
+        "yardline100": 63,
+        "fieldPositionText": "IND 37",
+        "scoreDiff": -6,
+        "scoreText": "IND 0–6 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3711,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872965976",
+        "actual": "PUNT",
+        "situationText": "4th & 1 at IND 37"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.005716632286850709,
+          "baselineWp": 0.3711,
+          "options": {
+            "GO": 0.35873032710002767,
+            "FG": null,
+            "PUNT": 0.35301369481317696
+          },
+          "grade": "B",
+          "wpRegret": 0.005716632286850709,
+          "wpRegretPp": 0.5716632286850709,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.005716632286850709,
+          "baselineWp": 0.3711,
+          "options": {
+            "GO": 0.35873032710002767,
+            "FG": null,
+            "PUNT": 0.35301369481317696
+          },
+          "grade": "B",
+          "wpRegret": 0.005716632286850709,
+          "wpRegretPp": 0.5716632286850709,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c9fb6430147350ba44c0a0a3681a94793d8912c9b398ea868e5f3a5032801e72"
     }
   ]
 }
