@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-05T03:34:20.533Z",
+  "lastMaterialUpdateAt": "2026-10-05T03:59:59.880Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 429,
-    "gradable": 428,
+    "archived": 431,
+    "gradable": 430,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 428/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 430/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.13412500289327672,
-    "totalModelWpaBurnPp": 57.40550123832244,
-    "exactCoachModelAgreement": 0.8154205607476636,
-    "actualGoRate": 0.20093457943925233,
-    "modelGoRate": 0.22429906542056074
+    "meanModelWpaBurnPp": 0.13517164836648102,
+    "totalModelWpaBurnPp": 58.12380879758683,
+    "exactCoachModelAgreement": 0.813953488372093,
+    "actualGoRate": 0.20232558139534884,
+    "modelGoRate": 0.22790697674418606
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 30,
+    "GAME_NOT_FOUND": 29,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -114,6 +114,20 @@
       "endgameDecisions": 2
     },
     {
+      "team": "CAR",
+      "decisions": 17,
+      "gradable": 17,
+      "exactCoachModelAgreement": 0.5882352941176471,
+      "totalModelWpaBurnPp": 3.251377088086011,
+      "meanModelWpaBurnPp": 0.19125747576976537,
+      "costlyMistakes2Pp": 0,
+      "catastrophicMistakes5Pp": 0,
+      "actualGoRate": 0.29411764705882354,
+      "modelGoRate": 0.17647058823529413,
+      "aggressionDelta": 0.11764705882352941,
+      "endgameDecisions": 2
+    },
+    {
       "team": "KC",
       "decisions": 12,
       "gradable": 12,
@@ -129,17 +143,17 @@
     },
     {
       "team": "DET",
-      "decisions": 12,
-      "gradable": 12,
-      "exactCoachModelAgreement": 0.6666666666666666,
+      "decisions": 13,
+      "gradable": 13,
+      "exactCoachModelAgreement": 0.6923076923076923,
       "totalModelWpaBurnPp": 2.770525307487355,
-      "meanModelWpaBurnPp": 0.23087710895727956,
+      "meanModelWpaBurnPp": 0.21311733134518113,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.3333333333333333,
-      "modelGoRate": 0.25,
-      "aggressionDelta": 0.08333333333333333,
-      "endgameDecisions": 1
+      "actualGoRate": 0.38461538461538464,
+      "modelGoRate": 0.3076923076923077,
+      "aggressionDelta": 0.07692307692307693,
+      "endgameDecisions": 2
     },
     {
       "team": "LAC",
@@ -154,20 +168,6 @@
       "modelGoRate": 0.3125,
       "aggressionDelta": -0.125,
       "endgameDecisions": 2
-    },
-    {
-      "team": "CAR",
-      "decisions": 16,
-      "gradable": 16,
-      "exactCoachModelAgreement": 0.625,
-      "totalModelWpaBurnPp": 2.5330695288216143,
-      "meanModelWpaBurnPp": 0.1583168455513509,
-      "costlyMistakes2Pp": 0,
-      "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.3125,
-      "modelGoRate": 0.125,
-      "aggressionDelta": 0.1875,
-      "endgameDecisions": 1
     },
     {
       "team": "NE",
@@ -1040,6 +1040,27 @@
       "referenceRegretPp": null
     },
     {
+      "id": "401872978:4018729784784",
+      "eventId": "401872978",
+      "gameName": "DET @ CAR",
+      "offense": "CAR",
+      "defense": "DET",
+      "quarter": 4,
+      "clock": "2:12",
+      "ydstogo": 11,
+      "yardline100": 51,
+      "scoreDiff": 6,
+      "actual": "PUNT",
+      "optimal": "GO",
+      "grade": "B",
+      "modelWpaBurnPp": 0.7183075592643973,
+      "certainty": "TOSS-UP",
+      "endgameTags": [],
+      "description": null,
+      "referenceOptimal": null,
+      "referenceRegretPp": null
+    },
+    {
       "id": "401872964:4018729643915",
       "eventId": "401872964",
       "gameName": "PIT @ CLE",
@@ -1101,30 +1122,53 @@
       "description": null,
       "referenceOptimal": null,
       "referenceRegretPp": null
-    },
-    {
-      "id": "401872978:4018729781454",
-      "eventId": "401872978",
-      "gameName": "DET @ CAR",
-      "offense": "CAR",
-      "defense": "DET",
-      "quarter": 2,
-      "clock": "8:52",
-      "ydstogo": 4,
-      "yardline100": 42,
-      "scoreDiff": 1,
-      "actual": "GO",
-      "optimal": "FG",
-      "grade": "B",
-      "modelWpaBurnPp": 0.6592805140316405,
-      "certainty": "TOSS-UP",
-      "endgameTags": [],
-      "description": null,
-      "referenceOptimal": null,
-      "referenceRegretPp": null
     }
   ],
   "recent": [
+    {
+      "id": "401872978:4018729784879",
+      "capturedAt": "2026-10-05T03:59:59.879Z",
+      "gameName": "DET @ CAR",
+      "kickoff": "2026-10-05T00:20Z",
+      "offense": "DET",
+      "defense": "CAR",
+      "quarter": 4,
+      "clock": "1:29",
+      "ydstogo": 13,
+      "yardline100": 90,
+      "scoreDiff": -6,
+      "actual": "GO",
+      "optimal": "GO",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": [
+        "TRAILING_PUNT_SCARCITY"
+      ]
+    },
+    {
+      "id": "401872978:4018729784784",
+      "capturedAt": "2026-10-05T03:59:59.845Z",
+      "gameName": "DET @ CAR",
+      "kickoff": "2026-10-05T00:20Z",
+      "offense": "CAR",
+      "defense": "DET",
+      "quarter": 4,
+      "clock": "2:12",
+      "ydstogo": 11,
+      "yardline100": 51,
+      "scoreDiff": 6,
+      "actual": "PUNT",
+      "optimal": "GO",
+      "grade": "B",
+      "modelWpaBurnPp": 0.7183075592643973,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401872978:4018729784197",
       "capturedAt": "2026-10-05T03:34:13.808Z",
@@ -1931,48 +1975,6 @@
       "grade": "A",
       "modelWpaBurnPp": 0.30286425922453897,
       "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401872975:4018729752412",
-      "capturedAt": "2026-10-04T22:21:47.083Z",
-      "gameName": "DEN @ SF",
-      "kickoff": "2026-10-04T20:25Z",
-      "offense": "SF",
-      "defense": "DEN",
-      "quarter": 3,
-      "clock": "14:05",
-      "ydstogo": 9,
-      "yardline100": 68,
-      "scoreDiff": 0,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "LEAN",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401872974:4018729743034",
-      "capturedAt": "2026-10-04T22:21:47.029Z",
-      "gameName": "MIA @ MIN",
-      "kickoff": "2026-10-04T20:05Z",
-      "offense": "MIN",
-      "defense": "MIA",
-      "quarter": 3,
-      "clock": "2:00",
-      "ydstogo": 12,
-      "yardline100": 76,
-      "scoreDiff": 9,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "LEAN",
       "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
