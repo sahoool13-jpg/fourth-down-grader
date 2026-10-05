@@ -43858,6 +43858,626 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872978:4018729783419",
+      "season": 2026,
+      "capturedAt": "2026-10-05T03:34:13.630Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872978",
+        "name": "DET @ CAR",
+        "kickoff": "2026-10-05T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "defense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "14:49",
+        "secondsRemaining": 889,
+        "ydstogo": 19,
+        "yardline100": 48,
+        "fieldPositionText": "CAR 48",
+        "scoreDiff": -10,
+        "scoreText": "DET 19–29 CAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.14249999999999996,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729783419",
+        "actual": "PUNT",
+        "situationText": "4th & 19 at CAR 48"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01213747002460458,
+          "baselineWp": 0.14249999999999996,
+          "options": {
+            "GO": 0.10370450826262886,
+            "FG": 0.12088708996579525,
+            "PUNT": 0.10874961994119067
+          },
+          "grade": "B",
+          "wpRegret": 0.01213747002460458,
+          "wpRegretPp": 1.213747002460458,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01213747002460458,
+          "baselineWp": 0.14249999999999996,
+          "options": {
+            "GO": 0.10370450826262886,
+            "FG": 0.12088708996579525,
+            "PUNT": 0.10874961994119067
+          },
+          "grade": "B",
+          "wpRegret": 0.01213747002460458,
+          "wpRegretPp": 1.213747002460458,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "f33fde66327359f47a07c2149b9fe5c5b34bc7c8a3839e3a983d4f2b7d9f0bab"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872978:4018729783619",
+      "season": 2026,
+      "capturedAt": "2026-10-05T03:34:13.725Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872978",
+        "name": "DET @ CAR",
+        "kickoff": "2026-10-05T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "11:14",
+        "secondsRemaining": 674,
+        "ydstogo": 4,
+        "yardline100": 37,
+        "fieldPositionText": "DET 37",
+        "scoreDiff": 10,
+        "scoreText": "CAR 29–19 DET",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8866,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729783619",
+        "actual": "GO",
+        "situationText": "4th & 4 at DET 37"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.006141543574930242,
+          "baselineWp": 0.8866,
+          "options": {
+            "GO": 0.8671768391755654,
+            "FG": 0.8733183827504957,
+            "PUNT": 0.8581284744808748
+          },
+          "grade": "B",
+          "wpRegret": 0.006141543574930242,
+          "wpRegretPp": 0.6141543574930242,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.006141543574930242,
+          "baselineWp": 0.8866,
+          "options": {
+            "GO": 0.8671768391755654,
+            "FG": 0.8733183827504957,
+            "PUNT": 0.8581284744808748
+          },
+          "grade": "B",
+          "wpRegret": 0.006141543574930242,
+          "wpRegretPp": 0.6141543574930242,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "22d5ef4cf7f9b800d090005b02eb350d156cb8eb48616b915f4a5b649f34789a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872978:4018729783767",
+      "season": 2026,
+      "capturedAt": "2026-10-05T03:34:13.696Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872978",
+        "name": "DET @ CAR",
+        "kickoff": "2026-10-05T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "8:59",
+        "secondsRemaining": 539,
+        "ydstogo": 10,
+        "yardline100": 14,
+        "fieldPositionText": "DET 14",
+        "scoreDiff": 10,
+        "scoreText": "CAR 29–19 DET",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.937,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729783767",
+        "actual": "FG",
+        "situationText": "4th & 10 at DET 14"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011999125530613663,
+          "baselineWp": 0.937,
+          "options": {
+            "GO": 0.9096392015477389,
+            "FG": 0.9216383270783526,
+            "PUNT": 0.9006095913660728
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011999125530613663,
+          "baselineWp": 0.937,
+          "options": {
+            "GO": 0.9096392015477389,
+            "FG": 0.9216383270783526,
+            "PUNT": 0.9006095913660728
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "e5e079c487c841d9bea8336a410e0284cfcc7f9b3a83b86ce1a65fbb18893801"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872978:4018729784069",
+      "season": 2026,
+      "capturedAt": "2026-10-05T03:34:13.693Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872978",
+        "name": "DET @ CAR",
+        "kickoff": "2026-10-05T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "defense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "7:10",
+        "secondsRemaining": 430,
+        "ydstogo": 20,
+        "yardline100": 25,
+        "fieldPositionText": "CAR 25",
+        "scoreDiff": -13,
+        "scoreText": "DET 19–32 CAR",
+        "timeouts": 3,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.043200000000000016,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729784069",
+        "actual": "GO",
+        "situationText": "4th & 20 at CAR 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.003335850654257188,
+          "baselineWp": 0.043200000000000016,
+          "options": {
+            "GO": 0.022263123430416858,
+            "FG": 0.025598974084674046,
+            "PUNT": 0.01963891130021091
+          },
+          "grade": "A",
+          "wpRegret": 0.003335850654257188,
+          "wpRegretPp": 0.3335850654257188,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.003335850654257188,
+          "baselineWp": 0.043200000000000016,
+          "options": {
+            "GO": 0.022263123430416858,
+            "FG": 0.025598974084674046,
+            "PUNT": 0.01963891130021091
+          },
+          "grade": "A",
+          "wpRegret": 0.003335850654257188,
+          "wpRegretPp": 0.3335850654257188,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d5bdbe2e6277dac3a06dfbe63af6e99da88b3de3c6ba5f70b40c5ffcc27cc2fe"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872978:4018729784197",
+      "season": 2026,
+      "capturedAt": "2026-10-05T03:34:13.808Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872978",
+        "name": "DET @ CAR",
+        "kickoff": "2026-10-05T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "6:14",
+        "secondsRemaining": 374,
+        "ydstogo": 7,
+        "yardline100": 85,
+        "fieldPositionText": "CAR 15",
+        "scoreDiff": 13,
+        "scoreText": "CAR 32–19 DET",
+        "timeouts": 1,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9448,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729784197",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at CAR 15"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.016307592625615652,
+          "baselineWp": 0.9448,
+          "options": {
+            "GO": 0.9187684792013165,
+            "FG": null,
+            "PUNT": 0.9350760718269322
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.016307592625615652,
+          "baselineWp": 0.9448,
+          "options": {
+            "GO": 0.9187684792013165,
+            "FG": null,
+            "PUNT": 0.9350760718269322
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "022cf5e98d1a1a0f93d702290aa1041c86baf9cb4e59bf864198f9aa4b9eccd7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872978:4018729784422",
+      "season": 2026,
+      "capturedAt": "2026-10-05T03:34:13.807Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872978",
+        "name": "DET @ CAR",
+        "kickoff": "2026-10-05T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "defense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "4:05",
+        "secondsRemaining": 245,
+        "ydstogo": 5,
+        "yardline100": 10,
+        "fieldPositionText": "CAR 10",
+        "scoreDiff": -13,
+        "scoreText": "DET 19–32 CAR",
+        "timeouts": 3,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.01200000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729784422",
+        "actual": "GO",
+        "situationText": "4th & 5 at CAR 10"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0036503675788842156,
+          "baselineWp": 0.01200000000000001,
+          "options": {
+            "GO": 0.008293400190549369,
+            "FG": 0.0046430326116651535,
+            "PUNT": 0.0034777182898675604
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [
+            "FG_DOES_NOT_TIE_OR_LEAD"
+          ],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.003158728899875192,
+          "baselineWp": 0.01200000000000001,
+          "options": {
+            "GO": 0.008146659756171551,
+            "FG": 0.004987930856296359,
+            "PUNT": 0.0034777182898675604
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "00c6d5d883d93436e0df15bc79a755dcea7a5434e9745162e9b5c3b3af77340b"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872978:401872978467",
       "season": 2026,
       "capturedAt": "2026-10-05T01:05:34.686Z",
