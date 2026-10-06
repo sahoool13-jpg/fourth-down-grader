@@ -44899,6 +44899,418 @@
       },
       "reference": null,
       "snapshotHash": "00f37d75e457a1f6b42be8f8e18c57ce5cef245bd5cdf5030bd87a404e45f80c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872979:401872979321",
+      "season": 2026,
+      "capturedAt": "2026-10-06T00:59:20.316Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872979",
+        "name": "ATL @ NO",
+        "kickoff": "2026-10-06T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "defense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:50",
+        "secondsRemaining": 3470,
+        "ydstogo": 18,
+        "yardline100": 81,
+        "fieldPositionText": "NO 19",
+        "scoreDiff": -7,
+        "scoreText": "NO 0–7 ATL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.402,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872979321",
+        "actual": "PUNT",
+        "situationText": "4th & 18 at NO 19"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02653432336119299,
+          "baselineWp": 0.402,
+          "options": {
+            "GO": 0.359539215333896,
+            "FG": null,
+            "PUNT": 0.386073538695089
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02653432336119299,
+          "baselineWp": 0.402,
+          "options": {
+            "GO": 0.359539215333896,
+            "FG": null,
+            "PUNT": 0.386073538695089
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "85fd034f5f2ee0f051de66ad7c338d3d2c86f37ba0991d0bacd8405df63b403e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872979:401872979491",
+      "season": 2026,
+      "capturedAt": "2026-10-06T00:59:20.325Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872979",
+        "name": "ATL @ NO",
+        "kickoff": "2026-10-06T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "10:25",
+        "secondsRemaining": 3325,
+        "ydstogo": 12,
+        "yardline100": 41,
+        "fieldPositionText": "NO 41",
+        "scoreDiff": 7,
+        "scoreText": "ATL 7–0 NO",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5629,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872979491",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at NO 41"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.0180682477987526,
+          "baselineWp": 0.5629,
+          "options": {
+            "GO": 0.5351847685762111,
+            "FG": 0.5544156808898155,
+            "PUNT": 0.5363474330910629
+          },
+          "grade": "C",
+          "wpRegret": 0.0180682477987526,
+          "wpRegretPp": 1.8068247798752601,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.0180682477987526,
+          "baselineWp": 0.5629,
+          "options": {
+            "GO": 0.5351847685762111,
+            "FG": 0.5544156808898155,
+            "PUNT": 0.5363474330910629
+          },
+          "grade": "C",
+          "wpRegret": 0.0180682477987526,
+          "wpRegretPp": 1.8068247798752601,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d0ad4c1e0f75906dfecd83099b80ab3ef8b7311a6136261f7da984483d830828"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872979:401872979803",
+      "season": 2026,
+      "capturedAt": "2026-10-06T00:59:20.325Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872979",
+        "name": "ATL @ NO",
+        "kickoff": "2026-10-06T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "defense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "5:08",
+        "secondsRemaining": 3008,
+        "ydstogo": 6,
+        "yardline100": 34,
+        "fieldPositionText": "ATL 34",
+        "scoreDiff": -7,
+        "scoreText": "NO 0–7 ATL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.447,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872979803",
+        "actual": "FG",
+        "situationText": "4th & 6 at ATL 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015773785028633025,
+          "baselineWp": 0.447,
+          "options": {
+            "GO": 0.424643032024671,
+            "FG": 0.44041681705330404,
+            "PUNT": 0.41329271771841936
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015773785028633025,
+          "baselineWp": 0.447,
+          "options": {
+            "GO": 0.424643032024671,
+            "FG": 0.44041681705330404,
+            "PUNT": 0.41329271771841936
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ec1112762298f4eab1e1528e747aee9c9ca73e4e5ce9b335fdc4cee50da03085"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872979:401872979900",
+      "season": 2026,
+      "capturedAt": "2026-10-06T00:59:20.433Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872979",
+        "name": "ATL @ NO",
+        "kickoff": "2026-10-06T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "3:04",
+        "secondsRemaining": 2884,
+        "ydstogo": 14,
+        "yardline100": 62,
+        "fieldPositionText": "ATL 38",
+        "scoreDiff": 7,
+        "scoreText": "ATL 7–0 NO",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5635,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872979900",
+        "actual": "PUNT",
+        "situationText": "4th & 14 at ATL 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.017390422501631586,
+          "baselineWp": 0.5635,
+          "options": {
+            "GO": 0.5277097973299233,
+            "FG": null,
+            "PUNT": 0.5451002198315549
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.017390422501631586,
+          "baselineWp": 0.5635,
+          "options": {
+            "GO": 0.5277097973299233,
+            "FG": null,
+            "PUNT": 0.5451002198315549
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "722176995e32d0959101334c10c8f10ca8568248ddf3d7fda68550272865f8c6"
     }
   ]
 }
