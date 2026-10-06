@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-06T02:35:09.977Z",
+  "lastMaterialUpdateAt": "2026-10-06T02:54:59.103Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 439,
-    "gradable": 438,
+    "archived": 441,
+    "gradable": 440,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 438/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 440/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.13793380757750934,
-    "totalModelWpaBurnPp": 60.41500771894909,
-    "exactCoachModelAgreement": 0.8105022831050228,
-    "actualGoRate": 0.19863013698630136,
-    "modelGoRate": 0.22602739726027396
+    "meanModelWpaBurnPp": 0.13739395337696736,
+    "totalModelWpaBurnPp": 60.453339485865634,
+    "exactCoachModelAgreement": 0.8090909090909091,
+    "actualGoRate": 0.20227272727272727,
+    "modelGoRate": 0.22727272727272727
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 31,
+    "GAME_NOT_FOUND": 30,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -409,16 +409,16 @@
     },
     {
       "team": "NO",
-      "decisions": 9,
-      "gradable": 9,
-      "exactCoachModelAgreement": 0.7777777777777778,
-      "totalModelWpaBurnPp": 0.48437414148699703,
-      "meanModelWpaBurnPp": 0.05381934905411078,
+      "decisions": 11,
+      "gradable": 11,
+      "exactCoachModelAgreement": 0.7272727272727273,
+      "totalModelWpaBurnPp": 0.5227059084035457,
+      "meanModelWpaBurnPp": 0.04751871894577688,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.1111111111111111,
-      "modelGoRate": 0.2222222222222222,
-      "aggressionDelta": -0.1111111111111111,
+      "actualGoRate": 0.2727272727272727,
+      "modelGoRate": 0.2727272727272727,
+      "aggressionDelta": 0,
       "endgameDecisions": 1
     },
     {
@@ -1139,6 +1139,48 @@
     }
   ],
   "recent": [
+    {
+      "id": "401872979:4018729793412",
+      "capturedAt": "2026-10-06T02:54:59.102Z",
+      "gameName": "ATL @ NO",
+      "kickoff": "2026-10-06T00:15Z",
+      "offense": "NO",
+      "defense": "ATL",
+      "quarter": 4,
+      "clock": "13:59",
+      "ydstogo": 1,
+      "yardline100": 16,
+      "scoreDiff": -21,
+      "actual": "GO",
+      "optimal": "GO",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401872979:4018729793217",
+      "capturedAt": "2026-10-06T02:54:59.008Z",
+      "gameName": "ATL @ NO",
+      "kickoff": "2026-10-06T00:15Z",
+      "offense": "NO",
+      "defense": "ATL",
+      "quarter": 3,
+      "clock": "1:33",
+      "ydstogo": 10,
+      "yardline100": 43,
+      "scoreDiff": -21,
+      "actual": "GO",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0.038331766916548625,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401872979:4018729792225",
       "capturedAt": "2026-10-06T02:35:02.069Z",
@@ -1942,48 +1984,6 @@
       "ydstogo": 11,
       "yardline100": 65,
       "scoreDiff": 3,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "CLEAR",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401872977:4018729772925",
-      "capturedAt": "2026-10-04T22:43:35.444Z",
-      "gameName": "LAC @ SEA",
-      "kickoff": "2026-10-04T20:25Z",
-      "offense": "LAC",
-      "defense": "SEA",
-      "quarter": 3,
-      "clock": "5:54",
-      "ydstogo": 3,
-      "yardline100": 13,
-      "scoreDiff": -21,
-      "actual": "GO",
-      "optimal": "GO",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401872975:4018729752717",
-      "capturedAt": "2026-10-04T22:43:35.395Z",
-      "gameName": "DEN @ SF",
-      "kickoff": "2026-10-04T20:25Z",
-      "offense": "SF",
-      "defense": "DEN",
-      "quarter": 3,
-      "clock": "9:52",
-      "ydstogo": 7,
-      "yardline100": 89,
-      "scoreDiff": 0,
       "actual": "PUNT",
       "optimal": "PUNT",
       "grade": "A+",
