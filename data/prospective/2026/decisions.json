@@ -46357,6 +46357,521 @@
       },
       "reference": null,
       "snapshotHash": "b9c8538bcf2a791a6bda5036f32328513bfabd9e7901b6eec4d153d72c7858da"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872980:4018729801339",
+      "season": 2026,
+      "capturedAt": "2026-10-09T01:45:30.300Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872980",
+        "name": "TB @ DAL",
+        "kickoff": "2026-10-09T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "9:20",
+        "secondsRemaining": 2360,
+        "ydstogo": 10,
+        "yardline100": 47,
+        "fieldPositionText": "TB 47",
+        "scoreDiff": 0,
+        "scoreText": "DAL 7–7 TB",
+        "timeouts": 1,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.817,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729801339",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at TB 47"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0005411135545807522,
+          "baselineWp": 0.817,
+          "options": {
+            "GO": 0.7975833036826426,
+            "FG": 0.7988625880627871,
+            "PUNT": 0.7994037016173678
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0005411135545807522,
+          "baselineWp": 0.817,
+          "options": {
+            "GO": 0.7975833036826426,
+            "FG": 0.7988625880627871,
+            "PUNT": 0.7994037016173678
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c1bb08f9fd4ea422dab15d3a657acb44346809e2fb366bc9a098d4150d729470"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872980:4018729801620",
+      "season": 2026,
+      "capturedAt": "2026-10-09T01:45:30.399Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872980",
+        "name": "TB @ DAL",
+        "kickoff": "2026-10-09T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "defense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "3:47",
+        "secondsRemaining": 2027,
+        "ydstogo": 10,
+        "yardline100": 48,
+        "fieldPositionText": "DAL 48",
+        "scoreDiff": 0,
+        "scoreText": "TB 7–7 DAL",
+        "timeouts": 3,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.19640000000000002,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729801620",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at DAL 48"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0022486067246189068,
+          "baselineWp": 0.19640000000000002,
+          "options": {
+            "GO": 0.1758909243121785,
+            "FG": 0.17542714381574354,
+            "PUNT": 0.17813953103679742
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0022486067246189068,
+          "baselineWp": 0.19640000000000002,
+          "options": {
+            "GO": 0.1758909243121785,
+            "FG": 0.17542714381574354,
+            "PUNT": 0.17813953103679742
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5dbc9650c48e8951ef1ef0be5c5908c65b063876e6b44bddd80d06c601e0e18b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872980:4018729801749",
+      "season": 2026,
+      "capturedAt": "2026-10-09T01:45:30.496Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872980",
+        "name": "TB @ DAL",
+        "kickoff": "2026-10-09T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "3:15",
+        "secondsRemaining": 1995,
+        "ydstogo": 10,
+        "yardline100": 82,
+        "fieldPositionText": "DAL 18",
+        "scoreDiff": 0,
+        "scoreText": "DAL 7–7 TB",
+        "timeouts": 1,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7637,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729801749",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at DAL 18"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.021987136160963705,
+          "baselineWp": 0.7637,
+          "options": {
+            "GO": 0.7243695393355596,
+            "FG": null,
+            "PUNT": 0.7463566754965233
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.021987136160963705,
+          "baselineWp": 0.7637,
+          "options": {
+            "GO": 0.7243695393355596,
+            "FG": null,
+            "PUNT": 0.7463566754965233
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d7fd8b2a42e5ebdf61b2a769a0151e6767f1bc4503e1c596b4e0082172366618"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872980:4018729801888",
+      "season": 2026,
+      "capturedAt": "2026-10-09T01:45:30.497Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872980",
+        "name": "TB @ DAL",
+        "kickoff": "2026-10-09T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "defense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "2:00",
+        "secondsRemaining": 1920,
+        "ydstogo": 9,
+        "yardline100": 51,
+        "fieldPositionText": "TB 49",
+        "scoreDiff": 0,
+        "scoreText": "TB 7–7 DAL",
+        "timeouts": 3,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.19979999999999998,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729801888",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at TB 49"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003317362275214425,
+          "baselineWp": 0.19979999999999998,
+          "options": {
+            "GO": 0.17898872861569112,
+            "FG": 0.17300101262496603,
+            "PUNT": 0.18230609089090555
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003317362275214425,
+          "baselineWp": 0.19979999999999998,
+          "options": {
+            "GO": 0.17898872861569112,
+            "FG": 0.17300101262496603,
+            "PUNT": 0.18230609089090555
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d75ae2784179075cdcdbd56af676a33498c7fe798f25a64f9f3826cb26c69e59"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872980:4018729802060",
+      "season": 2026,
+      "capturedAt": "2026-10-09T01:45:30.374Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872980",
+        "name": "TB @ DAL",
+        "kickoff": "2026-10-09T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "0:21",
+        "secondsRemaining": 1821,
+        "ydstogo": 6,
+        "yardline100": 23,
+        "fieldPositionText": "TB 23",
+        "scoreDiff": 0,
+        "scoreText": "DAL 7–7 TB",
+        "timeouts": 1,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8302,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729802060",
+        "actual": "FG",
+        "situationText": "4th & 6 at TB 23"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010307797825439446,
+          "baselineWp": 0.8302,
+          "options": {
+            "GO": 0.8089433179983634,
+            "FG": 0.8192511158238028,
+            "PUNT": 0.7935417703933054
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010307797825439446,
+          "baselineWp": 0.8302,
+          "options": {
+            "GO": 0.8089433179983634,
+            "FG": 0.8192511158238028,
+            "PUNT": 0.7935417703933054
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "152d1855cd7e9b6790f4824c450f3b8b34574cbca0bfcccebc6be81679adc998"
     }
   ]
 }
