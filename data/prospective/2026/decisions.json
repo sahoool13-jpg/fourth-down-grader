@@ -47608,6 +47608,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872981:4018729812435",
+      "season": 2026,
+      "capturedAt": "2026-10-11T15:45:00.986Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872981",
+        "name": "PHI VS JAX",
+        "kickoff": "2026-10-11T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "13:38",
+        "secondsRemaining": 1718,
+        "ydstogo": 3,
+        "yardline100": 63,
+        "fieldPositionText": "PHI 37",
+        "scoreDiff": 7,
+        "scoreText": "PHI 14–7 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5367,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729812435",
+        "actual": "PUNT",
+        "situationText": "4th & 3 at PHI 37"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003906464624259032,
+          "baselineWp": 0.5367,
+          "options": {
+            "GO": 0.5078741620173787,
+            "FG": null,
+            "PUNT": 0.5117806266416377
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003906464624259032,
+          "baselineWp": 0.5367,
+          "options": {
+            "GO": 0.5078741620173787,
+            "FG": null,
+            "PUNT": 0.5117806266416377
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c2e4aa4633b1231f0b7f57ca5df6c35197aac32cec660c753959f1ba3f04c38d"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872981:401872981307",
       "season": 2026,
       "capturedAt": "2026-10-11T14:22:42.617Z",
