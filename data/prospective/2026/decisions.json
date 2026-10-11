@@ -48440,6 +48440,526 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872981:4018729814280",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.445Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872981",
+        "name": "PHI VS JAX",
+        "kickoff": "2026-10-11T13:30Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "5:40",
+        "secondsRemaining": 340,
+        "ydstogo": 9,
+        "yardline100": 93,
+        "fieldPositionText": "PHI 7",
+        "scoreDiff": 4,
+        "scoreText": "PHI 14–10 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.5752999999999999,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729814280",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at PHI 7"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.07910476486894524,
+          "baselineWp": 0.5752999999999999,
+          "options": {
+            "GO": 0.4480815056133308,
+            "FG": null,
+            "PUNT": 0.5271862704822761
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.07910476486894524,
+          "baselineWp": 0.5752999999999999,
+          "options": {
+            "GO": 0.4480815056133308,
+            "FG": null,
+            "PUNT": 0.5271862704822761
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1214ae0ab63fb928931f1059a0f18d17d561fbcdb222f4da0ff6e64177cb3b86"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872981:4018729814408",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.598Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872981",
+        "name": "PHI VS JAX",
+        "kickoff": "2026-10-11T13:30Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "3:20",
+        "secondsRemaining": 200,
+        "ydstogo": 5,
+        "yardline100": 27,
+        "fieldPositionText": "PHI 27",
+        "scoreDiff": -4,
+        "scoreText": "JAX 10–14 PHI",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2897,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729814408",
+        "actual": "GO",
+        "situationText": "4th & 5 at PHI 27"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01773444576922739,
+          "baselineWp": 0.2897,
+          "options": {
+            "GO": 0.20690523472072314,
+            "FG": 0.18917078895149575,
+            "PUNT": 0.14582515270956872
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01773444576922739,
+          "baselineWp": 0.2897,
+          "options": {
+            "GO": 0.20690523472072314,
+            "FG": 0.18917078895149575,
+            "PUNT": 0.14582515270956872
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0dbbf26a4471b5b458608d5ed66ce90fa9c89d688a523b1ce375030ad8e06c50"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872981:4018729814540",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.589Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872981",
+        "name": "PHI VS JAX",
+        "kickoff": "2026-10-11T13:30Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "2:14",
+        "secondsRemaining": 134,
+        "ydstogo": 16,
+        "yardline100": 71,
+        "fieldPositionText": "PHI 29",
+        "scoreDiff": -2,
+        "scoreText": "PHI 14–16 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.1985,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729814540",
+        "actual": "PUNT",
+        "situationText": "4th & 16 at PHI 29"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02009587662479398,
+          "baselineWp": 0.1985,
+          "options": {
+            "GO": 0.09466216915842725,
+            "FG": null,
+            "PUNT": 0.11475804578322123
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02009587662479398,
+          "baselineWp": 0.1985,
+          "options": {
+            "GO": 0.09466216915842725,
+            "FG": null,
+            "PUNT": 0.11475804578322123
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c02d9cc6cab1908348bf2c70459d4219828331557db108f366fda0e2c2226382"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872981:4018729814652",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.449Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872981",
+        "name": "PHI VS JAX",
+        "kickoff": "2026-10-11T13:30Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "1:46",
+        "secondsRemaining": 106,
+        "ydstogo": 2,
+        "yardline100": 69,
+        "fieldPositionText": "JAX 31",
+        "scoreDiff": 2,
+        "scoreText": "JAX 16–14 PHI",
+        "timeouts": 2,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.6958,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729814652",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at JAX 31"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "CLEAR",
+          "edge": 0.14907062201215304,
+          "baselineWp": 0.6958,
+          "options": {
+            "GO": 0.7880861897139687,
+            "FG": null,
+            "PUNT": 0.6390155677018157
+          },
+          "grade": "F",
+          "wpRegret": 0.14907062201215304,
+          "wpRegretPp": 14.907062201215304,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [
+            "CONVERSION_CAN_SEAL"
+          ],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "CLEAR",
+          "edge": 0.1413756792925277,
+          "baselineWp": 0.6958,
+          "options": {
+            "GO": 0.7803912469943434,
+            "FG": null,
+            "PUNT": 0.6390155677018157
+          },
+          "grade": "F",
+          "wpRegret": 0.1413756792925277,
+          "wpRegretPp": 14.13756792925277,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "03c41e92fba0edc6d0bd318aa0825eaf0f0a8be3e336d30f47e00cf01de5f365"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872981:4018729814917",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.653Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872981",
+        "name": "PHI VS JAX",
+        "kickoff": "2026-10-11T13:30Z",
+        "stateAtCapture": "post"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "0:08",
+        "secondsRemaining": 8,
+        "ydstogo": 6,
+        "yardline100": 30,
+        "fieldPositionText": "JAX 30",
+        "scoreDiff": -2,
+        "scoreText": "PHI 14–16 JAX",
+        "timeouts": 1,
+        "opponentTimeouts": 0,
+        "baselineWp": 0.6132,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729814917",
+        "actual": "FG",
+        "situationText": "4th & 6 at JAX 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.15363469358463322,
+          "baselineWp": 0.6132,
+          "options": {
+            "GO": 0.440515993738239,
+            "FG": 0.5941506873228722,
+            "PUNT": 0.002319928715006727
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [
+            "TRAILING_PUNT_SCARCITY",
+            "FG_TAKES_LEAD"
+          ],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.07430741850682543,
+          "baselineWp": 0.6132,
+          "options": {
+            "GO": 0.440515993738239,
+            "FG": 0.5148234122450644,
+            "PUNT": 0.002319928715006727
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "bca42a6b07dd8e92c10c096375d220c3b060868c3226ae1d64862a059f323cb7"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872981:401872981533",
       "season": 2026,
       "capturedAt": "2026-10-11T14:22:42.620Z",
@@ -48749,6 +49269,933 @@
       },
       "reference": null,
       "snapshotHash": "bc2ef358f8a462ae6a8569866b2fdca287a7624024b972972705d1cb07cf67dc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872983:401872983136",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.651Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872983",
+        "name": "CLE @ NYJ",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "5",
+        "abbreviation": "CLE",
+        "name": "Cleveland Browns"
+      },
+      "defense": {
+        "id": "20",
+        "abbreviation": "NYJ",
+        "name": "New York Jets"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:58",
+        "secondsRemaining": 3478,
+        "ydstogo": 11,
+        "yardline100": 67,
+        "fieldPositionText": "CLE 33",
+        "scoreDiff": 0,
+        "scoreText": "CLE 0–0 NYJ",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.42910000000000004,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872983136",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at CLE 33"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013029744341318983,
+          "baselineWp": 0.42910000000000004,
+          "options": {
+            "GO": 0.39998665000855765,
+            "FG": null,
+            "PUNT": 0.41301639434987664
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013029744341318983,
+          "baselineWp": 0.42910000000000004,
+          "options": {
+            "GO": 0.39998665000855765,
+            "FG": null,
+            "PUNT": 0.41301639434987664
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ac05e456c09f687bb204f6572faa077e9b37d83c660eb819d0237cb6aa1c90df"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872984:401872984271",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.555Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872984",
+        "name": "HOU @ TEN",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "10",
+        "abbreviation": "TEN",
+        "name": "Tennessee Titans"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "10:39",
+        "secondsRemaining": 3339,
+        "ydstogo": 4,
+        "yardline100": 12,
+        "fieldPositionText": "HOU 12",
+        "scoreDiff": 0,
+        "scoreText": "TEN 0–0 HOU",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3861,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872984271",
+        "actual": "FG",
+        "situationText": "4th & 4 at HOU 12"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008465786275257015,
+          "baselineWp": 0.3861,
+          "options": {
+            "GO": 0.3621801755342293,
+            "FG": 0.37064596180948634,
+            "PUNT": 0.3354491077138831
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008465786275257015,
+          "baselineWp": 0.3861,
+          "options": {
+            "GO": 0.3621801755342293,
+            "FG": 0.37064596180948634,
+            "PUNT": 0.3354491077138831
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "bfba88387f45e6eb183279956f820d7b93818a6589f5247b45a91b793b8a7347"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872984:401872984419",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.557Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872984",
+        "name": "HOU @ TEN",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "defense": {
+        "id": "10",
+        "abbreviation": "TEN",
+        "name": "Tennessee Titans"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "9:12",
+        "secondsRemaining": 3252,
+        "ydstogo": 5,
+        "yardline100": 51,
+        "fieldPositionText": "HOU 49",
+        "scoreDiff": -3,
+        "scoreText": "HOU 0–3 TEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5757,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872984419",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at HOU 49"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0010835813133962535,
+          "baselineWp": 0.5757,
+          "options": {
+            "GO": 0.556536750697107,
+            "FG": 0.5454037963513615,
+            "PUNT": 0.5554531693837107
+          },
+          "grade": "A",
+          "wpRegret": 0.0010835813133962535,
+          "wpRegretPp": 0.10835813133962535,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0010835813133962535,
+          "baselineWp": 0.5757,
+          "options": {
+            "GO": 0.556536750697107,
+            "FG": 0.5454037963513615,
+            "PUNT": 0.5554531693837107
+          },
+          "grade": "A",
+          "wpRegret": 0.0010835813133962535,
+          "wpRegretPp": 0.10835813133962535,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "fda85d86eca2d7bdba3b0a4f3245201c85f7b95be39faab9c22fb5b143ed89df"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872985:401872985193",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.699Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872985",
+        "name": "IND @ PIT",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:28",
+        "secondsRemaining": 3448,
+        "ydstogo": 25,
+        "yardline100": 80,
+        "fieldPositionText": "PIT 20",
+        "scoreDiff": 0,
+        "scoreText": "PIT 0–0 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4536,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872985193",
+        "actual": "PUNT",
+        "situationText": "4th & 25 at PIT 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.028110473963581517,
+          "baselineWp": 0.4536,
+          "options": {
+            "GO": 0.4090793785574413,
+            "FG": null,
+            "PUNT": 0.4371898525210228
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.028110473963581517,
+          "baselineWp": 0.4536,
+          "options": {
+            "GO": 0.4090793785574413,
+            "FG": null,
+            "PUNT": 0.4371898525210228
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d995d8cce74d91debbc057ea8da601b6a67746be55e74126ccca952490fe73fd"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872985:401872985363",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.687Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872985",
+        "name": "IND @ PIT",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "8:57",
+        "secondsRemaining": 3237,
+        "ydstogo": 5,
+        "yardline100": 39,
+        "fieldPositionText": "PIT 39",
+        "scoreDiff": 0,
+        "scoreText": "IND 0–0 PIT",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5018,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872985363",
+        "actual": "FG",
+        "situationText": "4th & 5 at PIT 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.013726788474796636,
+          "baselineWp": 0.5018,
+          "options": {
+            "GO": 0.4812419820360923,
+            "FG": 0.49496877051088894,
+            "PUNT": 0.47292467840369207
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.013726788474796636,
+          "baselineWp": 0.5018,
+          "options": {
+            "GO": 0.4812419820360923,
+            "FG": 0.49496877051088894,
+            "PUNT": 0.47292467840369207
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a46244ed298ec2e51d541bbcd038837e346570a193ecc5bc8cad26a150fe25dc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872986:401872986136",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.565Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872986",
+        "name": "LV @ NE",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "13",
+        "abbreviation": "LV",
+        "name": "Las Vegas Raiders"
+      },
+      "defense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "14:02",
+        "secondsRemaining": 3542,
+        "ydstogo": 6,
+        "yardline100": 61,
+        "fieldPositionText": "LV 39",
+        "scoreDiff": 0,
+        "scoreText": "LV 0–0 NE",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3509,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872986136",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at LV 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004251904849491173,
+          "baselineWp": 0.3509,
+          "options": {
+            "GO": 0.3319347610084669,
+            "FG": null,
+            "PUNT": 0.3361866658579581
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004251904849491173,
+          "baselineWp": 0.3509,
+          "options": {
+            "GO": 0.3319347610084669,
+            "FG": null,
+            "PUNT": 0.3361866658579581
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "df96e53f6bc49dc86f17a5a79da693325790747c2df1cbcd807f7fcad5a4bf24"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872987:401872987308",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.806Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872987",
+        "name": "MIN @ NO",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "defense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "9:04",
+        "secondsRemaining": 3244,
+        "ydstogo": 6,
+        "yardline100": 21,
+        "fieldPositionText": "NO 21",
+        "scoreDiff": 0,
+        "scoreText": "MIN 0–0 NO",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5959,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872987308",
+        "actual": "FG",
+        "situationText": "4th & 6 at NO 21"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016661286817419185,
+          "baselineWp": 0.5959,
+          "options": {
+            "GO": 0.5705782796669425,
+            "FG": 0.5872395664843617,
+            "PUNT": 0.5523665113918442
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016661286817419185,
+          "baselineWp": 0.5959,
+          "options": {
+            "GO": 0.5705782796669425,
+            "FG": 0.5872395664843617,
+            "PUNT": 0.5523665113918442
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "93fb3881d3c23d70d41e10b46749187d02fe31a3e90fd0ebc06e3ff8ddb7949f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872987:401872987431",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.805Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872987",
+        "name": "MIN @ NO",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "defense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "7:48",
+        "secondsRemaining": 3168,
+        "ydstogo": 9,
+        "yardline100": 72,
+        "fieldPositionText": "NO 28",
+        "scoreDiff": 0,
+        "scoreText": "NO 0–0 MIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4186,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872987431",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at NO 28"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01400790629635279,
+          "baselineWp": 0.4186,
+          "options": {
+            "GO": 0.3875404925517075,
+            "FG": null,
+            "PUNT": 0.4015483988480603
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01400790629635279,
+          "baselineWp": 0.4186,
+          "options": {
+            "GO": 0.3875404925517075,
+            "FG": null,
+            "PUNT": 0.4015483988480603
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "9be19532f0aab571255ff5aba4adae4926e4fea0e2d9421825dfe2f3486a068b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872990:401872990192",
+      "season": 2026,
+      "capturedAt": "2026-10-11T17:20:21.460Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872990",
+        "name": "CHI @ GB",
+        "kickoff": "2026-10-11T17:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:13",
+        "secondsRemaining": 3433,
+        "ydstogo": 15,
+        "yardline100": 62,
+        "fieldPositionText": "CHI 38",
+        "scoreDiff": 0,
+        "scoreText": "CHI 0–0 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5536,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872990192",
+        "actual": "PUNT",
+        "situationText": "4th & 15 at CHI 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.016495390439992375,
+          "baselineWp": 0.5536,
+          "options": {
+            "GO": 0.5205813904452861,
+            "FG": null,
+            "PUNT": 0.5370767808852784
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.016495390439992375,
+          "baselineWp": 0.5536,
+          "options": {
+            "GO": 0.5205813904452861,
+            "FG": null,
+            "PUNT": 0.5370767808852784
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5e1c0d351c61289d7a001d43c162e30f19a5ae5695fc21cc004eae971a8897f9"
     }
   ]
 }
