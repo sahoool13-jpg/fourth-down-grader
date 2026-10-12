@@ -67604,6 +67604,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872993:4018729932667",
+      "season": 2026,
+      "capturedAt": "2026-10-12T03:06:15.672Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872993",
+        "name": "BAL @ ATL",
+        "kickoff": "2026-10-12T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "3:47",
+        "secondsRemaining": 1127,
+        "ydstogo": 2,
+        "yardline100": 39,
+        "fieldPositionText": "BAL 39",
+        "scoreDiff": 2,
+        "scoreText": "ATL 17–15 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6393,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729932667",
+        "actual": "GO",
+        "situationText": "4th & 2 at BAL 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.006385765823588629,
+          "baselineWp": 0.6393,
+          "options": {
+            "GO": 0.6119662812406509,
+            "FG": 0.6183520470642395,
+            "PUNT": 0.5907845336757563
+          },
+          "grade": "B",
+          "wpRegret": 0.006385765823588629,
+          "wpRegretPp": 0.6385765823588629,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.006385765823588629,
+          "baselineWp": 0.6393,
+          "options": {
+            "GO": 0.6119662812406509,
+            "FG": 0.6183520470642395,
+            "PUNT": 0.5907845336757563
+          },
+          "grade": "B",
+          "wpRegret": 0.006385765823588629,
+          "wpRegretPp": 0.6385765823588629,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "9875f5c64408d6521552588d1ac6c44121df28ddc53445666b3ce22d6d1089eb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872993:4018729932813",
+      "season": 2026,
+      "capturedAt": "2026-10-12T03:06:15.836Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872993",
+        "name": "BAL @ ATL",
+        "kickoff": "2026-10-12T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "1:38",
+        "secondsRemaining": 998,
+        "ydstogo": 11,
+        "yardline100": 62,
+        "fieldPositionText": "BAL 38",
+        "scoreDiff": -2,
+        "scoreText": "BAL 15–17 ATL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3457,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729932813",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at BAL 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015432823402480256,
+          "baselineWp": 0.3457,
+          "options": {
+            "GO": 0.2903470223547569,
+            "FG": null,
+            "PUNT": 0.30577984575723716
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015432823402480256,
+          "baselineWp": 0.3457,
+          "options": {
+            "GO": 0.2903470223547569,
+            "FG": null,
+            "PUNT": 0.30577984575723716
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "cb2386b59a72242d7627a3bd72c1cbe5618918c9a7727ce08877c3d5114cfca8"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872993:401872993286",
       "season": 2026,
       "capturedAt": "2026-10-12T01:09:21.737Z",
@@ -67705,6 +67911,315 @@
       },
       "reference": null,
       "snapshotHash": "684d8578d01efe80778024a98436c3fb375083943ce15561f60254d91243cbd3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872993:4018729933252",
+      "season": 2026,
+      "capturedAt": "2026-10-12T03:06:15.722Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872993",
+        "name": "BAL @ ATL",
+        "kickoff": "2026-10-12T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "8:03",
+        "secondsRemaining": 483,
+        "ydstogo": 9,
+        "yardline100": 16,
+        "fieldPositionText": "BAL 16",
+        "scoreDiff": 2,
+        "scoreText": "ATL 17–15 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7357,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729933252",
+        "actual": "FG",
+        "situationText": "4th & 9 at BAL 16"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.028680293919997824,
+          "baselineWp": 0.7357,
+          "options": {
+            "GO": 0.6602736110198432,
+            "FG": 0.688953904939841,
+            "PUNT": 0.6284419807807031
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.028680293919997824,
+          "baselineWp": 0.7357,
+          "options": {
+            "GO": 0.6602736110198432,
+            "FG": 0.688953904939841,
+            "PUNT": 0.6284419807807031
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "f6736ff07ff7f7fc7d427d639e2a5512152a74df8c367fe2787025ef9f5f3621"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872993:4018729933369",
+      "season": 2026,
+      "capturedAt": "2026-10-12T03:06:15.838Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872993",
+        "name": "BAL @ ATL",
+        "kickoff": "2026-10-12T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "6:30",
+        "secondsRemaining": 390,
+        "ydstogo": 4,
+        "yardline100": 62,
+        "fieldPositionText": "BAL 38",
+        "scoreDiff": -5,
+        "scoreText": "BAL 15–20 ATL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.17869999999999997,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729933369",
+        "actual": "PUNT",
+        "situationText": "4th & 4 at BAL 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01641524735614737,
+          "baselineWp": 0.17869999999999997,
+          "options": {
+            "GO": 0.13627592742556618,
+            "FG": null,
+            "PUNT": 0.11986068006941882
+          },
+          "grade": "C",
+          "wpRegret": 0.01641524735614737,
+          "wpRegretPp": 1.6415247356147369,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01641524735614737,
+          "baselineWp": 0.17869999999999997,
+          "options": {
+            "GO": 0.13627592742556618,
+            "FG": null,
+            "PUNT": 0.11986068006941882
+          },
+          "grade": "C",
+          "wpRegret": 0.01641524735614737,
+          "wpRegretPp": 1.6415247356147369,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "42506eb96bc995813a83fd7136fe2ae8011852fbede4a1c8f2db8413b6fb459c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872993:4018729933621",
+      "season": 2026,
+      "capturedAt": "2026-10-12T03:06:15.718Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872993",
+        "name": "BAL @ ATL",
+        "kickoff": "2026-10-12T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "2:31",
+        "secondsRemaining": 151,
+        "ydstogo": 5,
+        "yardline100": 30,
+        "fieldPositionText": "BAL 30",
+        "scoreDiff": 5,
+        "scoreText": "ATL 20–15 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8922,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729933621",
+        "actual": "FG",
+        "situationText": "4th & 5 at BAL 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.014932734591831198,
+          "baselineWp": 0.8922,
+          "options": {
+            "GO": 0.8539184231408118,
+            "FG": 0.868851157732643,
+            "PUNT": 0.8362560356262005
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.014932734591831198,
+          "baselineWp": 0.8922,
+          "options": {
+            "GO": 0.8539184231408118,
+            "FG": 0.868851157732643,
+            "PUNT": 0.8362560356262005
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "acee95c01b4c8fb9bdaeece9bc9a146fb6d1494a364ce92743af1bc9b7183816"
     },
     {
       "schemaVersion": 1,
