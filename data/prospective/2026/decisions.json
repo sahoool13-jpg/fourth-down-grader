@@ -68641,6 +68641,418 @@
       },
       "reference": null,
       "snapshotHash": "2b73625021210d3f9dd9b8919c5cbd7022adb8edf1a739e011dde100bed0e6d6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872994:401872994133",
+      "season": 2026,
+      "capturedAt": "2026-10-13T01:05:28.385Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872994",
+        "name": "BUF @ LAR",
+        "kickoff": "2026-10-13T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "13:23",
+        "secondsRemaining": 3503,
+        "ydstogo": 15,
+        "yardline100": 31,
+        "fieldPositionText": "LAR 31",
+        "scoreDiff": 0,
+        "scoreText": "BUF 0–0 LAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4466,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872994133",
+        "actual": "FG",
+        "situationText": "4th & 15 at LAR 31"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.02771505076307812,
+          "baselineWp": 0.4466,
+          "options": {
+            "GO": 0.4133776789162841,
+            "FG": 0.44206933445567115,
+            "PUNT": 0.41435428369259303
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.02771505076307812,
+          "baselineWp": 0.4466,
+          "options": {
+            "GO": 0.4133776789162841,
+            "FG": 0.44206933445567115,
+            "PUNT": 0.41435428369259303
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6023087419d8e91335e78cff0c10a7b6f01a0fd44ee8e7c9fc09e42fec50ca3b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872994:401872994411",
+      "season": 2026,
+      "capturedAt": "2026-10-13T01:05:28.406Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872994",
+        "name": "BUF @ LAR",
+        "kickoff": "2026-10-13T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "8:00",
+        "secondsRemaining": 3180,
+        "ydstogo": 1,
+        "yardline100": 39,
+        "fieldPositionText": "BUF 39",
+        "scoreDiff": -3,
+        "scoreText": "LAR 0–3 BUF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4935,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872994411",
+        "actual": "GO",
+        "situationText": "4th & 1 at BUF 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0040635037343723646,
+          "baselineWp": 0.4935,
+          "options": {
+            "GO": 0.48256741763944483,
+            "FG": 0.4866309213738172,
+            "PUNT": 0.4642457873230241
+          },
+          "grade": "A",
+          "wpRegret": 0.0040635037343723646,
+          "wpRegretPp": 0.40635037343723646,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0040635037343723646,
+          "baselineWp": 0.4935,
+          "options": {
+            "GO": 0.48256741763944483,
+            "FG": 0.4866309213738172,
+            "PUNT": 0.4642457873230241
+          },
+          "grade": "A",
+          "wpRegret": 0.0040635037343723646,
+          "wpRegretPp": 0.40635037343723646,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "216f37712117713c0b550a35786fabb62a35fcd70035997cd97de3dbd62fca8c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872994:401872994536",
+      "season": 2026,
+      "capturedAt": "2026-10-13T01:05:28.437Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872994",
+        "name": "BUF @ LAR",
+        "kickoff": "2026-10-13T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "5:40",
+        "secondsRemaining": 3040,
+        "ydstogo": 5,
+        "yardline100": 32,
+        "fieldPositionText": "BUF 32",
+        "scoreDiff": -3,
+        "scoreText": "LAR 0–3 BUF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5201,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872994536",
+        "actual": "FG",
+        "situationText": "4th & 5 at BUF 32"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015880353041142936,
+          "baselineWp": 0.5201,
+          "options": {
+            "GO": 0.49750138760256474,
+            "FG": 0.5133817406437077,
+            "PUNT": 0.48450805878519193
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015880353041142936,
+          "baselineWp": 0.5201,
+          "options": {
+            "GO": 0.49750138760256474,
+            "FG": 0.5133817406437077,
+            "PUNT": 0.48450805878519193
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "4faa101ba88cbc78f519960a1c056e1b58ca9857ec7f2ab2f8f56ce1dedac154"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872994:401872994812",
+      "season": 2026,
+      "capturedAt": "2026-10-13T01:05:28.433Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872994",
+        "name": "BUF @ LAR",
+        "kickoff": "2026-10-13T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "0:10",
+        "secondsRemaining": 2710,
+        "ydstogo": 3,
+        "yardline100": 5,
+        "fieldPositionText": "LAR 5",
+        "scoreDiff": 3,
+        "scoreText": "BUF 3–0 LAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5732999999999999,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872994812",
+        "actual": "FG",
+        "situationText": "4th & 3 at LAR 5"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.017323134227244297,
+          "baselineWp": 0.5732999999999999,
+          "options": {
+            "GO": 0.5556992441947313,
+            "FG": 0.538376109967487,
+            "PUNT": 0.4960298484634496
+          },
+          "grade": "C",
+          "wpRegret": 0.017323134227244297,
+          "wpRegretPp": 1.7323134227244297,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.017323134227244297,
+          "baselineWp": 0.5732999999999999,
+          "options": {
+            "GO": 0.5556992441947313,
+            "FG": 0.538376109967487,
+            "PUNT": 0.4960298484634496
+          },
+          "grade": "C",
+          "wpRegret": 0.017323134227244297,
+          "wpRegretPp": 1.7323134227244297,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "62b10353e45270752a685d8ed0f9d267bc347a1d816bacca6867a69eaf469c59"
     }
   ]
 }
