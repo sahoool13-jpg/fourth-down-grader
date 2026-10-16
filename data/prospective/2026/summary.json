@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-16T00:51:20.703Z",
+  "lastMaterialUpdateAt": "2026-10-16T01:27:53.235Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 672,
-    "gradable": 671,
+    "archived": 673,
+    "gradable": 672,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 671/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 672/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.16894878345371897,
-    "totalModelWpaBurnPp": 113.36463369744543,
-    "exactCoachModelAgreement": 0.8092399403874814,
-    "actualGoRate": 0.20864381520119224,
-    "modelGoRate": 0.23099850968703428
+    "meanModelWpaBurnPp": 0.1694603436080824,
+    "totalModelWpaBurnPp": 113.87735090463137,
+    "exactCoachModelAgreement": 0.8080357142857143,
+    "actualGoRate": 0.20833333333333334,
+    "modelGoRate": 0.23065476190476192
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 47,
+    "GAME_NOT_FOUND": 46,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -436,6 +436,20 @@
       "endgameDecisions": 4
     },
     {
+      "team": "SEA",
+      "decisions": 25,
+      "gradable": 25,
+      "exactCoachModelAgreement": 0.92,
+      "totalModelWpaBurnPp": 0.6308925572413637,
+      "meanModelWpaBurnPp": 0.02523570228965455,
+      "costlyMistakes2Pp": 0,
+      "catastrophicMistakes5Pp": 0,
+      "actualGoRate": 0.08,
+      "modelGoRate": 0.08,
+      "aggressionDelta": 0,
+      "endgameDecisions": 3
+    },
+    {
       "team": "TB",
       "decisions": 27,
       "gradable": 27,
@@ -490,20 +504,6 @@
       "modelGoRate": 0.3181818181818182,
       "aggressionDelta": -0.09090909090909091,
       "endgameDecisions": 2
-    },
-    {
-      "team": "SEA",
-      "decisions": 24,
-      "gradable": 24,
-      "exactCoachModelAgreement": 0.9583333333333334,
-      "totalModelWpaBurnPp": 0.11817535005541613,
-      "meanModelWpaBurnPp": 0.004923972918975672,
-      "costlyMistakes2Pp": 0,
-      "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.08333333333333333,
-      "modelGoRate": 0.08333333333333333,
-      "aggressionDelta": 0,
-      "endgameDecisions": 3
     }
   ],
   "biggestMistakes": [
@@ -1141,6 +1141,27 @@
     }
   ],
   "recent": [
+    {
+      "id": "401872995:4018729951200",
+      "capturedAt": "2026-10-16T01:27:53.234Z",
+      "gameName": "SEA @ DEN",
+      "kickoff": "2026-10-16T00:15Z",
+      "offense": "SEA",
+      "defense": "DEN",
+      "quarter": 2,
+      "clock": "9:55",
+      "ydstogo": 10,
+      "yardline100": 45,
+      "scoreDiff": -4,
+      "actual": "PUNT",
+      "optimal": "FG",
+      "grade": "B",
+      "modelWpaBurnPp": 0.5127172071859476,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401872995:401872995732",
       "capturedAt": "2026-10-16T00:51:09.452Z",
@@ -1965,27 +1986,6 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401872991:4018729913374",
-      "capturedAt": "2026-10-11T22:45:18.079Z",
-      "gameName": "DET @ ARI",
-      "kickoff": "2026-10-11T20:25Z",
-      "offense": "DET",
-      "defense": "ARI",
-      "quarter": 3,
-      "clock": "1:05",
-      "ydstogo": 1,
-      "yardline100": 1,
-      "scoreDiff": 17,
-      "actual": "GO",
-      "optimal": "GO",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
       "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []

@@ -69580,6 +69580,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872995:4018729951200",
+      "season": 2026,
+      "capturedAt": "2026-10-16T01:27:53.234Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872995",
+        "name": "SEA @ DEN",
+        "kickoff": "2026-10-16T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "9:55",
+        "secondsRemaining": 2395,
+        "ydstogo": 10,
+        "yardline100": 45,
+        "fieldPositionText": "DEN 45",
+        "scoreDiff": -4,
+        "scoreText": "SEA 3–7 DEN",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.40090000000000003,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729951200",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at DEN 45"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.005127172071859476,
+          "baselineWp": 0.40090000000000003,
+          "options": {
+            "GO": 0.3715015357610745,
+            "FG": 0.37760288935403785,
+            "PUNT": 0.3724757172821784
+          },
+          "grade": "B",
+          "wpRegret": 0.005127172071859476,
+          "wpRegretPp": 0.5127172071859476,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.005127172071859476,
+          "baselineWp": 0.40090000000000003,
+          "options": {
+            "GO": 0.3715015357610745,
+            "FG": 0.37760288935403785,
+            "PUNT": 0.3724757172821784
+          },
+          "grade": "B",
+          "wpRegret": 0.005127172071859476,
+          "wpRegretPp": 0.5127172071859476,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a4adcf8f4991c4df801eeee7e83d475227bde0e030c4702b85118cf57f59e381"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872995:401872995265",
       "season": 2026,
       "capturedAt": "2026-10-16T00:51:09.354Z",
