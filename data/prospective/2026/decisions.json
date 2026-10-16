@@ -69892,6 +69892,315 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872995:4018729952204",
+      "season": 2026,
+      "capturedAt": "2026-10-16T02:30:02.885Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872995",
+        "name": "SEA @ DEN",
+        "kickoff": "2026-10-16T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "12:51",
+        "secondsRemaining": 1671,
+        "ydstogo": 11,
+        "yardline100": 56,
+        "fieldPositionText": "DEN 44",
+        "scoreDiff": 11,
+        "scoreText": "DEN 14–3 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8138,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729952204",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at DEN 44"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.010045820046647336,
+          "baselineWp": 0.8138,
+          "options": {
+            "GO": 0.7871825035294553,
+            "FG": null,
+            "PUNT": 0.7972283235761026
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.010045820046647336,
+          "baselineWp": 0.8138,
+          "options": {
+            "GO": 0.7871825035294553,
+            "FG": null,
+            "PUNT": 0.7972283235761026
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "03a3c82f54b689d8ac485be966c482add9acd9cac4a6044a0f3429a6921b91e6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872995:4018729952440",
+      "season": 2026,
+      "capturedAt": "2026-10-16T02:30:02.992Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872995",
+        "name": "SEA @ DEN",
+        "kickoff": "2026-10-16T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "8:34",
+        "secondsRemaining": 1414,
+        "ydstogo": 12,
+        "yardline100": 29,
+        "fieldPositionText": "DEN 29",
+        "scoreDiff": -11,
+        "scoreText": "SEA 3–14 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.19720000000000004,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729952440",
+        "actual": "FG",
+        "situationText": "4th & 12 at DEN 29"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.017826568567424816,
+          "baselineWp": 0.19720000000000004,
+          "options": {
+            "GO": 0.1680380366152205,
+            "FG": 0.1858646051826453,
+            "PUNT": 0.16239715303674485
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.017826568567424816,
+          "baselineWp": 0.19720000000000004,
+          "options": {
+            "GO": 0.1680380366152205,
+            "FG": 0.1858646051826453,
+            "PUNT": 0.16239715303674485
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d3dc34790be1dc5d3b71930ad00dd9175c23ec880fe6ebcb47adaa1b1f9f64bb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872995:4018729952569",
+      "season": 2026,
+      "capturedAt": "2026-10-16T02:30:02.888Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872995",
+        "name": "SEA @ DEN",
+        "kickoff": "2026-10-16T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "7:55",
+        "secondsRemaining": 1375,
+        "ydstogo": 6,
+        "yardline100": 59,
+        "fieldPositionText": "DEN 41",
+        "scoreDiff": 11,
+        "scoreText": "DEN 14–3 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8339,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729952569",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at DEN 41"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0054666885571840185,
+          "baselineWp": 0.8339,
+          "options": {
+            "GO": 0.812365218462611,
+            "FG": null,
+            "PUNT": 0.817831907019795
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0054666885571840185,
+          "baselineWp": 0.8339,
+          "options": {
+            "GO": 0.812365218462611,
+            "FG": null,
+            "PUNT": 0.817831907019795
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "98a62fda81c5588da0f0240d2828d3018bb8ed7363f0b72bb56c0e4e2e956888"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872995:401872995265",
       "season": 2026,
       "capturedAt": "2026-10-16T00:51:09.354Z",
@@ -69993,6 +70302,212 @@
       },
       "reference": null,
       "snapshotHash": "c43474b5343a567c8bd9478c0bef14060a35ec9b47c23db90fcd96545b97deb2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872995:4018729952827",
+      "season": 2026,
+      "capturedAt": "2026-10-16T02:30:03.106Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872995",
+        "name": "SEA @ DEN",
+        "kickoff": "2026-10-16T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "3:32",
+        "secondsRemaining": 1112,
+        "ydstogo": 19,
+        "yardline100": 67,
+        "fieldPositionText": "SEA 33",
+        "scoreDiff": -11,
+        "scoreText": "SEA 3–14 DEN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.119,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729952827",
+        "actual": "PUNT",
+        "situationText": "4th & 19 at SEA 33"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012315502257369243,
+          "baselineWp": 0.119,
+          "options": {
+            "GO": 0.09103395755232808,
+            "FG": null,
+            "PUNT": 0.10334945980969733
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012315502257369243,
+          "baselineWp": 0.119,
+          "options": {
+            "GO": 0.09103395755232808,
+            "FG": null,
+            "PUNT": 0.10334945980969733
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "aaf14f0636e00a754b2f89f27d09c223c7b243a240f4fd27ae5b34eb0af8bd9e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872995:4018729952951",
+      "season": 2026,
+      "capturedAt": "2026-10-16T02:30:03.102Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872995",
+        "name": "SEA @ DEN",
+        "kickoff": "2026-10-16T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "1:54",
+        "secondsRemaining": 1014,
+        "ydstogo": 7,
+        "yardline100": 87,
+        "fieldPositionText": "DEN 13",
+        "scoreDiff": 11,
+        "scoreText": "DEN 14–3 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8304,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729952951",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at DEN 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.024975292803286253,
+          "baselineWp": 0.8304,
+          "options": {
+            "GO": 0.7866516297545934,
+            "FG": null,
+            "PUNT": 0.8116269225578796
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.024975292803286253,
+          "baselineWp": 0.8304,
+          "options": {
+            "GO": 0.7866516297545934,
+            "FG": null,
+            "PUNT": 0.8116269225578796
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "494ba857d466f82fbdffb8edefb9e826338cc4ca39a9bd6569a1f6718616b7ba"
     },
     {
       "schemaVersion": 1,
