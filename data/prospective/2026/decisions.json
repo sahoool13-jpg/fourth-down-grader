@@ -71449,6 +71449,109 @@
       },
       "reference": null,
       "snapshotHash": "1fb614505566288bbe691f0f750aa41f69943a58a5c1512a101550d513aa9aec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872996:401872996167",
+      "season": 2026,
+      "capturedAt": "2026-10-18T13:41:46.841Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872996",
+        "name": "HOU VS JAX",
+        "kickoff": "2026-10-18T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "12:53",
+        "secondsRemaining": 3473,
+        "ydstogo": 6,
+        "yardline100": 42,
+        "fieldPositionText": "HOU 42",
+        "scoreDiff": 0,
+        "scoreText": "JAX 0–0 HOU",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5859,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872996167",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at HOU 42"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010057680641579747,
+          "baselineWp": 0.5859,
+          "options": {
+            "GO": 0.5667002105350053,
+            "FG": 0.576757891176585,
+            "PUNT": 0.5610072581745719
+          },
+          "grade": "C",
+          "wpRegret": 0.01575063300201318,
+          "wpRegretPp": 1.5750633002013181,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010057680641579747,
+          "baselineWp": 0.5859,
+          "options": {
+            "GO": 0.5667002105350053,
+            "FG": 0.576757891176585,
+            "PUNT": 0.5610072581745719
+          },
+          "grade": "C",
+          "wpRegret": 0.01575063300201318,
+          "wpRegretPp": 1.5750633002013181,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "85d9557dafe48dd655fe666118f34702939263d558f23c78ca703b2218d58559"
     }
   ]
 }
