@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-18T23:17:40.235Z",
+  "lastMaterialUpdateAt": "2026-10-18T23:17:54.056Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -51,10 +51,10 @@
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 55,
+    "GAME_NOT_FOUND": 58,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 3
+    "UNKNOWN": 0
   },
   "teams": [
     {
@@ -1163,7 +1163,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": [
         "TRAILING_PUNT_SCARCITY",
@@ -1187,7 +1187,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1208,28 +1208,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873006:4018730063736",
-      "capturedAt": "2026-10-18T23:17:40.226Z",
-      "gameName": "LAC @ KC",
-      "kickoff": "2026-10-18T20:25Z",
-      "offense": "KC",
-      "defense": "LAC",
-      "quarter": 4,
-      "clock": "11:51",
-      "ydstogo": 1,
-      "yardline100": 35,
-      "scoreDiff": 13,
-      "actual": "FG",
-      "optimal": "GO",
-      "grade": "A",
-      "modelWpaBurnPp": 0.05365046443350785,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1250,7 +1229,28 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873006:4018730063736",
+      "capturedAt": "2026-10-18T23:17:40.226Z",
+      "gameName": "LAC @ KC",
+      "kickoff": "2026-10-18T20:25Z",
+      "offense": "KC",
+      "defense": "LAC",
+      "quarter": 4,
+      "clock": "11:51",
+      "ydstogo": 1,
+      "yardline100": 35,
+      "scoreDiff": 13,
+      "actual": "FG",
+      "optimal": "GO",
+      "grade": "A",
+      "modelWpaBurnPp": 0.05365046443350785,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1271,7 +1271,7 @@
       "grade": "A",
       "modelWpaBurnPp": 0.05638856582025342,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1292,7 +1292,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
