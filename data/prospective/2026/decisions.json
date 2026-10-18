@@ -71452,6 +71452,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401872996:4018729961104",
+      "season": 2026,
+      "capturedAt": "2026-10-18T14:42:02.234Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872996",
+        "name": "HOU VS JAX",
+        "kickoff": "2026-10-18T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "11:20",
+        "secondsRemaining": 2480,
+        "ydstogo": 1,
+        "yardline100": 71,
+        "fieldPositionText": "HOU 29",
+        "scoreDiff": 7,
+        "scoreText": "HOU 7–0 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5977,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729961104",
+        "actual": "PUNT",
+        "situationText": "4th & 1 at HOU 29"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.004158654910563331,
+          "baselineWp": 0.5977,
+          "options": {
+            "GO": 0.5820504296753944,
+            "FG": null,
+            "PUNT": 0.5778917747648311
+          },
+          "grade": "A",
+          "wpRegret": 0.004158654910563331,
+          "wpRegretPp": 0.4158654910563331,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.004158654910563331,
+          "baselineWp": 0.5977,
+          "options": {
+            "GO": 0.5820504296753944,
+            "FG": null,
+            "PUNT": 0.5778917747648311
+          },
+          "grade": "A",
+          "wpRegret": 0.004158654910563331,
+          "wpRegretPp": 0.4158654910563331,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6266690f102dc4e83e8917c3a8e55b6ce6a41a5b155edaf5b853590b51a84f96"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872996:4018729961596",
+      "season": 2026,
+      "capturedAt": "2026-10-18T14:42:02.312Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872996",
+        "name": "HOU VS JAX",
+        "kickoff": "2026-10-18T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "4:16",
+        "secondsRemaining": 2056,
+        "ydstogo": 1,
+        "yardline100": 7,
+        "fieldPositionText": "JAX 7",
+        "scoreDiff": 0,
+        "scoreText": "HOU 7–7 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6015828774269707,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018729961596",
+        "actual": "FG",
+        "situationText": "4th & 1 at JAX 7"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.019630821283087685,
+          "baselineWp": 0.6015828774269707,
+          "options": {
+            "GO": 0.5776678765934972,
+            "FG": 0.5580370553104095,
+            "PUNT": 0.507216141167075
+          },
+          "grade": "C",
+          "wpRegret": 0.019630821283087685,
+          "wpRegretPp": 1.9630821283087685,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": false
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.017634062995709465,
+          "baselineWp": 0.6015828774269707,
+          "options": {
+            "GO": 0.5800778161191794,
+            "FG": 0.56244375312347,
+            "PUNT": 0.5167902827222768
+          },
+          "grade": "C",
+          "wpRegret": 0.017634062995709465,
+          "wpRegretPp": 1.7634062995709465,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1a0072c03bb904f27e29195d859313de1e9a1a81f38fcaa9462244539b0721d4"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401872996:401872996167",
       "season": 2026,
       "capturedAt": "2026-10-18T13:41:46.841Z",
