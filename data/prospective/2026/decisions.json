@@ -71553,6 +71553,212 @@
       },
       "reference": null,
       "snapshotHash": "85d9557dafe48dd655fe666118f34702939263d558f23c78ca703b2218d58559"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872996:401872996266",
+      "season": 2026,
+      "capturedAt": "2026-10-18T14:18:49.159Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872996",
+        "name": "HOU VS JAX",
+        "kickoff": "2026-10-18T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "11:21",
+        "secondsRemaining": 3381,
+        "ydstogo": 7,
+        "yardline100": 91,
+        "fieldPositionText": "HOU 9",
+        "scoreDiff": 0,
+        "scoreText": "HOU 0–0 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3581,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872996266",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at HOU 9"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01746780534816006,
+          "baselineWp": 0.3581,
+          "options": {
+            "GO": 0.3244887108241653,
+            "FG": null,
+            "PUNT": 0.34195651617232536
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01746780534816006,
+          "baselineWp": 0.3581,
+          "options": {
+            "GO": 0.3244887108241653,
+            "FG": null,
+            "PUNT": 0.34195651617232536
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "8014dd5de71d46420abff9b93239be9158e19284e9c29ffcf8e6b7775c973a71"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401872996:401872996443",
+      "season": 2026,
+      "capturedAt": "2026-10-18T14:18:49.162Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401872996",
+        "name": "HOU VS JAX",
+        "kickoff": "2026-10-18T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "8:21",
+        "secondsRemaining": 3201,
+        "ydstogo": 3,
+        "yardline100": 37,
+        "fieldPositionText": "HOU 37",
+        "scoreDiff": 0,
+        "scoreText": "JAX 0–0 HOU",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5983,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401872996443",
+        "actual": "GO",
+        "situationText": "4th & 3 at HOU 37"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011710186208436002,
+          "baselineWp": 0.5983,
+          "options": {
+            "GO": 0.5805998976922099,
+            "FG": 0.5923100839006459,
+            "PUNT": 0.5685511055975725
+          },
+          "grade": "B",
+          "wpRegret": 0.011710186208436002,
+          "wpRegretPp": 1.1710186208436002,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011710186208436002,
+          "baselineWp": 0.5983,
+          "options": {
+            "GO": 0.5805998976922099,
+            "FG": 0.5923100839006459,
+            "PUNT": 0.5685511055975725
+          },
+          "grade": "B",
+          "wpRegret": 0.011710186208436002,
+          "wpRegretPp": 1.1710186208436002,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5d1c0ec90167a6165d0c33d12ca3dee71f5657712b728fb767400b3b87464105"
     }
   ]
 }
