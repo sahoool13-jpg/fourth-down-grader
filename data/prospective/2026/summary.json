@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-18T15:42:16.537Z",
+  "lastMaterialUpdateAt": "2026-10-18T16:22:06.406Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 692,
-    "gradable": 691,
+    "archived": 693,
+    "gradable": 692,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 691/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 692/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.17972223906051807,
+    "meanModelWpaBurnPp": 0.17946252484222253,
     "totalModelWpaBurnPp": 124.18806719081799,
-    "exactCoachModelAgreement": 0.8031837916063675,
-    "actualGoRate": 0.20549927641099855,
-    "modelGoRate": 0.22865412445730826
+    "exactCoachModelAgreement": 0.8034682080924855,
+    "actualGoRate": 0.20520231213872833,
+    "modelGoRate": 0.22832369942196531
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 48,
+    "GAME_NOT_FOUND": 47,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -185,16 +185,16 @@
     },
     {
       "team": "HOU",
-      "decisions": 23,
-      "gradable": 23,
-      "exactCoachModelAgreement": 0.6956521739130435,
+      "decisions": 24,
+      "gradable": 24,
+      "exactCoachModelAgreement": 0.7083333333333334,
       "totalModelWpaBurnPp": 3.6056547293545904,
-      "meanModelWpaBurnPp": 0.15676759692846046,
+      "meanModelWpaBurnPp": 0.15023561372310792,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.043478260869565216,
-      "modelGoRate": 0.21739130434782608,
-      "aggressionDelta": -0.17391304347826086,
+      "actualGoRate": 0.041666666666666664,
+      "modelGoRate": 0.20833333333333334,
+      "aggressionDelta": -0.16666666666666666,
       "endgameDecisions": 0
     },
     {
@@ -1142,6 +1142,27 @@
   ],
   "recent": [
     {
+      "id": "401872996:4018729962880",
+      "capturedAt": "2026-10-18T16:22:06.405Z",
+      "gameName": "HOU VS JAX",
+      "kickoff": "2026-10-18T13:30Z",
+      "offense": "HOU",
+      "defense": "JAX",
+      "quarter": 3,
+      "clock": "5:38",
+      "ydstogo": 4,
+      "yardline100": 76,
+      "scoreDiff": 10,
+      "actual": "PUNT",
+      "optimal": "PUNT",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "LEAN",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
       "id": "401872996:4018729962699",
       "capturedAt": "2026-10-18T15:42:03.704Z",
       "gameName": "HOU VS JAX",
@@ -1955,27 +1976,6 @@
       "optimal": "FG",
       "grade": "B",
       "modelWpaBurnPp": 0.6385765823588629,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401872993:4018729932307",
-      "capturedAt": "2026-10-12T02:13:24.750Z",
-      "gameName": "BAL @ ATL",
-      "kickoff": "2026-10-12T00:20Z",
-      "offense": "ATL",
-      "defense": "BAL",
-      "quarter": 3,
-      "clock": "9:51",
-      "ydstogo": 5,
-      "yardline100": 5,
-      "scoreDiff": 5,
-      "actual": "FG",
-      "optimal": "GO",
-      "grade": "B",
-      "modelWpaBurnPp": 0.6408858778266135,
       "certainty": "TOSS-UP",
       "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
