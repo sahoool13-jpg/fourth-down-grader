@@ -89280,6 +89280,212 @@
       },
       "reference": null,
       "snapshotHash": "1a2fd9ff20c7611698ddb016a9eeef3509e3edf711fa921fd7f2622983df2cc9"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873007:401873007212",
+      "season": 2026,
+      "capturedAt": "2026-10-19T00:57:28.758Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873007",
+        "name": "DAL @ GB",
+        "kickoff": "2026-10-19T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "11:20",
+        "secondsRemaining": 3380,
+        "ydstogo": 4,
+        "yardline100": 47,
+        "fieldPositionText": "GB 47",
+        "scoreDiff": 0,
+        "scoreText": "DAL 0–0 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5129,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873007212",
+        "actual": "PUNT",
+        "situationText": "4th & 4 at GB 47"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.00422591113224996,
+          "baselineWp": 0.5129,
+          "options": {
+            "GO": 0.49545022706470015,
+            "FG": 0.4912243159324502,
+            "PUNT": 0.49038563884132347
+          },
+          "grade": "B",
+          "wpRegret": 0.005064588223376687,
+          "wpRegretPp": 0.5064588223376687,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.00422591113224996,
+          "baselineWp": 0.5129,
+          "options": {
+            "GO": 0.49545022706470015,
+            "FG": 0.4912243159324502,
+            "PUNT": 0.49038563884132347
+          },
+          "grade": "B",
+          "wpRegret": 0.005064588223376687,
+          "wpRegretPp": 0.5064588223376687,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "e0f7bf2e9aa906963bfaad91ffef2b3b3a880d8f51148ffb3051972ce4f8d7e2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873007:401873007859",
+      "season": 2026,
+      "capturedAt": "2026-10-19T00:57:28.662Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873007",
+        "name": "DAL @ GB",
+        "kickoff": "2026-10-19T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "2:46",
+        "secondsRemaining": 2866,
+        "ydstogo": 12,
+        "yardline100": 70,
+        "fieldPositionText": "DAL 30",
+        "scoreDiff": -7,
+        "scoreText": "DAL 0–7 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3067,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873007859",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at DAL 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01426249227839943,
+          "baselineWp": 0.3067,
+          "options": {
+            "GO": 0.27652714580494125,
+            "FG": null,
+            "PUNT": 0.2907896380833407
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01426249227839943,
+          "baselineWp": 0.3067,
+          "options": {
+            "GO": 0.27652714580494125,
+            "FG": null,
+            "PUNT": 0.2907896380833407
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "8e0e66c767a130f2ed97588a66980765021d08ec966b34fe236a83fbd1d666c2"
     }
   ]
 }
