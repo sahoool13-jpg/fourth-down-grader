@@ -89283,6 +89283,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873007:4018730071589",
+      "season": 2026,
+      "capturedAt": "2026-10-19T01:36:05.249Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873007",
+        "name": "DAL @ GB",
+        "kickoff": "2026-10-19T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "defense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "5:58",
+        "secondsRemaining": 2158,
+        "ydstogo": 7,
+        "yardline100": 7,
+        "fieldPositionText": "DAL 7",
+        "scoreDiff": 7,
+        "scoreText": "GB 7–0 DAL",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.7493,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730071589",
+        "actual": "FG",
+        "situationText": "4th & Goal at DAL 7"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0008480537320059156,
+          "baselineWp": 0.7493,
+          "options": {
+            "GO": 0.7183885261284727,
+            "FG": 0.7192365798604786,
+            "PUNT": 0.6813678987010051
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0008480537320059156,
+          "baselineWp": 0.7493,
+          "options": {
+            "GO": 0.7183885261284727,
+            "FG": 0.7192365798604786,
+            "PUNT": 0.6813678987010051
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "48295af516170b4770b48ff5c9e482b3c035815af110a632d5d386b1f5ee9365"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873007:401873007212",
       "season": 2026,
       "capturedAt": "2026-10-19T00:57:28.758Z",
