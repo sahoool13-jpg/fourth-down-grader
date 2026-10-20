@@ -91363,6 +91363,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873008:4018730082960",
+      "season": 2026,
+      "capturedAt": "2026-10-20T02:50:57.307Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873008",
+        "name": "WSH @ SF",
+        "kickoff": "2026-10-20T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "14:14",
+        "secondsRemaining": 854,
+        "ydstogo": 11,
+        "yardline100": 66,
+        "fieldPositionText": "SF 34",
+        "scoreDiff": 13,
+        "scoreText": "SF 23–10 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9688,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730082960",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at SF 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004583170849269513,
+          "baselineWp": 0.9688,
+          "options": {
+            "GO": 0.9600544161087543,
+            "FG": null,
+            "PUNT": 0.9646375869580238
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004583170849269513,
+          "baselineWp": 0.9688,
+          "options": {
+            "GO": 0.9600544161087543,
+            "FG": null,
+            "PUNT": 0.9646375869580238
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "7887f6a8177acb2bc5061579fc70cefdfb3d8079975ad7278518ce8243b29cf7"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873008:401873008410",
       "season": 2026,
       "capturedAt": "2026-10-20T00:52:47.855Z",
