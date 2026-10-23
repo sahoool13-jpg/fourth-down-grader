@@ -92199,6 +92199,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873010:4018730101368",
+      "season": 2026,
+      "capturedAt": "2026-10-23T01:33:29.995Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873010",
+        "name": "NE @ CHI",
+        "kickoff": "2026-10-23T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "8:57",
+        "secondsRemaining": 2337,
+        "ydstogo": 1,
+        "yardline100": 20,
+        "fieldPositionText": "NE 20",
+        "scoreDiff": 3,
+        "scoreText": "CHI 10–7 NE",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7086,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730101368",
+        "actual": "GO",
+        "situationText": "4th & 1 at NE 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.000731178699313384,
+          "baselineWp": 0.7086,
+          "options": {
+            "GO": 0.6942792904724934,
+            "FG": 0.6950104691718068,
+            "PUNT": 0.6602586213012489
+          },
+          "grade": "A",
+          "wpRegret": 0.000731178699313384,
+          "wpRegretPp": 0.0731178699313384,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.000731178699313384,
+          "baselineWp": 0.7086,
+          "options": {
+            "GO": 0.6942792904724934,
+            "FG": 0.6950104691718068,
+            "PUNT": 0.6602586213012489
+          },
+          "grade": "A",
+          "wpRegret": 0.000731178699313384,
+          "wpRegretPp": 0.0731178699313384,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "27fabe0e8e5ca7778a8a6400d6268da22b9924673fafe6abd224b6c5f9de12ef"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873010:4018730101489",
+      "season": 2026,
+      "capturedAt": "2026-10-23T01:33:30.095Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873010",
+        "name": "NE @ CHI",
+        "kickoff": "2026-10-23T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "7:04",
+        "secondsRemaining": 2224,
+        "ydstogo": 8,
+        "yardline100": 13,
+        "fieldPositionText": "NE 13",
+        "scoreDiff": 3,
+        "scoreText": "CHI 10–7 NE",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7154,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730101489",
+        "actual": "FG",
+        "situationText": "4th & 8 at NE 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.014640650104760344,
+          "baselineWp": 0.7154,
+          "options": {
+            "GO": 0.6792352816970604,
+            "FG": 0.6938759318018207,
+            "PUNT": 0.6558455648024195
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.014640650104760344,
+          "baselineWp": 0.7154,
+          "options": {
+            "GO": 0.6792352816970604,
+            "FG": 0.6938759318018207,
+            "PUNT": 0.6558455648024195
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "7451eef61f64a0613ec6a1930a3a8a9ed17d88e64e2b4af639c2adca57103d86"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873010:401873010224",
       "season": 2026,
       "capturedAt": "2026-10-23T00:54:45.239Z",
