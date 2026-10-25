@@ -94071,6 +94071,418 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873011:4018730112976",
+      "season": 2026,
+      "capturedAt": "2026-10-25T16:21:43.485Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873011",
+        "name": "PIT VS NO",
+        "kickoff": "2026-10-25T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "defense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "0:14",
+        "secondsRemaining": 914,
+        "ydstogo": 16,
+        "yardline100": 20,
+        "fieldPositionText": "NO 20",
+        "scoreDiff": 3,
+        "scoreText": "PIT 13–10 NO",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.743,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730112976",
+        "actual": "FG",
+        "situationText": "4th & 16 at NO 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.041468224192150016,
+          "baselineWp": 0.743,
+          "options": {
+            "GO": 0.6738332306217981,
+            "FG": 0.7153014548139481,
+            "PUNT": 0.6698899508936096
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.041468224192150016,
+          "baselineWp": 0.743,
+          "options": {
+            "GO": 0.6738332306217981,
+            "FG": 0.7153014548139481,
+            "PUNT": 0.6698899508936096
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "58b83cec03e4dcda4273bf98532d01b9034e2fdee3c1aaec3104fd810f36a33c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873011:4018730113326",
+      "season": 2026,
+      "capturedAt": "2026-10-25T16:21:43.521Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873011",
+        "name": "PIT VS NO",
+        "kickoff": "2026-10-25T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "9:32",
+        "secondsRemaining": 572,
+        "ydstogo": 7,
+        "yardline100": 34,
+        "fieldPositionText": "PIT 34",
+        "scoreDiff": -6,
+        "scoreText": "NO 10–16 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2277,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730113326",
+        "actual": "FG",
+        "situationText": "4th & 7 at PIT 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0001745420421516708,
+          "baselineWp": 0.2277,
+          "options": {
+            "GO": 0.17654201621806112,
+            "FG": 0.1767165582602128,
+            "PUNT": 0.15025886756005732
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0001745420421516708,
+          "baselineWp": 0.2277,
+          "options": {
+            "GO": 0.17654201621806112,
+            "FG": 0.1767165582602128,
+            "PUNT": 0.15025886756005732
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "13e8a390103e9957c6b58226bf2c55ac091d25eb3a59f1808ae1e9690ff6f7bd"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873011:4018730113418",
+      "season": 2026,
+      "capturedAt": "2026-10-25T16:21:43.689Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873011",
+        "name": "PIT VS NO",
+        "kickoff": "2026-10-25T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "defense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "7:15",
+        "secondsRemaining": 435,
+        "ydstogo": 12,
+        "yardline100": 60,
+        "fieldPositionText": "PIT 40",
+        "scoreDiff": 6,
+        "scoreText": "PIT 16–10 NO",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7937,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730113418",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at PIT 40"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02599358820577402,
+          "baselineWp": 0.7937,
+          "options": {
+            "GO": 0.7377798630270073,
+            "FG": null,
+            "PUNT": 0.7637734512327813
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02599358820577402,
+          "baselineWp": 0.7937,
+          "options": {
+            "GO": 0.7377798630270073,
+            "FG": null,
+            "PUNT": 0.7637734512327813
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1c6572eee112805284603109840d3daf5dec3e010e39c50883b0958678570800"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873011:4018730113590",
+      "season": 2026,
+      "capturedAt": "2026-10-25T16:21:43.653Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873011",
+        "name": "PIT VS NO",
+        "kickoff": "2026-10-25T13:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "18",
+        "abbreviation": "NO",
+        "name": "New Orleans Saints"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "6:02",
+        "secondsRemaining": 362,
+        "ydstogo": 18,
+        "yardline100": 68,
+        "fieldPositionText": "NO 32",
+        "scoreDiff": -6,
+        "scoreText": "NO 10–16 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1444,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730113590",
+        "actual": "PUNT",
+        "situationText": "4th & 18 at NO 32"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012969377917940964,
+          "baselineWp": 0.1444,
+          "options": {
+            "GO": 0.08102667426055717,
+            "FG": null,
+            "PUNT": 0.09399605217849813
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012969377917940964,
+          "baselineWp": 0.1444,
+          "options": {
+            "GO": 0.08102667426055717,
+            "FG": null,
+            "PUNT": 0.09399605217849813
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "f0ccf193e82d9bda036aba782896a493961ec15366dd79cfdebbd700a5b0bb80"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873011:401873011579",
       "season": 2026,
       "capturedAt": "2026-10-25T14:20:15.612Z",
