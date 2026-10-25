@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-25T23:18:54.586Z",
+  "lastMaterialUpdateAt": "2026-10-25T23:41:31.378Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1039,
-    "gradable": 1038,
+    "archived": 1042,
+    "gradable": 1041,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1038/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1041/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.15793586776429286,
+    "meanModelWpaBurnPp": 0.15748072117131218,
     "totalModelWpaBurnPp": 163.93743073933598,
-    "exactCoachModelAgreement": 0.7957610789980732,
-    "actualGoRate": 0.20905587668593448,
-    "modelGoRate": 0.2350674373795761
+    "exactCoachModelAgreement": 0.7963496637848223,
+    "actualGoRate": 0.21037463976945245,
+    "modelGoRate": 0.23631123919308358
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 72,
+    "GAME_NOT_FOUND": 70,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 2
   },
   "teams": [
     {
@@ -227,17 +227,17 @@
     },
     {
       "team": "ARI",
-      "decisions": 44,
-      "gradable": 44,
-      "exactCoachModelAgreement": 0.75,
+      "decisions": 45,
+      "gradable": 45,
+      "exactCoachModelAgreement": 0.7555555555555555,
       "totalModelWpaBurnPp": 4.3684631980178255,
-      "meanModelWpaBurnPp": 0.09928325450040512,
+      "meanModelWpaBurnPp": 0.09707695995595168,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.20454545454545456,
-      "modelGoRate": 0.2727272727272727,
-      "aggressionDelta": -0.06818181818181818,
-      "endgameDecisions": 6
+      "actualGoRate": 0.2222222222222222,
+      "modelGoRate": 0.28888888888888886,
+      "aggressionDelta": -0.06666666666666667,
+      "endgameDecisions": 7
     },
     {
       "team": "CHI",
@@ -409,17 +409,17 @@
     },
     {
       "team": "LV",
-      "decisions": 36,
-      "gradable": 36,
-      "exactCoachModelAgreement": 0.8611111111111112,
+      "decisions": 38,
+      "gradable": 38,
+      "exactCoachModelAgreement": 0.868421052631579,
       "totalModelWpaBurnPp": 2.4664652269417706,
-      "meanModelWpaBurnPp": 0.06851292297060474,
+      "meanModelWpaBurnPp": 0.06490697965636238,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.2222222222222222,
-      "modelGoRate": 0.2222222222222222,
+      "actualGoRate": 0.23684210526315788,
+      "modelGoRate": 0.23684210526315788,
       "aggressionDelta": 0,
-      "endgameDecisions": 5
+      "endgameDecisions": 6
     },
     {
       "team": "TB",
@@ -1144,6 +1144,75 @@
     }
   ],
   "recent": [
+    {
+      "id": "401873021:4018730214254",
+      "capturedAt": "2026-10-25T23:41:31.376Z",
+      "gameName": "LAR @ LV",
+      "kickoff": "2026-10-25T20:25Z",
+      "offense": "LV",
+      "defense": "LAR",
+      "quarter": 4,
+      "clock": "4:11",
+      "ydstogo": 10,
+      "yardline100": 18,
+      "scoreDiff": -17,
+      "actual": "FG",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": [
+        "FG_DOES_NOT_TIE_OR_LEAD"
+      ]
+    },
+    {
+      "id": "401873019:4018730194791",
+      "capturedAt": "2026-10-25T23:41:31.330Z",
+      "gameName": "DEN @ ARI",
+      "kickoff": "2026-10-25T20:05Z",
+      "offense": "ARI",
+      "defense": "DEN",
+      "quarter": 4,
+      "clock": "0:56",
+      "ydstogo": 5,
+      "yardline100": 5,
+      "scoreDiff": -14,
+      "actual": "GO",
+      "optimal": "GO",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": [
+        "TRAILING_PUNT_SCARCITY",
+        "FG_DOES_NOT_TIE_OR_LEAD",
+        "MUST_TD_PATH"
+      ]
+    },
+    {
+      "id": "401873021:4018730214099",
+      "capturedAt": "2026-10-25T23:41:31.265Z",
+      "gameName": "LAR @ LV",
+      "kickoff": "2026-10-25T20:25Z",
+      "offense": "LV",
+      "defense": "LAR",
+      "quarter": 4,
+      "clock": "5:29",
+      "ydstogo": 10,
+      "yardline100": 65,
+      "scoreDiff": -17,
+      "actual": "GO",
+      "optimal": "GO",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401873020:4018730203900",
       "capturedAt": "2026-10-25T23:18:37.981Z",
@@ -1921,69 +1990,6 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873021:401873021133",
-      "capturedAt": "2026-10-25T20:43:38.211Z",
-      "gameName": "LAR @ LV",
-      "kickoff": "2026-10-25T20:25Z",
-      "offense": "LV",
-      "defense": "LAR",
-      "quarter": 1,
-      "clock": "13:39",
-      "ydstogo": 9,
-      "yardline100": 61,
-      "scoreDiff": 0,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "LEAN",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873021:401873021382",
-      "capturedAt": "2026-10-25T20:43:38.207Z",
-      "gameName": "LAR @ LV",
-      "kickoff": "2026-10-25T20:25Z",
-      "offense": "LV",
-      "defense": "LAR",
-      "quarter": 1,
-      "clock": "10:53",
-      "ydstogo": 13,
-      "yardline100": 33,
-      "scoreDiff": 0,
-      "actual": "FG",
-      "optimal": "FG",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "CLEAR",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873019:401873019430",
-      "capturedAt": "2026-10-25T20:43:38.194Z",
-      "gameName": "DEN @ ARI",
-      "kickoff": "2026-10-25T20:05Z",
-      "offense": "ARI",
-      "defense": "DEN",
-      "quarter": 1,
-      "clock": "10:02",
-      "ydstogo": 12,
-      "yardline100": 71,
-      "scoreDiff": -3,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "LEAN",
       "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
