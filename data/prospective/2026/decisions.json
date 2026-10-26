@@ -108550,6 +108550,315 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873022:4018730221177",
+      "season": 2026,
+      "capturedAt": "2026-10-26T01:36:06.607Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873022",
+        "name": "KC @ SEA",
+        "kickoff": "2026-10-26T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "8:22",
+        "secondsRemaining": 2302,
+        "ydstogo": 7,
+        "yardline100": 7,
+        "fieldPositionText": "KC 7",
+        "scoreDiff": 0,
+        "scoreText": "SEA 0–0 KC",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5427,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730221177",
+        "actual": "FG",
+        "situationText": "4th & Goal at KC 7"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0015846739997402715,
+          "baselineWp": 0.5427,
+          "options": {
+            "GO": 0.5078665131568347,
+            "FG": 0.5062818391570945,
+            "PUNT": 0.4620028660291759
+          },
+          "grade": "A",
+          "wpRegret": 0.0015846739997402715,
+          "wpRegretPp": 0.15846739997402715,
+          "robustness": 0.7777777777777778,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0015846739997402715,
+          "baselineWp": 0.5427,
+          "options": {
+            "GO": 0.5078665131568347,
+            "FG": 0.5062818391570945,
+            "PUNT": 0.4620028660291759
+          },
+          "grade": "A",
+          "wpRegret": 0.0015846739997402715,
+          "wpRegretPp": 0.15846739997402715,
+          "robustness": 0.7777777777777778,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0eb2b91b7bde322cc07a5792759ef1a31e4e85ca47ecbed8b9967cfd940f4f41"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873022:4018730221309",
+      "season": 2026,
+      "capturedAt": "2026-10-26T01:36:06.709Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873022",
+        "name": "KC @ SEA",
+        "kickoff": "2026-10-26T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:49",
+        "secondsRemaining": 2209,
+        "ydstogo": 1,
+        "yardline100": 49,
+        "fieldPositionText": "SEA 49",
+        "scoreDiff": -3,
+        "scoreText": "KC 0–3 SEA",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4154,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730221309",
+        "actual": "GO",
+        "situationText": "4th & 1 at SEA 49"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.014103300006971409,
+          "baselineWp": 0.4154,
+          "options": {
+            "GO": 0.402782405539812,
+            "FG": 0.38199481499045645,
+            "PUNT": 0.3886791055328406
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.014103300006971409,
+          "baselineWp": 0.4154,
+          "options": {
+            "GO": 0.402782405539812,
+            "FG": 0.38199481499045645,
+            "PUNT": 0.3886791055328406
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "f6f1a782adda32bc604117bf4bb81e2364c44002cc881cc1590ac276addf5049"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873022:4018730221807",
+      "season": 2026,
+      "capturedAt": "2026-10-26T01:36:06.607Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873022",
+        "name": "KC @ SEA",
+        "kickoff": "2026-10-26T00:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:29",
+        "secondsRemaining": 1889,
+        "ydstogo": 5,
+        "yardline100": 60,
+        "fieldPositionText": "KC 40",
+        "scoreDiff": -10,
+        "scoreText": "KC 0–10 SEA",
+        "timeouts": 1,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.2108,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730221807",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at KC 40"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0028229348053377123,
+          "baselineWp": 0.2108,
+          "options": {
+            "GO": 0.19213195437101002,
+            "FG": null,
+            "PUNT": 0.19495488917634773
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0028229348053377123,
+          "baselineWp": 0.2108,
+          "options": {
+            "GO": 0.19213195437101002,
+            "FG": null,
+            "PUNT": 0.19495488917634773
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "eec0a27442992507d8dafb9e5cec4ad30aaa364b4e3f09c18ab71b4a76f92406"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873022:401873022223",
       "season": 2026,
       "capturedAt": "2026-10-26T00:56:10.104Z",
