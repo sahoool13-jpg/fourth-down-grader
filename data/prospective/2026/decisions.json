@@ -92823,6 +92823,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873009:4018730093309",
+      "season": 2026,
+      "capturedAt": "2026-10-27T02:52:46.881Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873009",
+        "name": "DAL @ PHI",
+        "kickoff": "2026-10-27T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "14:27",
+        "secondsRemaining": 867,
+        "ydstogo": 2,
+        "yardline100": 77,
+        "fieldPositionText": "PHI 23",
+        "scoreDiff": -7,
+        "scoreText": "PHI 21–28 DAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1119,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730093309",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at PHI 23"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.003405992503991248,
+          "baselineWp": 0.1119,
+          "options": {
+            "GO": 0.09404621906419601,
+            "FG": null,
+            "PUNT": 0.09064022656020476
+          },
+          "grade": "A",
+          "wpRegret": 0.003405992503991248,
+          "wpRegretPp": 0.3405992503991248,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.003405992503991248,
+          "baselineWp": 0.1119,
+          "options": {
+            "GO": 0.09404621906419601,
+            "FG": null,
+            "PUNT": 0.09064022656020476
+          },
+          "grade": "A",
+          "wpRegret": 0.003405992503991248,
+          "wpRegretPp": 0.3405992503991248,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "dc72b126f40e40efe3bb75fdda7a8d409db4b9d0f492fcca5cc7b9b37675e7fa"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873009:4018730093568",
+      "season": 2026,
+      "capturedAt": "2026-10-27T02:52:46.996Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873009",
+        "name": "DAL @ PHI",
+        "kickoff": "2026-10-27T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "9:10",
+        "secondsRemaining": 550,
+        "ydstogo": 5,
+        "yardline100": 6,
+        "fieldPositionText": "PHI 6",
+        "scoreDiff": 7,
+        "scoreText": "DAL 28–21 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9326,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730093568",
+        "actual": "FG",
+        "situationText": "4th & 5 at PHI 6"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.023449318906218486,
+          "baselineWp": 0.9326,
+          "options": {
+            "GO": 0.9179064732676374,
+            "FG": 0.9413557921738559,
+            "PUNT": 0.880384484957041
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.023449318906218486,
+          "baselineWp": 0.9326,
+          "options": {
+            "GO": 0.9179064732676374,
+            "FG": 0.9413557921738559,
+            "PUNT": 0.880384484957041
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d093454bfef86ba34df488ecba52aec3a241453bb661e7710e51de2be1c5012e"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873010:4018730101368",
       "season": 2026,
       "capturedAt": "2026-10-23T01:33:29.995Z",
