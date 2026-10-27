@@ -92199,6 +92199,315 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873009:4018730091421",
+      "season": 2026,
+      "capturedAt": "2026-10-27T01:35:44.839Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873009",
+        "name": "DAL @ PHI",
+        "kickoff": "2026-10-27T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "9:10",
+        "secondsRemaining": 2350,
+        "ydstogo": 1,
+        "yardline100": 44,
+        "fieldPositionText": "PHI 44",
+        "scoreDiff": -4,
+        "scoreText": "DAL 10–14 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.5681,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730091421",
+        "actual": "GO",
+        "situationText": "4th & 1 at PHI 44"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.008002767817601453,
+          "baselineWp": 0.5681,
+          "options": {
+            "GO": 0.5553154889394983,
+            "FG": 0.5473127211218969,
+            "PUNT": 0.5372773868996461
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.008002767817601453,
+          "baselineWp": 0.5681,
+          "options": {
+            "GO": 0.5553154889394983,
+            "FG": 0.5473127211218969,
+            "PUNT": 0.5372773868996461
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1ba522ad037066544926725d1ae58ca6e0fad3c391ef6d52d8066972c32789cb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873009:4018730091812",
+      "season": 2026,
+      "capturedAt": "2026-10-27T01:35:44.737Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873009",
+        "name": "DAL @ PHI",
+        "kickoff": "2026-10-27T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "2:37",
+        "secondsRemaining": 1957,
+        "ydstogo": 15,
+        "yardline100": 50,
+        "fieldPositionText": "50",
+        "scoreDiff": -3,
+        "scoreText": "PHI 14–17 DAL",
+        "timeouts": 1,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2449,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730091812",
+        "actual": "PUNT",
+        "situationText": "4th & 15 at 50"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.007915345998887519,
+          "baselineWp": 0.2449,
+          "options": {
+            "GO": 0.21498392460666382,
+            "FG": 0.21632814937721234,
+            "PUNT": 0.22424349537609986
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.007915345998887519,
+          "baselineWp": 0.2449,
+          "options": {
+            "GO": 0.21498392460666382,
+            "FG": 0.21632814937721234,
+            "PUNT": 0.22424349537609986
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1a330a4a295fc204cfa99ba5b9e07841f3f8530557ead16b24ee5ae3547afef8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873009:4018730091916",
+      "season": 2026,
+      "capturedAt": "2026-10-27T01:35:44.728Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873009",
+        "name": "DAL @ PHI",
+        "kickoff": "2026-10-27T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:52",
+        "secondsRemaining": 1912,
+        "ydstogo": 4,
+        "yardline100": 92,
+        "fieldPositionText": "DAL 8",
+        "scoreDiff": 3,
+        "scoreText": "DAL 17–14 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 0,
+        "baselineWp": 0.6975,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730091916",
+        "actual": "PUNT",
+        "situationText": "4th & 4 at DAL 8"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.017928146105099407,
+          "baselineWp": 0.6975,
+          "options": {
+            "GO": 0.6583221878353148,
+            "FG": null,
+            "PUNT": 0.6762503339404142
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.017928146105099407,
+          "baselineWp": 0.6975,
+          "options": {
+            "GO": 0.6583221878353148,
+            "FG": null,
+            "PUNT": 0.6762503339404142
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "2ea28d950720536814297ea04add35d8682bd319ce5b425fa3f55d07c2e91316"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873009:401873009213",
       "season": 2026,
       "capturedAt": "2026-10-27T00:54:40.656Z",
