@@ -111047,6 +111047,315 @@
       },
       "reference": null,
       "snapshotHash": "bf6ded47cceccbeae5d62d04a06e58e029f3f23daaca115ba77e77f1352b9bd7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873023:401873023190",
+      "season": 2026,
+      "capturedAt": "2026-10-30T00:42:13.523Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873023",
+        "name": "CAR @ GB",
+        "kickoff": "2026-10-30T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "11:43",
+        "secondsRemaining": 3403,
+        "ydstogo": 14,
+        "yardline100": 21,
+        "fieldPositionText": "GB 21",
+        "scoreDiff": 0,
+        "scoreText": "CAR 0–0 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.395,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873023190",
+        "actual": "FG",
+        "situationText": "4th & 14 at GB 21"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.027941617559612664,
+          "baselineWp": 0.395,
+          "options": {
+            "GO": 0.3594516329793324,
+            "FG": 0.3873932505389451,
+            "PUNT": 0.35466359408681675
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.027941617559612664,
+          "baselineWp": 0.395,
+          "options": {
+            "GO": 0.3594516329793324,
+            "FG": 0.3873932505389451,
+            "PUNT": 0.35466359408681675
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "3b1956d8a0f9c19fc80fdc8fbe03796c8875e0cb117213f89c6ea6c81dced7bb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873023:401873023313",
+      "season": 2026,
+      "capturedAt": "2026-10-30T00:42:13.718Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873023",
+        "name": "CAR @ GB",
+        "kickoff": "2026-10-30T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "defense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "10:22",
+        "secondsRemaining": 3322,
+        "ydstogo": 3,
+        "yardline100": 60,
+        "fieldPositionText": "GB 40",
+        "scoreDiff": -3,
+        "scoreText": "GB 0–3 CAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5539,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873023313",
+        "actual": "PUNT",
+        "situationText": "4th & 3 at GB 40"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0009142631523306743,
+          "baselineWp": 0.5539,
+          "options": {
+            "GO": 0.5359671127088051,
+            "FG": null,
+            "PUNT": 0.5368813758611358
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0009142631523306743,
+          "baselineWp": 0.5539,
+          "options": {
+            "GO": 0.5359671127088051,
+            "FG": null,
+            "PUNT": 0.5368813758611358
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "5b91bc3692e669202ec9ecbfad94f72c5b0797a4bfa3b90c7a489c472dac2992"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873023:401873023414",
+      "season": 2026,
+      "capturedAt": "2026-10-30T00:42:13.721Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873023",
+        "name": "CAR @ GB",
+        "kickoff": "2026-10-30T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "8:51",
+        "secondsRemaining": 3231,
+        "ydstogo": 6,
+        "yardline100": 84,
+        "fieldPositionText": "CAR 16",
+        "scoreDiff": 3,
+        "scoreText": "CAR 3–0 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.391,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873023414",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at CAR 16"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013750675814380886,
+          "baselineWp": 0.391,
+          "options": {
+            "GO": 0.3605888638891002,
+            "FG": null,
+            "PUNT": 0.3743395397034811
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.013750675814380886,
+          "baselineWp": 0.391,
+          "options": {
+            "GO": 0.3605888638891002,
+            "FG": null,
+            "PUNT": 0.3743395397034811
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "31e47b7e518bf061657eac595603aee9018b93d7b09a9fd833e9989918de433a"
     }
   ]
 }
