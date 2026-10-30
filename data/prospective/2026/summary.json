@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-10-30T03:20:21.125Z",
+  "lastMaterialUpdateAt": "2026-10-30T03:41:33.727Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1080,
-    "gradable": 1079,
+    "archived": 1081,
+    "gradable": 1080,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1079/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1080/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.15393893737314812,
-    "totalModelWpaBurnPp": 166.10011342562683,
-    "exactCoachModelAgreement": 0.8007414272474513,
-    "actualGoRate": 0.21408711770157554,
-    "modelGoRate": 0.24096385542168675
+    "meanModelWpaBurnPp": 0.1547424512082305,
+    "totalModelWpaBurnPp": 167.12184730488895,
+    "exactCoachModelAgreement": 0.8,
+    "actualGoRate": 0.21388888888888888,
+    "modelGoRate": 0.24074074074074073
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 75,
+    "GAME_NOT_FOUND": 74,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -182,6 +182,20 @@
       "modelGoRate": 0.2413793103448276,
       "aggressionDelta": 0.06896551724137931,
       "endgameDecisions": 2
+    },
+    {
+      "team": "GB",
+      "decisions": 36,
+      "gradable": 36,
+      "exactCoachModelAgreement": 0.8333333333333334,
+      "totalModelWpaBurnPp": 4.948305810116127,
+      "meanModelWpaBurnPp": 0.1374529391698924,
+      "costlyMistakes2Pp": 0,
+      "catastrophicMistakes5Pp": 0,
+      "actualGoRate": 0.25,
+      "modelGoRate": 0.1388888888888889,
+      "aggressionDelta": 0.1111111111111111,
+      "endgameDecisions": 5
     },
     {
       "team": "DET",
@@ -336,20 +350,6 @@
       "modelGoRate": 0.20588235294117646,
       "aggressionDelta": -0.14705882352941177,
       "endgameDecisions": 1
-    },
-    {
-      "team": "GB",
-      "decisions": 35,
-      "gradable": 35,
-      "exactCoachModelAgreement": 0.8571428571428571,
-      "totalModelWpaBurnPp": 3.926571930854006,
-      "meanModelWpaBurnPp": 0.1121877694529716,
-      "costlyMistakes2Pp": 0,
-      "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.2571428571428571,
-      "modelGoRate": 0.14285714285714285,
-      "aggressionDelta": 0.11428571428571428,
-      "endgameDecisions": 4
     },
     {
       "team": "IND",
@@ -1144,6 +1144,27 @@
     }
   ],
   "recent": [
+    {
+      "id": "401873023:4018730234456",
+      "capturedAt": "2026-10-30T03:41:33.726Z",
+      "gameName": "CAR @ GB",
+      "kickoff": "2026-10-30T00:15Z",
+      "offense": "GB",
+      "defense": "CAR",
+      "quarter": 4,
+      "clock": "0:30",
+      "ydstogo": 12,
+      "yardline100": 37,
+      "scoreDiff": 8,
+      "actual": "PUNT",
+      "optimal": "FG",
+      "grade": "B",
+      "modelWpaBurnPp": 1.0217338792621211,
+      "certainty": "LEAN",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401873023:4018730233566",
       "capturedAt": "2026-10-30T03:20:01.792Z",
@@ -1970,31 +1991,6 @@
       "referenceOptimal": null,
       "endgameTags": [
         "FG_DOES_NOT_TIE_OR_LEAD"
-      ]
-    },
-    {
-      "id": "401873019:4018730194791",
-      "capturedAt": "2026-10-25T23:41:31.330Z",
-      "gameName": "DEN @ ARI",
-      "kickoff": "2026-10-25T20:05Z",
-      "offense": "ARI",
-      "defense": "DEN",
-      "quarter": 4,
-      "clock": "0:56",
-      "ydstogo": 5,
-      "yardline100": 5,
-      "scoreDiff": -14,
-      "actual": "GO",
-      "optimal": "GO",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": [
-        "TRAILING_PUNT_SCARCITY",
-        "FG_DOES_NOT_TIE_OR_LEAD",
-        "MUST_TD_PATH"
       ]
     }
   ]
