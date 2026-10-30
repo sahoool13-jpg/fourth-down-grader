@@ -111050,6 +111050,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873023:4018730231337",
+      "season": 2026,
+      "capturedAt": "2026-10-30T01:19:39.752Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873023",
+        "name": "CAR @ GB",
+        "kickoff": "2026-10-30T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "11:27",
+        "secondsRemaining": 2487,
+        "ydstogo": 9,
+        "yardline100": 62,
+        "fieldPositionText": "CAR 38",
+        "scoreDiff": 4,
+        "scoreText": "CAR 10–6 GB",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4689,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730231337",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at CAR 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012361961667007426,
+          "baselineWp": 0.4689,
+          "options": {
+            "GO": 0.43618947360914784,
+            "FG": null,
+            "PUNT": 0.44855143527615526
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012361961667007426,
+          "baselineWp": 0.4689,
+          "options": {
+            "GO": 0.43618947360914784,
+            "FG": null,
+            "PUNT": 0.44855143527615526
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "cf58d54aabe7be5186b7d04d9cb213b1b86b3fda55380dc2a6ae672234218931"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873023:401873023190",
       "season": 2026,
       "capturedAt": "2026-10-30T00:42:13.523Z",
@@ -111359,6 +111462,109 @@
       },
       "reference": null,
       "snapshotHash": "31e47b7e518bf061657eac595603aee9018b93d7b09a9fd833e9989918de433a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873023:401873023984",
+      "season": 2026,
+      "capturedAt": "2026-10-30T01:19:39.652Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873023",
+        "name": "CAR @ GB",
+        "kickoff": "2026-10-30T00:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "29",
+        "abbreviation": "CAR",
+        "name": "Carolina Panthers"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "0:50",
+        "secondsRemaining": 2750,
+        "ydstogo": 1,
+        "yardline100": 9,
+        "fieldPositionText": "GB 9",
+        "scoreDiff": -3,
+        "scoreText": "CAR 3–6 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3439,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873023984",
+        "actual": "GO",
+        "situationText": "4th & 1 at GB 9"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.007945511468298583,
+          "baselineWp": 0.3439,
+          "options": {
+            "GO": 0.3283253445469471,
+            "FG": 0.32037983307864853,
+            "PUNT": 0.28527044861497
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.007945511468298583,
+          "baselineWp": 0.3439,
+          "options": {
+            "GO": 0.3283253445469471,
+            "FG": 0.32037983307864853,
+            "PUNT": 0.28527044861497
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0494ac9f195cd1b2736ae11d66c49d55ceb206e12327b7a74605786514150311"
     }
   ]
 }
