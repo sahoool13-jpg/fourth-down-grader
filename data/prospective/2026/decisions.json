@@ -129682,6 +129682,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873035:4018730351190",
+      "season": 2026,
+      "capturedAt": "2026-11-02T02:20:24.089Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873035",
+        "name": "PHI @ WSH",
+        "kickoff": "2026-11-02T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "0:28",
+        "secondsRemaining": 2728,
+        "ydstogo": 4,
+        "yardline100": 38,
+        "fieldPositionText": "PHI 38",
+        "scoreDiff": -10,
+        "scoreText": "WSH 0–10 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3535,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730351190",
+        "actual": "FG",
+        "situationText": "4th & 4 at PHI 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011544506882240124,
+          "baselineWp": 0.3535,
+          "options": {
+            "GO": 0.33486720946372045,
+            "FG": 0.3464117163459606,
+            "PUNT": 0.32357939084980736
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011544506882240124,
+          "baselineWp": 0.3535,
+          "options": {
+            "GO": 0.33486720946372045,
+            "FG": 0.3464117163459606,
+            "PUNT": 0.32357939084980736
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a037e258c103d6515db6524c14805b8dbd30ec31a85e35ca515beb24c529b9f4"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873035:4018730351434",
+      "season": 2026,
+      "capturedAt": "2026-11-02T02:20:24.000Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873035",
+        "name": "PHI @ WSH",
+        "kickoff": "2026-11-02T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "10:58",
+        "secondsRemaining": 2458,
+        "ydstogo": 9,
+        "yardline100": 48,
+        "fieldPositionText": "WSH 48",
+        "scoreDiff": 7,
+        "scoreText": "PHI 10–3 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5680000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730351434",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at WSH 48"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003114192952745287,
+          "baselineWp": 0.5680000000000001,
+          "options": {
+            "GO": 0.5385230780182176,
+            "FG": 0.5371973198230775,
+            "PUNT": 0.5416372709709629
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.003114192952745287,
+          "baselineWp": 0.5680000000000001,
+          "options": {
+            "GO": 0.5385230780182176,
+            "FG": 0.5371973198230775,
+            "PUNT": 0.5416372709709629
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d4ec0fc5b25959cb322b7be42e89bdfd6ab2e18c8ca21fc8933bf9a89ef66e52"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873035:401873035315",
       "season": 2026,
       "capturedAt": "2026-11-02T01:42:16.354Z",
@@ -129887,6 +130093,212 @@
       },
       "reference": null,
       "snapshotHash": "71372d427362c57245509b82da5be2d032d42fef985f68ad2cd4a19792a6eaa5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873035:401873035534",
+      "season": 2026,
+      "capturedAt": "2026-11-02T02:20:23.984Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873035",
+        "name": "PHI @ WSH",
+        "kickoff": "2026-11-02T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "9:51",
+        "secondsRemaining": 3291,
+        "ydstogo": 3,
+        "yardline100": 81,
+        "fieldPositionText": "WSH 19",
+        "scoreDiff": 0,
+        "scoreText": "WSH 0–0 PHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6099,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873035534",
+        "actual": "PUNT",
+        "situationText": "4th & 3 at WSH 19"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.0076398592955126965,
+          "baselineWp": 0.6099,
+          "options": {
+            "GO": 0.5857750377637057,
+            "FG": null,
+            "PUNT": 0.5934148970592183
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.0076398592955126965,
+          "baselineWp": 0.6099,
+          "options": {
+            "GO": 0.5857750377637057,
+            "FG": null,
+            "PUNT": 0.5934148970592183
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "44e4c0421141b8d7ef4ffe36355287db6a25323a2089f36c6706ca51fde7c116"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873035:401873035698",
+      "season": 2026,
+      "capturedAt": "2026-11-02T02:20:24.161Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873035",
+        "name": "PHI @ WSH",
+        "kickoff": "2026-11-02T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "21",
+        "abbreviation": "PHI",
+        "name": "Philadelphia Eagles"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "6:10",
+        "secondsRemaining": 3070,
+        "ydstogo": 6,
+        "yardline100": 22,
+        "fieldPositionText": "WSH 22",
+        "scoreDiff": 0,
+        "scoreText": "PHI 0–0 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.39849999999999997,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873035698",
+        "actual": "FG",
+        "situationText": "4th & 6 at WSH 22"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01612480506804953,
+          "baselineWp": 0.39849999999999997,
+          "options": {
+            "GO": 0.37321554927814876,
+            "FG": 0.3893403543461983,
+            "PUNT": 0.3560481990625656
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.01612480506804953,
+          "baselineWp": 0.39849999999999997,
+          "options": {
+            "GO": 0.37321554927814876,
+            "FG": 0.3893403543461983,
+            "PUNT": 0.3560481990625656
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ff09cfbf8b6f4dc43a64400ad5100a2a71c2080e02edc2fd5986313e650ff747"
     }
   ]
 }
