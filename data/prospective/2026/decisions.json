@@ -131456,6 +131456,315 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873036:4018730361001",
+      "season": 2026,
+      "capturedAt": "2026-11-03T02:20:03.392Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873036",
+        "name": "CHI @ SEA",
+        "kickoff": "2026-11-03T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "12:50",
+        "secondsRemaining": 2570,
+        "ydstogo": 9,
+        "yardline100": 9,
+        "fieldPositionText": "CHI 9",
+        "scoreDiff": -7,
+        "scoreText": "SEA 0–7 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4179,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730361001",
+        "actual": "FG",
+        "situationText": "4th & Goal at CHI 9"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.006394156134331641,
+          "baselineWp": 0.4179,
+          "options": {
+            "GO": 0.38396279194648497,
+            "FG": 0.3903569480808166,
+            "PUNT": 0.350679565815747
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.006394156134331641,
+          "baselineWp": 0.4179,
+          "options": {
+            "GO": 0.38396279194648497,
+            "FG": 0.3903569480808166,
+            "PUNT": 0.350679565815747
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ef19b1ae03faccc50fae745634a1c503de362df03ca5e416804eaab8da134748"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873036:4018730361126",
+      "season": 2026,
+      "capturedAt": "2026-11-03T02:20:03.517Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873036",
+        "name": "CHI @ SEA",
+        "kickoff": "2026-11-03T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "11:22",
+        "secondsRemaining": 2482,
+        "ydstogo": 6,
+        "yardline100": 75,
+        "fieldPositionText": "CHI 25",
+        "scoreDiff": 4,
+        "scoreText": "CHI 7–3 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5267,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730361126",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at CHI 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012599501397298374,
+          "baselineWp": 0.5267,
+          "options": {
+            "GO": 0.4936120780342901,
+            "FG": null,
+            "PUNT": 0.5062115794315885
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012599501397298374,
+          "baselineWp": 0.5267,
+          "options": {
+            "GO": 0.4936120780342901,
+            "FG": null,
+            "PUNT": 0.5062115794315885
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "4f4e1118f37e629634304ce17f8b986287a6d4a5b080d81620a1b7d41b30d0e1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873036:4018730361220",
+      "season": 2026,
+      "capturedAt": "2026-11-03T02:20:03.375Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873036",
+        "name": "CHI @ SEA",
+        "kickoff": "2026-11-03T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "9:41",
+        "secondsRemaining": 2381,
+        "ydstogo": 8,
+        "yardline100": 68,
+        "fieldPositionText": "SEA 32",
+        "scoreDiff": -4,
+        "scoreText": "SEA 3–7 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.4137,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730361220",
+        "actual": "PUNT",
+        "situationText": "4th & 8 at SEA 32"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.011873118730394816,
+          "baselineWp": 0.4137,
+          "options": {
+            "GO": 0.3813859105881605,
+            "FG": null,
+            "PUNT": 0.39325902931855533
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.011873118730394816,
+          "baselineWp": 0.4137,
+          "options": {
+            "GO": 0.3813859105881605,
+            "FG": null,
+            "PUNT": 0.39325902931855533
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "eff1d429325d2fef8bf211801a3f1e07732c0ec445b084b09c47db1fdb527970"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873036:401873036131",
       "season": 2026,
       "capturedAt": "2026-11-03T01:41:52.172Z",
@@ -131557,6 +131866,212 @@
       },
       "reference": null,
       "snapshotHash": "03e7858f1b9cc9d77cc5085d0bd5c3cd74640d581e5eac311c787d9fdd5f5be3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873036:4018730361407",
+      "season": 2026,
+      "capturedAt": "2026-11-03T02:20:03.581Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873036",
+        "name": "CHI @ SEA",
+        "kickoff": "2026-11-03T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:07",
+        "secondsRemaining": 2167,
+        "ydstogo": 4,
+        "yardline100": 25,
+        "fieldPositionText": "SEA 25",
+        "scoreDiff": 4,
+        "scoreText": "CHI 7–3 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6174999999999999,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730361407",
+        "actual": "FG",
+        "situationText": "4th & 4 at SEA 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.013376045881497767,
+          "baselineWp": 0.6174999999999999,
+          "options": {
+            "GO": 0.590097744095082,
+            "FG": 0.6034737899765797,
+            "PUNT": 0.5673184077106659
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.013376045881497767,
+          "baselineWp": 0.6174999999999999,
+          "options": {
+            "GO": 0.590097744095082,
+            "FG": 0.6034737899765797,
+            "PUNT": 0.5673184077106659
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "30b29f76b3c32dae3d6811a754765865d9dc52c19aabdd687710386c0733567e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873036:4018730361532",
+      "season": 2026,
+      "capturedAt": "2026-11-03T02:20:03.566Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873036",
+        "name": "CHI @ SEA",
+        "kickoff": "2026-11-03T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "4:57",
+        "secondsRemaining": 2097,
+        "ydstogo": 5,
+        "yardline100": 74,
+        "fieldPositionText": "SEA 26",
+        "scoreDiff": -7,
+        "scoreText": "SEA 3–10 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3116,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730361532",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at SEA 26"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.008882883835653999,
+          "baselineWp": 0.3116,
+          "options": {
+            "GO": 0.28336867955799383,
+            "FG": null,
+            "PUNT": 0.29225156339364783
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.008882883835653999,
+          "baselineWp": 0.3116,
+          "options": {
+            "GO": 0.28336867955799383,
+            "FG": null,
+            "PUNT": 0.29225156339364783
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "f8beb5a967df9139a0209121c5e7dc85b8d6ec6e80a76a25f360f7d6a061cb87"
     },
     {
       "schemaVersion": 1,
@@ -131765,6 +132280,109 @@
       },
       "reference": null,
       "snapshotHash": "cc7ecd8a706f8b9a7f27c398ed91730eb2d5bc3dc0bb5c2686b9084fae1c0db9"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873036:401873036799",
+      "season": 2026,
+      "capturedAt": "2026-11-03T02:20:03.294Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873036",
+        "name": "CHI @ SEA",
+        "kickoff": "2026-11-03T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "1:48",
+        "secondsRemaining": 2808,
+        "ydstogo": 2,
+        "yardline100": 88,
+        "fieldPositionText": "CHI 12",
+        "scoreDiff": 7,
+        "scoreText": "CHI 7–0 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5807,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873036799",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at CHI 12"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.008902248983500227,
+          "baselineWp": 0.5807,
+          "options": {
+            "GO": 0.5522683244651145,
+            "FG": null,
+            "PUNT": 0.5611705734486148
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.008902248983500227,
+          "baselineWp": 0.5807,
+          "options": {
+            "GO": 0.5522683244651145,
+            "FG": null,
+            "PUNT": 0.5611705734486148
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "66cca4f84977f8df0b6b79fea46f381231fb21ff8450bd192bb0f1da04d07005"
     }
   ]
 }
