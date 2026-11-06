@@ -133022,6 +133022,418 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873037:4018730371145",
+      "season": 2026,
+      "capturedAt": "2026-11-06T02:19:29.475Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "9:42",
+        "secondsRemaining": 2382,
+        "ydstogo": 11,
+        "yardline100": 57,
+        "fieldPositionText": "BAL 43",
+        "scoreDiff": -7,
+        "scoreText": "BAL 3–10 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1111,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730371145",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at BAL 43"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004210520891803932,
+          "baselineWp": 0.1111,
+          "options": {
+            "GO": 0.0985177711092729,
+            "FG": null,
+            "PUNT": 0.10272829200107683
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004210520891803932,
+          "baselineWp": 0.1111,
+          "options": {
+            "GO": 0.0985177711092729,
+            "FG": null,
+            "PUNT": 0.10272829200107683
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c282179635307b3350381da7a3d14307a1ef7e7873616b5fe1ca233d6e73cd7a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873037:4018730371312",
+      "season": 2026,
+      "capturedAt": "2026-11-06T02:19:29.452Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:39",
+        "secondsRemaining": 2199,
+        "ydstogo": 7,
+        "yardline100": 76,
+        "fieldPositionText": "JAX 24",
+        "scoreDiff": 7,
+        "scoreText": "JAX 10–3 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8666,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730371312",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at JAX 24"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.008524037051207745,
+          "baselineWp": 0.8666,
+          "options": {
+            "GO": 0.8476091444268058,
+            "FG": null,
+            "PUNT": 0.8561331814780135
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.008524037051207745,
+          "baselineWp": 0.8666,
+          "options": {
+            "GO": 0.8476091444268058,
+            "FG": null,
+            "PUNT": 0.8561331814780135
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a2b92a2b3667ae707f6b60d05a0845344e1e8ef1a2f8bb35e46e2054cb96cca6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873037:4018730371409",
+      "season": 2026,
+      "capturedAt": "2026-11-06T02:19:29.479Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "4:37",
+        "secondsRemaining": 2077,
+        "ydstogo": 1,
+        "yardline100": 71,
+        "fieldPositionText": "BAL 29",
+        "scoreDiff": -7,
+        "scoreText": "BAL 3–10 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.109,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730371409",
+        "actual": "GO",
+        "situationText": "4th & 1 at BAL 29"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0021863511093994092,
+          "baselineWp": 0.109,
+          "options": {
+            "GO": 0.10253991362460532,
+            "FG": null,
+            "PUNT": 0.10035356251520591
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0021863511093994092,
+          "baselineWp": 0.109,
+          "options": {
+            "GO": 0.10253991362460532,
+            "FG": null,
+            "PUNT": 0.10035356251520591
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b3d018ffab6930415794c76ccdb437d5509129f3018b337cecec7da93531dfe6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873037:4018730371594",
+      "season": 2026,
+      "capturedAt": "2026-11-06T02:19:29.479Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "2:12",
+        "secondsRemaining": 1932,
+        "ydstogo": 9,
+        "yardline100": 55,
+        "fieldPositionText": "BAL 45",
+        "scoreDiff": -7,
+        "scoreText": "BAL 3–10 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1155,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730371594",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at BAL 45"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0032367525227972455,
+          "baselineWp": 0.1155,
+          "options": {
+            "GO": 0.10210771123752875,
+            "FG": null,
+            "PUNT": 0.105344463760326
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0032367525227972455,
+          "baselineWp": 0.1155,
+          "options": {
+            "GO": 0.10210771123752875,
+            "FG": null,
+            "PUNT": 0.105344463760326
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "e6da19aeea690e9b8f5bdcfd5670465cdf832cefb944ad745d272fb73895d015"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873037:401873037480",
       "season": 2026,
       "capturedAt": "2026-11-06T01:42:09.502Z",
@@ -133123,6 +133535,109 @@
       },
       "reference": null,
       "snapshotHash": "19d1e2ff5801d4513e5e995711c41993532fb227827775e3eb8f53055bb15b46"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873037:401873037757",
+      "season": 2026,
+      "capturedAt": "2026-11-06T02:19:29.480Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "2:00",
+        "secondsRemaining": 2820,
+        "ydstogo": 7,
+        "yardline100": 18,
+        "fieldPositionText": "BAL 18",
+        "scoreDiff": 4,
+        "scoreText": "JAX 7–3 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8751,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873037757",
+        "actual": "FG",
+        "situationText": "4th & 7 at BAL 18"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008710939005756924,
+          "baselineWp": 0.8751,
+          "options": {
+            "GO": 0.8601642439991283,
+            "FG": 0.8688751830048852,
+            "PUNT": 0.8502369110511467
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008710939005756924,
+          "baselineWp": 0.8751,
+          "options": {
+            "GO": 0.8601642439991283,
+            "FG": 0.8688751830048852,
+            "PUNT": 0.8502369110511467
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "01eb11dba654c2b7a6181f172bf30292f20eba18afadbf203634330cc4761746"
     }
   ]
 }
