@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-06T02:19:49.575Z",
+  "lastMaterialUpdateAt": "2026-11-06T02:40:41.506Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1283,
-    "gradable": 1282,
+    "archived": 1284,
+    "gradable": 1283,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1282/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1283/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.14365494816500768,
-    "totalModelWpaBurnPp": 184.16564354753984,
-    "exactCoachModelAgreement": 0.8057722308892356,
-    "actualGoRate": 0.21060842433697347,
-    "modelGoRate": 0.24414976599063962
+    "meanModelWpaBurnPp": 0.14356684026789834,
+    "totalModelWpaBurnPp": 184.19625606371358,
+    "exactCoachModelAgreement": 0.8051441932969603,
+    "actualGoRate": 0.21044427123928294,
+    "modelGoRate": 0.24473889321901793
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 89,
+    "GAME_NOT_FOUND": 88,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -157,16 +157,16 @@
     },
     {
       "team": "BAL",
-      "decisions": 50,
-      "gradable": 50,
-      "exactCoachModelAgreement": 0.84,
-      "totalModelWpaBurnPp": 6.577340871827532,
-      "meanModelWpaBurnPp": 0.13154681743655064,
+      "decisions": 51,
+      "gradable": 51,
+      "exactCoachModelAgreement": 0.8235294117647058,
+      "totalModelWpaBurnPp": 6.607953388001264,
+      "meanModelWpaBurnPp": 0.12956771349022086,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.16,
-      "modelGoRate": 0.28,
-      "aggressionDelta": -0.12,
+      "actualGoRate": 0.1568627450980392,
+      "modelGoRate": 0.29411764705882354,
+      "aggressionDelta": -0.13725490196078433,
       "endgameDecisions": 3
     },
     {
@@ -1145,6 +1145,27 @@
   ],
   "recent": [
     {
+      "id": "401873037:4018730371895",
+      "capturedAt": "2026-11-06T02:40:41.505Z",
+      "gameName": "JAX @ BAL",
+      "kickoff": "2026-11-06T01:15Z",
+      "offense": "BAL",
+      "defense": "JAX",
+      "quarter": 2,
+      "clock": "0:22",
+      "ydstogo": 2,
+      "yardline100": 61,
+      "scoreDiff": -14,
+      "actual": "PUNT",
+      "optimal": "GO",
+      "grade": "A+",
+      "modelWpaBurnPp": 0.030612516173731535,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
       "id": "401873037:401873037757",
       "capturedAt": "2026-11-06T02:19:29.480Z",
       "gameName": "JAX @ BAL",
@@ -1977,29 +1998,6 @@
         "TRAILING_PUNT_SCARCITY",
         "FG_DOES_NOT_TIE_OR_LEAD",
         "MUST_TD_PATH"
-      ]
-    },
-    {
-      "id": "401873032:4018730323896",
-      "capturedAt": "2026-11-02T00:37:38.820Z",
-      "gameName": "LAC @ LAR",
-      "kickoff": "2026-11-01T21:05Z",
-      "offense": "LAR",
-      "defense": "LAC",
-      "quarter": 4,
-      "clock": "0:25",
-      "ydstogo": 1,
-      "yardline100": 38,
-      "scoreDiff": 15,
-      "actual": "GO",
-      "optimal": "GO",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": [
-        "CONVERSION_CAN_SEAL"
       ]
     }
   ]

@@ -133438,6 +133438,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873037:4018730371895",
+      "season": 2026,
+      "capturedAt": "2026-11-06T02:40:41.505Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "0:22",
+        "secondsRemaining": 1822,
+        "ydstogo": 2,
+        "yardline100": 61,
+        "fieldPositionText": "BAL 39",
+        "scoreDiff": -14,
+        "scoreText": "BAL 3–17 JAX",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.0438,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730371895",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at BAL 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.00030612516173731535,
+          "baselineWp": 0.0438,
+          "options": {
+            "GO": 0.040087912909922904,
+            "FG": null,
+            "PUNT": 0.03978178774818559
+          },
+          "grade": "A+",
+          "wpRegret": 0.00030612516173731535,
+          "wpRegretPp": 0.030612516173731535,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.00030612516173731535,
+          "baselineWp": 0.0438,
+          "options": {
+            "GO": 0.040087912909922904,
+            "FG": null,
+            "PUNT": 0.03978178774818559
+          },
+          "grade": "A+",
+          "wpRegret": 0.00030612516173731535,
+          "wpRegretPp": 0.030612516173731535,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "1f904dc5d569becfe5a2087072afd231e4db7c31b8c4eab190f86199cb961f89"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873037:401873037480",
       "season": 2026,
       "capturedAt": "2026-11-06T01:42:09.502Z",
