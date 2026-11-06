@@ -133958,6 +133958,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873037:4018730372968",
+      "season": 2026,
+      "capturedAt": "2026-11-06T03:40:38.011Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "13:35",
+        "secondsRemaining": 815,
+        "ydstogo": 2,
+        "yardline100": 29,
+        "fieldPositionText": "BAL 29",
+        "scoreDiff": 17,
+        "scoreText": "JAX 20–3 BAL",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9903,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730372968",
+        "actual": "FG",
+        "situationText": "4th & 2 at BAL 29"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.00044661350184216353,
+          "baselineWp": 0.9903,
+          "options": {
+            "GO": 0.9886820504995593,
+            "FG": 0.9891286640014014,
+            "PUNT": 0.9871786280372946
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.00044661350184216353,
+          "baselineWp": 0.9903,
+          "options": {
+            "GO": 0.9886820504995593,
+            "FG": 0.9891286640014014,
+            "PUNT": 0.9871786280372946
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "e492c77fbdb42ee607d71433751ae93e9e64f2bf9071c838740d3022a85ed033"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873037:4018730373120",
+      "season": 2026,
+      "capturedAt": "2026-11-06T03:40:38.082Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873037",
+        "name": "JAX @ BAL",
+        "kickoff": "2026-11-06T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "30",
+        "abbreviation": "JAX",
+        "name": "Jacksonville Jaguars"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "11:52",
+        "secondsRemaining": 712,
+        "ydstogo": 2,
+        "yardline100": 15,
+        "fieldPositionText": "BAL 15",
+        "scoreDiff": 20,
+        "scoreText": "JAX 23–3 BAL",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9989,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730373120",
+        "actual": "FG",
+        "situationText": "4th & 2 at BAL 15"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.00003428473762401296,
+          "baselineWp": 0.9989,
+          "options": {
+            "GO": 0.9986312312940951,
+            "FG": 0.9986655160317192,
+            "PUNT": 0.9983156067700452
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.00003428473762401296,
+          "baselineWp": 0.9989,
+          "options": {
+            "GO": 0.9986312312940951,
+            "FG": 0.9986655160317192,
+            "PUNT": 0.9983156067700452
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "59ed6a3c8d1687bd044e88b37099e7b97bbb0f10885c933a0ace7e3783c96d1f"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873037:401873037480",
       "season": 2026,
       "capturedAt": "2026-11-06T01:42:09.502Z",
