@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-08T20:41:05.610Z",
+  "lastMaterialUpdateAt": "2026-11-08T20:41:27.678Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -51,10 +51,10 @@
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 90,
+    "GAME_NOT_FOUND": 97,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 7
+    "UNKNOWN": 0
   },
   "teams": [
     {
@@ -1145,27 +1145,6 @@
   ],
   "recent": [
     {
-      "id": "401873043:4018730433871",
-      "capturedAt": "2026-11-08T20:41:05.609Z",
-      "gameName": "LAR @ WSH",
-      "kickoff": "2026-11-08T18:00Z",
-      "offense": "WSH",
-      "defense": "LAR",
-      "quarter": 4,
-      "clock": "8:21",
-      "ydstogo": 11,
-      "yardline100": 45,
-      "scoreDiff": -7,
-      "actual": "PUNT",
-      "optimal": "GO",
-      "grade": "A",
-      "modelWpaBurnPp": 0.4890170023035517,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
       "id": "401873041:4018730413741",
       "capturedAt": "2026-11-08T20:41:05.609Z",
       "gameName": "DEN @ CAR",
@@ -1182,7 +1161,28 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873043:4018730433871",
+      "capturedAt": "2026-11-08T20:41:05.609Z",
+      "gameName": "LAR @ WSH",
+      "kickoff": "2026-11-08T18:00Z",
+      "offense": "WSH",
+      "defense": "LAR",
+      "quarter": 4,
+      "clock": "8:21",
+      "ydstogo": 11,
+      "yardline100": 45,
+      "scoreDiff": -7,
+      "actual": "PUNT",
+      "optimal": "GO",
+      "grade": "A",
+      "modelWpaBurnPp": 0.4890170023035517,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1203,7 +1203,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1224,7 +1224,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1245,7 +1245,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1266,7 +1266,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1287,7 +1287,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1308,7 +1308,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1329,7 +1329,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1350,7 +1350,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1371,7 +1371,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1392,7 +1392,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1413,7 +1413,7 @@
       "grade": "A",
       "modelWpaBurnPp": 0.3322257449511534,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1434,7 +1434,7 @@
       "grade": "A",
       "modelWpaBurnPp": 0.060576262856615326,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1455,7 +1455,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
