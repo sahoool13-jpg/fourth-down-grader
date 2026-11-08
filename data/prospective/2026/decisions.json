@@ -148441,6 +148441,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873046:4018730462489",
+      "season": 2026,
+      "capturedAt": "2026-11-08T23:12:15.541Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873046",
+        "name": "HOU @ LAC",
+        "kickoff": "2026-11-08T21:05Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "0:10",
+        "secondsRemaining": 1810,
+        "ydstogo": 14,
+        "yardline100": 74,
+        "fieldPositionText": "LAC 26",
+        "scoreDiff": -15,
+        "scoreText": "LAC 9–24 HOU",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.074,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730462489",
+        "actual": "PUNT",
+        "situationText": "4th & 14 at LAC 26"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.007067169156925519,
+          "baselineWp": 0.074,
+          "options": {
+            "GO": 0.06031666382713096,
+            "FG": null,
+            "PUNT": 0.06738383298405648
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.007067169156925519,
+          "baselineWp": 0.074,
+          "options": {
+            "GO": 0.06031666382713096,
+            "FG": null,
+            "PUNT": 0.06738383298405648
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "eaa413940b83a17114f484939c47d3ae4c0b29966498f0f5f00c97a46b1355cc"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873046:401873046573",
       "season": 2026,
       "capturedAt": "2026-11-08T21:41:02.902Z",
@@ -149585,6 +149688,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873048:4018730481824",
+      "season": 2026,
+      "capturedAt": "2026-11-08T23:12:15.733Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873048",
+        "name": "ARI @ SEA",
+        "kickoff": "2026-11-08T21:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "22",
+        "abbreviation": "ARI",
+        "name": "Arizona Cardinals"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:55",
+        "secondsRemaining": 1915,
+        "ydstogo": 9,
+        "yardline100": 71,
+        "fieldPositionText": "ARI 29",
+        "scoreDiff": -4,
+        "scoreText": "ARI 3–7 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2368,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730481824",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at ARI 29"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012444667679571114,
+          "baselineWp": 0.2368,
+          "options": {
+            "GO": 0.20742620149832044,
+            "FG": null,
+            "PUNT": 0.21987086917789156
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.012444667679571114,
+          "baselineWp": 0.2368,
+          "options": {
+            "GO": 0.20742620149832044,
+            "FG": null,
+            "PUNT": 0.21987086917789156
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "84c2376c7b22610d88e0915ef0cab6aeb0fd407138648c7c6d812d45790406b8"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873048:401873048427",
       "season": 2026,
       "capturedAt": "2026-11-08T21:41:03.046Z",
@@ -150206,6 +150412,212 @@
       },
       "reference": null,
       "snapshotHash": "979a761b5eba1fd39f3c9d13fe001e6a24e3495ed1ea5250ea20a6181d242207"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873049:4018730492294",
+      "season": 2026,
+      "capturedAt": "2026-11-08T23:12:15.735Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873049",
+        "name": "GB @ NE",
+        "kickoff": "2026-11-08T21:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "defense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:52",
+        "secondsRemaining": 1912,
+        "ydstogo": 3,
+        "yardline100": 43,
+        "fieldPositionText": "NE 43",
+        "scoreDiff": 10,
+        "scoreText": "GB 24–14 NE",
+        "timeouts": 3,
+        "opponentTimeouts": 0,
+        "baselineWp": 0.7659,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730492294",
+        "actual": "GO",
+        "situationText": "4th & 3 at NE 43"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0013461657437213725,
+          "baselineWp": 0.7659,
+          "options": {
+            "GO": 0.7478084512735339,
+            "FG": 0.7491546170172553,
+            "PUNT": 0.7394974304618457
+          },
+          "grade": "A",
+          "wpRegret": 0.0013461657437213725,
+          "wpRegretPp": 0.13461657437213725,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0013461657437213725,
+          "baselineWp": 0.7659,
+          "options": {
+            "GO": 0.7478084512735339,
+            "FG": 0.7491546170172553,
+            "PUNT": 0.7394974304618457
+          },
+          "grade": "A",
+          "wpRegret": 0.0013461657437213725,
+          "wpRegretPp": 0.13461657437213725,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "25a7de0e1c4c3466d3c035d4d3016f6807eee6113cacb7f26fac2278e7878045"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873049:4018730492473",
+      "season": 2026,
+      "capturedAt": "2026-11-08T23:12:15.686Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873049",
+        "name": "GB @ NE",
+        "kickoff": "2026-11-08T21:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "0:59",
+        "secondsRemaining": 1859,
+        "ydstogo": 10,
+        "yardline100": 46,
+        "fieldPositionText": "GB 46",
+        "scoreDiff": -10,
+        "scoreText": "NE 14–24 GB",
+        "timeouts": 0,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2364,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730492473",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at GB 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.002182255262179883,
+          "baselineWp": 0.2364,
+          "options": {
+            "GO": 0.21206575779403147,
+            "FG": 0.2150527588834146,
+            "PUNT": 0.21287050362123472
+          },
+          "grade": "A",
+          "wpRegret": 0.002182255262179883,
+          "wpRegretPp": 0.2182255262179883,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.002182255262179883,
+          "baselineWp": 0.2364,
+          "options": {
+            "GO": 0.21206575779403147,
+            "FG": 0.2150527588834146,
+            "PUNT": 0.21287050362123472
+          },
+          "grade": "A",
+          "wpRegret": 0.002182255262179883,
+          "wpRegretPp": 0.2182255262179883,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "24062671c096634928c44d4d12228ebcdc0482a313f6dc6ea9c19570fe2dbdc0"
     },
     {
       "schemaVersion": 1,
