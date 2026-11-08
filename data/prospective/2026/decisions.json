@@ -134475,6 +134475,109 @@
       },
       "reference": null,
       "snapshotHash": "01eb11dba654c2b7a6181f172bf30292f20eba18afadbf203634330cc4761746"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873038:401873038843",
+      "season": 2026,
+      "capturedAt": "2026-11-08T15:11:48.453Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873038",
+        "name": "CIN VS ATL",
+        "kickoff": "2026-11-08T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "2:56",
+        "secondsRemaining": 2876,
+        "ydstogo": 13,
+        "yardline100": 13,
+        "fieldPositionText": "CIN 13",
+        "scoreDiff": 0,
+        "scoreText": "ATL 7–7 CIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2873,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873038843",
+        "actual": "FG",
+        "situationText": "4th & Goal at CIN 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016835510101263718,
+          "baselineWp": 0.2873,
+          "options": {
+            "GO": 0.2550172396659598,
+            "FG": 0.2718527497672235,
+            "PUNT": 0.24128383956755883
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.016835510101263718,
+          "baselineWp": 0.2873,
+          "options": {
+            "GO": 0.2550172396659598,
+            "FG": 0.2718527497672235,
+            "PUNT": 0.24128383956755883
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "80f6c1d1ac422fd999bcdef0904e1b300f5b1b38b2e0d4638fb0e4008a890d80"
     }
   ]
 }
