@@ -134894,6 +134894,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873038:4018730383317",
+      "season": 2026,
+      "capturedAt": "2026-11-08T17:11:32.779Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873038",
+        "name": "CIN VS ATL",
+        "kickoff": "2026-11-08T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "defense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "11:31",
+        "secondsRemaining": 691,
+        "ydstogo": 12,
+        "yardline100": 20,
+        "fieldPositionText": "CIN 20",
+        "scoreDiff": -14,
+        "scoreText": "ATL 17–31 CIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.0387,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730383317",
+        "actual": "FG",
+        "situationText": "4th & 12 at CIN 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.000727761567543745,
+          "baselineWp": 0.0387,
+          "options": {
+            "GO": 0.02585814341215351,
+            "FG": 0.026585904979697254,
+            "PUNT": 0.020885677371582628
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.7777777777777778,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.000727761567543745,
+          "baselineWp": 0.0387,
+          "options": {
+            "GO": 0.02585814341215351,
+            "FG": 0.026585904979697254,
+            "PUNT": 0.020885677371582628
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.7777777777777778,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "8049b7d93aa13193d4bfb4354e2639d7923b41d8b5ff5e292cfee5b793b07d78"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873038:4018730383424",
+      "season": 2026,
+      "capturedAt": "2026-11-08T17:11:32.795Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873038",
+        "name": "CIN VS ATL",
+        "kickoff": "2026-11-08T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "defense": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "name": "Atlanta Falcons"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "9:27",
+        "secondsRemaining": 567,
+        "ydstogo": 7,
+        "yardline100": 69,
+        "fieldPositionText": "CIN 31",
+        "scoreDiff": 14,
+        "scoreText": "CIN 31–17 ATL",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9759,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730383424",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at CIN 31"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0033469248419180087,
+          "baselineWp": 0.9759,
+          "options": {
+            "GO": 0.9688086802910526,
+            "FG": null,
+            "PUNT": 0.9721556051329706
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0033469248419180087,
+          "baselineWp": 0.9759,
+          "options": {
+            "GO": 0.9688086802910526,
+            "FG": null,
+            "PUNT": 0.9721556051329706
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b9aa49da853f04ff59602664492fb041a22a985cc441b6cf7013b93ddd0c2aa3"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873038:401873038843",
       "season": 2026,
       "capturedAt": "2026-11-08T15:11:48.453Z",
