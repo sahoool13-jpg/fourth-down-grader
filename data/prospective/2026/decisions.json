@@ -153855,6 +153855,418 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873050:4018730503196",
+      "season": 2026,
+      "capturedAt": "2026-11-09T04:18:23.726Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873050",
+        "name": "TB @ CHI",
+        "kickoff": "2026-11-09T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "2:02",
+        "secondsRemaining": 1022,
+        "ydstogo": 2,
+        "yardline100": 66,
+        "fieldPositionText": "TB 34",
+        "scoreDiff": -11,
+        "scoreText": "TB 13–24 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.07909999999999995,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730503196",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at TB 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0029473886268278487,
+          "baselineWp": 0.07909999999999995,
+          "options": {
+            "GO": 0.0686947370914806,
+            "FG": null,
+            "PUNT": 0.06574734846465276
+          },
+          "grade": "A",
+          "wpRegret": 0.0029473886268278487,
+          "wpRegretPp": 0.2947388626827849,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0029473886268278487,
+          "baselineWp": 0.07909999999999995,
+          "options": {
+            "GO": 0.0686947370914806,
+            "FG": null,
+            "PUNT": 0.06574734846465276
+          },
+          "grade": "A",
+          "wpRegret": 0.0029473886268278487,
+          "wpRegretPp": 0.2947388626827849,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "4357f3f1b58e4134d0dfcfb3ed064d70473111d0b5477377f255d46de22e8bb5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873050:4018730503328",
+      "season": 2026,
+      "capturedAt": "2026-11-09T04:18:23.798Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873050",
+        "name": "TB @ CHI",
+        "kickoff": "2026-11-09T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "0:33",
+        "secondsRemaining": 933,
+        "ydstogo": 9,
+        "yardline100": 86,
+        "fieldPositionText": "CHI 14",
+        "scoreDiff": 11,
+        "scoreText": "CHI 24–13 TB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8809,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730503328",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at CHI 14"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.023893832171684948,
+          "baselineWp": 0.8809,
+          "options": {
+            "GO": 0.8425730504706637,
+            "FG": null,
+            "PUNT": 0.8664668826423486
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.023893832171684948,
+          "baselineWp": 0.8809,
+          "options": {
+            "GO": 0.8425730504706637,
+            "FG": null,
+            "PUNT": 0.8664668826423486
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "57ed1560638124cfd01fc5ff42953b086fe00418d102c94ccdd2b9bc3d6c6b7b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873050:4018730503571",
+      "season": 2026,
+      "capturedAt": "2026-11-09T04:18:23.661Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873050",
+        "name": "TB @ CHI",
+        "kickoff": "2026-11-09T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "11:24",
+        "secondsRemaining": 684,
+        "ydstogo": 9,
+        "yardline100": 17,
+        "fieldPositionText": "CHI 17",
+        "scoreDiff": -11,
+        "scoreText": "TB 13–24 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.10209999999999997,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730503571",
+        "actual": "FG",
+        "situationText": "4th & 9 at CHI 17"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.0346653175120097,
+          "baselineWp": 0.10209999999999997,
+          "options": {
+            "GO": 0.07175774504254885,
+            "FG": 0.10642306255455855,
+            "PUNT": 0.05494112524742461
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.0346653175120097,
+          "baselineWp": 0.10209999999999997,
+          "options": {
+            "GO": 0.07175774504254885,
+            "FG": 0.10642306255455855,
+            "PUNT": 0.05494112524742461
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "12e607b3e2a3cb1a89955c5365d9790a11d2e390f071a710915ec29d54343689"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873050:4018730503800",
+      "season": 2026,
+      "capturedAt": "2026-11-09T04:18:23.669Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873050",
+        "name": "TB @ CHI",
+        "kickoff": "2026-11-09T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "8:10",
+        "secondsRemaining": 490,
+        "ydstogo": 12,
+        "yardline100": 46,
+        "fieldPositionText": "TB 46",
+        "scoreDiff": 8,
+        "scoreText": "CHI 24–16 TB",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8904,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730503800",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at TB 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011098414864973427,
+          "baselineWp": 0.8904,
+          "options": {
+            "GO": 0.8593358740464356,
+            "FG": 0.8769091052094977,
+            "PUNT": 0.8658106903445243
+          },
+          "grade": "B",
+          "wpRegret": 0.011098414864973427,
+          "wpRegretPp": 1.1098414864973427,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011098414864973427,
+          "baselineWp": 0.8904,
+          "options": {
+            "GO": 0.8593358740464356,
+            "FG": 0.8769091052094977,
+            "PUNT": 0.8658106903445243
+          },
+          "grade": "B",
+          "wpRegret": 0.011098414864973427,
+          "wpRegretPp": 1.1098414864973427,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ac9855c4f817e844d58a4cd2a9b16d07d409ce2285a96b1d792046df4460af88"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873050:401873050438",
       "season": 2026,
       "capturedAt": "2026-11-09T01:42:04.773Z",
