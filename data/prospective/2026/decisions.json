@@ -153231,6 +153231,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873050:4018730501564",
+      "season": 2026,
+      "capturedAt": "2026-11-09T02:40:51.460Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873050",
+        "name": "TB @ CHI",
+        "kickoff": "2026-11-09T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "5:30",
+        "secondsRemaining": 2130,
+        "ydstogo": 10,
+        "yardline100": 70,
+        "fieldPositionText": "TB 30",
+        "scoreDiff": -11,
+        "scoreText": "TB 3–14 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.1291,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730501564",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at TB 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.007065403498046241,
+          "baselineWp": 0.1291,
+          "options": {
+            "GO": 0.11209151535974418,
+            "FG": null,
+            "PUNT": 0.11915691885779042
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.007065403498046241,
+          "baselineWp": 0.1291,
+          "options": {
+            "GO": 0.11209151535974418,
+            "FG": null,
+            "PUNT": 0.11915691885779042
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "98919113b5cd3ae20327f0c42a954c02f1033a358730d869548932f4f5945fc5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873050:4018730501730",
+      "season": 2026,
+      "capturedAt": "2026-11-09T02:40:51.499Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873050",
+        "name": "TB @ CHI",
+        "kickoff": "2026-11-09T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "27",
+        "abbreviation": "TB",
+        "name": "Tampa Bay Buccaneers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "3:02",
+        "secondsRemaining": 1982,
+        "ydstogo": 4,
+        "yardline100": 7,
+        "fieldPositionText": "TB 7",
+        "scoreDiff": 11,
+        "scoreText": "CHI 14–3 TB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8981,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730501730",
+        "actual": "FG",
+        "situationText": "4th & 4 at TB 7"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0004959104667292547,
+          "baselineWp": 0.8981,
+          "options": {
+            "GO": 0.8814708474528435,
+            "FG": 0.8819667579195728,
+            "PUNT": 0.8612764024781476
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0004959104667292547,
+          "baselineWp": 0.8981,
+          "options": {
+            "GO": 0.8814708474528435,
+            "FG": 0.8819667579195728,
+            "PUNT": 0.8612764024781476
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "9021c6faa055dff02f9e58500b4e3af579c228a9dfe87308a56fb713893b014b"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873050:401873050438",
       "season": 2026,
       "capturedAt": "2026-11-09T01:42:04.773Z",
