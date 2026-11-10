@@ -155623,6 +155623,521 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873051:4018730513172",
+      "season": 2026,
+      "capturedAt": "2026-11-10T04:16:14.579Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873051",
+        "name": "BUF @ MIN",
+        "kickoff": "2026-11-10T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "0:40",
+        "secondsRemaining": 940,
+        "ydstogo": 17,
+        "yardline100": 46,
+        "fieldPositionText": "MIN 46",
+        "scoreDiff": 7,
+        "scoreText": "BUF 13–6 MIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8304,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730513172",
+        "actual": "PUNT",
+        "situationText": "4th & 17 at MIN 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.009766296705491784,
+          "baselineWp": 0.8304,
+          "options": {
+            "GO": 0.7913987126190403,
+            "FG": 0.8130351730015286,
+            "PUNT": 0.8032688762960368
+          },
+          "grade": "B",
+          "wpRegret": 0.009766296705491784,
+          "wpRegretPp": 0.9766296705491784,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.009766296705491784,
+          "baselineWp": 0.8304,
+          "options": {
+            "GO": 0.7913987126190403,
+            "FG": 0.8130351730015286,
+            "PUNT": 0.8032688762960368
+          },
+          "grade": "B",
+          "wpRegret": 0.009766296705491784,
+          "wpRegretPp": 0.9766296705491784,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a1e6dc9d9f1418f82a612baa719678444707ddd0e961a254c9f39cc1139e2f2e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873051:4018730513285",
+      "season": 2026,
+      "capturedAt": "2026-11-10T04:16:14.625Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873051",
+        "name": "BUF @ MIN",
+        "kickoff": "2026-11-10T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "defense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "15:00",
+        "secondsRemaining": 900,
+        "ydstogo": 6,
+        "yardline100": 76,
+        "fieldPositionText": "MIN 24",
+        "scoreDiff": -7,
+        "scoreText": "MIN 6–13 BUF",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.121,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730513285",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at MIN 24"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0027001589721825786,
+          "baselineWp": 0.121,
+          "options": {
+            "GO": 0.09666275172687949,
+            "FG": null,
+            "PUNT": 0.09936291069906207
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0027001589721825786,
+          "baselineWp": 0.121,
+          "options": {
+            "GO": 0.09666275172687949,
+            "FG": null,
+            "PUNT": 0.09936291069906207
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b1105e547d31358675f01004e2a7edee9a98e475289e6906df41e6b63cd7180e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873051:4018730513507",
+      "season": 2026,
+      "capturedAt": "2026-11-10T04:16:14.627Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873051",
+        "name": "BUF @ MIN",
+        "kickoff": "2026-11-10T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "10:15",
+        "secondsRemaining": 615,
+        "ydstogo": 1,
+        "yardline100": 38,
+        "fieldPositionText": "MIN 38",
+        "scoreDiff": 7,
+        "scoreText": "BUF 13–6 MIN",
+        "timeouts": 3,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.8626,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730513507",
+        "actual": "GO",
+        "situationText": "4th & 1 at MIN 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.026515138029899576,
+          "baselineWp": 0.8626,
+          "options": {
+            "GO": 0.8494000273898666,
+            "FG": 0.8759151654197662,
+            "PUNT": 0.8280994225834263
+          },
+          "grade": "C",
+          "wpRegret": 0.026515138029899576,
+          "wpRegretPp": 2.6515138029899576,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.026515138029899576,
+          "baselineWp": 0.8626,
+          "options": {
+            "GO": 0.8494000273898666,
+            "FG": 0.8759151654197662,
+            "PUNT": 0.8280994225834263
+          },
+          "grade": "C",
+          "wpRegret": 0.026515138029899576,
+          "wpRegretPp": 2.6515138029899576,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "075baf0673720334d25ff510f494462157f309d1121b1adebcf13d3cfa85b6be"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873051:4018730513832",
+      "season": 2026,
+      "capturedAt": "2026-11-10T04:16:14.612Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873051",
+        "name": "BUF @ MIN",
+        "kickoff": "2026-11-10T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "defense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "5:41",
+        "secondsRemaining": 341,
+        "ydstogo": 4,
+        "yardline100": 58,
+        "fieldPositionText": "MIN 42",
+        "scoreDiff": -14,
+        "scoreText": "MIN 6–20 BUF",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.0053,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730513832",
+        "actual": "GO",
+        "situationText": "4th & 4 at MIN 42"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.000999676515013411,
+          "baselineWp": 0.0053,
+          "options": {
+            "GO": 0.003761520867591071,
+            "FG": null,
+            "PUNT": 0.00276184435257766
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.000999676515013411,
+          "baselineWp": 0.0053,
+          "options": {
+            "GO": 0.003761520867591071,
+            "FG": null,
+            "PUNT": 0.00276184435257766
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "d48fecdaf177a40682e87d6930538982f28d67a16144026d414da583bf3b3033"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873051:4018730513935",
+      "season": 2026,
+      "capturedAt": "2026-11-10T04:16:14.629Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873051",
+        "name": "BUF @ MIN",
+        "kickoff": "2026-11-10T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "state": {
+        "quarter": 4,
+        "clock": "4:40",
+        "secondsRemaining": 280,
+        "ydstogo": 3,
+        "yardline100": 34,
+        "fieldPositionText": "MIN 34",
+        "scoreDiff": 14,
+        "scoreText": "BUF 20–6 MIN",
+        "timeouts": 3,
+        "opponentTimeouts": 0,
+        "baselineWp": 0.9937,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730513935",
+        "actual": "FG",
+        "situationText": "4th & 3 at MIN 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0027157401970545614,
+          "baselineWp": 0.9937,
+          "options": {
+            "GO": 0.9919950986427298,
+            "FG": 0.9947108388397844,
+            "PUNT": 0.9910711873111437
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": true,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0027157401970545614,
+          "baselineWp": 0.9937,
+          "options": {
+            "GO": 0.9919950986427298,
+            "FG": 0.9947108388397844,
+            "PUNT": 0.9910711873111437
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "244893043ae841bbc9dcefa6ce61f6eb52ab18f1eee8b93a66a63d0fceea6095"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873051:401873051804",
       "season": 2026,
       "capturedAt": "2026-11-10T02:19:41.167Z",
