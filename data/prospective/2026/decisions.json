@@ -172285,6 +172285,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873062:4018730621689",
+      "season": 2026,
+      "capturedAt": "2026-11-15T22:41:31.593Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873062",
+        "name": "SEA @ LV",
+        "kickoff": "2026-11-15T21:05Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "13",
+        "abbreviation": "LV",
+        "name": "Las Vegas Raiders"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "0:33",
+        "secondsRemaining": 1833,
+        "ydstogo": 7,
+        "yardline100": 58,
+        "fieldPositionText": "LV 42",
+        "scoreDiff": 3,
+        "scoreText": "LV 10–7 SEA",
+        "timeouts": 2,
+        "opponentTimeouts": 1,
+        "baselineWp": 0.409,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730621689",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at LV 42"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.007662256642512966,
+          "baselineWp": 0.409,
+          "options": {
+            "GO": 0.3775638318450038,
+            "FG": null,
+            "PUNT": 0.38522608848751677
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.007662256642512966,
+          "baselineWp": 0.409,
+          "options": {
+            "GO": 0.3775638318450038,
+            "FG": null,
+            "PUNT": 0.38522608848751677
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "20b86095618e95c9d0519cb3fde3d2f9f5d676bc319426689cff3316c9aebfe7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873062:4018730621867",
+      "season": 2026,
+      "capturedAt": "2026-11-15T22:41:31.590Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873062",
+        "name": "SEA @ LV",
+        "kickoff": "2026-11-15T21:05Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "13",
+        "abbreviation": "LV",
+        "name": "Las Vegas Raiders"
+      },
+      "defense": {
+        "id": "26",
+        "abbreviation": "SEA",
+        "name": "Seattle Seahawks"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "13:35",
+        "secondsRemaining": 1715,
+        "ydstogo": 12,
+        "yardline100": 76,
+        "fieldPositionText": "LV 24",
+        "scoreDiff": 3,
+        "scoreText": "LV 10–7 SEA",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3844,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730621867",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at LV 24"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02703175147040321,
+          "baselineWp": 0.3844,
+          "options": {
+            "GO": 0.33381708776434016,
+            "FG": null,
+            "PUNT": 0.36084883923474337
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.02703175147040321,
+          "baselineWp": 0.3844,
+          "options": {
+            "GO": 0.33381708776434016,
+            "FG": null,
+            "PUNT": 0.36084883923474337
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "16565939fd2935de60f82f13d295e205a83a39a7be2488d16d12c3138ce6b88f"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873062:401873062953",
       "season": 2026,
       "capturedAt": "2026-11-15T22:13:20.515Z",
@@ -172594,6 +172800,212 @@
       },
       "reference": null,
       "snapshotHash": "77b0a9d22d2634b80727c03faff0bd772f01626b2cc8c5f86179aeb1ea959e25"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873063:4018730631500",
+      "season": 2026,
+      "capturedAt": "2026-11-15T22:41:31.591Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873063",
+        "name": "SF @ DAL",
+        "kickoff": "2026-11-15T21:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "defense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:54",
+        "secondsRemaining": 2214,
+        "ydstogo": 10,
+        "yardline100": 10,
+        "fieldPositionText": "DAL 10",
+        "scoreDiff": -3,
+        "scoreText": "SF 7–10 DAL",
+        "timeouts": 2,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.5822,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730631500",
+        "actual": "FG",
+        "situationText": "4th & Goal at DAL 10"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011464580289290427,
+          "baselineWp": 0.5822,
+          "options": {
+            "GO": 0.540582364774169,
+            "FG": 0.5520469450634594,
+            "PUNT": 0.5079237094792758
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011464580289290427,
+          "baselineWp": 0.5822,
+          "options": {
+            "GO": 0.540582364774169,
+            "FG": 0.5520469450634594,
+            "PUNT": 0.5079237094792758
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "afc63447105c8da38b9ab7be5f94cbf4c6851d9402a18dd8d6e5f858d76baf53"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873063:4018730631663",
+      "season": 2026,
+      "capturedAt": "2026-11-15T22:41:31.594Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873063",
+        "name": "SF @ DAL",
+        "kickoff": "2026-11-15T21:25Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "6",
+        "abbreviation": "DAL",
+        "name": "Dallas Cowboys"
+      },
+      "defense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "5:18",
+        "secondsRemaining": 2118,
+        "ydstogo": 1,
+        "yardline100": 52,
+        "fieldPositionText": "DAL 48",
+        "scoreDiff": 0,
+        "scoreText": "DAL 10–10 SF",
+        "timeouts": 2,
+        "opponentTimeouts": 2,
+        "baselineWp": 0.3841,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730631663",
+        "actual": "GO",
+        "situationText": "4th & 1 at DAL 48"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01133161742367872,
+          "baselineWp": 0.3841,
+          "options": {
+            "GO": 0.37094786528743534,
+            "FG": null,
+            "PUNT": 0.3596162478637566
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.01133161742367872,
+          "baselineWp": 0.3841,
+          "options": {
+            "GO": 0.37094786528743534,
+            "FG": null,
+            "PUNT": 0.3596162478637566
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "819d1a4a512cc66d7dadb5751bb8adff40d9259f249696cc1f8c53e7148fde62"
     },
     {
       "schemaVersion": 1,
