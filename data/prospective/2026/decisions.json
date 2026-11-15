@@ -158331,6 +158331,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873053:4018730532415",
+      "season": 2026,
+      "capturedAt": "2026-11-15T16:41:23.675Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873053",
+        "name": "NE VS DET",
+        "kickoff": "2026-11-15T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "defense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "13:51",
+        "secondsRemaining": 1731,
+        "ydstogo": 2,
+        "yardline100": 65,
+        "fieldPositionText": "DET 35",
+        "scoreDiff": 18,
+        "scoreText": "DET 21–3 NE",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.9369,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730532415",
+        "actual": "PUNT",
+        "situationText": "4th & 2 at DET 35"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0007609644231111323,
+          "baselineWp": 0.9369,
+          "options": {
+            "GO": 0.9301064685253877,
+            "FG": null,
+            "PUNT": 0.9308674329484988
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0007609644231111323,
+          "baselineWp": 0.9369,
+          "options": {
+            "GO": 0.9301064685253877,
+            "FG": null,
+            "PUNT": 0.9308674329484988
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.8888888888888888,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "8e4b78a5429e582c532c6b70af4b37e944c6065fc6d0802e3dd24cadc11834d0"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873053:4018730532526",
+      "season": 2026,
+      "capturedAt": "2026-11-15T16:41:23.702Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873053",
+        "name": "NE VS DET",
+        "kickoff": "2026-11-15T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "11:54",
+        "secondsRemaining": 1614,
+        "ydstogo": 12,
+        "yardline100": 84,
+        "fieldPositionText": "NE 16",
+        "scoreDiff": -18,
+        "scoreText": "NE 3–21 DET",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.03979999999999995,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730532526",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at NE 16"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004505933419908625,
+          "baselineWp": 0.03979999999999995,
+          "options": {
+            "GO": 0.03131503617632398,
+            "FG": null,
+            "PUNT": 0.035820969596232606
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.004505933419908625,
+          "baselineWp": 0.03979999999999995,
+          "options": {
+            "GO": 0.03131503617632398,
+            "FG": null,
+            "PUNT": 0.035820969596232606
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "322eca9d2747a43daf37c9f4aae3fb9cb55eecf44fe1c867c3a6c5e77cf7d05d"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873053:401873053353",
       "season": 2026,
       "capturedAt": "2026-11-15T15:12:58.691Z",
