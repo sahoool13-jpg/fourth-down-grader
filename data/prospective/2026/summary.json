@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-15T21:12:39.027Z",
+  "lastMaterialUpdateAt": "2026-11-15T21:13:02.728Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -51,10 +51,10 @@
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 105,
+    "GAME_NOT_FOUND": 112,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 7
+    "UNKNOWN": 0
   },
   "teams": [
     {
@@ -1161,7 +1161,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": [
         "TRAILING_PUNT_SCARCITY"
@@ -1184,7 +1184,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1205,7 +1205,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": [
         "TRAILING_PUNT_SCARCITY"
@@ -1228,7 +1228,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0.019532054110049657,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1249,7 +1249,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1270,7 +1270,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1291,7 +1291,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": [
         "TRAILING_PUNT_SCARCITY",
@@ -1316,7 +1316,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1337,7 +1337,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1358,7 +1358,7 @@
       "grade": "C",
       "modelWpaBurnPp": 2.161552901334132,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1379,7 +1379,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1400,7 +1400,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1421,7 +1421,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1442,7 +1442,28 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873056:4018730563918",
+      "capturedAt": "2026-11-15T21:12:38.847Z",
+      "gameName": "HOU @ CLE",
+      "kickoff": "2026-11-15T18:00Z",
+      "offense": "HOU",
+      "defense": "CLE",
+      "quarter": 4,
+      "clock": "3:41",
+      "ydstogo": 11,
+      "yardline100": 75,
+      "scoreDiff": 4,
+      "actual": "PUNT",
+      "optimal": "PUNT",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "CLEAR",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1463,32 +1484,11 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": [
         "CONVERSION_CAN_SEAL"
       ]
-    },
-    {
-      "id": "401873056:4018730563918",
-      "capturedAt": "2026-11-15T21:12:38.847Z",
-      "gameName": "HOU @ CLE",
-      "kickoff": "2026-11-15T18:00Z",
-      "offense": "HOU",
-      "defense": "CLE",
-      "quarter": 4,
-      "clock": "3:41",
-      "ydstogo": 11,
-      "yardline100": 75,
-      "scoreDiff": 4,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "CLEAR",
-      "referenceStatus": "PENDING",
-      "referenceOptimal": null,
-      "endgameTags": []
     },
     {
       "id": "401873058:4018730583805",
@@ -1507,28 +1507,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873058:4018730584165",
-      "capturedAt": "2026-11-15T21:12:38.843Z",
-      "gameName": "KC @ ATL",
-      "kickoff": "2026-11-15T18:00Z",
-      "offense": "KC",
-      "defense": "ATL",
-      "quarter": 4,
-      "clock": "3:39",
-      "ydstogo": 4,
-      "yardline100": 38,
-      "scoreDiff": 22,
-      "actual": "GO",
-      "optimal": "FG",
-      "grade": "A+",
-      "modelWpaBurnPp": 0.006492660469159528,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1549,7 +1528,28 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873058:4018730584165",
+      "capturedAt": "2026-11-15T21:12:38.843Z",
+      "gameName": "KC @ ATL",
+      "kickoff": "2026-11-15T18:00Z",
+      "offense": "KC",
+      "defense": "ATL",
+      "quarter": 4,
+      "clock": "3:39",
+      "ydstogo": 4,
+      "yardline100": 38,
+      "scoreDiff": 22,
+      "actual": "GO",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0.006492660469159528,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1570,7 +1570,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": [
         "TRAILING_PUNT_SCARCITY",
