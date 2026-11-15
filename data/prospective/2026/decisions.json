@@ -158227,6 +158227,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873053:4018730531648",
+      "season": 2026,
+      "capturedAt": "2026-11-15T16:14:12.110Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873053",
+        "name": "NE VS DET",
+        "kickoff": "2026-11-15T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "5:08",
+        "secondsRemaining": 2108,
+        "ydstogo": 9,
+        "yardline100": 60,
+        "fieldPositionText": "NE 40",
+        "scoreDiff": -11,
+        "scoreText": "NE 3–14 DET",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.17989999999999995,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730531648",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at NE 40"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0061233073116016,
+          "baselineWp": 0.17989999999999995,
+          "options": {
+            "GO": 0.1605524893602684,
+            "FG": null,
+            "PUNT": 0.16667579667187
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0061233073116016,
+          "baselineWp": 0.17989999999999995,
+          "options": {
+            "GO": 0.1605524893602684,
+            "FG": null,
+            "PUNT": 0.16667579667187
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ae011a51e89d94c7e16666f70a186f44d4b855e4cc94ada310a076846e43adc1"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873053:401873053353",
       "season": 2026,
       "capturedAt": "2026-11-15T15:12:58.691Z",
