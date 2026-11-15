@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-13T04:17:02.343Z",
+  "lastMaterialUpdateAt": "2026-11-15T15:12:58.695Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1516,
-    "gradable": 1515,
+    "archived": 1518,
+    "gradable": 1517,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1515/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1517/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,11 +42,11 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.14356205398087385,
+    "meanModelWpaBurnPp": 0.14337278298023987,
     "totalModelWpaBurnPp": 217.49651178102388,
-    "exactCoachModelAgreement": 0.8006600660066007,
-    "actualGoRate": 0.20462046204620463,
-    "modelGoRate": 0.2448844884488449
+    "exactCoachModelAgreement": 0.8009228740936059,
+    "actualGoRate": 0.2043506921555702,
+    "modelGoRate": 0.24456163480553725
   },
   "benchmarkPipeline": {
     "READY": 0,
@@ -54,7 +54,7 @@
     "GAME_NOT_FOUND": 104,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -171,16 +171,16 @@
     },
     {
       "team": "NE",
-      "decisions": 41,
-      "gradable": 41,
-      "exactCoachModelAgreement": 0.6585365853658537,
+      "decisions": 43,
+      "gradable": 43,
+      "exactCoachModelAgreement": 0.6744186046511628,
       "totalModelWpaBurnPp": 7.31013845624657,
-      "meanModelWpaBurnPp": 0.17829605990845293,
+      "meanModelWpaBurnPp": 0.17000321991271092,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.2682926829268293,
-      "modelGoRate": 0.1951219512195122,
-      "aggressionDelta": 0.07317073170731707,
+      "actualGoRate": 0.2558139534883721,
+      "modelGoRate": 0.18604651162790697,
+      "aggressionDelta": 0.06976744186046512,
       "endgameDecisions": 3
     },
     {
@@ -1145,6 +1145,48 @@
   ],
   "recent": [
     {
+      "id": "401873053:401873053353",
+      "capturedAt": "2026-11-15T15:12:58.691Z",
+      "gameName": "NE VS DET",
+      "kickoff": "2026-11-15T14:30Z",
+      "offense": "NE",
+      "defense": "DET",
+      "quarter": 1,
+      "clock": "9:12",
+      "ydstogo": 15,
+      "yardline100": 15,
+      "scoreDiff": 0,
+      "actual": "FG",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "CLEAR",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873053:401873053774",
+      "capturedAt": "2026-11-15T15:12:58.598Z",
+      "gameName": "NE VS DET",
+      "kickoff": "2026-11-15T14:30Z",
+      "offense": "NE",
+      "defense": "DET",
+      "quarter": 1,
+      "clock": "3:38",
+      "ydstogo": 16,
+      "yardline100": 60,
+      "scoreDiff": -4,
+      "actual": "PUNT",
+      "optimal": "PUNT",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "LEAN",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
       "id": "401873052:4018730524040",
       "capturedAt": "2026-11-13T04:16:39.199Z",
       "gameName": "WSH @ NYG",
@@ -1937,48 +1979,6 @@
       "ydstogo": 9,
       "yardline100": 81,
       "scoreDiff": -4,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "LEAN",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873050:4018730502821",
-      "capturedAt": "2026-11-09T03:40:37.165Z",
-      "gameName": "TB @ CHI",
-      "kickoff": "2026-11-09T01:20Z",
-      "offense": "CHI",
-      "defense": "TB",
-      "quarter": 3,
-      "clock": "7:01",
-      "ydstogo": 10,
-      "yardline100": 75,
-      "scoreDiff": 4,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "CLEAR",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873050:4018730502569",
-      "capturedAt": "2026-11-09T03:40:37.127Z",
-      "gameName": "TB @ CHI",
-      "kickoff": "2026-11-09T01:20Z",
-      "offense": "CHI",
-      "defense": "TB",
-      "quarter": 3,
-      "clock": "10:40",
-      "ydstogo": 3,
-      "yardline100": 73,
-      "scoreDiff": 4,
       "actual": "PUNT",
       "optimal": "PUNT",
       "grade": "A+",

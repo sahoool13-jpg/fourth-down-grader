@@ -157912,6 +157912,212 @@
       },
       "reference": null,
       "snapshotHash": "c8c8ec38efde6373de8ecb906e635fde1cab7eb3fe07ea7f40ea20d4a213b78f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873053:401873053353",
+      "season": 2026,
+      "capturedAt": "2026-11-15T15:12:58.691Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873053",
+        "name": "NE VS DET",
+        "kickoff": "2026-11-15T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "9:12",
+        "secondsRemaining": 3252,
+        "ydstogo": 15,
+        "yardline100": 15,
+        "fieldPositionText": "DET 15",
+        "scoreDiff": 0,
+        "scoreText": "NE 0–0 DET",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5233,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873053353",
+        "actual": "FG",
+        "situationText": "4th & Goal at DET 15"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.027444427820578987,
+          "baselineWp": 0.5233,
+          "options": {
+            "GO": 0.48201907189388016,
+            "FG": 0.5094634997144591,
+            "PUNT": 0.47161495839217993
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "CLEAR",
+          "edge": 0.027444427820578987,
+          "baselineWp": 0.5233,
+          "options": {
+            "GO": 0.48201907189388016,
+            "FG": 0.5094634997144591,
+            "PUNT": 0.47161495839217993
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "efa55c423469124b6f6663247d702b2ee335544364411e4b7e0de2ed93fbb801"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873053:401873053774",
+      "season": 2026,
+      "capturedAt": "2026-11-15T15:12:58.598Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873053",
+        "name": "NE VS DET",
+        "kickoff": "2026-11-15T14:30Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "17",
+        "abbreviation": "NE",
+        "name": "New England Patriots"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "3:38",
+        "secondsRemaining": 2918,
+        "ydstogo": 16,
+        "yardline100": 60,
+        "fieldPositionText": "NE 40",
+        "scoreDiff": -4,
+        "scoreText": "NE 3–7 DET",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3528,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873053774",
+        "actual": "PUNT",
+        "situationText": "4th & 16 at NE 40"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015621603234919845,
+          "baselineWp": 0.3528,
+          "options": {
+            "GO": 0.32023215213496814,
+            "FG": null,
+            "PUNT": 0.335853755369888
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015621603234919845,
+          "baselineWp": 0.3528,
+          "options": {
+            "GO": 0.32023215213496814,
+            "FG": null,
+            "PUNT": 0.335853755369888
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "cab4fd43fe74a780477a94a01edcb23f8540660c8087752bff1c535ff5664788"
     }
   ]
 }
