@@ -176871,6 +176871,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873065:4018730651805",
+      "season": 2026,
+      "capturedAt": "2026-11-17T02:41:04.633Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873065",
+        "name": "LAC @ BAL",
+        "kickoff": "2026-11-17T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:56",
+        "secondsRemaining": 1916,
+        "ydstogo": 1,
+        "yardline100": 1,
+        "fieldPositionText": "BAL 1",
+        "scoreDiff": 3,
+        "scoreText": "LAC 10–7 BAL",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7006,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730651805",
+        "actual": "GO",
+        "situationText": "4th & Goal at BAL 1"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "CLEAR",
+          "edge": 0.041655024223980486,
+          "baselineWp": 0.7006,
+          "options": {
+            "GO": 0.6908890321381772,
+            "FG": 0.6492340079141967,
+            "PUNT": 0.6046495439834012
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "CLEAR",
+          "edge": 0.041655024223980486,
+          "baselineWp": 0.7006,
+          "options": {
+            "GO": 0.6908890321381772,
+            "FG": 0.6492340079141967,
+            "PUNT": 0.6046495439834012
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "63fc6b6a9d87d09f368efd57ceaa3ef2ae765a290d818d0e849270739f8e4302"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873065:401873065449",
       "season": 2026,
       "capturedAt": "2026-11-17T01:42:40.319Z",
