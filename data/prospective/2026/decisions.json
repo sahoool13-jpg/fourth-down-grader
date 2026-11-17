@@ -176559,6 +176559,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873065:4018730651396",
+      "season": 2026,
+      "capturedAt": "2026-11-17T02:20:27.712Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873065",
+        "name": "LAC @ BAL",
+        "kickoff": "2026-11-17T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "10:29",
+        "secondsRemaining": 2429,
+        "ydstogo": 5,
+        "yardline100": 83,
+        "fieldPositionText": "LAC 17",
+        "scoreDiff": 3,
+        "scoreText": "LAC 10–7 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5917,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730651396",
+        "actual": "PUNT",
+        "situationText": "4th & 5 at LAC 17"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015864853859315464,
+          "baselineWp": 0.5917,
+          "options": {
+            "GO": 0.5554093607982957,
+            "FG": null,
+            "PUNT": 0.5712742146576112
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.015864853859315464,
+          "baselineWp": 0.5917,
+          "options": {
+            "GO": 0.5554093607982957,
+            "FG": null,
+            "PUNT": 0.5712742146576112
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "308d7c5fad02d0c1bf5e4f98b37afb4cbe3a7343b7f9cf622e6848ef1cc0bb4d"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873065:401873065153",
       "season": 2026,
       "capturedAt": "2026-11-17T01:42:40.303Z",
@@ -176660,6 +176763,109 @@
       },
       "reference": null,
       "snapshotHash": "f6b055009c17ac1e6435ef0d4bfeb4f38d3fae66721b8578dffb35ece13591a6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873065:4018730651547",
+      "season": 2026,
+      "capturedAt": "2026-11-17T02:20:27.712Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873065",
+        "name": "LAC @ BAL",
+        "kickoff": "2026-11-17T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "7:30",
+        "secondsRemaining": 2250,
+        "ydstogo": 1,
+        "yardline100": 39,
+        "fieldPositionText": "BAL 39",
+        "scoreDiff": 3,
+        "scoreText": "LAC 10–7 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6332,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730651547",
+        "actual": "GO",
+        "situationText": "4th & 1 at BAL 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0013039516644043347,
+          "baselineWp": 0.6332,
+          "options": {
+            "GO": 0.6202522511913332,
+            "FG": 0.6215562028557375,
+            "PUNT": 0.5989119691953384
+          },
+          "grade": "A",
+          "wpRegret": 0.0013039516644043347,
+          "wpRegretPp": 0.13039516644043347,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0013039516644043347,
+          "baselineWp": 0.6332,
+          "options": {
+            "GO": 0.6202522511913332,
+            "FG": 0.6215562028557375,
+            "PUNT": 0.5989119691953384
+          },
+          "grade": "A",
+          "wpRegret": 0.0013039516644043347,
+          "wpRegretPp": 0.13039516644043347,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "13151aa400d54fa2c6f928dbe4a09d335f81fdc66932a7a88d7b0ca4f07bbcc0"
     },
     {
       "schemaVersion": 1,
@@ -176868,6 +177074,212 @@
       },
       "reference": null,
       "snapshotHash": "09ad7fbc776222aebaf4b020eff60dcea8a99e080a2778431e1838e7890f9775"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873065:401873065691",
+      "season": 2026,
+      "capturedAt": "2026-11-17T02:20:27.683Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873065",
+        "name": "LAC @ BAL",
+        "kickoff": "2026-11-17T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "defense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "4:50",
+        "secondsRemaining": 2990,
+        "ydstogo": 12,
+        "yardline100": 92,
+        "fieldPositionText": "BAL 8",
+        "scoreDiff": -7,
+        "scoreText": "BAL 0–7 LAC",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2247,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873065691",
+        "actual": "PUNT",
+        "situationText": "4th & 12 at BAL 8"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.020591474576851232,
+          "baselineWp": 0.2247,
+          "options": {
+            "GO": 0.19103978638012767,
+            "FG": null,
+            "PUNT": 0.2116312609569789
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "CLEAR",
+          "edge": 0.020591474576851232,
+          "baselineWp": 0.2247,
+          "options": {
+            "GO": 0.19103978638012767,
+            "FG": null,
+            "PUNT": 0.2116312609569789
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6d61ad0582a0bc4b4dc5dd4ee6fc3cc9faf2d243e9fa383c11131552abdf315d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873065:401873065946",
+      "season": 2026,
+      "capturedAt": "2026-11-17T02:20:27.807Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873065",
+        "name": "LAC @ BAL",
+        "kickoff": "2026-11-17T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "24",
+        "abbreviation": "LAC",
+        "name": "Los Angeles Chargers"
+      },
+      "defense": {
+        "id": "33",
+        "abbreviation": "BAL",
+        "name": "Baltimore Ravens"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "2:03",
+        "secondsRemaining": 2823,
+        "ydstogo": 4,
+        "yardline100": 20,
+        "fieldPositionText": "BAL 20",
+        "scoreDiff": 7,
+        "scoreText": "LAC 7–0 BAL",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7706,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873065946",
+        "actual": "FG",
+        "situationText": "4th & 4 at BAL 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010211313493170504,
+          "baselineWp": 0.7706,
+          "options": {
+            "GO": 0.7514961002550664,
+            "FG": 0.7617074137482369,
+            "PUNT": 0.7334847320893995
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.010211313493170504,
+          "baselineWp": 0.7706,
+          "options": {
+            "GO": 0.7514961002550664,
+            "FG": 0.7617074137482369,
+            "PUNT": 0.7334847320893995
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "287e8e205cb5c83aeb291296c0d5874395fc027ab2f656e8680a597c3d809955"
     }
   ]
 }
