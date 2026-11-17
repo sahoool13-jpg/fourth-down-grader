@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-17T04:17:54.456Z",
+  "lastMaterialUpdateAt": "2026-11-17T04:41:01.723Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1712,
-    "gradable": 1711,
+    "archived": 1713,
+    "gradable": 1712,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1711/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1712/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.13599907066590747,
-    "totalModelWpaBurnPp": 232.6944099093677,
-    "exactCoachModelAgreement": 0.7995324371712449,
-    "actualGoRate": 0.2033898305084746,
-    "modelGoRate": 0.24780829924021042
+    "meanModelWpaBurnPp": 0.13624431134335116,
+    "totalModelWpaBurnPp": 233.2502610198172,
+    "exactCoachModelAgreement": 0.7990654205607477,
+    "actualGoRate": 0.20327102803738317,
+    "modelGoRate": 0.24824766355140188
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 117,
+    "GAME_NOT_FOUND": 116,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -254,6 +254,20 @@
       "endgameDecisions": 4
     },
     {
+      "team": "LAC",
+      "decisions": 64,
+      "gradable": 64,
+      "exactCoachModelAgreement": 0.828125,
+      "totalModelWpaBurnPp": 6.802182986885186,
+      "meanModelWpaBurnPp": 0.10628410917008103,
+      "costlyMistakes2Pp": 1,
+      "catastrophicMistakes5Pp": 0,
+      "actualGoRate": 0.234375,
+      "modelGoRate": 0.34375,
+      "aggressionDelta": -0.109375,
+      "endgameDecisions": 9
+    },
+    {
       "team": "DET",
       "decisions": 46,
       "gradable": 46,
@@ -266,20 +280,6 @@
       "modelGoRate": 0.2608695652173913,
       "aggressionDelta": 0.043478260869565216,
       "endgameDecisions": 6
-    },
-    {
-      "team": "LAC",
-      "decisions": 63,
-      "gradable": 63,
-      "exactCoachModelAgreement": 0.8412698412698413,
-      "totalModelWpaBurnPp": 6.246331876435696,
-      "meanModelWpaBurnPp": 0.09914812502278883,
-      "costlyMistakes2Pp": 1,
-      "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.23809523809523808,
-      "modelGoRate": 0.3333333333333333,
-      "aggressionDelta": -0.09523809523809523,
-      "endgameDecisions": 8
     },
     {
       "team": "ATL",
@@ -1145,6 +1145,27 @@
   ],
   "recent": [
     {
+      "id": "401873065:4018730654191",
+      "capturedAt": "2026-11-17T04:41:01.722Z",
+      "gameName": "LAC @ BAL",
+      "kickoff": "2026-11-17T01:15Z",
+      "offense": "LAC",
+      "defense": "BAL",
+      "quarter": 4,
+      "clock": "0:18",
+      "ydstogo": 7,
+      "yardline100": 39,
+      "scoreDiff": 3,
+      "actual": "PUNT",
+      "optimal": "GO",
+      "grade": "B",
+      "modelWpaBurnPp": 0.5558511104494901,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
       "id": "401873065:4018730653905",
       "capturedAt": "2026-11-17T04:17:29.244Z",
       "gameName": "LAC @ BAL",
@@ -1966,27 +1987,6 @@
       "scoreDiff": 25,
       "actual": "FG",
       "optimal": "FG",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873061:4018730613212",
-      "capturedAt": "2026-11-15T23:40:54.122Z",
-      "gameName": "LAR @ ARI",
-      "kickoff": "2026-11-15T21:05Z",
-      "offense": "ARI",
-      "defense": "LAR",
-      "quarter": 4,
-      "clock": "12:24",
-      "ydstogo": 10,
-      "yardline100": 52,
-      "scoreDiff": -28,
-      "actual": "PUNT",
-      "optimal": "GO",
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
