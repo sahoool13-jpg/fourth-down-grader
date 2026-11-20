@@ -178428,6 +178428,109 @@
       },
       "reference": null,
       "snapshotHash": "287e8e205cb5c83aeb291296c0d5874395fc027ab2f656e8680a597c3d809955"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873066:401873066277",
+      "season": 2026,
+      "capturedAt": "2026-11-20T01:42:22.253Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873066",
+        "name": "IND @ HOU",
+        "kickoff": "2026-11-20T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "10:43",
+        "secondsRemaining": 3343,
+        "ydstogo": 8,
+        "yardline100": 16,
+        "fieldPositionText": "HOU 16",
+        "scoreDiff": 0,
+        "scoreText": "IND 0–0 HOU",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2986,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873066277",
+        "actual": "FG",
+        "situationText": "4th & 8 at HOU 16"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015323794538036561,
+          "baselineWp": 0.2986,
+          "options": {
+            "GO": 0.2731935612462126,
+            "FG": 0.28851735578424914,
+            "PUNT": 0.2589668869076258
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.015323794538036561,
+          "baselineWp": 0.2986,
+          "options": {
+            "GO": 0.2731935612462126,
+            "FG": 0.28851735578424914,
+            "PUNT": 0.2589668869076258
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "877abd6a4b88f2865300674c2655e4b5ec4943856d662667c1c4e3b5db4ac649"
     }
   ]
 }
