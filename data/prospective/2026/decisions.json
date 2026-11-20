@@ -178535,6 +178535,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873066:4018730661657",
+      "season": 2026,
+      "capturedAt": "2026-11-20T02:40:39.024Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873066",
+        "name": "IND @ HOU",
+        "kickoff": "2026-11-20T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "defense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "5:47",
+        "secondsRemaining": 2147,
+        "ydstogo": 7,
+        "yardline100": 75,
+        "fieldPositionText": "HOU 25",
+        "scoreDiff": 11,
+        "scoreText": "HOU 14–3 IND",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.8898,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730661657",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at HOU 25"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.007314816523174783,
+          "baselineWp": 0.8898,
+          "options": {
+            "GO": 0.8735172633252077,
+            "FG": null,
+            "PUNT": 0.8808320798483825
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.007314816523174783,
+          "baselineWp": 0.8898,
+          "options": {
+            "GO": 0.8735172633252077,
+            "FG": null,
+            "PUNT": 0.8808320798483825
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "74b045d217b7aead75b227d1e03517b64dd54e64491d79e64bb53036c5c3f6bc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873066:4018730661807",
+      "season": 2026,
+      "capturedAt": "2026-11-20T02:40:39.025Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873066",
+        "name": "IND @ HOU",
+        "kickoff": "2026-11-20T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "2:49",
+        "secondsRemaining": 1969,
+        "ydstogo": 7,
+        "yardline100": 44,
+        "fieldPositionText": "HOU 44",
+        "scoreDiff": -11,
+        "scoreText": "IND 3–14 HOU",
+        "timeouts": 2,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.09699999999999998,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730661807",
+        "actual": "FG",
+        "situationText": "4th & 7 at HOU 44"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0018264296446457579,
+          "baselineWp": 0.09699999999999998,
+          "options": {
+            "GO": 0.08735291415210424,
+            "FG": 0.08917934379675,
+            "PUNT": 0.08550119761028332
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0018264296446457579,
+          "baselineWp": 0.09699999999999998,
+          "options": {
+            "GO": 0.08735291415210424,
+            "FG": 0.08917934379675,
+            "PUNT": 0.08550119761028332
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a9315d19b7d730f6ad261f591e04718960222e26262bbaf352db9d1c980f7c4e"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873066:401873066277",
       "season": 2026,
       "capturedAt": "2026-11-20T01:42:22.253Z",

@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-20T02:20:06.350Z",
+  "lastMaterialUpdateAt": "2026-11-20T02:40:39.026Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1716,
-    "gradable": 1715,
+    "archived": 1718,
+    "gradable": 1717,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1715/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1717/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.13600598310193424,
+    "meanModelWpaBurnPp": 0.13584756029109912,
     "totalModelWpaBurnPp": 233.2502610198172,
-    "exactCoachModelAgreement": 0.7994169096209912,
-    "actualGoRate": 0.20291545189504373,
-    "modelGoRate": 0.2478134110787172
+    "exactCoachModelAgreement": 0.7996505532906232,
+    "actualGoRate": 0.20267909143855561,
+    "modelGoRate": 0.24752475247524752
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 118,
+    "GAME_NOT_FOUND": 117,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -381,16 +381,16 @@
     },
     {
       "team": "IND",
-      "decisions": 68,
-      "gradable": 68,
-      "exactCoachModelAgreement": 0.8382352941176471,
+      "decisions": 69,
+      "gradable": 69,
+      "exactCoachModelAgreement": 0.8405797101449275,
       "totalModelWpaBurnPp": 4.574402117970489,
-      "meanModelWpaBurnPp": 0.06727061938191894,
+      "meanModelWpaBurnPp": 0.06629568286913752,
       "costlyMistakes2Pp": 1,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.22058823529411764,
-      "modelGoRate": 0.23529411764705882,
-      "aggressionDelta": -0.014705882352941176,
+      "actualGoRate": 0.21739130434782608,
+      "modelGoRate": 0.2318840579710145,
+      "aggressionDelta": -0.014492753623188406,
       "endgameDecisions": 9
     },
     {
@@ -409,16 +409,16 @@
     },
     {
       "team": "HOU",
-      "decisions": 49,
-      "gradable": 49,
-      "exactCoachModelAgreement": 0.7755102040816326,
+      "decisions": 50,
+      "gradable": 50,
+      "exactCoachModelAgreement": 0.78,
       "totalModelWpaBurnPp": 4.085273732034322,
-      "meanModelWpaBurnPp": 0.0833729333068229,
+      "meanModelWpaBurnPp": 0.08170547464068643,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.061224489795918366,
-      "modelGoRate": 0.1836734693877551,
-      "aggressionDelta": -0.12244897959183673,
+      "actualGoRate": 0.06,
+      "modelGoRate": 0.18,
+      "aggressionDelta": -0.12,
       "endgameDecisions": 5
     },
     {
@@ -1144,6 +1144,48 @@
     }
   ],
   "recent": [
+    {
+      "id": "401873066:4018730661807",
+      "capturedAt": "2026-11-20T02:40:39.025Z",
+      "gameName": "IND @ HOU",
+      "kickoff": "2026-11-20T01:15Z",
+      "offense": "IND",
+      "defense": "HOU",
+      "quarter": 2,
+      "clock": "2:49",
+      "ydstogo": 7,
+      "yardline100": 44,
+      "scoreDiff": -11,
+      "actual": "FG",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873066:4018730661657",
+      "capturedAt": "2026-11-20T02:40:39.024Z",
+      "gameName": "IND @ HOU",
+      "kickoff": "2026-11-20T01:15Z",
+      "offense": "HOU",
+      "defense": "IND",
+      "quarter": 2,
+      "clock": "5:47",
+      "ydstogo": 7,
+      "yardline100": 75,
+      "scoreDiff": 11,
+      "actual": "PUNT",
+      "optimal": "PUNT",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401873066:401873066759",
       "capturedAt": "2026-11-20T02:19:39.469Z",
@@ -1951,48 +1993,6 @@
         "FG_DOES_NOT_TIE_OR_LEAD",
         "MUST_TD_PATH"
       ]
-    },
-    {
-      "id": "401873062:4018730623498",
-      "capturedAt": "2026-11-16T00:42:04.145Z",
-      "gameName": "SEA @ LV",
-      "kickoff": "2026-11-15T21:05Z",
-      "offense": "LV",
-      "defense": "SEA",
-      "quarter": 4,
-      "clock": "3:48",
-      "ydstogo": 1,
-      "yardline100": 60,
-      "scoreDiff": -11,
-      "actual": "GO",
-      "optimal": "GO",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873063:4018730633790",
-      "capturedAt": "2026-11-16T00:42:04.123Z",
-      "gameName": "SF @ DAL",
-      "kickoff": "2026-11-15T21:25Z",
-      "offense": "SF",
-      "defense": "DAL",
-      "quarter": 4,
-      "clock": "6:50",
-      "ydstogo": 6,
-      "yardline100": 64,
-      "scoreDiff": 13,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
     }
   ]
 }
