@@ -178431,6 +178431,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873066:4018730661511",
+      "season": 2026,
+      "capturedAt": "2026-11-20T02:19:39.446Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873066",
+        "name": "IND @ HOU",
+        "kickoff": "2026-11-20T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:44",
+        "secondsRemaining": 2204,
+        "ydstogo": 11,
+        "yardline100": 54,
+        "fieldPositionText": "IND 46",
+        "scoreDiff": -11,
+        "scoreText": "IND 3–14 HOU",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.09340000000000004,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730661511",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at IND 46"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0028433790963312278,
+          "baselineWp": 0.09340000000000004,
+          "options": {
+            "GO": 0.08250449063523986,
+            "FG": null,
+            "PUNT": 0.08534786973157109
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0028433790963312278,
+          "baselineWp": 0.09340000000000004,
+          "options": {
+            "GO": 0.08250449063523986,
+            "FG": null,
+            "PUNT": 0.08534786973157109
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b04a0c14f650a08cc96eb2c065595695e2d77ff3a9f9a176985a4d047aa0a2b4"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873066:401873066277",
       "season": 2026,
       "capturedAt": "2026-11-20T01:42:22.253Z",
@@ -178532,6 +178635,109 @@
       },
       "reference": null,
       "snapshotHash": "877abd6a4b88f2865300674c2655e4b5ec4943856d662667c1c4e3b5db4ac649"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873066:401873066759",
+      "season": 2026,
+      "capturedAt": "2026-11-20T02:19:39.469Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873066",
+        "name": "IND @ HOU",
+        "kickoff": "2026-11-20T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "11",
+        "abbreviation": "IND",
+        "name": "Indianapolis Colts"
+      },
+      "defense": {
+        "id": "34",
+        "abbreviation": "HOU",
+        "name": "Houston Texans"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "3:44",
+        "secondsRemaining": 2924,
+        "ydstogo": 10,
+        "yardline100": 38,
+        "fieldPositionText": "HOU 38",
+        "scoreDiff": 3,
+        "scoreText": "IND 3–0 HOU",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.33840000000000003,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873066759",
+        "actual": "FG",
+        "situationText": "4th & 10 at HOU 38"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.018340119591990722,
+          "baselineWp": 0.33840000000000003,
+          "options": {
+            "GO": 0.31309479178352634,
+            "FG": 0.33143491137551706,
+            "PUNT": 0.3106350039990083
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.018340119591990722,
+          "baselineWp": 0.33840000000000003,
+          "options": {
+            "GO": 0.31309479178352634,
+            "FG": 0.33143491137551706,
+            "PUNT": 0.3106350039990083
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6492e6edf3a8d7e9e51713bf3a6de32b92fe56b785f554b3016631b990d2b228"
     }
   ]
 }
