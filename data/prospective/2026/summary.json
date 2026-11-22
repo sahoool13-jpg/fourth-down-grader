@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-22T23:40:41.399Z",
+  "lastMaterialUpdateAt": "2026-11-22T23:41:08.823Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -51,10 +51,10 @@
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 125,
+    "GAME_NOT_FOUND": 128,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 3
+    "UNKNOWN": 0
   },
   "teams": [
     {
@@ -1145,27 +1145,6 @@
   ],
   "recent": [
     {
-      "id": "401873075:4018730752495",
-      "capturedAt": "2026-11-22T23:40:41.398Z",
-      "gameName": "LV @ DEN",
-      "kickoff": "2026-11-22T21:25Z",
-      "offense": "LV",
-      "defense": "DEN",
-      "quarter": 3,
-      "clock": "12:48",
-      "ydstogo": 2,
-      "yardline100": 64,
-      "scoreDiff": -7,
-      "actual": "PUNT",
-      "optimal": "GO",
-      "grade": "A+",
-      "modelWpaBurnPp": 0.008379517019210803,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
       "id": "401873069:4018730692777",
       "capturedAt": "2026-11-22T23:40:41.398Z",
       "gameName": "JAX @ NYG",
@@ -1182,7 +1161,28 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873075:4018730752495",
+      "capturedAt": "2026-11-22T23:40:41.398Z",
+      "gameName": "LV @ DEN",
+      "kickoff": "2026-11-22T21:25Z",
+      "offense": "LV",
+      "defense": "DEN",
+      "quarter": 3,
+      "clock": "12:48",
+      "ydstogo": 2,
+      "yardline100": 64,
+      "scoreDiff": -7,
+      "actual": "PUNT",
+      "optimal": "GO",
+      "grade": "A+",
+      "modelWpaBurnPp": 0.008379517019210803,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1203,7 +1203,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "LEAN",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1224,7 +1224,7 @@
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
@@ -1245,7 +1245,7 @@
       "grade": "B",
       "modelWpaBurnPp": 0.5091190262122305,
       "certainty": "TOSS-UP",
-      "referenceStatus": "PENDING",
+      "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
     },
