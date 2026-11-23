@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-23T01:18:04.721Z",
+  "lastMaterialUpdateAt": "2026-11-23T01:42:19.729Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1864,
-    "gradable": 1863,
+    "archived": 1865,
+    "gradable": 1864,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1863/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1864/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,11 +42,11 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.13292867476189882,
+    "meanModelWpaBurnPp": 0.13285736109518104,
     "totalModelWpaBurnPp": 247.64612108141748,
-    "exactCoachModelAgreement": 0.7997852925389157,
-    "actualGoRate": 0.20397208803005903,
-    "modelGoRate": 0.25120772946859904
+    "exactCoachModelAgreement": 0.799892703862661,
+    "actualGoRate": 0.20386266094420602,
+    "modelGoRate": 0.2510729613733906
   },
   "benchmarkPipeline": {
     "READY": 0,
@@ -54,7 +54,7 @@
     "GAME_NOT_FOUND": 128,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -423,16 +423,16 @@
     },
     {
       "team": "MIN",
-      "decisions": 57,
-      "gradable": 57,
-      "exactCoachModelAgreement": 0.8421052631578947,
+      "decisions": 58,
+      "gradable": 58,
+      "exactCoachModelAgreement": 0.8448275862068966,
       "totalModelWpaBurnPp": 3.6966186110041765,
-      "meanModelWpaBurnPp": 0.06485295808779257,
+      "meanModelWpaBurnPp": 0.06373480363800305,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.14035087719298245,
-      "modelGoRate": 0.21052631578947367,
-      "aggressionDelta": -0.07017543859649122,
+      "actualGoRate": 0.13793103448275862,
+      "modelGoRate": 0.20689655172413793,
+      "aggressionDelta": -0.06896551724137931,
       "endgameDecisions": 8
     },
     {
@@ -1144,6 +1144,27 @@
     }
   ],
   "recent": [
+    {
+      "id": "401873077:401873077458",
+      "capturedAt": "2026-11-23T01:42:19.727Z",
+      "gameName": "MIN VS SF",
+      "kickoff": "2026-11-23T01:20Z",
+      "offense": "MIN",
+      "defense": "SF",
+      "quarter": 1,
+      "clock": "7:38",
+      "ydstogo": 11,
+      "yardline100": 37,
+      "scoreDiff": -7,
+      "actual": "FG",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "LEAN",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401873069:4018730694811",
       "capturedAt": "2026-11-23T01:17:38.220Z",
@@ -1964,27 +1985,6 @@
       "optimal": "PUNT",
       "grade": "A+",
       "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873075:401873075350",
-      "capturedAt": "2026-11-22T21:40:47.390Z",
-      "gameName": "LV @ DEN",
-      "kickoff": "2026-11-22T21:25Z",
-      "offense": "LV",
-      "defense": "DEN",
-      "quarter": 1,
-      "clock": "10:17",
-      "ydstogo": 1,
-      "yardline100": 78,
-      "scoreDiff": 0,
-      "actual": "PUNT",
-      "optimal": "GO",
-      "grade": "A",
-      "modelWpaBurnPp": 0.1000545339150491,
       "certainty": "TOSS-UP",
       "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
