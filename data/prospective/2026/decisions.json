@@ -194166,6 +194166,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873077:4018730771277",
+      "season": 2026,
+      "capturedAt": "2026-11-23T02:22:23.443Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873077",
+        "name": "MIN VS SF",
+        "kickoff": "2026-11-23T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "defense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "10:08",
+        "secondsRemaining": 2408,
+        "ydstogo": 1,
+        "yardline100": 53,
+        "fieldPositionText": "MIN 47",
+        "scoreDiff": -7,
+        "scoreText": "MIN 7–14 SF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.21189999999999998,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730771277",
+        "actual": "GO",
+        "situationText": "4th & 1 at MIN 47"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0070135140197016554,
+          "baselineWp": 0.21189999999999998,
+          "options": {
+            "GO": 0.20335193959924322,
+            "FG": null,
+            "PUNT": 0.19633842557954156
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.0070135140197016554,
+          "baselineWp": 0.21189999999999998,
+          "options": {
+            "GO": 0.20335193959924322,
+            "FG": null,
+            "PUNT": 0.19633842557954156
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "7f333ffbe5eece4074ca7a767071e08e6078f589d6c09d18d591ee3854694517"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873077:4018730771408",
+      "season": 2026,
+      "capturedAt": "2026-11-23T02:22:23.428Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873077",
+        "name": "MIN VS SF",
+        "kickoff": "2026-11-23T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "defense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:48",
+        "secondsRemaining": 2208,
+        "ydstogo": 3,
+        "yardline100": 30,
+        "fieldPositionText": "SF 30",
+        "scoreDiff": -7,
+        "scoreText": "MIN 7–14 SF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.24680000000000002,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730771408",
+        "actual": "FG",
+        "situationText": "4th & 3 at SF 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008701446802392515,
+          "baselineWp": 0.24680000000000002,
+          "options": {
+            "GO": 0.22971872049842643,
+            "FG": 0.23842016730081894,
+            "PUNT": 0.21462539719126625
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008701446802392515,
+          "baselineWp": 0.24680000000000002,
+          "options": {
+            "GO": 0.22971872049842643,
+            "FG": 0.23842016730081894,
+            "PUNT": 0.21462539719126625
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "00b0ae6c39d5b2ff69208f883cd3108b5dfbef34574731880fdab0f9c1262610"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873077:401873077458",
       "season": 2026,
       "capturedAt": "2026-11-23T01:42:19.727Z",
@@ -194267,6 +194473,109 @@
       },
       "reference": null,
       "snapshotHash": "11cea21bd5484ab2719b48bf6571b8eda9bf536d346c8beec2389bd327bb9b2c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873077:401873077551",
+      "season": 2026,
+      "capturedAt": "2026-11-23T02:22:23.422Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873077",
+        "name": "MIN VS SF",
+        "kickoff": "2026-11-23T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "25",
+        "abbreviation": "SF",
+        "name": "San Francisco 49ers"
+      },
+      "defense": {
+        "id": "16",
+        "abbreviation": "MIN",
+        "name": "Minnesota Vikings"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "6:09",
+        "secondsRemaining": 3069,
+        "ydstogo": 19,
+        "yardline100": 64,
+        "fieldPositionText": "SF 36",
+        "scoreDiff": 7,
+        "scoreText": "SF 7–0 MIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7649,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873077551",
+        "actual": "PUNT",
+        "situationText": "4th & 19 at SF 36"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01602410300505719,
+          "baselineWp": 0.7649,
+          "options": {
+            "GO": 0.7357838803187611,
+            "FG": null,
+            "PUNT": 0.7518079833238183
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01602410300505719,
+          "baselineWp": 0.7649,
+          "options": {
+            "GO": 0.7357838803187611,
+            "FG": null,
+            "PUNT": 0.7518079833238183
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6dd2425bbda101bfc57f2e620967bca618de9fc22cf5501ed34e7cca51d13cd1"
     }
   ]
 }
