@@ -195314,6 +195314,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873078:4018730781227",
+      "season": 2026,
+      "capturedAt": "2026-11-24T02:20:42.149Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873078",
+        "name": "CIN @ WSH",
+        "kickoff": "2026-11-24T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "8:34",
+        "secondsRemaining": 2314,
+        "ydstogo": 2,
+        "yardline100": 37,
+        "fieldPositionText": "WSH 37",
+        "scoreDiff": 0,
+        "scoreText": "CIN 0–0 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7169,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730781227",
+        "actual": "GO",
+        "situationText": "4th & 2 at WSH 37"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008020102433668908,
+          "baselineWp": 0.7169,
+          "options": {
+            "GO": 0.6999199524518332,
+            "FG": 0.7079400548855022,
+            "PUNT": 0.6854208657178362
+          },
+          "grade": "B",
+          "wpRegret": 0.008020102433668908,
+          "wpRegretPp": 0.8020102433668908,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.008020102433668908,
+          "baselineWp": 0.7169,
+          "options": {
+            "GO": 0.6999199524518332,
+            "FG": 0.7079400548855022,
+            "PUNT": 0.6854208657178362
+          },
+          "grade": "B",
+          "wpRegret": 0.008020102433668908,
+          "wpRegretPp": 0.8020102433668908,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a125efdb29e6627b7fa866402698762a74475497c7e719b67b987d220f32d325"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873078:401873078131",
       "season": 2026,
       "capturedAt": "2026-11-24T01:42:21.779Z",
@@ -195415,6 +195518,212 @@
       },
       "reference": null,
       "snapshotHash": "efee7dedfc24acc3a8fc28fd9ff3765d26eea98a86e8f8004a0c8327d65a0986"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873078:4018730781322",
+      "season": 2026,
+      "capturedAt": "2026-11-24T02:20:42.149Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873078",
+        "name": "CIN @ WSH",
+        "kickoff": "2026-11-24T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:17",
+        "secondsRemaining": 2177,
+        "ydstogo": 4,
+        "yardline100": 20,
+        "fieldPositionText": "WSH 20",
+        "scoreDiff": 0,
+        "scoreText": "CIN 0–0 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7432000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730781322",
+        "actual": "FG",
+        "situationText": "4th & 4 at WSH 20"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.009897532822393917,
+          "baselineWp": 0.7432000000000001,
+          "options": {
+            "GO": 0.7196183180036552,
+            "FG": 0.7295158508260491,
+            "PUNT": 0.6961082344082634
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.009897532822393917,
+          "baselineWp": 0.7432000000000001,
+          "options": {
+            "GO": 0.7196183180036552,
+            "FG": 0.7295158508260491,
+            "PUNT": 0.6961082344082634
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "b21c0c001c8da5fcfe86e8dca58ffd73ebdbd7b9eb3922789747e033c2e4a2f8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873078:4018730781437",
+      "season": 2026,
+      "capturedAt": "2026-11-24T02:20:42.150Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873078",
+        "name": "CIN @ WSH",
+        "kickoff": "2026-11-24T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "4:43",
+        "secondsRemaining": 2083,
+        "ydstogo": 9,
+        "yardline100": 70,
+        "fieldPositionText": "WSH 30",
+        "scoreDiff": -3,
+        "scoreText": "WSH 0–3 CIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2134,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730781437",
+        "actual": "PUNT",
+        "situationText": "4th & 9 at WSH 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.010670031298364052,
+          "baselineWp": 0.2134,
+          "options": {
+            "GO": 0.18775227023150196,
+            "FG": null,
+            "PUNT": 0.198422301529866
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.010670031298364052,
+          "baselineWp": 0.2134,
+          "options": {
+            "GO": 0.18775227023150196,
+            "FG": null,
+            "PUNT": 0.198422301529866
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a6db74c0e466e662ce5e921376f40c6e2ed0169fa1d4201ed40938f3d552135d"
     },
     {
       "schemaVersion": 1,
@@ -195727,6 +196036,212 @@
       },
       "reference": null,
       "snapshotHash": "da128cd34d82057d2b2d71b4bdc1dbb17b8ed8a6ca48a50ed730b2f980c71dea"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873078:401873078829",
+      "season": 2026,
+      "capturedAt": "2026-11-24T02:20:42.127Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873078",
+        "name": "CIN @ WSH",
+        "kickoff": "2026-11-24T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "defense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "1:01",
+        "secondsRemaining": 2761,
+        "ydstogo": 1,
+        "yardline100": 55,
+        "fieldPositionText": "CIN 45",
+        "scoreDiff": 0,
+        "scoreText": "CIN 0–0 WSH",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7112,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873078829",
+        "actual": "GO",
+        "situationText": "4th & 1 at CIN 45"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.007168231799459246,
+          "baselineWp": 0.7112,
+          "options": {
+            "GO": 0.7009872804487987,
+            "FG": null,
+            "PUNT": 0.6938190486493394
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.007168231799459246,
+          "baselineWp": 0.7112,
+          "options": {
+            "GO": 0.7009872804487987,
+            "FG": null,
+            "PUNT": 0.6938190486493394
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "cf3edd12506d1b203b35ef47387f04e3f6d7f036b89862d4756a6c3d440e65a7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873078:401873078938",
+      "season": 2026,
+      "capturedAt": "2026-11-24T02:20:42.277Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873078",
+        "name": "CIN @ WSH",
+        "kickoff": "2026-11-24T01:15Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "28",
+        "abbreviation": "WSH",
+        "name": "Washington Commanders"
+      },
+      "defense": {
+        "id": "4",
+        "abbreviation": "CIN",
+        "name": "Cincinnati Bengals"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "14:21",
+        "secondsRemaining": 2661,
+        "ydstogo": 10,
+        "yardline100": 45,
+        "fieldPositionText": "CIN 45",
+        "scoreDiff": 0,
+        "scoreText": "WSH 0–0 CIN",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2775,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873078938",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at CIN 45"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.003883175121902782,
+          "baselineWp": 0.2775,
+          "options": {
+            "GO": 0.2546054854122173,
+            "FG": 0.259484950985753,
+            "PUNT": 0.25560177586385024
+          },
+          "grade": "A",
+          "wpRegret": 0.003883175121902782,
+          "wpRegretPp": 0.3883175121902782,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.003883175121902782,
+          "baselineWp": 0.2775,
+          "options": {
+            "GO": 0.2546054854122173,
+            "FG": 0.259484950985753,
+            "PUNT": 0.25560177586385024
+          },
+          "grade": "A",
+          "wpRegret": 0.003883175121902782,
+          "wpRegretPp": 0.3883175121902782,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "2456c90638725ea3a8da8e8a6eb6d222f9c2eb7909189935d083cab47bf07cf2"
     }
   ]
 }
