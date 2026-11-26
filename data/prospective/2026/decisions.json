@@ -198231,6 +198231,212 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873081:4018730811264",
+      "season": 2026,
+      "capturedAt": "2026-11-26T19:13:06.482Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873081",
+        "name": "CHI @ DET",
+        "kickoff": "2026-11-26T18:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "defense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "10:52",
+        "secondsRemaining": 2452,
+        "ydstogo": 13,
+        "yardline100": 22,
+        "fieldPositionText": "DET 22",
+        "scoreDiff": -10,
+        "scoreText": "CHI 0–10 DET",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.23740000000000006,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730811264",
+        "actual": "FG",
+        "situationText": "4th & 13 at DET 22"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.019908190052333685,
+          "baselineWp": 0.23740000000000006,
+          "options": {
+            "GO": 0.20767356257963035,
+            "FG": 0.22758175263196403,
+            "PUNT": 0.2015586320947026
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.019908190052333685,
+          "baselineWp": 0.23740000000000006,
+          "options": {
+            "GO": 0.20767356257963035,
+            "FG": 0.22758175263196403,
+            "PUNT": 0.2015586320947026
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "a6d7fd9063a4a5472a92a7b95713bfea2c31fc5d3bd21e0f617a2f0ebf945448"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873081:4018730811461",
+      "season": 2026,
+      "capturedAt": "2026-11-26T19:13:06.481Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873081",
+        "name": "CHI @ DET",
+        "kickoff": "2026-11-26T18:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "8",
+        "abbreviation": "DET",
+        "name": "Detroit Lions"
+      },
+      "defense": {
+        "id": "3",
+        "abbreviation": "CHI",
+        "name": "Chicago Bears"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "8:17",
+        "secondsRemaining": 2297,
+        "ydstogo": 10,
+        "yardline100": 61,
+        "fieldPositionText": "DET 39",
+        "scoreDiff": 7,
+        "scoreText": "DET 10–3 CHI",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.7273,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730811461",
+        "actual": "PUNT",
+        "situationText": "4th & 10 at DET 39"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.011467280757547549,
+          "baselineWp": 0.7273,
+          "options": {
+            "GO": 0.6985139766069802,
+            "FG": null,
+            "PUNT": 0.7099812573645278
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.011467280757547549,
+          "baselineWp": 0.7273,
+          "options": {
+            "GO": 0.6985139766069802,
+            "FG": null,
+            "PUNT": 0.7099812573645278
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "385fc556e2c21a45e4b66a61c04f8dc6c221b89e094e264e06bdfa4994f71512"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873081:401873081293",
       "season": 2026,
       "capturedAt": "2026-11-26T18:18:05.877Z",
