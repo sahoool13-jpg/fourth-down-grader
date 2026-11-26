@@ -197191,6 +197191,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873079:4018730791916",
+      "season": 2026,
+      "capturedAt": "2026-11-26T02:40:52.046Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873079",
+        "name": "GB @ LAR",
+        "kickoff": "2026-11-26T01:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "1:50",
+        "secondsRemaining": 1910,
+        "ydstogo": 1,
+        "yardline100": 30,
+        "fieldPositionText": "LAR 30",
+        "scoreDiff": -3,
+        "scoreText": "GB 10–13 LAR",
+        "timeouts": 1,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.3167,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730791916",
+        "actual": "FG",
+        "situationText": "4th & 1 at LAR 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0017277722154455666,
+          "baselineWp": 0.3167,
+          "options": {
+            "GO": 0.3030876282433553,
+            "FG": 0.30481540045880084,
+            "PUNT": 0.2758493432020384
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "TOSS-UP",
+          "edge": 0.0017277722154455666,
+          "baselineWp": 0.3167,
+          "options": {
+            "GO": 0.3030876282433553,
+            "FG": 0.30481540045880084,
+            "PUNT": 0.2758493432020384
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0cd3f7ac2047d7f6fb0f6442d2425b61bbf8d661db89c680cc9a44b26d5fd768"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873079:401873079344",
       "season": 2026,
       "capturedAt": "2026-11-26T01:42:22.318Z",

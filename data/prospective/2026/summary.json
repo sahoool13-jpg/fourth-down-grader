@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-26T02:20:24.927Z",
+  "lastMaterialUpdateAt": "2026-11-26T02:40:52.047Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1896,
-    "gradable": 1895,
+    "archived": 1897,
+    "gradable": 1896,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1895/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1896/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.13229565160444415,
+    "meanModelWpaBurnPp": 0.13222587541688907,
     "totalModelWpaBurnPp": 250.70025979042165,
-    "exactCoachModelAgreement": 0.8005277044854882,
-    "actualGoRate": 0.20316622691292877,
-    "modelGoRate": 0.25065963060686014
+    "exactCoachModelAgreement": 0.8006329113924051,
+    "actualGoRate": 0.2030590717299578,
+    "modelGoRate": 0.2505274261603376
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 131,
+    "GAME_NOT_FOUND": 130,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -353,16 +353,16 @@
     },
     {
       "team": "GB",
-      "decisions": 53,
-      "gradable": 53,
-      "exactCoachModelAgreement": 0.7924528301886793,
+      "decisions": 54,
+      "gradable": 54,
+      "exactCoachModelAgreement": 0.7962962962962963,
       "totalModelWpaBurnPp": 5.2553968043756285,
-      "meanModelWpaBurnPp": 0.09915843027123827,
+      "meanModelWpaBurnPp": 0.09732216304399312,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.20754716981132076,
-      "modelGoRate": 0.1509433962264151,
-      "aggressionDelta": 0.05660377358490566,
+      "actualGoRate": 0.2037037037037037,
+      "modelGoRate": 0.14814814814814814,
+      "aggressionDelta": 0.05555555555555555,
       "endgameDecisions": 7
     },
     {
@@ -1144,6 +1144,27 @@
     }
   ],
   "recent": [
+    {
+      "id": "401873079:4018730791916",
+      "capturedAt": "2026-11-26T02:40:52.046Z",
+      "gameName": "GB @ LAR",
+      "kickoff": "2026-11-26T01:00Z",
+      "offense": "GB",
+      "defense": "LAR",
+      "quarter": 2,
+      "clock": "1:50",
+      "ydstogo": 1,
+      "yardline100": 30,
+      "scoreDiff": -3,
+      "actual": "FG",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "TOSS-UP",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401873079:4018730791598",
       "capturedAt": "2026-11-26T02:19:57.411Z",
@@ -1969,27 +1990,6 @@
       "scoreDiff": 11,
       "actual": "PUNT",
       "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "CLEAR",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873069:4018730693166",
-      "capturedAt": "2026-11-23T00:38:46.392Z",
-      "gameName": "JAX @ NYG",
-      "kickoff": "2026-11-22T21:25Z",
-      "offense": "JAX",
-      "defense": "NYG",
-      "quarter": 3,
-      "clock": "1:06",
-      "ydstogo": 1,
-      "yardline100": 11,
-      "scoreDiff": -14,
-      "actual": "GO",
-      "optimal": "GO",
       "grade": "A+",
       "modelWpaBurnPp": 0,
       "certainty": "CLEAR",
