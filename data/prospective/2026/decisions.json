@@ -197087,6 +197087,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873079:4018730791598",
+      "season": 2026,
+      "capturedAt": "2026-11-26T02:19:57.411Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873079",
+        "name": "GB @ LAR",
+        "kickoff": "2026-11-26T01:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "defense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "6:11",
+        "secondsRemaining": 2171,
+        "ydstogo": 11,
+        "yardline100": 66,
+        "fieldPositionText": "LAR 34",
+        "scoreDiff": 3,
+        "scoreText": "LAR 13–10 GB",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.6964,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730791598",
+        "actual": "PUNT",
+        "situationText": "4th & 11 at LAR 34"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01593571735265853,
+          "baselineWp": 0.6964,
+          "options": {
+            "GO": 0.6613773932225614,
+            "FG": null,
+            "PUNT": 0.6773131105752199
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.01593571735265853,
+          "baselineWp": 0.6964,
+          "options": {
+            "GO": 0.6613773932225614,
+            "FG": null,
+            "PUNT": 0.6773131105752199
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "6a5dd7dd799c1df4a431d4bf6d9b17e55172f86ad7baa9f5936e8978ef0eef64"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873079:401873079344",
       "season": 2026,
       "capturedAt": "2026-11-26T01:42:22.318Z",
@@ -197292,6 +197395,109 @@
       },
       "reference": null,
       "snapshotHash": "a41c3ebc8cbb1c57784c49c7409d8cee59edd36a097b81ef081240f2bf363a89"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873079:401873079947",
+      "season": 2026,
+      "capturedAt": "2026-11-26T02:19:57.410Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873079",
+        "name": "GB @ LAR",
+        "kickoff": "2026-11-26T01:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "9",
+        "abbreviation": "GB",
+        "name": "Green Bay Packers"
+      },
+      "defense": {
+        "id": "14",
+        "abbreviation": "LAR",
+        "name": "Los Angeles Rams"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "1:28",
+        "secondsRemaining": 2788,
+        "ydstogo": 7,
+        "yardline100": 36,
+        "fieldPositionText": "LAR 36",
+        "scoreDiff": -6,
+        "scoreText": "GB 0–6 LAR",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.2247,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873079947",
+        "actual": "FG",
+        "situationText": "4th & 7 at LAR 36"
+      },
+      "model": {
+        "v051": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011697896921943784,
+          "baselineWp": 0.2247,
+          "options": {
+            "GO": 0.20762672880153926,
+            "FG": 0.21932462572348305,
+            "PUNT": 0.20157648544482334
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "FG",
+          "certainty": "LEAN",
+          "edge": 0.011697896921943784,
+          "baselineWp": 0.2247,
+          "options": {
+            "GO": 0.20762672880153926,
+            "FG": 0.21932462572348305,
+            "PUNT": 0.20157648544482334
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "dbf0e026b6d18bca268a065b40f4325037e2da39def4d79241af12eff9ac2755"
     }
   ]
 }
