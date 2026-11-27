@@ -4,7 +4,7 @@
   "status": "ACTIVE",
   "monitorStartAt": "2026-09-27T09:57:27Z",
   "releaseTag": "v0.5.1",
-  "lastMaterialUpdateAt": "2026-11-27T00:36:01.591Z",
+  "lastMaterialUpdateAt": "2026-11-27T01:16:08.583Z",
   "productionHealth": {
     "releaseVersion": "v0.5.1",
     "releaseStatus": "PROMOTED",
@@ -14,8 +14,8 @@
     "bootState": "READY"
   },
   "sample": {
-    "archived": 1925,
-    "gradable": 1924,
+    "archived": 1927,
+    "gradable": 1926,
     "referenceComparable": 0,
     "endgameReferenceComparable": 0
   },
@@ -26,7 +26,7 @@
   },
   "modelHealth": {
     "state": "LOCKED_SAMPLE",
-    "headline": "Freeze remains locked: 1924/500 gradable, 0/250 reference-comparable.",
+    "headline": "Freeze remains locked: 1926/500 gradable, 0/250 reference-comparable.",
     "mature": false,
     "triggers": []
   },
@@ -42,19 +42,19 @@
     }
   },
   "coachModel": {
-    "meanModelWpaBurnPp": 0.1335958776335631,
+    "meanModelWpaBurnPp": 0.13345714878866843,
     "totalModelWpaBurnPp": 257.0384685669754,
-    "exactCoachModelAgreement": 0.8009355509355509,
-    "actualGoRate": 0.20374220374220375,
-    "modelGoRate": 0.2505197505197505
+    "exactCoachModelAgreement": 0.8011422637590861,
+    "actualGoRate": 0.2035306334371755,
+    "modelGoRate": 0.2502596053997923
   },
   "benchmarkPipeline": {
     "READY": 0,
     "DATA_UNAVAILABLE": 0,
-    "GAME_NOT_FOUND": 133,
+    "GAME_NOT_FOUND": 132,
     "PIPELINE_ERROR": 0,
     "NO_MATCH": 0,
-    "UNKNOWN": 0
+    "UNKNOWN": 1
   },
   "teams": [
     {
@@ -479,17 +479,17 @@
     },
     {
       "team": "DAL",
-      "decisions": 65,
-      "gradable": 65,
-      "exactCoachModelAgreement": 0.8615384615384616,
+      "decisions": 67,
+      "gradable": 67,
+      "exactCoachModelAgreement": 0.8656716417910447,
       "totalModelWpaBurnPp": 3.098395500057023,
-      "meanModelWpaBurnPp": 0.047667623077800356,
+      "meanModelWpaBurnPp": 0.04624470895607497,
       "costlyMistakes2Pp": 0,
       "catastrophicMistakes5Pp": 0,
-      "actualGoRate": 0.27692307692307694,
-      "modelGoRate": 0.3076923076923077,
-      "aggressionDelta": -0.03076923076923077,
-      "endgameDecisions": 7
+      "actualGoRate": 0.26865671641791045,
+      "modelGoRate": 0.29850746268656714,
+      "aggressionDelta": -0.029850746268656716,
+      "endgameDecisions": 8
     },
     {
       "team": "TEN",
@@ -1144,6 +1144,48 @@
     }
   ],
   "recent": [
+    {
+      "id": "401873080:4018730803892",
+      "capturedAt": "2026-11-27T01:16:08.583Z",
+      "gameName": "PHI @ DAL",
+      "kickoff": "2026-11-26T21:30Z",
+      "offense": "DAL",
+      "defense": "PHI",
+      "quarter": 4,
+      "clock": "7:48",
+      "ydstogo": 85,
+      "yardline100": 85,
+      "scoreDiff": 8,
+      "actual": "PUNT",
+      "optimal": "PUNT",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "CLEAR",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
+    {
+      "id": "401873080:4018730804208",
+      "capturedAt": "2026-11-27T01:16:08.575Z",
+      "gameName": "PHI @ DAL",
+      "kickoff": "2026-11-26T21:30Z",
+      "offense": "DAL",
+      "defense": "PHI",
+      "quarter": 4,
+      "clock": "3:27",
+      "ydstogo": 5,
+      "yardline100": 22,
+      "scoreDiff": 8,
+      "actual": "FG",
+      "optimal": "FG",
+      "grade": "A+",
+      "modelWpaBurnPp": 0,
+      "certainty": "LEAN",
+      "referenceStatus": "PENDING",
+      "referenceOptimal": null,
+      "endgameTags": []
+    },
     {
       "id": "401873080:4018730802598",
       "capturedAt": "2026-11-27T00:35:31.740Z",
@@ -1945,48 +1987,6 @@
       "grade": "C",
       "modelWpaBurnPp": 1.8048991789773177,
       "certainty": "LEAN",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873078:4018730782877",
-      "capturedAt": "2026-11-24T03:41:03.984Z",
-      "gameName": "CIN @ WSH",
-      "kickoff": "2026-11-24T01:15Z",
-      "offense": "CIN",
-      "defense": "WSH",
-      "quarter": 3,
-      "clock": "1:40",
-      "ydstogo": 5,
-      "yardline100": 63,
-      "scoreDiff": 4,
-      "actual": "PUNT",
-      "optimal": "PUNT",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "LEAN",
-      "referenceStatus": "GAME_NOT_FOUND",
-      "referenceOptimal": null,
-      "endgameTags": []
-    },
-    {
-      "id": "401873078:4018730782759",
-      "capturedAt": "2026-11-24T03:41:03.888Z",
-      "gameName": "CIN @ WSH",
-      "kickoff": "2026-11-24T01:15Z",
-      "offense": "WSH",
-      "defense": "CIN",
-      "quarter": 3,
-      "clock": "2:36",
-      "ydstogo": 4,
-      "yardline100": 22,
-      "scoreDiff": -7,
-      "actual": "FG",
-      "optimal": "FG",
-      "grade": "A+",
-      "modelWpaBurnPp": 0,
-      "certainty": "TOSS-UP",
       "referenceStatus": "GAME_NOT_FOUND",
       "referenceOptimal": null,
       "endgameTags": []
