@@ -200941,6 +200941,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873082:4018730821061",
+      "season": 2026,
+      "capturedAt": "2026-11-27T02:20:10.083Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873082",
+        "name": "KC @ BUF",
+        "kickoff": "2026-11-27T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "defense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "state": {
+        "quarter": 2,
+        "clock": "12:25",
+        "secondsRemaining": 2545,
+        "ydstogo": 7,
+        "yardline100": 69,
+        "fieldPositionText": "KC 31",
+        "scoreDiff": -7,
+        "scoreText": "KC 0–7 BUF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.26659999999999995,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730821061",
+        "actual": "PUNT",
+        "situationText": "4th & 7 at KC 31"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.00775237712625651,
+          "baselineWp": 0.26659999999999995,
+          "options": {
+            "GO": 0.2431431699290195,
+            "FG": null,
+            "PUNT": 0.250895547055276
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "LEAN",
+          "edge": 0.00775237712625651,
+          "baselineWp": 0.26659999999999995,
+          "options": {
+            "GO": 0.2431431699290195,
+            "FG": null,
+            "PUNT": 0.250895547055276
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "0c15b5952065139e600334d11ca94055bb4affd3b0499869e952da049eb7cbc7"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873082:401873082244",
       "season": 2026,
       "capturedAt": "2026-11-27T01:42:07.452Z",
@@ -201146,6 +201249,315 @@
       },
       "reference": null,
       "snapshotHash": "a1a3ca8cf144fabf0749498f93ae62a23c413cd6f4ba922f41548b30b6409353"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873082:401873082435",
+      "season": 2026,
+      "capturedAt": "2026-11-27T02:20:09.928Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873082",
+        "name": "KC @ BUF",
+        "kickoff": "2026-11-27T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "7:29",
+        "secondsRemaining": 3149,
+        "ydstogo": 6,
+        "yardline100": 65,
+        "fieldPositionText": "BUF 35",
+        "scoreDiff": 0,
+        "scoreText": "BUF 0–0 KC",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.5033,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873082435",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at BUF 35"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0065850750430985205,
+          "baselineWp": 0.5033,
+          "options": {
+            "GO": 0.47902831983530353,
+            "FG": null,
+            "PUNT": 0.48561339487840205
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0065850750430985205,
+          "baselineWp": 0.5033,
+          "options": {
+            "GO": 0.47902831983530353,
+            "FG": null,
+            "PUNT": 0.48561339487840205
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "c56d29661745869f207811086e31bca991c03cfa7841c45388faa753de28a91c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873082:401873082539",
+      "season": 2026,
+      "capturedAt": "2026-11-27T02:20:10.059Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873082",
+        "name": "KC @ BUF",
+        "kickoff": "2026-11-27T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "defense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "5:47",
+        "secondsRemaining": 3047,
+        "ydstogo": 1,
+        "yardline100": 87,
+        "fieldPositionText": "KC 13",
+        "scoreDiff": 0,
+        "scoreText": "KC 0–0 BUF",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.42510000000000003,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873082539",
+        "actual": "PUNT",
+        "situationText": "4th & 1 at KC 13"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.000658213259670859,
+          "baselineWp": 0.42510000000000003,
+          "options": {
+            "GO": 0.40741243477903394,
+            "FG": null,
+            "PUNT": 0.4067542215193631
+          },
+          "grade": "A",
+          "wpRegret": 0.000658213259670859,
+          "wpRegretPp": 0.0658213259670859,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "TOSS-UP",
+          "edge": 0.000658213259670859,
+          "baselineWp": 0.42510000000000003,
+          "options": {
+            "GO": 0.40741243477903394,
+            "FG": null,
+            "PUNT": 0.4067542215193631
+          },
+          "grade": "A",
+          "wpRegret": 0.000658213259670859,
+          "wpRegretPp": 0.0658213259670859,
+          "robustness": 0.6666666666666666,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "8952218c2be445bade18450b5a8dba10e57b56f015692a460d8d817db222caf2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "401873082:401873082752",
+      "season": 2026,
+      "capturedAt": "2026-11-27T02:20:09.946Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873082",
+        "name": "KC @ BUF",
+        "kickoff": "2026-11-27T01:20Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "2",
+        "abbreviation": "BUF",
+        "name": "Buffalo Bills"
+      },
+      "defense": {
+        "id": "12",
+        "abbreviation": "KC",
+        "name": "Kansas City Chiefs"
+      },
+      "state": {
+        "quarter": 1,
+        "clock": "0:15",
+        "secondsRemaining": 2715,
+        "ydstogo": 1,
+        "yardline100": 4,
+        "fieldPositionText": "KC 4",
+        "scoreDiff": 0,
+        "scoreText": "BUF 0–0 KC",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.58,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "401873082752",
+        "actual": "GO",
+        "situationText": "4th & 1 at KC 4"
+      },
+      "model": {
+        "v051": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.0172785877874152,
+          "baselineWp": 0.58,
+          "options": {
+            "GO": 0.5603769678152775,
+            "FG": 0.5430983800278623,
+            "PUNT": 0.5006197175562831
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "GO",
+          "certainty": "LEAN",
+          "edge": 0.0172785877874152,
+          "baselineWp": 0.58,
+          "options": {
+            "GO": 0.5603769678152775,
+            "FG": 0.5430983800278623,
+            "PUNT": 0.5006197175562831
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "2999169c168d7fbf99324247d55630cb1c373db5f63929f3992cd8489a06d7d5"
     }
   ]
 }
