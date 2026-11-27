@@ -202917,6 +202917,109 @@
     },
     {
       "schemaVersion": 1,
+      "id": "401873083:4018730832022",
+      "season": 2026,
+      "capturedAt": "2026-11-27T21:40:25.922Z",
+      "release": {
+        "tag": "v0.5.1",
+        "releaseVersion": "v0.5.1",
+        "releaseStatus": "PROMOTED",
+        "evaluatedCandidateCommit": "8daaa8f75787e4f28d25af6462142518f4594e9a",
+        "deployCommit": "3b959cd6a3f3af11b954c480825ca1ff489f1f17"
+      },
+      "game": {
+        "eventId": "401873083",
+        "name": "DEN @ PIT",
+        "kickoff": "2026-11-27T20:00Z",
+        "stateAtCapture": "in"
+      },
+      "offense": {
+        "id": "7",
+        "abbreviation": "DEN",
+        "name": "Denver Broncos"
+      },
+      "defense": {
+        "id": "23",
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Steelers"
+      },
+      "state": {
+        "quarter": 3,
+        "clock": "14:13",
+        "secondsRemaining": 1753,
+        "ydstogo": 6,
+        "yardline100": 70,
+        "fieldPositionText": "DEN 30",
+        "scoreDiff": -19,
+        "scoreText": "DEN 5–24 PIT",
+        "timeouts": 3,
+        "opponentTimeouts": 3,
+        "baselineWp": 0.04530000000000001,
+        "indoor": false
+      },
+      "decision": {
+        "playId": "4018730832022",
+        "actual": "PUNT",
+        "situationText": "4th & 6 at DEN 30"
+      },
+      "model": {
+        "v051": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0014316253855903571,
+          "baselineWp": 0.04530000000000001,
+          "options": {
+            "GO": 0.039610796582937424,
+            "FG": null,
+            "PUNT": 0.04104242196852778
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        },
+        "legacy": {
+          "optimal": "PUNT",
+          "certainty": "TOSS-UP",
+          "edge": 0.0014316253855903571,
+          "baselineWp": 0.04530000000000001,
+          "options": {
+            "GO": 0.039610796582937424,
+            "FG": null,
+            "PUNT": 0.04104242196852778
+          },
+          "grade": "A+",
+          "wpRegret": 0,
+          "wpRegretPp": 0,
+          "robustness": 1,
+          "endgameActive": false,
+          "endgameTags": [],
+          "liveAnchorUsed": true
+        }
+      },
+      "outcome": {
+        "text": null
+      },
+      "integrity": {
+        "verifiedState": true,
+        "possessionSource": "start.team",
+        "fieldPositionSource": "start.downDistanceText",
+        "fieldPositionConflict": null,
+        "numericConflict": null,
+        "sourceConflict": null
+      },
+      "referencePipeline": {
+        "code": "PENDING",
+        "label": "PENDING"
+      },
+      "reference": null,
+      "snapshotHash": "ff24280ea22e784ef80caf51613525b1e2ad78c61c55bd78b242c634632cabc8"
+    },
+    {
+      "schemaVersion": 1,
       "id": "401873083:401873083244",
       "season": 2026,
       "capturedAt": "2026-11-27T20:15:06.553Z",
